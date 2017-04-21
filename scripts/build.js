@@ -41,6 +41,8 @@ const buildSCSS = function () {
     if (!error) {
       fs.writeFileSync(OUT_FILE, result.css);
       console.log("Build CSS");
+    } else {
+      console.log("ERROR", error);
     }
   });
 }
