@@ -1,4 +1,4 @@
 ---
-title: about
+title: About
 ---
 example about content
