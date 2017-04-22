@@ -4,6 +4,7 @@ const path = require('path');
 const watch = require('node-watch');
 const browserify = require('browserify');
 const livereload = require('livereload');
+const nsp = require('ncp').ncp;
 
 const STATIC = path.join(__dirname, '..', 'static')
 
@@ -46,6 +47,13 @@ const buildSCSS = function () {
     }
   });
 }
+
+nsp('node_modules/font-awesome/fonts', path.join(STATIC, 'build', 'fonts'), function (err) {
+  if (err) {
+    return console.error(err);
+  }
+  console.log('Copied fonts');
+});
 
 bundle();
 buildSCSS();

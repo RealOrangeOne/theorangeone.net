@@ -10,6 +10,7 @@
   "devDependencies": {
     "browserify": "14.3.0",
     "livereload": "0.6.2",
+    "ncp": "2.0.0",
     "node-sass": "4.5.2",
     "node-watch": "0.5.2",
     "uglifyify": "3.0.4"
