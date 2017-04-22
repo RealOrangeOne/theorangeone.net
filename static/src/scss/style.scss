@@ -1,5 +1,7 @@
 $fa-font-path: "../fonts";
 @import "node_modules/font-awesome/scss/font-awesome";
 
+@import "node_modules/bootstrap/scss/bootstrap-grid";
 
+// Import Alpha theme (ish)
 @import 'alpha';
