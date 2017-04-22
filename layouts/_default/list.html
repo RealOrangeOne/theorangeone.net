@@ -1,0 +1,16 @@
+{{ partial "page_start.html" . }}
+<div id="page-wrapper">
+  <section id="main" class="container">
+  	<header>
+  		<h2>{{ title .Title }}</h2>
+      {{ if .Params.subtitle }}
+  			<p>{{ .Params.subtitle }}</p>
+      {{ end }}
+		</header>
+		<div class="box">
+			<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+      {{ .Content }}
+		</div>
+	</section>
+</div>
+{{ partial "page_end.html" . }}
