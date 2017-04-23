@@ -3,21 +3,22 @@
     <nav id="nav">
       <ul>
         {{ range where .Site.Pages.ByTitle "Kind" "section" }}
-        {{ $page := . }}
           <li>
-            <a href="{{ $page.Permalink }}">
-              {{ $page.Title }}
-            </a>
+            <a href="{{ .Permalink }}">{{ title .Title }}</a>
+            {{ if .Pages }}
+              <ul>
+                {{ range first 4 .Pages.ByDate }}
+                  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
+                <li><a href="{{ .Permalink }}"><i>See more {{ lower .Title }}</i></a></li>
+              </ul>
+            {{ end }}
           </li>
         {{ end }}
+
         {{ range where .Site.Pages.ByTitle "Kind" "page" }}
-          {{ $page := . }}
-          {{ if eq $page.Section "" }}
-            <li>
-              <a href="{{ $page.Permalink }}">
-                {{ $page.Title }}
-              </a>
-            </li>
+          {{ if eq .Section "" }}
+            <li><a href="{{ .Permalink }}">{{ title .Title }}</a></li>
           {{ end }}
         {{ end }}
       </ul>
