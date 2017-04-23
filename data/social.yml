@@ -1,0 +1,68 @@
+---
+accounts:
+  github:
+    name: GitHub
+    username: RealOrangeOne
+    link: https://github.com/RealOrangeOne/
+    icon: fa-github
+
+  twitter:
+    name: Twitter
+    username: RealOrangeOne
+    link: https://twitter.com/RealOrangeOne/
+    icon: fa-twitter
+
+  reddit:
+    name: Reddit
+    username: RealOrangeOne
+    link: https://reddit.com/u/RealOrangeOne/
+    icon: fa-reddit
+
+  flickr:
+    name: Flickr
+    username: TheOrangeOne
+    link: https://flickr.com/photos/TheOrangeOne/
+    icon: fa-flickr
+
+  bitbucket:
+    name: BitBucket
+    username: TheOrangeOne
+    link: https://bitbucket.com/TheOrangeOne/
+    icon: fa-bitbucket
+
+  trello:
+    name: Trello
+    username: TheOrangeOne
+    link: https://trello.com/TheOrangeOne/
+    icon: fa-trello
+
+  freenode:
+    name: Freenode
+    username: TheOrangeOne
+    link: https://webchat.freenode.net/
+    icon: fa-rss
+
+  pcpartpicker:
+    name: PCPartPicker
+    username: TheOrangeOne97
+    link: https://uk.pcpartpicker.com/user/TheOrangeOne97/
+    icon: fa-desktop
+
+  codepen:
+    name: CodePen
+    username: TheOrangeOne
+    link: https://codepen.io/TheOrangeOne/
+    icon: fa-codepen
+
+  npm:
+    name: npm
+    username: TheOrangeOne
+    link: https://www.npmjs.com/~TheOrangeOne/
+    icon: fa-file-code-o
+
+footer_accounts:
+  - github
+  - twitter
+  - reddit
+  - flickr
+  - bitbucket
