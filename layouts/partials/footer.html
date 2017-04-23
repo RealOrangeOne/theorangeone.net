@@ -2,10 +2,13 @@
   <ul class="icons">
     {{ range .Site.Data.social.footer_accounts }}
     {{ $account := index $.Site.Data.social.accounts . }}
-      <li><a href="{{ $account.link }}" class="icon {{ $account.icon }}"><span class="label">{{ $account.name }}</span></a></li>
+      <li><a href="{{ $account.link }}" class="icon {{ $account.icon }}">
+        <span class="label">{{ $account.name }}</span>
+      </a></li>
     {{ end }}
   </ul>
   <ul class="copyright">
-    <li>&copy; {{ title .Site.Params.author }} - All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    <li>&copy; {{ title .Site.Params.author }} - All rights reserved.</li>
+    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
   </ul>
 </footer>
