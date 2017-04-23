@@ -3,14 +3,28 @@
   <section id="main" class="container">
   	<header>
   		<h2>{{ title .Title }}</h2>
-      {{ if .Params.subtitle }}
-  			<p>{{ .Params.subtitle }}</p>
-      {{ end }}
 		</header>
-		<div class="box">
-			<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-      {{ .Content }}
-		</div>
+    {{ if .Content }}
+  		<div class="box">
+        {{ .Content }}
+  		</div>
+    {{ end }}
+    <div class="row">
+      {{ range .Pages.ByTitle }}
+        <div class="col-sm-6">
+          <section class="box special">
+            {{ if .Params.image }}
+              <span class="image featured"><img src="{{ .Params.image }}" alt="{{ .Title }} featured image" /></span>
+            {{ end }}
+            <h3>{{ title .Title }}</h3>
+            <p>{{ .Summary }}</p>
+            <ul class="actions">
+              <li><a href="{{ .Permalink }}" class="button alt">Read More</a></li>
+            </ul>
+          </section>
+        </div>
+      {{ end }}
+    </div>
 	</section>
 </div>
 {{ partial "page_end.html" . }}
