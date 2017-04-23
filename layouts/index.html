@@ -40,21 +40,24 @@
 			</div>
 		</section>
 
-		<div class="row">
-    {{ range first 6 (where .Data.Pages.ByDate "Kind" "page") }}
-      {{ if ne .Section "" }}
-        <div class="col-sm-6">
-          <section class="box special">
-            <span class="image featured"><img src="{{ .Params.image }}" /></span>
-            <h3>{{ .Title }}</h3>
-            <p>{{ .Summary }}</p>
-            <ul class="actions">
-              <li><a href="{{ .Permalink }}" class="button alt">Read More</a></li>
-            </ul>
-          </section>
-        </div>
+    <div class="box special">
+      <h2>Recent Posts</h2>
+  		<div class="row">
+      {{ range first 6 (where .Data.Pages.ByDate "Kind" "page") }}
+        {{ if ne .Section "" }}
+          <div class="col-sm-6">
+            <section class="box special">
+              <span class="image featured"><img src="{{ .Params.image }}" /></span>
+              <h3>{{ .Title }}</h3>
+              <p>{{ .Summary }}</p>
+              <ul class="actions">
+                <li><a href="{{ .Permalink }}" class="button alt">Read More</a></li>
+              </ul>
+            </section>
+          </div>
+        {{ end }}
       {{ end }}
-    {{ end }}
-		</div>
+  		</div>
+    </div>
 	</section>
 {{ partial "page_end.html" . }}
