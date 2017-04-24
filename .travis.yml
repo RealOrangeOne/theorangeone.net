@@ -1,0 +1,12 @@
+sudo: false
+language: go
+
+go:
+  - 1.x
+
+install:
+  - go get github.com/kardianos/govendor
+  - govendor get github.com/spf13/hugo
+
+script:
+  - hugo -vDEF

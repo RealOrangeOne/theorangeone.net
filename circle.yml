@@ -1,9 +1,0 @@
-dependencies:
-  pre:
-    - sudo apt-get update; sudo apt-get install golang-1.8-go
-    - go get github.com/kardianos/govendor
-    - govendor get github.com/spf13/hugo
-
-test:
-  override:
-    - hugo -vDEF
