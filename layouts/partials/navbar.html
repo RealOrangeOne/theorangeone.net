@@ -1,4 +1,4 @@
-  <header id="header" {{ if .Params.landing }}class="alt"{{ end }}>
+  <header id="header" {{ if .IsHome }}class="alt"{{ end }}>
     <h1><a href="/">{{ title .Site.Title }}</a></h1>
     <nav id="nav">
       <ul>

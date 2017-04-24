@@ -2,7 +2,7 @@
 <html>
 {{ partial "head.html" . }}
 
-{{ if .Params.landing }}
+{{ if .IsHome }}
   <body class="landing">
 {{ else }}
   <body>
