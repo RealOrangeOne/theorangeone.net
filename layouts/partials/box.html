@@ -3,7 +3,7 @@
     {{ if .Params.image }}
       <span class="image featured"><img src="{{ .Params.image }}" alt="{{ .Title }} featured image" /></span>
     {{ end }}
-    <h3>{{ title .Title }}</h3>
+    <h3>{{ title .LinkTitle }}</h3>
     <p>{{ .Summary }}</p>
     <ul class="actions">
       <li><a href="{{ .Permalink }}" class="button alt">Read More</a></li>

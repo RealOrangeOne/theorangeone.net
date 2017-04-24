@@ -4,11 +4,11 @@
       <ul>
         {{ range where .Site.Pages.ByTitle "Kind" "section" }}
           <li>
-            <a href="{{ .Permalink }}">{{ title .Title }}</a>
+            <a href="{{ .Permalink }}">{{ title .LinkTitle }}</a>
             {{ if .Pages }}
               <ul>
                 {{ range first 4 .Pages.ByDate }}
-                  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                  <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
                 {{ end }}
                 <li><a href="{{ .Permalink }}"><i>See more {{ lower .Title }}</i></a></li>
               </ul>
@@ -18,7 +18,7 @@
 
         {{ range where .Site.Pages.ByTitle "Kind" "page" }}
           {{ if eq .Section "" }}
-            <li><a href="{{ .Permalink }}">{{ title .Title }}</a></li>
+            <li><a href="{{ .Permalink }}">{{ title .LinkTitle }}</a></li>
           {{ end }}
         {{ end }}
       </ul>
