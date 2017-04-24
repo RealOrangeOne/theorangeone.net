@@ -1,0 +1,12 @@
+machine:
+  node:
+    version: 6.9.4
+
+dependencies:
+  post:
+    - wget https://github.com/spf13/hugo/releases/download/v0.20.3/hugo_v0.20.3_Linux-32bit.deb -O /tmp/hugo.deb
+    - dpkg -i /tmp/hugo.deb
+
+test:
+  override:
+    - hugo -vDEF
