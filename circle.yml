@@ -1,6 +1,8 @@
 dependencies:
   pre:
-    - sudo apt-get update; sudo apt-get install hugo
+    - sudo apt-get update; sudo apt-get install go
+    - go get github.com/kardianos/govendor
+    - govendor get github.com/spf13/hugo
 
 test:
   override:
