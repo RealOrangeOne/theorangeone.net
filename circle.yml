@@ -4,7 +4,7 @@ machine:
 
 dependencies:
   post:
-    - wget https://github.com/spf13/hugo/releases/download/v0.20.3/hugo_v0.20.3_Linux-32bit.deb -O /tmp/hugo.deb
+    - wget https://github.com/spf13/hugo/releases/download/v0.20.3/hugo_v0.20.3_Linux-64bit.deb -O /tmp/hugo.deb
     - sudo dpkg -i /tmp/hugo.deb
 
 test:
