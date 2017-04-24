@@ -4,8 +4,7 @@ machine:
 
 dependencies:
   post:
-    - wget https://github.com/spf13/hugo/releases/download/v0.20.4/hugo_0.20.4_Linux-64bit.deb -O /tmp/hugo.deb
-    - sudo dpkg -i /tmp/hugo.deb
+    - wget https://github.com/spf13/hugo/releases/download/v0.20.4/hugo_0.20.4_Linux-64bit.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
 
 test:
   override:
