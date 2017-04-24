@@ -43,7 +43,7 @@
     <div class="box special">
       <h2>Projects</h2>
   		<div class="row">
-      {{ range first 6 (where .Data.Pages.ByDate "Kind" "projects") }}
+      {{ range first 6 (where .Data.Pages.ByDate "Section" "projects") }}
         {{ if ne .Section "" }}
           {{ partial "box.html" . }}
         {{ end }}
