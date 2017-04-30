@@ -1,9 +1,7 @@
 {
   "name": "theorangeone.net",
   "version": "1.0.0",
-  "scripts": {
-    "build": "node scripts/build.js"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git@github:RealOrangeOne/theorangeone.net"
@@ -11,6 +9,7 @@
   "author": "Jake Howard <git@theorangeone.net>",
   "devDependencies": {
     "browserify": "14.3.0",
+    "eslint-config-dabapps": "github:dabapps/eslint-config-dabapps#v3.0.0",
     "node-sass": "4.5.2"
   },
   "dependencies": {

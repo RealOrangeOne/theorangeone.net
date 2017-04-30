@@ -28,4 +28,8 @@ node_modules:
 	npm install
 
 
-.PHONY: build clean install
+test:
+	$(NODE_BIN)/eslint $(STATIC_SRC)/js --ignore-pattern *.min.js
+
+
+.PHONY: build clean install test
