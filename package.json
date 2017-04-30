@@ -10,7 +10,8 @@
   "devDependencies": {
     "browserify": "14.3.0",
     "eslint-config-dabapps": "github:dabapps/eslint-config-dabapps#v3.0.0",
-    "node-sass": "4.5.2"
+    "node-sass": "4.5.2",
+    "sass-lint": "1.10.2"
   },
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",

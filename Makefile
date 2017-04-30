@@ -29,6 +29,7 @@ node_modules:
 
 
 test:
+	$(NODE_BIN)/sass-lint -vqc .sass-lint.yml
 	$(NODE_BIN)/eslint $(STATIC_SRC)/js --ignore-pattern *.min.js
 
 
