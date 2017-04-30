@@ -8,4 +8,4 @@ dependencies:
 
 test:
   override:
-    - hugo -vDEF
+    - make build
