@@ -1,4 +1,21 @@
-baseURL: http://example.com
+baseURL: https://theorangeone.net
 languageCode: en-gb
-title: My New Hugo Site
+title: TheOrangeOne
+
 staticDir: "static/build"
+
+buildDrafts: false
+buildFuture: true
+buildExpired: true
+
+enableGitInfo: true
+enableRobotsTXT: true
+
+disableHugoGeneratorInject: true
+enableEmoji: true
+
+pygmentsCodeFencesGuessSyntax: true
+rssLimit: 100
+
+blackfriday:
+  hrefTargetBlank: true
