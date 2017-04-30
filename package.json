@@ -1,7 +1,9 @@
 {
   "name": "theorangeone.net",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
   "repository": {
     "type": "git",
     "url": "git@github:RealOrangeOne/theorangeone.net"
@@ -9,11 +11,8 @@
   "author": "Jake Howard <git@theorangeone.net>",
   "devDependencies": {
     "browserify": "14.3.0",
-    "livereload": "0.6.2",
     "ncp": "2.0.0",
-    "node-sass": "4.5.2",
-    "node-watch": "0.5.2",
-    "uglifyify": "3.0.4"
+    "node-sass": "4.5.2"
   },
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
