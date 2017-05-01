@@ -4,9 +4,9 @@ $fa-font-path: "../fonts";
 @import "node_modules/bootstrap/scss/bootstrap-grid";
 
 // Import Alpha theme (ish)
-@import 'alpha';
+@import "alpha";
 
 
 .box .box {
-  border-radius: 0px;
+  border-radius: 0;
 }
