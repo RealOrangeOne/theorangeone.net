@@ -1,7 +1,9 @@
 {
   "name": "theorangeone.net",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "start": "tstatic public/"
+  },
   "repository": {
     "type": "git",
     "url": "git@github:RealOrangeOne/theorangeone.net"
@@ -16,6 +18,7 @@
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
     "font-awesome": "4.7.0",
-    "jquery": "3.2.1"
+    "jquery": "3.2.1",
+    "tstatic": "1.0.0"
   }
 }
