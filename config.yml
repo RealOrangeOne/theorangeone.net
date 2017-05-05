@@ -8,7 +8,7 @@ buildDrafts: false
 buildFuture: true
 buildExpired: true
 
-enableGitInfo: true
+enableGitInfo: false
 enableRobotsTXT: true
 
 disableHugoGeneratorInject: true
