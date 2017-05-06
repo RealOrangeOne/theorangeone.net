@@ -10,7 +10,9 @@
                 {{ range first 4 .Pages.ByDate }}
                   <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
                 {{ end }}
-                <li><a href="{{ .Permalink }}"><i>See more</i></a></li>
+                {{ if ge (len .Pages) 4 }}
+                  <li><a href="{{ .Permalink }}"><i>See more</i></a></li>
+                {{ end }}
               </ul>
             {{ end }}
           </li>
