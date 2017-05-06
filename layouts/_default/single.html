@@ -8,7 +8,9 @@
       {{ end }}
 		</header>
 		<div class="box">
-			<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+      {{ if .Params.image }}
+  			<span class="image featured"><img src="{{ .Params.image }}" alt="{{ .Title }} image" /></span>
+      {{ end }}
       {{ .Content }}
 		</div>
 	</section>
