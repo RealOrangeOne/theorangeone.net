@@ -51,11 +51,11 @@ em, i {
 }
 
 p {
-  margin: 0 0 2em 0;
+  margin: 0 0 2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 0.5em 0;
+  margin: 0 0 0.5em;
   line-height: 1em;
   color: #646464;
   font-weight: 300;
@@ -126,7 +126,7 @@ blockquote {
 }
 
 pre {
-  margin: 0 0 2em 0;
+  margin: 0 0 2em;
   border: solid 1px #E5E5E5;
   border-radius: 6px;
   background: #F8F8F8;
@@ -166,7 +166,7 @@ section.special, article.special {
 
 header p {
   position: relative;
-  margin: 0 0 1.5em 0;
+  margin: 0 0 1.5em;
   color: #999;
   font-style: italic;
 }
@@ -211,7 +211,7 @@ header.major {
 
 /* Form */
 form {
-  margin: 0 0 2em 0;
+  margin: 0 0 2em;
 }
 
 label {
@@ -253,7 +253,7 @@ textarea {
   position: relative;
   text-decoration: none;
 
-  &:before {
+  &::before {
     display: block;
     position: absolute;
     top: 0;
@@ -304,7 +304,7 @@ input[type="radio"] {
     font-size: 1em;
     font-weight: 300;
 
-    &:before {
+    &::before {
       display: inline-block;
       position: absolute;
       top: 0;
@@ -324,29 +324,25 @@ input[type="radio"] {
     }
   }
 
-  &:checked + label:before {
+  &:checked + label::before {
     border-color: #666;
+    box-shadow: 0 0 0 1px #E89980;
     background: #666;
     color: #FFF;
     content: "\f00c";
   }
-
-  &:checked + label:before {
-    border-color: #E89980;
-    box-shadow: 0 0 0 1px #E89980;
-  }
 }
 
-input[type="checkbox"] + label:before {
+input[type="checkbox"] + label::before {
   border-radius: 6px;
 }
 
-input[type="radio"] + label:before {
+input[type="radio"] + label::before {
   border-radius: 100%;
 }
 
 .formerize-placeholder {
-  opacity: 1.0;
+  opacity: 1;
   color: #999 !important;
 }
 
@@ -376,7 +372,7 @@ input[type="radio"] + label:before {
   border-top: solid 2px #E5E5E5;
 }
 
-.box.features .features-row:after {
+.box.features .features-row::after {
   display: block;
   clear: both;
   content: "";
@@ -396,7 +392,7 @@ input[type="radio"] + label:before {
   padding-right: 0;
 }
 
-.box.features .features-row section:nth-child(2n):before {
+.box.features .features-row section:nth-child(2n)::before {
   display: block;
   position: absolute;
   top: 0;
@@ -468,7 +464,7 @@ input[type="radio"] + label:before {
 /* Icon */
 .icon {
   position: relative;
-  border-bottom: none;
+  border-bottom: 0;
   text-decoration: none;
 }
 
@@ -485,7 +481,7 @@ input[type="radio"] + label:before {
 
 .icon.major {
   display: inline-block;
-  margin: 0 0 2em 0;
+  margin: 0 0 2em;
   border-radius: 100%;
   background: #666;
   cursor: default;
@@ -495,7 +491,7 @@ input[type="radio"] + label:before {
   color: #FFF;
 }
 
-.icon.major:before {
+.icon.major::before {
   font-size: 2.5em;
 }
 
@@ -573,7 +569,7 @@ ol li {
 }
 
 ul {
-  margin: 0 0 2em 0;
+  margin: 0 0 2em;
   padding-left: 1em;
   list-style: disc;
 }
@@ -616,7 +612,7 @@ ul.icons li .icon {
   color: inherit;
 }
 
-ul.icons li .icon:before {
+ul.icons li .icon::before {
   font-size: 1.75em;
 }
 
@@ -654,7 +650,7 @@ ul.actions.vertical li > * {
 }
 
 ul.actions.vertical.small li {
-  padding: 0.5em 0 0 0;
+  padding: 0.5em 0 0;
 }
 
 ul.actions.vertical.small li:first-child {
@@ -712,11 +708,11 @@ table tbody tr:nth-child(2n + 1) {
 }
 
 table td {
-  padding: 0.75em 0.75em;
+  padding: 0.75em;
 }
 
 table th {
-  padding: 0 0.75em 0.75em 0.75em;
+  padding: 0 0.75em 0.75em;
   text-align: left;
   color: #646464;
   font-size: 0.9em;
@@ -800,10 +796,10 @@ input[type="button"].icon,
   padding-left: 1.35em;
 }
 
-input[type="submit"].icon:before,
-input[type="reset"].icon:before,
-input[type="button"].icon:before,
-.button.icon:before {
+input[type="submit"].icon::before,
+input[type="reset"].icon::before,
+input[type="button"].icon::before,
+.button.icon::before {
   margin-right: 0.5em;
 }
 
@@ -812,7 +808,7 @@ input[type="reset"].fit,
 input[type="button"].fit,
 .button.fit {
   display: block;
-  margin: 0 0 1em 0;
+  margin: 0 0 1em;
   width: 100%;
 }
 
@@ -857,10 +853,10 @@ input[type="button"].alt:active,
   background-color: #F0F0F0;
 }
 
-input[type="submit"].alt.icon:before,
-input[type="reset"].alt.icon:before,
-input[type="button"].alt.icon:before,
-.button.alt.icon:before {
+input[type="submit"].alt.icon::before,
+input[type="reset"].alt.icon::before,
+input[type="button"].alt.icon::before,
+.button.alt.icon::before {
   color: #999;
 }
 
@@ -988,7 +984,7 @@ body.landing #page-wrapper {
   color: #FFF;
 }
 
-#header nav > ul > li a:not(.button).icon:before {
+#header nav > ul > li a:not(.button).icon::before {
   margin-right: 0.5em;
   color: #999;
 }
@@ -1052,7 +1048,7 @@ body.landing #page-wrapper {
   color: rgba(255, 255, 255, 0.75);
 }
 
-#header.alt nav > ul > li a:not(.button).icon:before {
+#header.alt nav > ul > li a:not(.button).icon::before {
   color: rgba(255, 255, 255, 0.75);
 }
 
@@ -1143,7 +1139,7 @@ body.landing #page-wrapper {
   background-repeat: repeat, no-repeat;
   background-position: top left, center center;
   background-size: auto, cover;
-  padding: 12em 0 20em 0;
+  padding: 12em 0 20em;
   text-align: center;
   color: #FFF;
 }
@@ -1157,7 +1153,7 @@ body.landing #page-wrapper {
 }
 
 #banner h2 {
-  margin: 0 0 0.5em 0;
+  margin: 0 0 0.5em;
   padding: 0;
   line-height: 1em;
   font-size: 3.5em;
@@ -1217,9 +1213,9 @@ body.landing #page-wrapper {
 
 #main > header p {
   display: inline-block;
-  margin: 1em 0 0 0;
+  margin: 1em 0 0;
   border-top: solid 2px #E5E5E5;
-  padding: 1em 0 1.25em 0;
+  padding: 1em 0 1.25em;
   color: #777;
   font-style: normal;
 }
@@ -1422,20 +1418,14 @@ body.landing #main {
 
   /* Header */
   #page-wrapper {
+    transition: transform 0.5s ease;
     padding-top: 0;
+    padding-bottom: 1px;
+    backface-visibility: hidden;
   }
 
   #header {
     display: none;
-  }
-
-  /* Banner */
-
-  /* Off-Canvas Navigation */
-  #page-wrapper {
-    transition: transform 0.5s ease;
-    padding-bottom: 1px;
-    backface-visibility: hidden;
   }
 
   #navButton {
@@ -1462,13 +1452,6 @@ body.landing #main {
   }
 
   #navButton .toggle::before {
-    text-transform: none !important;
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  #navButton .toggle::before {
     display: block;
     position: absolute;
     top: 0.5em;
@@ -1478,9 +1461,13 @@ body.landing #main {
     width: 3.5em;
     height: 2.25em;
     text-align: center;
+    text-transform: none !important;
     line-height: 2.25em;
     color: #FFF;
+    font-family: FontAwesome;
     font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
     content: "\f0c9";
   }
 
@@ -1504,7 +1491,7 @@ body.landing #main {
     display: block;
     border-top: solid 1px rgba(255, 255, 255, 0.05);
     border-bottom: 0;
-    padding: 0 1em 0 1em;
+    padding: 0 1em;
     height: 44px;
     text-decoration: none;
     line-height: 44px;
@@ -1592,7 +1579,7 @@ body.landing #main {
   /* Box */
   .box {
     margin: 1em;
-    padding: 2em 2em !important;
+    padding: 2em !important;
     overflow-x: hidden;
   }
 
@@ -1603,10 +1590,10 @@ body.landing #main {
 
   .box.features .features-row section {
     float: none;
-    margin: 2em 0 0 0 !important;
+    margin: 2em 0 0 !important;
     border: 0;
     border-top: solid 1px #E5E5E5 !important;
-    padding: 2em 0 0 0 !important;
+    padding: 2em 0 0 !important;
     width: 100%;
   }
 
@@ -1646,11 +1633,11 @@ body.landing #main {
 
   /* Main */
   #main {
-    padding: 4em 0 0 0;
+    padding: 4em 0 0;
   }
 
   #main > header {
-    margin: 0 2em 1.5em 2em;
+    margin: 0 2em 1.5em;
   }
 
   #main > header h2 {
