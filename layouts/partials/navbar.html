@@ -4,13 +4,13 @@
       <ul>
         {{ range where .Site.Pages.ByTitle "Kind" "section" }}
           <li>
-            <a href="{{ .Permalink }}">{{ title .LinkTitle }}</a>
+            <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
             {{ if .Pages }}
               <ul>
                 {{ range first 4 .Pages.ByDate }}
                   <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
                 {{ end }}
-                <li><a href="{{ .Permalink }}"><i>See more {{ lower .Title }}</i></a></li>
+                <li><a href="{{ .Permalink }}"><i>See more</i></a></li>
               </ul>
             {{ end }}
           </li>
