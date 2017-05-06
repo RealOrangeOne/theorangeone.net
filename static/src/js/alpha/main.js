@@ -1,61 +1,45 @@
+'use strict';
 /*
-	Alpha by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  Alpha by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-(function($) {
-	$(function() {
+$(function() {
+  var $body = $('body');
 
-		var	$window = $(window),
-			$body = $('body'),
-			$header = $('#header'),
-			$banner = $('#banner');
+  // Fix: Placeholder polyfill.
+  $('form').placeholder();
 
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
+  // Dropdowns.
+  $('#nav > ul').dropotron({
+    alignment: 'right'
+  });
 
-		// Dropdowns.
-			$('#nav > ul').dropotron({
-				alignment: 'right'
-			});
+  // Navigation Button.
+  $(
+    '<div id="navButton">' +
+    '<a href="#navPanel" class="toggle"></a>' +
+    '</div>'
+  ).appendTo($body);
 
-		// Off-Canvas Navigation.
-
-			// Navigation Button.
-				$(
-					'<div id="navButton">' +
-						'<a href="#navPanel" class="toggle"></a>' +
-					'</div>'
-				)
-					.appendTo($body);
-
-			// Navigation Panel.
-				$(
-					'<div id="navPanel">' +
-						'<nav>' +
-							$('#nav').navList() +
-						'</nav>' +
-					'</div>'
-				)
-					.appendTo($body)
-					.panel({
-						delay: 500,
-						hideOnClick: true,
-						hideOnSwipe: true,
-						resetScroll: true,
-						resetForms: true,
-						side: 'left',
-						target: $body,
-						visibleClass: 'navPanel-visible'
-					});
-
-			// Fix: Remove navPanel transitions on WP<10 (poor/buggy performance).
-
-		// Header.
-		// If the header is using "alt" styling and #banner is present, use scrollwatch
-		// to revert it back to normal styling once the user scrolls past the banner.
-		// Note: This is disabled on mobile devices.
-	});
-
-})(jQuery);
+  // Navigation Panel.
+  $(
+    '<div id="navPanel">' +
+    '<nav>' +
+    $('#nav').navList() +
+    '</nav>' +
+    '</div>'
+  )
+    .appendTo($body)
+    .panel({
+      delay: 500,
+      hideOnClick: true,
+      hideOnSwipe: true,
+      resetScroll: true,
+      resetForms: true,
+      side: 'left',
+      target: $body,
+      visibleClass: 'navPanel-visible'
+    });
+});
