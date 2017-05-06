@@ -1,0 +1,26 @@
+{{ partial "page_start.html" . }}
+<div id="page-wrapper">
+  <section id="main" class="container">
+  	<header>
+  		<h2>{{ title .Title }}</h2>
+      {{ if .Params.subtitle }}
+  			<p>{{ .Params.subtitle }}</p>
+      {{ end }}
+		</header>
+		<div class="box">
+			<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+      {{ .Content }}
+		</div>
+		<div class="box">
+      <ul class="actions fir">
+        {{ if .Params.download_url }}
+          <li><a class="button special fit" href="{{ .Params.download_url }}">Download {{ .Title }}</a></li>
+        {{ end }}
+        {{ if .Params.repo }}
+          <li><a class="button special fit" href="{{ .Params.repo }}"><i class="fa fa-github fa-lg"></i> View Source</a></li>
+        {{ end }}
+      </ul>
+		</div>
+	</section>
+</div>
+{{ partial "page_end.html" . }}
