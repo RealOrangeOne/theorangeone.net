@@ -8,9 +8,6 @@
 $(function() {
   var $body = $('body');
 
-  // Fix: Placeholder polyfill.
-  $('form').placeholder();
-
   // Dropdowns.
   $('#nav > ul').dropotron({
     alignment: 'right'
