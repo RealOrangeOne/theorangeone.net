@@ -2,6 +2,9 @@ baseURL: https://theorangeone.net
 languageCode: en-gb
 title: TheOrangeOne
 
+params:
+  author: TheOrangeOne
+
 staticDir: "static/build"
 
 buildDrafts: false
