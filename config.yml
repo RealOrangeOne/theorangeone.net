@@ -4,6 +4,7 @@ title: TheOrangeOne
 
 params:
   author: TheOrangeOne
+  summary_length: 100
 
 staticDir: "static/build"
 
