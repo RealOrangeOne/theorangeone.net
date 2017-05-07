@@ -44,9 +44,7 @@
       <h2>Projects</h2>
   		<div class="row">
       {{ range first 6 (where .Data.Pages.ByDate "Section" "projects") }}
-        {{ if ne .Section "" }}
-          {{ partial "box.html" . }}
-        {{ end }}
+        {{ partial "box.html" . }}
       {{ end }}
   		</div>
       <h4><a href="/projects/">All Projects</a></h4>
@@ -55,10 +53,8 @@
     <div class="box special">
       <h2>Recent Posts</h2>
   		<div class="row">
-      {{ range first 6 (where .Data.Pages.ByDate "Kind" "page") }}
-        {{ if ne .Section "" }}
-          {{ partial "box.html" . }}
-        {{ end }}
+      {{ range first 6 (where .Data.Pages.ByDate "Section" "!=" "") }}
+        {{ partial "box.html" . }}
       {{ end }}
   		</div>
     </div>
