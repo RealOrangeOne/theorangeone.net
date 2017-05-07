@@ -18,12 +18,14 @@ buildExpired: true
 
 enableGitInfo: false
 enableRobotsTXT: true
+rssLimit: 100
 
 disableHugoGeneratorInject: true
 enableEmoji: true
 
 pygmentsCodeFencesGuessSyntax: true
-rssLimit: 100
+PygmentsCodeFences: true
+pygmentsuseclasses: false
 
 blackfriday:
   hrefTargetBlank: true
