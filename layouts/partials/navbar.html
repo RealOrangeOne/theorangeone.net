@@ -7,10 +7,10 @@
             <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
             {{ if .Pages }}
               <ul>
-                {{ range first 4 .Pages.ByDate }}
+                {{ range first .Site.Params.nav_items .Pages.ByDate }}
                   <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
                 {{ end }}
-                {{ if ge (len .Pages) 4 }}
+                {{ if ge (len .Pages) .Site.Params.nav_items }}
                   <li><a href="{{ .Permalink }}"><i>See more</i></a></li>
                 {{ end }}
               </ul>

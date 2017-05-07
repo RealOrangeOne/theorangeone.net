@@ -6,6 +6,8 @@ params:
   author: TheOrangeOne
   author_name: Jake Howard
   summary_length: 100
+  nav_items: 5
+  index_items: 6
 
 staticDir: "static/build"
 

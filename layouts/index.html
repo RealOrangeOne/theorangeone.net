@@ -43,7 +43,7 @@
     <div class="box special">
       <h2>Projects</h2>
   		<div class="row">
-      {{ range first 6 (where .Data.Pages.ByDate "Section" "projects") }}
+      {{ range first .Site.Params.index_items (where .Data.Pages.ByDate "Section" "projects") }}
         {{ partial "box.html" . }}
       {{ end }}
   		</div>
@@ -53,7 +53,7 @@
     <div class="box special">
       <h2>Recent Posts</h2>
   		<div class="row">
-      {{ range first 6 (where .Data.Pages.ByDate "Section" "!=" "") }}
+      {{ range first .Site.Params.index_items (where .Data.Pages.ByDate "Section" "!=" "") }}
         {{ partial "box.html" . }}
       {{ end }}
   		</div>
