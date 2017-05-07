@@ -1,6 +1,6 @@
 ---
 title: Desktop
-image: /static/img/header.jpg
+image: /img/header.jpg
 ---
 
 
