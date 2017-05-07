@@ -4,6 +4,7 @@ title: TheOrangeOne
 
 params:
   author: TheOrangeOne
+  author_name: Jake Howard
   summary_length: 100
 
 staticDir: "static/build"
