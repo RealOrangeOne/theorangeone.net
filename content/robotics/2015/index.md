@@ -1,5 +1,6 @@
 ---
 title: Student Robotics 2015
+linktitle: 2015
 slug: /
 ---
 
