@@ -7,8 +7,12 @@ $fa-font-path: "../fonts";
 @import "alpha";
 
 
-.box .box {
-  border-radius: 0;
+.box {
+  padding: 2em;
+
+  .box {
+    border-radius: 0;
+  }
 }
 
 .dropotron {
