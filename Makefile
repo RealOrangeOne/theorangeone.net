@@ -16,6 +16,9 @@ build: install
 	cp -r $(STATIC_SRC)/img $(STATIC_BUILD)/img
 	@hugo -vDEF --ignoreCache
 
+server: build
+	hugo server
+
 
 clean:
 	rm -rf $(STATIC_BUILD)
