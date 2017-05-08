@@ -25,7 +25,7 @@ enableEmoji: true
 
 pygmentsCodeFencesGuessSyntax: true
 PygmentsCodeFences: true
-pygmentsuseclasses: false
+pygmentsuseclasses: true
 
 blackfriday:
   hrefTargetBlank: true
