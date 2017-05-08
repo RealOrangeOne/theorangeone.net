@@ -10,7 +10,7 @@
   		</div>
     {{ end }}
     <div class="row">
-      {{ range .Pages.ByTitle }}
+      {{ range where .Pages.ByTitle "Params.show_in_nav" "!=" "false" }}
         {{ partial "box.html" . }}
       {{ end }}
     </div>
