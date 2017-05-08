@@ -6,7 +6,7 @@ subtitle: Fixing "`libGL error failed to load driver i965`"
 Running steam on linux is great, besides for the game support obviously. But running it on an iGPU has recently been causing me problems, mainly under Arch.
 
 ## Stacktrace:
-```
+```bash
 jake@***:~$ steam
 ~/.local/share/Steam/steam.sh: line 154: VERSION_ID: unbound variable
 ~/.local/share/Steam/steam.sh: line 154: VERSION_ID: unbound variable
@@ -33,7 +33,7 @@ LD_PRELOAD='/usr/$LIB/libstdc++.so.6 /usr/$LIB/libgcc_s.so.1 /usr/$LIB/libxcb.so
 
 I have no idea why it works, but it works perfectly for me! Steam client runs with no problems.
 
-```
+```bash
 jake@***:~$ LD_PRELOAD='/usr/$LIB/libstdc++.so.6 /usr/$LIB/libgcc_s.so.1 /usr/$LIB/libxcb.so.1 /usr/$LIB/libgpg-error.so' /usr/bin/steam %U
 ~/.local/share/Steam/steam.sh: line 154: VERSION_ID: unbound variable
 ~/.local/share/Steam/steam.sh: line 154: VERSION_ID: unbound variable
