@@ -1,0 +1,14 @@
+<div class="col-sm-6">
+  <section class="box special image">
+    {{ if .Params.image }}
+      <span class="image featured"><img src="{{ .Params.image }}" alt="{{ .Title }} featured image" /></span>
+    {{ end }}
+    <a href="{{ .Permalink }}">
+      <h3>{{ title .LinkTitle }}</h3>
+    </a>
+    <p>{{ .Summary | truncate .Site.Params.summary_length "..." }}</p>
+    <ul class="actions">
+      <li><a href="{{ .Permalink }}" class="button alt">Read More</a></li>
+    </ul>
+  </section>
+</div>

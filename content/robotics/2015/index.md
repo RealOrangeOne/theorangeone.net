@@ -2,6 +2,7 @@
 title: Student Robotics 2015
 linktitle: 2015
 slug: /
+image: https://c2.staticflickr.com/8/7726/17309695331_584e7de16c_b.jpg
 ---
 
 Welcome to the homepage of Collyer's Student Robotics Team 2015 (The 'A' Team) - Creators of 'A.L.I.C.E'! Here you can see everything that goes on throughout the competition.

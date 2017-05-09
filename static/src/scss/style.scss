@@ -9,7 +9,9 @@ $fa-font-path: "../fonts";
 
 
 .box {
-  padding: 2em;
+  &:not(.image) {
+    padding: 2em;
+  }
 
   .box {
     border-radius: 0;

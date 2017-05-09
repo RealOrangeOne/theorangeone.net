@@ -10,8 +10,13 @@
   		</div>
     {{ end }}
     <div class="row">
+      {{ $parent := . }}
       {{ range where .Pages.ByTitle "Params.show_in_nav" "!=" "false" }}
-        {{ partial "box.html" . }}
+        {{ if $parent.Params.show_images }}
+          {{ partial "box_image.html" . }}
+        {{ else }}
+          {{ partial "box.html" . }}
+        {{ end }}
       {{ end }}
     </div>
 	</section>
