@@ -3,7 +3,7 @@
     <a href="{{ .Permalink }}">
       <h3>{{ title .LinkTitle }}</h3>
     </a>
-    <p>{{ .Summary | truncate .Site.Params.summary_length "..." }}</p>
+    <p>{{ .Params.summary | default .Summary | truncate .Site.Params.summary_length "..." }}</p>
     <ul class="actions">
       <li><a href="{{ .Permalink }}" class="button alt">Read More</a></li>
     </ul>

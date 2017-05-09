@@ -37,7 +37,12 @@ pre code {
   background-position: center;
   background-size: cover;
 
-  &.featured.main {
-    height: 40vh;
+  &.featured {
+    margin-bottom: 2em !important;
+    height: 13em;
+
+    &.main {
+      height: 40vh;
+    }
   }
 }

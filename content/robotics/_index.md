@@ -3,6 +3,7 @@ title: Student Robotics
 linktitle: Robotics
 image: https://farm4.staticflickr.com/3849/33683313131_6ba584094a_k_d.jpg
 hide_pages: false
+show_images: true
 ---
 
 Student Robotics is the the place where my development knowledge really started to grow. Thanks to the other people in my team teaching me. I had never done anything robotics related, and so when my computing teacher initially told us about it, I wasn't really interested. After I found out that my friend was also doing it, I signed up, and went along to the kickstart. From then on I was hooked, getting involved with all aspects of the development and design, as well as helping out other teams on the IRC room.
