@@ -8,14 +8,8 @@ $fa-font-path: "../fonts";
 @import "alpha";
 
 
-.box {
-  &:not(.image) {
-    padding: 2em;
-  }
-
-  .box {
-    border-radius: 0;
-  }
+.box .box {
+  border-radius: 0;
 }
 
 .dropotron {
@@ -36,4 +30,8 @@ pre code {
   border-radius: 0;
   background: none;
   padding: 0;
+}
+
+.image.featured {
+  max-height: 45vh;
 }

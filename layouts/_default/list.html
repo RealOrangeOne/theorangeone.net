@@ -6,6 +6,9 @@
 		</header>
     {{ if .Content }}
   		<div class="box">
+        {{ if .Params.image }}
+    			<span class="image featured"><img src="{{ .Params.image }}" alt="{{ .Title }} image" /></span>
+        {{ end }}
         {{ .Content }}
   		</div>
     {{ end }}
