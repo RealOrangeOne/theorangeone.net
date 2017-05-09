@@ -32,6 +32,12 @@ pre code {
   padding: 0;
 }
 
-.image.featured {
-  max-height: 45vh;
+.image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &.featured.main {
+    height: 40vh;
+  }
 }

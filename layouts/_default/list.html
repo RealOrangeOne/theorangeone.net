@@ -7,21 +7,23 @@
     {{ if .Content }}
   		<div class="box">
         {{ if .Params.image }}
-    			<span class="image featured"><img src="{{ .Params.image }}" alt="{{ .Title }} image" /></span>
+    			<span class="image featured main" data-image="{{ .Params.image }}"></span>
         {{ end }}
         {{ .Content }}
   		</div>
     {{ end }}
-    <div class="row">
-      {{ $parent := . }}
-      {{ range where .Pages.ByTitle "Params.show_in_nav" "!=" "false" }}
-        {{ if $parent.Params.show_images }}
-          {{ partial "box_image.html" . }}
-        {{ else }}
-          {{ partial "box.html" . }}
+    {{ if ne .Params.hide_pages "true" }}
+      <div class="row">
+        {{ $parent := . }}
+        {{ range where .Pages.ByTitle "Params.show_in_nav" "!=" "false" }}
+          {{ if $parent.Params.show_images }}
+            {{ partial "box_image.html" . }}
+          {{ else }}
+            {{ partial "box.html" . }}
+          {{ end }}
         {{ end }}
-      {{ end }}
-    </div>
+      </div>
+    {{ end }}
 	</section>
 </div>
 {{ partial "page_end.html" . }}

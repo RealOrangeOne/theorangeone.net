@@ -9,7 +9,7 @@
 		</header>
 		<div class="box">
       {{ if .Params.image }}
-  			<span class="image featured"><img src="{{ .Params.image }}" alt="{{ .Title }} image" /></span>
+        <span class="image featured main" data-image="{{ .Params.image }}"></span>
       {{ end }}
       {{ .Content }}
 		</div>
