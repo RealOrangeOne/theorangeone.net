@@ -16,21 +16,33 @@
 		<section class="box special features">
 			<div class="features-row">
 				<section>
-					<span class="icon major fa-bolt accent2"></span>
-					<h3>Magna etiam</h3>
-					<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+					<span class="icon major fa-sticky-note-o accent2"></span>
+					<h3>Blog</h3>
+					<p>
+            {{ with .Site.GetPage "section" "posts" }}
+              {{ .Params.summary | default .Summary | truncate .Site.Params.summary_length_long "..." }}
+            {{ end }}
+          </p>
 				</section>
 				<section>
-					<span class="icon major fa-area-chart accent3"></span>
-					<h3>Ipsum dolor</h3>
-					<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+					<span class="icon major fa-code accent3"></span>
+					<h3>Projects</h3>
+					<p>
+            {{ with .Site.GetPage "section" "projects" }}
+              {{ .Params.summary | default .Summary | truncate .Site.Params.summary_length_long "..." }}
+            {{ end }}
+          </p>
 				</section>
 			</div>
 			<div class="features-row">
   			<section>
-  				<span class="icon major fa-cloud accent4"></span>
-					<h3>Sed feugiat</h3>
-					<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+  				<span class="icon major fa-desktop accent4"></span>
+					<h3>Setup</h3>
+					<p>
+            {{ with .Site.GetPage "section" "setup" }}
+              {{ .Params.summary | default .Summary | truncate .Site.Params.summary_length_long "..." }}
+            {{ end }}
+          </p>
 				</section>
   			<section>
   				<span class="icon major fa-lock accent5"></span>
