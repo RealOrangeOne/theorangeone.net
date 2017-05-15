@@ -16,33 +16,39 @@
 		<section class="box special features">
 			<div class="features-row">
 				<section>
-					<span class="icon major fa-sticky-note-o accent2"></span>
-					<h3>Blog</h3>
-					<p>
-            {{ with .Site.GetPage "section" "posts" }}
-              {{ .Params.summary | default .Summary | truncate .Site.Params.summary_length_long "..." }}
-            {{ end }}
-          </p>
+          {{ with .Site.GetPage "section" "posts" }}
+            <a href="{{ .Permalink }}" class="no-underline">
+              <span class="icon major fa-sticky-note-o accent2"></span>
+              <h3>Blog</h3>
+            </a>
+  					<p>
+                {{ .Params.summary | default .Summary | truncate .Site.Params.summary_length_long "..." }}
+            </p>
+          {{ end }}
 				</section>
 				<section>
-					<span class="icon major fa-code accent3"></span>
-					<h3>Projects</h3>
-					<p>
-            {{ with .Site.GetPage "section" "projects" }}
+          {{ with .Site.GetPage "section" "projects" }}
+            <a href="{{ .Permalink }}" class="no-underline">
+    					<span class="icon major fa-code accent3"></span>
+    					<h3>Projects</h3>
+            </a>
+  					<p>
               {{ .Params.summary | default .Summary | truncate .Site.Params.summary_length_long "..." }}
-            {{ end }}
-          </p>
+            </p>
+          {{ end }}
 				</section>
 			</div>
 			<div class="features-row">
   			<section>
-  				<span class="icon major fa-desktop accent4"></span>
-					<h3>Setup</h3>
-					<p>
-            {{ with .Site.GetPage "section" "setup" }}
-              {{ .Params.summary | default .Summary | truncate .Site.Params.summary_length_long "..." }}
-            {{ end }}
-          </p>
+          {{ with .Site.GetPage "section" "setup" }}
+            <a href="{{ .Permalink }}" class="no-underline">
+              <span class="icon major fa-desktop accent4"></span>
+              <h3>Setup</h3>
+            </a>
+  					<p>
+                {{ .Params.summary | default .Summary | truncate .Site.Params.summary_length_long "..." }}
+            </p>
+          {{ end }}
 				</section>
   			<section>
   				<span class="icon major fa-lock accent5"></span>

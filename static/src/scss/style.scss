@@ -43,3 +43,11 @@ pre code {
     }
   }
 }
+
+a.no-underline {
+  border-bottom: 0;
+}
+
+a .icon {
+  cursor: inherit !important;
+}
