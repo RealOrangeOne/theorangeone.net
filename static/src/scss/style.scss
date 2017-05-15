@@ -4,6 +4,8 @@ $fa-font-path: "../fonts";
 @import "node_modules/bootstrap/scss/bootstrap-grid";
 @import "node_modules/pygments-css/github";
 
+@import "alpha.min";
+
 .box .box {
   border-radius: 0;
 }

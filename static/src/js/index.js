@@ -4,8 +4,8 @@ require('./jquery-global');
 require('bootstrap');
 
 // Install alpha things
-require('./alpha/jquery.dropotron.min');
-require('./alpha/util');
+require('club-alpha/assets/js/jquery.dropotron.min');
+require('club-alpha/assets/js/util');
 require('./alpha/main');
 
 
