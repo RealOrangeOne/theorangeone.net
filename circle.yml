@@ -7,9 +7,8 @@ machine:
 dependencies:
   pre:
     - wget https://github.com/spf13/hugo/releases/download/v0.20.6/hugo_0.20.6_Linux-64bit.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
-  post:
-    - make build
 
 test:
   override:
+    - make build
     - make test
