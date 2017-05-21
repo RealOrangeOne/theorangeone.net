@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 
 class TestClient:
-    output_path = os.path.realpath('./output')
+    output_path = os.path.realpath('./public')
 
     def get(self, path, JS=True):
         file_path = self.build_path(path)
@@ -37,7 +37,7 @@ class TestCase(unittest.TestCase):
         self.assertIn(title, content.title.string)
 
     def assertHeaderTitle(self, content, title):
-        header_title = content.find('div', class_="header-content").find('h1')
+        header_title = content.find('header').find('h2')
         self.assertIn(title, self.get_children(header_title))
 
     def assertSamePath(self, p1, p2):
