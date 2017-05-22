@@ -1,5 +1,6 @@
 BASEDIR=$(PWD)
 NODE_BIN=node_modules/.bin
+ENV=env/bin
 
 STATIC_SRC=$(BASEDIR)/static/src
 STATIC_BUILD=$(BASEDIR)/static/build
@@ -39,6 +40,8 @@ test:
 	$(NODE_BIN)/yamllint data/*.yml
 	$(NODE_BIN)/yamllint config.yml
 	$(NODE_BIN)/mdspell --en-gb -ranx 'content/**/*.*'
+	$(ENV)/nose2
+
 
 
 .PHONY: build clean install test
