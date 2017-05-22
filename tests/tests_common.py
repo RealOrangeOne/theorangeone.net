@@ -27,6 +27,7 @@ class CommonPagesTestCase(TestCase):
                 self.assertEqual(len(tab.find_all('ul')), 0)
                 self.assertTrue(self.client.exists(tab.find('a').attrs['href']))
             else:
+                self.assertLessEqual(len(tab.find_all('a')), self.settings['params']['nav_items'] + 2)
                 for link in tab.find_all('a'):
                     self.assertTrue(self.client.exists(link.attrs['href']))
                     self.assertNotEqual(self.get_children(link), '')

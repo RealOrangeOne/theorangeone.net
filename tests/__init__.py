@@ -1,6 +1,9 @@
 import unittest
 import os.path
 from bs4 import BeautifulSoup
+import yaml
+
+SETTINGS = yaml.safe_load(open(os.path.realpath('./config.yml')))
 
 
 class TestClient:
@@ -17,8 +20,8 @@ class TestClient:
         return content
 
     def build_path(self, path):
-        if path.startswith('https://theorangeone.net'):
-            path = path.replace('https://theorangeone.net', '')
+        if path.startswith(SETTINGS['baseURL']):
+            path = path.replace(SETTINGS['baseURL'], '')
         if path.startswith('/'):
             path = path[1:]
         if path.endswith('/'):
@@ -31,6 +34,7 @@ class TestClient:
 
 class TestCase(unittest.TestCase):
     client = TestClient()
+    settings = SETTINGS
 
     def get_children(self, content):
         return str(list(content.children)[0]).strip()
