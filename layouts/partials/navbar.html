@@ -3,7 +3,7 @@
     <nav id="nav">
       <ul>
         {{ range where .Site.Pages.ByTitle "Kind" "section" }}
-          <li>
+          <li class="top-level">
             <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
             {{ if .Pages }}
               <ul>
@@ -20,7 +20,7 @@
 
         {{ range where .Site.Pages.ByTitle "Kind" "page" }}
           {{ if eq .Section "" }}
-            <li><a href="{{ .Permalink }}">{{ title .LinkTitle }}</a></li>
+            <li class="top-level"><a href="{{ .Permalink }}">{{ title .LinkTitle }}</a></li>
           {{ end }}
         {{ end }}
       </ul>

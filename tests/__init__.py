@@ -17,6 +17,8 @@ class TestClient:
         return content
 
     def build_path(self, path):
+        if path.startswith('https://theorangeone.net'):
+            path = path.replace('https://theorangeone.net', '')
         if path.startswith('/'):
             path = path[1:]
         if path.endswith('/'):
