@@ -46,7 +46,7 @@
               <h3>Setup</h3>
             </a>
   					<p>
-                {{ .Params.summary | default .Summary | truncate .Site.Params.summary_length_long "..." }}
+							{{ .Params.summary | default .Summary | truncate .Site.Params.summary_length_long "..." }}
             </p>
           {{ end }}
 				</section>
@@ -58,7 +58,7 @@
 			</div>
 		</section>
 
-    <div class="box special">
+    <div class="box special" id="projects">
       <h2>Projects</h2>
   		<div class="row">
       {{ range first .Site.Params.index_items (where .Data.Pages.ByDate "Section" "projects") }}
@@ -68,7 +68,7 @@
       <h4><a href="/projects/">All Projects</a></h4>
     </div>
 
-    <div class="box special">
+    <div class="box special" id="recent-posts">
       <h2>Recent Posts</h2>
   		<div class="row">
       {{ range first .Site.Params.index_items (where .Data.Pages.ByDate "Section" "!=" "") }}
