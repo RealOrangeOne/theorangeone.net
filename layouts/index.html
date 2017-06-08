@@ -71,10 +71,11 @@
     <div class="box special" id="recent-posts">
       <h2>Recent Posts</h2>
   		<div class="row">
-      {{ range first .Site.Params.index_items (where .Data.Pages.ByDate "Section" "!=" "") }}
+      {{ range first .Site.Params.index_items (where .Data.Pages.ByDate "Section" "posts") }}
         {{ partial "box.html" . }}
       {{ end }}
   		</div>
+      <h4><a href="/posts/">All Posts</a></h4>
     </div>
 	</section>
 {{ partial "page_end.html" . }}
