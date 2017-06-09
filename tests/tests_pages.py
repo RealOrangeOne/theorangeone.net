@@ -12,6 +12,6 @@ class IndexPageTestCase(TestCase):
                 self.assertIsNotNone(row.find('section', class_='box'))
                 self.assertTrue(self.client.exists(row.find('a').attrs['href']))
                 self.assertNotEqual(self.get_children(row.find('p')), '')
-                self.assertLessEqual(len(self.get_children(row.find('p'))), self.settings['params']['summary_length'])
+                self.assertLessEqual(len(self.get_children(row.find('p'))), self.settings['params']['summary_length'] + 3)
                 self.assertNotEqual(self.get_children(row.find('h3')), '')
 
