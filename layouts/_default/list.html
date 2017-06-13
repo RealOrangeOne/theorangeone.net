@@ -10,12 +10,13 @@
     			<span class="image featured main" data-image="{{ .Params.image }}"></span>
         {{ end }}
         {{ .Content }}
-  		</div>
+      </div>
     {{ end }}
     {{ if ne .Params.hide_pages "true" }}
       <div class="row">
         {{ $parent := . }}
-        {{ range where .Pages.ByTitle "Params.show_in_nav" "!=" "false" }}
+        {{ $valid_pages :=  where .Site.Pages.ByTitle ".Parent" "!=" nil }}
+        {{ range where $valid_pages ".Parent.UniqueID" $parent.UniqueID }}
           {{ if $parent.Params.show_images }}
             {{ partial "box_image.html" . }}
           {{ else }}
