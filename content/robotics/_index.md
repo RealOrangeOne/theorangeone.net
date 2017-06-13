@@ -2,7 +2,6 @@
 title: Student Robotics
 linktitle: Robotics
 image: https://farm4.staticflickr.com/3849/33683313131_6ba584094a_k_d.jpg
-hide_pages: false
 show_images: true
 ---
 
