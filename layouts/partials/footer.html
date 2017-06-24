@@ -9,7 +9,13 @@
   </ul>
   <ul class="copyright">
     <li>&copy; {{ title .Site.Params.author }} {{ now.Year }} - All rights reserved.</li>
-    <li><a href="{{ .Site.Data.social.accounts.github.link }}theorangeone.net">View Source</a></li>
+    {{ if .OutputFormats.Get "txt" }}
+      {{ with  .OutputFormats.Get "txt" }}
+        <li><a href="{{ .Permalink }}">View Raw</a></li>
+      {{ end }}
+    {{ else }}
+      <li><a href="{{ .Site.Data.social.accounts.github.link }}theorangeone.net">View Source</a></li>
+    {{ end }}
     <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
   </ul>
 </footer>

@@ -10,26 +10,22 @@ params:
   nav_items: 5
   index_items: 6
 
-mediaTypes:
-  text/markdown:
-    suffix: md
 outputFormats:
   markdown:
-    name: "md"
-    mediaType: "text/markdown"
+    name: "txt"
+    mediaType: "text/plain"
     isPlainText: true
 outputs:
   home:
     - "html"
     - "rss"
-    - "md"
   section:
     - "html"
     - "rss"
-    - "md"
+    - "txt"
   page:
     - "html"
-    - "md"
+    - "txt"
 
 staticDir: "static/build"
 
