@@ -47,6 +47,3 @@ disableKinds:
 pygmentsCodeFencesGuessSyntax: true
 PygmentsCodeFences: true
 pygmentsuseclasses: true
-
-blackfriday:
-  hrefTargetBlank: true

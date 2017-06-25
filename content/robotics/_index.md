@@ -13,7 +13,7 @@ Student Robotics is the the place where my development knowledge really started 
 More information can be found on [their website](https://studentrobotics.org).
 
 ## My Entries
-Being at college for 2 years, meant I was able to enter 2 years of competitions, [SR14](2014), and [SR15](2015). We were encouraged to gain an online presence for our team, so I created a website for both years. Unfortunately due to account inactivity, and me changing my website 3 times since, The original pages have been lost, however a large amount of the content the content still remains.
+Being at college for 2 years, meant I was able to enter 2 years of competitions, [SR14](2014), and [SR15](2015). We were encouraged to gain an online presence for our team, so I created a basic web page for both years. The original pages have been lost, but the content is all still there.
 
-### After 2015
+### Post-2015
 Unfortunately, after I left college, I also left behind entering Student Robotics as a competitor. Fortunately however, they're always looking for volunteers to help run the competition itself, as a _blue shirt_.
