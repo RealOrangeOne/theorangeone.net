@@ -1,0 +1,14 @@
+<header>
+  <h2>{{ title .Title }}</h2>
+  {{ if .Params.subtitle }}
+    <p>{{ markdownify .Params.subtitle }}</p>
+  {{ end }}
+</header>
+{{ if .Content }}
+  <div class="box">
+    {{ if .Params.image }}
+      <span class="image featured main" data-image="{{ .Params.image }}"></span>
+    {{ end }}
+    {{ .Content }}
+  </div>
+{{ end }}

@@ -1,17 +1,7 @@
 {{ partial "page_start.html" . }}
 <div id="page-wrapper">
   <section id="main" class="container">
-  	<header>
-  		<h2>{{ title .Title }}</h2>
-		</header>
-    {{ if .Content }}
-  		<div class="box">
-        {{ if .Params.image }}
-    			<span class="image featured main" data-image="{{ .Params.image }}"></span>
-        {{ end }}
-        {{ .Content }}
-      </div>
-    {{ end }}
+    {{ partial "content.html" . }}
     {{ if ne .Params.hide_pages "true" }}
       <div class="row">
         {{ $parent := . }}

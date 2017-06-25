@@ -1,18 +1,7 @@
 {{ partial "page_start.html" . }}
 <div id="page-wrapper">
   <section id="main" class="container">
-  	<header>
-  		<h2>{{ title .Title }}</h2>
-      {{ if .Params.subtitle }}
-  			<p>{{ markdownify .Params.subtitle }}</p>
-      {{ end }}
-		</header>
-		<div class="box">
-      {{ if .Params.image }}
-        <span class="image featured main" data-image="{{ .Params.image }}"></span>
-      {{ end }}
-      {{ .Content }}
-		</div>
+		{{ partial "content.html" . }}
 	</section>
 </div>
 {{ partial "page_end.html" . }}
