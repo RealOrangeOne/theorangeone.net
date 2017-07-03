@@ -8,7 +8,7 @@ My setup is everything, I use my computer at least once a day to browse the inte
 
 Over the years, my setup has evolved from a single monitor i5 machine, to a triple monitor AMD FX-based monster of a computer.
 
-##### [Current Parts list]()
+##### [Current Parts list](https://uk.pcpartpicker.com/user/TheOrangeOne/saved/7wswP6)
 
 ### Next Generation
 
@@ -23,8 +23,8 @@ I use Arch Linux on all my machines now, But some days I miss my windows-only ap
 
 ## Previous Generations
 
-The first generation was the first custom build I'd ever done. When I first built it, I wasn't really into gaming, or any kind of heavy workflow for that matter, so it wasn't particularly powerful, although compared to my old [Dell Inspiron 1525](http://www.pcworld.com/product/31104/dell-inspiron-1525.html), it was pretty damn incredible!
+The first generation was the first custom build I'd ever done. When I first built it, I wasn't really into gaming, or any kind of heavy workflow for that matter, so it wasn't particularly powerful, although compared to my old [Dell Inspiron 1525](http://amzn.eu/44JQAYL), it was pretty damn incredible!
 
 You can find the full list of parts over on the PCPartPicker link below. Unfortunately due to the lack of catalog, or bad memory on my part, not all the parts are there, but there are as many as possible.
 
-##### [Previous Parts List]()
+##### [Previous Parts List](https://uk.pcpartpicker.com/user/TheOrangeOne/saved/wPrZLk)
