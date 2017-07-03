@@ -1,0 +1,13 @@
+{{ $id := .Get 0 }}
+{{ $data := getJSON "https://uk.pcpartpicker.com/qapi/partlist/markup/?mode=markdown&partlist=" $id }}
+
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapse{{ $id }}" aria-expanded="false" aria-controls="collapse{{ $id }}">
+    View Parts List
+  </a>
+  <div class="collapse" id="collapse{{ $id }}">
+    <div class="card card-block">
+      <p>{{ $data.content | markdownify }}</p>
+    </div>
+  </div>
+</p>

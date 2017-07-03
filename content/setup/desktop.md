@@ -8,7 +8,7 @@ My setup is everything, I use my computer at least once a day to browse the inte
 
 Over the years, my setup has evolved from a single monitor i5 machine, to a triple monitor AMD FX-based monster of a computer.
 
-##### [Current Parts list](https://uk.pcpartpicker.com/user/TheOrangeOne/saved/7wswP6)
+{{% pcpartpicker ZhMzr7 %}}
 
 ### Next Generation
 
@@ -27,4 +27,4 @@ The first generation was the first custom build I'd ever done. When I first buil
 
 You can find the full list of parts over on the PCPartPicker link below. Unfortunately due to the lack of catalog, or bad memory on my part, not all the parts are there, but there are as many as possible.
 
-##### [Previous Parts List](https://uk.pcpartpicker.com/user/TheOrangeOne/saved/wPrZLk)
+{{% pcpartpicker zZ8pvV %}}

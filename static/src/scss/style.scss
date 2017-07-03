@@ -2,6 +2,9 @@ $fa-font-path: "../fonts";
 @import "node_modules/font-awesome/scss/font-awesome";
 
 @import "node_modules/bootstrap/scss/bootstrap-grid";
+@import "node_modules/bootstrap/scss/_mixins";
+@import "node_modules/bootstrap/scss/_transitions";
+@import "node_modules/bootstrap/scss/_card";
 @import "node_modules/pygments-css/github";
 
 @import "alpha.min";
