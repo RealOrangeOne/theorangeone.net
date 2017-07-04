@@ -1,6 +1,6 @@
 ---
 title: Wiki Game solver
-gist: https://gist.github.com/RealOrangeOne/7da9a3dd1bf90ecdf7be
+gist: 7da9a3dd1bf90ecdf7be
 subtitle: Simple script to win the Wiki Game
 ---
 

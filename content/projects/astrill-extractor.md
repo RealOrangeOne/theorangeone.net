@@ -1,6 +1,6 @@
 ---
 title: Astrill Extractor
-gist: https://gist.github.com/RealOrangeOne/050da86871fb952ba7bfe97eece8555c
+gist: 050da86871fb952ba7bfe97eece8555c
 ---
 
 Astrill, my VPN of choice, allows you to export OpenVPN config files for all it's VPNs, allowing you to connect on platforms it doesn't provide clients for, which albeit isn't many. The AUR package `astrill` has started becoming really unstable on my machine recently, so I decided to switch it out for `ovpn` files, as gnome has excellent support for OpenVPN.

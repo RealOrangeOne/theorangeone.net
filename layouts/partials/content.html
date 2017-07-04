@@ -2,6 +2,12 @@
   <h2>{{ title .Title }}</h2>
   {{ if .Params.subtitle }}
     <p>{{ markdownify .Params.subtitle }}</p>
+  {{ else if .Params.repo }}
+    {{ $data := getJSON "https://api.github.com/repos/" .Params.repo }}
+    <p>{{ $data.description }}</p>
+  {{ else if .Params.gist }}
+    {{ $data := getJSON "https://api.github.com/gists/" .Params.gist }}
+    <p>{{ $data.description }}</p>
   {{ end }}
 </header>
 {{ if .Content }}

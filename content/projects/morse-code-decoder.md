@@ -1,6 +1,6 @@
 ---
 title: Morse code decoder
-gist: https://gist.github.com/RealOrangeOne/6dc94875c93b787e5834
+gist: 6dc94875c93b787e5834
 subtitle: A JSON file to help decode morse-code
 ---
 
