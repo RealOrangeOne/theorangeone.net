@@ -14,7 +14,7 @@ build: install
 	$(NODE_BIN)/node-sass $(STATIC_SRC)/scss/style.scss $(STATIC_BUILD)/css/style.css --source-map-embed
 	cp -r $(BASEDIR)/node_modules/font-awesome/fonts $(STATIC_BUILD)/fonts
 	cp -r $(STATIC_SRC)/img $(STATIC_BUILD)/img
-	@hugo -vDEF --ignoreCache
+	@hugo -vDEF
 
 server: build
 	hugo server
