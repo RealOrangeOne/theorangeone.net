@@ -14,4 +14,4 @@ In order to make it accessible for as many people in as many different languages
 
 The source of the library is on GitHub as a gist. I recommend downloading the file to use yourself, however for testing you can use GitHub's raw file as a hotlink.
 
-<script src="https://gist.github.com/RealOrangeOne/6dc94875c93b787e5834.js"></script>
+{{% gist 6dc94875c93b787e5834 %}}

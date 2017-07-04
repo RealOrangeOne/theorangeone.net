@@ -28,7 +28,7 @@ With this, I started to write something that would change the location of the if
 ### Source
 The source for this was written in pure JS, and relies heavily on the fact that the wiki game uses jQuery so I can plug into components and events really easily. The code can be found in the GitHub gists below. Both the standard and compact versions are available.
 
-<script src="{{ article.repo }}.js"></script>
+{{% gist 7da9a3dd1bf90ecdf7be %}}
 
 ### Disclaimer
 As I experienced whilst developing this, the people that play Wiki Game don't tend to like people cheating. There were a lot of people getting very annoyed whilst I was developing and testing. So please use this at your own risk! At the moment I don't think there is any kind of banning system, but be warned!
