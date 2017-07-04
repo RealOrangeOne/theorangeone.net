@@ -1,7 +1,6 @@
 ---
 title: My Dotfiles
-repo: https://github.com/RealOrangeOne/dotfiles/
-subtitle: How I set up my machines just the way I like them!
+repo: RealOrangeOne/dotfiles
 ---
 
 ### What are dotfiles?

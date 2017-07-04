@@ -1,6 +1,6 @@
 ---
 title: Yoga Pal
-repo: https://github.com/RealOrangeOne/yoga-pal
+repo: RealOrangeOne/yoga-pal
 subtitle: Control screen rotation, touch screen, and trackpad using the terminal
 ---
 

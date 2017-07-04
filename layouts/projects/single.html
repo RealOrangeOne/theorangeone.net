@@ -1,14 +1,35 @@
 {{ partial "page_start.html" . }}
 <div id="page-wrapper">
   <section id="main" class="container">
-    {{ partial "content.html" . }}
-		<div class="box">
+    <header>
+      <h2>{{ title .Title }}</h2>
+      {{ if .Params.subtitle }}
+      <p>{{ markdownify .Params.subtitle }}</p>
+      {{ else if .Params.repo }}
+        {{ $data := getJSON "https://api.github.com/repos/" .Params.repo }}
+        <p>{{ $data.description }}</p>
+      {{ end }}
+    </header>
+    {{ if .Content }}
+      <div class="box">
+        {{ if .Params.image }}
+        <span class="image featured main" data-image="{{ .Params.image }}"></span>
+        {{ end }}
+        {{ .Content }}
+      </div>
+    {{ end }}
+    <div class="box">
       <ul class="actions fir">
         {{ if .Params.download_url }}
           <li><a class="button special fit" href="{{ .Params.download_url }}">Download {{ .Title }}</a></li>
         {{ end }}
         {{ if .Params.repo }}
-          <li><a class="button special fit" href="{{ .Params.repo }}"><i class="fa fa-github fa-lg"></i> View Source</a></li>
+          {{ $data := getJSON "https://api.github.com/repos/" .Params.repo }}
+          <li><a class="button special fit" href="{{ $data.html_url }}"><i class="fa fa-github fa-lg"></i> View Source</a></li>
+        {{ end }}
+        {{ if .Params.gist }}
+          {{ $data := getJSON "https://api.github.com/repos/" .Params.repo }}
+          <li><a class="button special fit" href="{{ $data.html_url }}"><i class="fa fa-github fa-lg"></i> View Source</a></li>
         {{ end }}
       </ul>
 		</div>

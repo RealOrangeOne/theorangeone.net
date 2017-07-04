@@ -1,6 +1,6 @@
 ---
 title: Attack on blocks game
-repo: https://github.com/RealOrangeOne/attack-on-blocks/
+repo: RealOrangeOne/attack-on-blocks
 download_link: https://github.com/RealOrangeOne/attack-on-blocks/archive/master.zip
 ---
 
