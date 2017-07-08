@@ -23,6 +23,6 @@
     "font-awesome": "4.7.0",
     "jquery": "3.2.1",
     "pygments-css": "1.0.0",
-    "tstatic": "1.0.0"
+    "tstatic": "1.1.0"
   }
 }
