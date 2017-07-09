@@ -16,4 +16,4 @@ More information can be found on [their website](https://studentrobotics.org).
 Being at college for 2 years, meant I was able to enter 2 years of competitions, [SR14](2014), and [SR15](2015). We were encouraged to gain an online presence for our team, so I created a basic web page for both years. The original pages have been lost, but the content is all still there.
 
 ### Post 2015
-Unfortunately, after I left college, I also left behind entering Student Robotics as a competitor. Fortunately however, they're always looking for volunteers to help run the competition itself, as a _blue shirt_.
+Unfortunately, after I left college, I also left behind entering Student Robotics as a competitor. Fortunately however, [they're always looking for volunteers](https://studentrobotics.org/volunteer/) to help run the competition itself, as a _Blue Shirt_.
