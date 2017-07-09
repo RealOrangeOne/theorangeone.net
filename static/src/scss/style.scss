@@ -72,8 +72,13 @@ blockquote p {
   margin-bottom: 0;
 }
 
-#header nav > ul > li a {
-  padding: 0 0.8em;
+#header  {
+  height: 2.5em;
+  line-height: 2.5em;
+
+  nav > ul > li a {
+    padding: 0 0.8em;
+  }
 }
 
 .dropotron.level-0 {
