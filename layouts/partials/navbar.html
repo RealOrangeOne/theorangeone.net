@@ -12,7 +12,14 @@
               {{ if $children }}
                 <ul>
                   {{ range first .Site.Params.nav_items $children }}
-                    <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+                    <li>
+                      <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+                      <ul>
+                        {{ range .Pages }}
+                        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+                        {{ end }}
+                      </ul>
+                    </li>
                   {{ end }}
                   {{ if ge (len $children) .Site.Params.nav_items }}
                     <li><a href="{{ .Permalink }}"><i>See more</i></a></li>
