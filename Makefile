@@ -40,8 +40,6 @@ test:
 	$(NODE_BIN)/yamllint data/*.yml
 	$(NODE_BIN)/yamllint config.yml
 	$(NODE_BIN)/mdspell --en-gb -ranx 'content/**/*.*'
-	nose2
-
 
 
 .PHONY: build clean install test
