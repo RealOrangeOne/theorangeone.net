@@ -1,5 +1,5 @@
 ---
-title: The Code
+title: Code
 ---
 
 The code used for this competition was by far the most complicated and advanced code ever written by a Collyer's team.

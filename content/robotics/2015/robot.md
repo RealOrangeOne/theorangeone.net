@@ -1,5 +1,5 @@
 ---
-title: The Robot
+title: Robot
 image: https://c2.staticflickr.com/8/7726/17309695331_584e7de16c_z.jpg
 ---
 
