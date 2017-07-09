@@ -81,9 +81,9 @@ blockquote p {
 }
 
 .dropotron.level-1 {
-  margin-top: 0.1em;
-  left: initial !important;
   right: 100% !important;
+  left: initial !important;
+  margin-top: 0.1em;
 }
 
 #main {
@@ -112,14 +112,14 @@ blockquote p {
 
 #light-gallery {
   a {
-    cursor: zoom-in;
     display: inline-block;
-    overflow: hidden;
+    cursor: zoom-in;
     width: 100%;
+    overflow: hidden;
 
     img {
-      width: 100%;
       transition: opacity 0.5s;
+      width: 100%;
     }
 
     &:hover img {
