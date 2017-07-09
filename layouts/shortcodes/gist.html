@@ -1,3 +1,3 @@
-{{ $id := .Get 0 }}
+{{ $id := default (.Get 0) .Page.Params.gist }}
 {{ $data := getJSON "https://api.github.com/gists/" $id }}
 <script src='{{ $data.html_url }}.js'></script>
