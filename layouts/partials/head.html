@@ -10,7 +10,14 @@
   <link rel="stylesheet" href="/css/style.css" />
 
 
-  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  {{ if .Parent }}
+    {{ if ne .Parent .Site.Home }}
+      <title>{{ .Title }} | {{ .Parent.Title }} | {{ .Site.Title }}</title>
+    {{ end }}
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+  {{ else }}
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+  {{ end }}
 
   {{ partial "metadata.html" . }}
 </head>
