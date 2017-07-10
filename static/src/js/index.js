@@ -31,3 +31,13 @@ $(document).ready(function () {
   });
 });
 
+$('.navbar-brand').bind('click', function (event) {
+  if ($('html').scrollTop() > 100) {
+    $('html, body').stop().animate({
+      scrollTop: 0
+    }, 500);
+  } else {
+    window.location = '/';
+  }
+  event.preventDefault();
+});
