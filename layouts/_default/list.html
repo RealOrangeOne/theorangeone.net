@@ -1,20 +1,18 @@
 {{ partial "page_start.html" . }}
-<div id="page-wrapper">
-  <section id="main" class="container">
-    {{ partial "content.html" . }}
-    {{ if ne .Params.hide_pages "true" }}
-      <div class="row">
-        {{ $parent := . }}
-        {{ $valid_pages :=  where .Site.Pages.ByTitle ".Parent" "!=" nil }}
-        {{ range where $valid_pages ".Parent.UniqueID" $parent.UniqueID }}
-          {{ if $parent.Params.show_images }}
-            {{ partial "box_image.html" . }}
-          {{ else }}
-            {{ partial "box.html" . }}
-          {{ end }}
+<section id="main" class="container">
+  {{ partial "content.html" . }}
+  {{ if ne .Params.hide_pages "true" }}
+    <div class="row">
+      {{ $parent := . }}
+      {{ $valid_pages :=  where .Site.Pages.ByTitle ".Parent" "!=" nil }}
+      {{ range where $valid_pages ".Parent.UniqueID" $parent.UniqueID }}
+        {{ if $parent.Params.show_images }}
+          {{ partial "box_image.html" . }}
+        {{ else }}
+          {{ partial "box.html" . }}
         {{ end }}
-      </div>
-    {{ end }}
-	</section>
-</div>
+      {{ end }}
+    </div>
+  {{ end }}
+</section>
 {{ partial "page_end.html" . }}
