@@ -84,9 +84,10 @@ blockquote p {
 
 nav {
   a {
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
+
     @media screen and (max-width: 840px) {
       &.link.depth-2 {
         display: none !important;
