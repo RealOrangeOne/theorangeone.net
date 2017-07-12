@@ -81,6 +81,27 @@ blockquote p {
   }
 }
 
+
+nav {
+  a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media screen and (max-width: 840px) {
+      &.link.depth-2 {
+        display: none !important;
+      }
+    }
+
+    @media screen and (min-width: 840px) {
+      &.show-mobile {
+        display: none !important;
+      }
+    }
+  }
+}
+
+
 .dropotron.level-0 {
   margin-top: 0.4em;
 }
