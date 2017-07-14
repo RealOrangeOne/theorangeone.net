@@ -73,8 +73,6 @@ blockquote p {
 }
 
 #header  {
-  height: 2.5em;
-  line-height: 2.5em;
 
   nav > ul > li a {
     padding: 0 0.8em;
@@ -84,11 +82,12 @@ blockquote p {
 
 nav {
   a {
-    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 
     @media screen and (max-width: 840px) {
+      overflow: hidden;
+
       &.link.depth-2 {
         display: none !important;
       }
