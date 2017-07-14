@@ -1,7 +1,7 @@
 ---
 title: Student Robotics 2015
 linktitle: 2015
-image: https://c2.staticflickr.com/8/7674/17308375182_a172a341d6_h.jpg
+image: https://farm9.staticflickr.com/8700/17404219256_a9ba1ac510_o_d.jpg
 show_images: true
 ---
 
