@@ -7,6 +7,7 @@
           {{ if eq .Parent $home }}
             {{ $valid_children :=  where .Site.Pages.ByTitle ".Parent" "!=" nil }}
             {{ $children := where $valid_children ".Parent.UniqueID" .UniqueID }}
+            {{ $children := where $children ".Params.hide_in_nav" "!=" "true" }}
             <li class="top-level">
               <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
               {{ if $children }}
