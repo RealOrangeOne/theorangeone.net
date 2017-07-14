@@ -72,11 +72,8 @@ blockquote p {
   margin-bottom: 0;
 }
 
-#header  {
-
-  nav > ul > li a {
-    padding: 0 0.8em;
-  }
+#header nav > ul > li a {
+  padding: 0 0.8em;
 }
 
 
@@ -112,12 +109,8 @@ nav {
   margin-top: 0.1em;
 }
 
-#main {
-  padding: 2em 0;
-
-  & > header {
-    margin-bottom: 2em;
-  }
+#main > header {
+  margin-bottom: 2em;
 }
 
 .yt-embed {
