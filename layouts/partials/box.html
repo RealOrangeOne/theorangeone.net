@@ -3,6 +3,6 @@
     <a href="{{ .Permalink }}">
       <h3>{{ title .LinkTitle }}</h3>
     </a>
-    <p>{{ .Params.summary | default .Summary | truncate .Site.Params.summary_length "..." }}</p>
+    {{ partial "summary_string.html" . }}
   </section>
 </div>
