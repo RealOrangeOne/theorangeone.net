@@ -1,0 +1,11 @@
+{
+  "id": "{{ .UniqueID }}",
+  "title": "{{ .Title }}",
+  "date": "{{ .Date }}",
+  "image": "{{ absURL .Params.image }}",
+  "permalink": "{{ .Permalink }}",
+  "wordCount": "{{ .WordCount }}",
+  "linkTitle": "{{ .LinkTitle }}",
+  "section": "{{ .Section }}",
+  "content": "{{ .Permalink }}index.txt"
+}
