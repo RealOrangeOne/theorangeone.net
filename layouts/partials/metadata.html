@@ -31,3 +31,7 @@
 <meta name="description" content="{{ .Summary | plainify | chomp | htmlUnescape | truncate .Site.Params.summary_length_long "..." }}" />
 <meta name="author" content="{{ title .Site.Params.author }}" />
 <meta name="canonical" content="{{ .Permalink }}" />
+
+{{ range .AlternativeOutputFormats }}
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}">
+{{ end }}
