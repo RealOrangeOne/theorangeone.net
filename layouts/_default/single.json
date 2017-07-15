@@ -1,11 +1,11 @@
 {
   "id": "{{ .UniqueID }}",
   "title": "{{ .Title }}",
-  "date": "{{ .Date }}",
+  "date_published": "{{ .Date }}",
   "image": "{{ absURL .Params.image }}",
-  "permalink": "{{ .Permalink }}",
-  "wordCount": "{{ .WordCount }}",
-  "linkTitle": "{{ .LinkTitle }}",
-  "section": "{{ .Section }}",
-  "content": "{{ .Permalink }}index.txt"
+  "url": "{{ .Permalink }}",
+  "content_html": {{ .Content | jsonify }},
+  "content_text": {{ .RawContent | jsonify }},
+  "summary": {{ .Summary | jsonify }},
+  "banner_image": "{{ absURL .Params.image }}"
 }
