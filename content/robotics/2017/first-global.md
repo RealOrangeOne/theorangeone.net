@@ -3,9 +3,20 @@ title: First Global
 image: https://farm3.staticflickr.com/2851/33427687130_bde9d52b36_o_d.jpg
 ---
 
-### First Global Information
-> The top three UK teams from this year's competition will get the opportunity to represent the UK in the FIRST Global Challenge 2017.  The FIRST Global Challenge is an international robotics competition featuring teams from more than 100 countries, and is being held in Washington, D.C. in July this year.
+After the 2017 Competition, the top 3 teams were given the opportunity to represent the UK at FIRST Global. The teams had to produce videos outlining to FIRST why they should go. My old college, `CLY` won this opportunity.
 
-> The team who builds the best robot (out of the top three) will go on to compete on behalf of the UK!  They will have their flights and accommodation paid for (up to a maximum of 8 people) by our generous sponsors too!
+{{% youtube wXnwPsjBMv0 %}}
 
-> More information will be provided if you are one of the three teams that gets this award at the competition.  For more details on the FIRST Global Challenge, see [this website](http://first.global/). Good luck!
+Whilst I had nothing directly to do with this, I still think it's really impressive!
+  
+## What is First Global?
+
+> FIRST Global organizes a yearly international robotics challenge to ignite a passion for Science, Technology, Engineering, and Mathematics (STEM) among the more than two billion youths across the world.
+
+More information can be found on [their website](http://first.global). 
+
+### The Competition
+The FIRST Global competition was between 163 teams from various different countries around the world. The competition is designed not only to allow teams to compete, but also to raise awareness for STEM courses in other countries.
+
+
+## Team UK
