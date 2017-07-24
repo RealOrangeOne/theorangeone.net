@@ -1,7 +1,6 @@
 {{ if eq .Section "posts" }}
   {{ .Summary | truncate .Site.Params.summary_length "..." }}
 {{ else }}
-
   {{ if .Params.subtitle }}
     {{ .Params.subtitle | markdownify }}
   {{ else if .Params.repo }}

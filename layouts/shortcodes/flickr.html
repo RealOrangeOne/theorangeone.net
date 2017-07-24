@@ -9,10 +9,10 @@
 
 <div id="light-gallery" class="row">
 {{ range $index, $element := $photoset_orig.photo }}
-    {{ $thumb := (index $photoset_thumb.photo $index).url_sq }}
-    <a href="{{ $element.url_o }}" title="{{ $element.title }}" class="col-2">
-      <img src="{{ $thumb }}" alt="{{ $element.title }}"/>
-    </a>
+  {{ $thumb := (index $photoset_thumb.photo $index).url_sq }}
+  <a href="{{ $element.url_o }}" title="{{ $element.title }}" class="col-2">
+    <img src="{{ $thumb }}" alt="{{ $element.title }}"/>
+  </a>
 {{ end }}
 </div>
 

@@ -1,42 +1,42 @@
-  <header id="header" {{ if .IsHome }}class="alt"{{ end }}>
-    <h1><a href="/" class="navbar-brand">{{ title .Site.Title }}</a></h1>
-    <nav id="nav">
-      <ul>
-        {{ $home := .Site.GetPage "home" }}
-        {{ range where .Site.Pages.ByTitle "Kind" "section" }}
-          {{ if eq .Parent $home }}
-            {{ $valid_children :=  where .Site.Pages.ByTitle ".Parent" "!=" nil }}
-            {{ $children := where $valid_children ".Parent.UniqueID" .UniqueID }}
-            {{ $children := where $children ".Params.hide_in_nav" "!=" "true" }}
-            <li class="top-level">
-              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
-              {{ if $children }}
-                <ul>
-                  {{ range first .Site.Params.nav_items $children }}
-                    <li>
-                      <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
-                      <ul>
-                        {{ range .Pages }}
-                        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-                        {{ end }}
-                      </ul>
-                    </li>
-                  {{ end }}
-                  {{ if ge (len $children) .Site.Params.nav_items }}
-                    <li><a href="{{ .Permalink }}"><i>See more</i></a></li>
-                  {{ end }}
-                </ul>
-              {{ end }}
-            </li>
-          {{ end }}
+<header id="header" {{ if .IsHome }}class="alt"{{ end }}>
+  <h1><a href="/" class="navbar-brand">{{ title .Site.Title }}</a></h1>
+  <nav id="nav">
+    <ul>
+      {{ $home := .Site.GetPage "home" }}
+      {{ range where .Site.Pages.ByTitle "Kind" "section" }}
+        {{ if eq .Parent $home }}
+          {{ $valid_children :=  where .Site.Pages.ByTitle ".Parent" "!=" nil }}
+          {{ $children := where $valid_children ".Parent.UniqueID" .UniqueID }}
+          {{ $children := where $children ".Params.hide_in_nav" "!=" "true" }}
+          <li class="top-level">
+            <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ if $children }}
+              <ul>
+                {{ range first .Site.Params.nav_items $children }}
+                  <li>
+                    <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+                    <ul>
+                      {{ range .Pages }}
+                      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+                      {{ end }}
+                    </ul>
+                  </li>
+                {{ end }}
+                {{ if ge (len $children) .Site.Params.nav_items }}
+                  <li><a href="{{ .Permalink }}"><i>See more</i></a></li>
+                {{ end }}
+              </ul>
+            {{ end }}
+          </li>
         {{ end }}
+      {{ end }}
 
-        {{ range where .Site.Pages.ByTitle "Kind" "page" }}
-          {{ if eq .Section "" }}
-            <li class="top-level"><a href="{{ .Permalink }}">{{ title .LinkTitle }}</a></li>
-          {{ end }}
+      {{ range where .Site.Pages.ByTitle "Kind" "page" }}
+        {{ if eq .Section "" }}
+          <li class="top-level"><a href="{{ .Permalink }}">{{ title .LinkTitle }}</a></li>
         {{ end }}
-        <li class="top-level"><a class="show-mobile" href="/">Home</a></li>
-      </ul>
-    </nav>
-  </header>
+      {{ end }}
+      <li class="top-level"><a class="show-mobile" href="/">Home</a></li>
+    </ul>
+  </nav>
+</header>
