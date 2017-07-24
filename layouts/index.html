@@ -18,7 +18,7 @@
           {{ with .Site.GetPage "section" "posts" }}
             <a href="{{ .Permalink }}" class="no-underline">
               <span class="icon major fa-comments accent2"></span>
-              <h3>{{ .Title }}</h3>
+              <h3>{{ .LinkTitle }}</h3>
             </a>
   					<p>
 							{{ partial "summary_string.html" . }}
@@ -29,7 +29,7 @@
           {{ with .Site.GetPage "section" "projects" }}
             <a href="{{ .Permalink }}" class="no-underline">
     					<span class="icon major fa-code accent3"></span>
-    					<h3>{{ .Title }}</h3>
+    					<h3>{{ .LinkTitle }}</h3>
             </a>
   					<p>
 							{{ partial "summary_string.html" . }}
@@ -42,7 +42,7 @@
           {{ with .Site.GetPage "section" "setup" }}
             <a href="{{ .Permalink }}" class="no-underline">
               <span class="icon major fa-desktop accent4"></span>
-              <h3>{{ .Title }}</h3>
+              <h3>{{ .LinkTitle }}</h3>
             </a>
   					<p>
 							{{ partial "summary_string.html" . }}
@@ -53,7 +53,7 @@
 					{{ with .Site.GetPage "section" "robotics" }}
 						<a href="{{ .Permalink }}" class="no-underline">
 							<span class="icon major fa-cogs accent5"></span>
-							<h3>{{ .Title }}</h3>
+							<h3>{{ .LinkTitle }}</h3>
 						</a>
 						<p>
 							{{ partial "summary_string.html" . }}
