@@ -17,8 +17,8 @@
 				<section>
           {{ with .Site.GetPage "section" "posts" }}
             <a href="{{ .Permalink }}" class="no-underline">
-              <span class="icon major fa-sticky-note-o accent2"></span>
-              <h3>Blog</h3>
+              <span class="icon major fa-comments accent2"></span>
+              <h3>{{ .Title }}</h3>
             </a>
   					<p>
 							{{ partial "summary_string.html" . }}
@@ -29,7 +29,7 @@
           {{ with .Site.GetPage "section" "projects" }}
             <a href="{{ .Permalink }}" class="no-underline">
     					<span class="icon major fa-code accent3"></span>
-    					<h3>Projects</h3>
+    					<h3>{{ .Title }}</h3>
             </a>
   					<p>
 							{{ partial "summary_string.html" . }}
@@ -42,17 +42,23 @@
           {{ with .Site.GetPage "section" "setup" }}
             <a href="{{ .Permalink }}" class="no-underline">
               <span class="icon major fa-desktop accent4"></span>
-              <h3>Setup</h3>
+              <h3>{{ .Title }}</h3>
             </a>
   					<p>
 							{{ partial "summary_string.html" . }}
             </p>
           {{ end }}
 				</section>
-  			<section>
-  				<span class="icon major fa-lock accent5"></span>
-					<h3>Enim phasellus</h3>
-					<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+				<section>
+					{{ with .Site.GetPage "section" "robotics" }}
+						<a href="{{ .Permalink }}" class="no-underline">
+							<span class="icon major fa-cogs accent5"></span>
+							<h3>{{ .Title }}</h3>
+						</a>
+						<p>
+							{{ partial "summary_string.html" . }}
+						</p>
+					{{ end }}
 				</section>
 			</div>
 		</section>
