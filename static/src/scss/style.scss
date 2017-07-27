@@ -117,6 +117,15 @@ nav {
 
 #main > header {
   margin-bottom: 2em;
+
+  p {
+    padding: 1em 0 0.5em;
+  }
+
+  small {
+    display: block;
+    font-size: 0.9em;
+  }
 }
 
 .yt-embed {
