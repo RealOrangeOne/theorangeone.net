@@ -1,8 +1,9 @@
 <header>
   <h2>{{ title .Title }}</h2>
-  <p>{{ partial "subtitle_string.html" . }}</p>
+  {{ partial "subtitle_string.html" . }}
+
   {{ if .Params.date }}
-    <small>Published: {{ .Date.Format "January 2 2006" }}</small>
+    <small>{{ .Date.Format "January 2 2006" }}</small>
   {{ end }}
 </header>
 {{ if .Content }}

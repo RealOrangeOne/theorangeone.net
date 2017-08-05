@@ -1,7 +1,7 @@
 {{ if .Params.subtitle }}
-  {{ .Params.subtitle | markdownify }}
+  <p>{{ .Params.subtitle | markdownify }}</p>
 {{ else if .Params.repo }}
-  {{ (getJSON "https://api.github.com/repos/" .Params.repo).description }}
+  <p>{{ (getJSON "https://api.github.com/repos/" .Params.repo).description }}</p>
 {{ else if .Params.gist }}
-  {{ (getJSON "https://api.github.com/gists/" .Params.gist).description }}
+  <p>{{ (getJSON "https://api.github.com/gists/" .Params.gist).description }}</p>
 {{ end }}
