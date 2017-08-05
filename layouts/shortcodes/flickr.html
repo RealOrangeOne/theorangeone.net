@@ -1,7 +1,7 @@
 {{ $id := .Get 0 }}
 {{ $query := querify "format" "json" "nojsoncallback" "1" "api_key" .Site.Data.flickr.api_key  }}
 
-{{ $method := querify "method" "flickr.photosets.getPhotos" "user_id" .Site.Data.flickr.user_id "photoset_id" $id "extras" "url_o" }}
+{{ $method := querify "method" "flickr.photosets.getPhotos" "user_id" .Site.Data.flickr.user_id "photoset_id" $id "extras" "url_l" }}
 {{ $photoset_orig:= (getJSON "https://api.flickr.com/services/rest/?" $query "&" $method).photoset }}
 
 {{ $method := querify "method" "flickr.photosets.getPhotos" "user_id" .Site.Data.flickr.user_id "photoset_id" $id "extras" "url_sq" }}
