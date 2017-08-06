@@ -1,6 +1,6 @@
 ---
 title: Day 1
-image: https://farm5.staticflickr.com/4426/35552704294_5aa52e2ed6_k_d.jpg
+image: https://farm5.staticflickr.com/4373/36251679941_9c7fd90f07_o_d.jpg
 linkTitle: Monday
 date: 2017-07-31
 ---
