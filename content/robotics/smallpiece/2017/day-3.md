@@ -5,9 +5,9 @@ linkTitle: Wednesday
 date: 2017-08-02
 ---
 
-One of my highlights of the whole week was on Wednesday, a cyber security talk from Dr Denis Nicole, a lecturer at the university. As soon as I saw this talk on the calendar, I knew I had to be there! The talk went into great detail on the NSAs PRISM project, and the various other communication-tapping schemes by other governments.
+One of my highlights of the whole week was on Wednesday, a cyber-security talk from Dr Denis Nicole, a lecturer at the university. As soon as I saw this talk on the calendar, I knew I had to be there! The talk went into great detail on the NSA's PRISM project, and the various other communication-tapping schemes by other governments.
 
-This was the day the finishing touches were done to the arena in the cube. Now that the scaffolding was completely setup, we needed to setup lighting, screens, and the gopro we'd mount to the lighting rig. Setting up lighting is infact much harder than it seems, as the axis of movement are relative to the light rather than me.
+This was the day the finishing touches were done to the arena in the cube. Now that the scaffolding was completely setup, we needed to setup lighting, screens, and the gopro we'd mount to the lighting rig. Setting up lighting is in fact much harder than it seems, as the axis of movement are relative to the light rather than me.
 
 ## GoPro
 
@@ -23,7 +23,7 @@ The remainder of the day was spent in the labs, assisting students with their ro
 
 ### Update Mechanism
 
-During the kit setup, and students started to use it more and more, we discovered an issue in the underlying setup. The robot system didnt correctly detect when a board was disconnected, and attempted to connect to it, which obviously caused an error. The fix for this was to clear the list of boards every time the robot restarted, but this required changing to each Pi, and we had no update mechanism.
+During the kit setup, and students started to use it more and more, we discovered an issue in the underlying setup. The robot system didn't correctly detect when a board was disconnected, and attempted to connect to it, which obviously caused an error. The fix for this was to clear the list of boards every time the robot restarted, but this required changing to each Pi, and we had no update mechanism.
 
-The way we handled updating was to take teams Pis and power boards, connect them to a display, and install the new software manually. This was simple as we distribute everything as a `.deb` file, but was still annoying! It was at this time we discussed potential solutions, including private Wi-Fi networks, and update files on USB drives, however we were never able to implement them.
+The way we handled updating was to take teams Pi's and power boards, connect them to a display, and install the new software manually. This was simple as we distribute everything as a `.deb` file, but was still annoying! It was at this time we discussed potential solutions, including private Wi-Fi networks, and update files on USB drives, however we were never able to implement them.
 
