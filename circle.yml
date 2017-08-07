@@ -1,12 +1,12 @@
 machine:
   node:
-    version: 6.9.4
+    version: 6.11.2
   python:
-    version: 3.6.0
+    version: 3.6.2
 
 dependencies:
   pre:
-    - wget https://github.com/gohugoio/hugo/releases/download/v0.25/hugo_0.25_Linux-64bit.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.26/hugo_0.26_Linux-64bit.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
 
 test:
   override:
