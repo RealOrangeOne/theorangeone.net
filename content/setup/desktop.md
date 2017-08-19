@@ -4,9 +4,9 @@ image: /img/header.jpg
 ---
 
 
-My setup is everything, I use my computer at least once a day to browse the internet, work on projects, even update this website, so it's very important that everything works perfectly and the fastest it can. Obviously this machine is probably a little too powerful for someone that does almost primarily web development, but it means when I want to do things like video editing, 3D modelling, or anything else that would require a high end computer, I can, because my computer is equipped to handle it.
+My setup is my everything, I use my computer daily to browse the internet, work on projects, even update this website, so it's very important that everything works perfectly and the fastest it can. Obviously this machine is probably a _little_ too powerful for someone that does almost primarily web development, but hey, it's more fun that way!
 
-Over the years, my setup has evolved from a single monitor i5 machine, to a triple monitor AMD FX-based monster of a computer.
+Over the years, my setup has evolved from a single monitor i5 computer, to a triple monitor AMD FX-based monster.
 
 {{% pcpartpicker ZhMzr7 %}}
 
@@ -19,12 +19,12 @@ The next generation of my build isn't actually a thing yet, but I'm actively wor
 ##### [Next-Gen Parts List]()
 
 #### OS
-I use Arch Linux on all my machines now, But some days I miss my windows-only applications and games, so I plan to use a virtual machine running windows, with a graphics card hardware pass-through to it to run windows applications, and play windows-only games. I got the idea for doing this from this amazing [video](https://www.youtube.com/watch?v=16dbAUrtMX4).
+I use Arch Linux on all my machines now, But some days I miss the windows-only applications / games, so I plan to use a virtual machine running windows, with a graphics card hardware pass-through to it to run windows applications, and play windows-only games. I got the idea for doing this from [here](https://www.youtube.com/watch?v=16dbAUrtMX4) and [here](https://www.youtube.com/watch?v=aLeWg11ZBn0).
 
 ## Previous Generations
 
 The first generation was the first custom build I'd ever done. When I first built it, I wasn't really into gaming, or any kind of heavy workflow for that matter, so it wasn't particularly powerful, although compared to my old [Dell Inspiron 1525](http://amzn.eu/44JQAYL), it was pretty damn incredible!
 
-You can find the full list of parts over on the PCPartPicker link below. Unfortunately due to the lack of catalog, or bad memory on my part, not all the parts are there, but there are as many as possible.
+Many of the parts from this build, including DVD drive, RAM and card reader, still live on in the current generation. The card reader and DVD were bought so I'd never need to buy another again!
 
 {{% pcpartpicker zZ8pvV %}}
