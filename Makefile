@@ -16,6 +16,7 @@ build: install
 	cp -r $(BASEDIR)/node_modules/lightgallery/dist/fonts $(STATIC_BUILD)
 	cp -r $(STATIC_SRC)/img $(STATIC_BUILD)/img
 	@hugo -vDEF
+	cp static/keybase.txt public/keybase.txt
 
 server: build
 	hugo server
