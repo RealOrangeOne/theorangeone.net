@@ -1,0 +1,20 @@
+{{ partial "page_start.html" . }}
+<section id="main" class="container">
+  {{ partial "content.html" . }}
+  {{ if ne .Params.hide_pages "true" }}
+  <div class="row">
+    {{ $parent := . }}
+    {{ $valid_pages := sort .Site.Pages "Date" "desc" }}
+    {{ $valid_pages :=  where $valid_pages ".Parent" "!=" nil }}
+    {{ $valid_pages :=  where $valid_pages ".Params.hide_in_list" "!=" "true" }}
+    {{ range where $valid_pages ".Parent.UniqueID" $parent.UniqueID }}
+    {{ if $parent.Params.show_images }}
+    {{ partial "box_image.html" . }}
+    {{ else }}
+    {{ partial "box.html" . }}
+    {{ end }}
+    {{ end }}
+  </div>
+  {{ end }}
+</section>
+{{ partial "page_end.html" . }}
