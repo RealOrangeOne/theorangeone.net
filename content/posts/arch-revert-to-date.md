@@ -12,7 +12,7 @@ I'm also one of those _crazy_ people who uses arch on my work machine. Craziness
 After running updates this morning, as I normally would, I went to start the project I was working on today locally, and was met with this wonderful message:
 
 ```text
-Put stack trace here later!
+ django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: /home/jake/Projects/******/env/lib/python3.5/site-packages/psycopg2/.libs/libresolv-2-c4c53def.5.so: symbol __res_maybe_init, version GLIBC_PRIVATE not defined in file libc.so.6 with link time reference
 ```
 
 I knew this was something to do with updates, because that's all that had changed between the last time it worked and now. But I had a feeling rolling back updates to a given date, especially on arch, would be fairly painful. Much to my surprise, it was super simple!
