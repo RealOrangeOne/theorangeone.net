@@ -98,3 +98,5 @@ edu
 tstatic
 nginx
 systemd
+mirrorlist
+pacman

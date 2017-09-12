@@ -46,4 +46,4 @@ Depending on what packages have been downgraded, you may have to reboot to apply
 To revert, just restore the backup of the pacman mirrorlist, and re-run the above pacman command.
 
 ## Outdated Packages
-Generally, having out of date packages on your system is a bad idea. Not only for security reasons, but stability and compatability. [The article](https://www.ostechnix.com/downgrade-packages-specific-date-arch-linux/) goes through a couple more too.  
+Generally, having out of date packages on your system is a bad idea. Not only for security reasons, but stability and compatibility. [The article](https://www.ostechnix.com/downgrade-packages-specific-date-arch-linux/) goes through a couple more too.  
