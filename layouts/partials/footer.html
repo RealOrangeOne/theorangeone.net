@@ -8,7 +8,7 @@
     {{ end }}
   </ul>
   <ul class="copyright">
-    <li>&copy; {{ title .Site.Params.author }} {{ now.Year }} - All rights reserved.</li>
+    <li>&copy; {{ title .Site.Params.author }} {{ now.Year }}.</li>
     {{ if .OutputFormats.Get "txt" }}
       {{ with  .OutputFormats.Get "txt" }}
         <li><a href="{{ .Permalink }}">View Raw</a></li>
