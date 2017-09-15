@@ -3,7 +3,7 @@
   {{ partial "subtitle_string.html" . }}
 
   {{ if .Params.date }}
-    <small>{{ .Date.Format "January 2 2006" }}</small>
+    <small title="{{ .Date.Format "January 2 2006" }}">{{ .Date.Format "2006-01-02" }}</small>
   {{ end }}
 </header>
 {{ if .Content }}
