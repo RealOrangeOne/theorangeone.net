@@ -63,24 +63,32 @@
 			</div>
 		</section>
 
-    <div class="box special" id="projects">
-			<h2><a href="/projects/">Projects</a></h2>
+    <div class="index-list" id="projects">
+			<div class="align-center">
+				<h2><a href="/projects/">Projects</a></h2>
+			</div>
   		<div class="row">
-      {{ range first .Site.Params.index_items (where .Data.Pages.ByDate "Section" "projects") }}
-        {{ partial "box.html" . }}
-      {{ end }}
+				{{ range first .Site.Params.index_items (where .Data.Pages.ByDate "Section" "projects") }}
+					{{ partial "box_image.html" . }}
+				{{ end }}
   		</div>
-      <h4><a href="/projects/">All Projects</a></h4>
+			<div class="align-center">
+				<h4><a href="/projects/">All Projects</a></h4>
+			</div>
     </div>
 
-    <div class="box special" id="recent-posts">
-			<h2><a href="/posts/">Recent Posts</a></h2>
+    <div class="index-list" id="recent-posts">
+			<div class="align-center">
+				<h2><a href="/posts/">Recent Posts</a></h2>
+			</div>
   		<div class="row">
-      {{ range first .Site.Params.index_items (where .Data.Pages.ByDate "Section" "posts") }}
-        {{ partial "box.html" . }}
-      {{ end }}
+				{{ range first .Site.Params.index_items (where .Data.Pages.ByDate "Section" "posts") }}
+					{{ partial "box_image.html" . }}
+				{{ end }}
   		</div>
-      <h4><a href="/posts/">All Posts</a></h4>
+			<div class="align-center">
+				<h4><a href="/posts/">All Posts</a></h4>
+			</div>
     </div>
 	</section>
 {{ partial "page_end.html" . }}
