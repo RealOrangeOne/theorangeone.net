@@ -42,9 +42,6 @@ rssLimit: 100
 disableHugoGeneratorInject: true
 enableEmoji: true
 MetaDataFormat: yaml
-disableKinds:
-  - taxonomy
-  - taxonomyTerm
 
 pygmentsCodeFencesGuessSyntax: true
 PygmentsCodeFences: true
