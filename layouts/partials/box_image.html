@@ -5,6 +5,9 @@
         <span class="image featured" data-image="{{ .Params.image }}"></span>
       </a>
     {{ end }}
+    {{ if .Params.date }}
+      <small title="{{ .Date.Format "January 2 2006" }}">{{ .Date.Format "2006-01-02" }}</small>
+    {{ end }}
     <a href="{{ .Permalink }}">
       <h3>{{ title .LinkTitle }}</h3>
     </a>
