@@ -18,7 +18,7 @@
     "yaml-lint": "0.0.4"
   },
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.6",
+    "bootstrap": "4.0.0-beta",
     "club-alpha": "0.0.3",
     "font-awesome": "4.7.0",
     "jquery": "3.2.1",
