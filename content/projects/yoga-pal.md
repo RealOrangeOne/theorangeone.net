@@ -2,6 +2,7 @@
 title: Yoga Pal
 repo: RealOrangeOne/yoga-pal
 subtitle: Control screen rotation, touch screen, and trackpad using the terminal
+tags: [linux]
 ---
 
 Once I started work, I bought myself a _Lenovo Yoga 3 14"_ laptop, because I needed a thin and light laptop for trains and the office. This came with windows, which within 10 minutes was running Ubuntu Gnome! Ubuntu greatly increased the performance, but I had to sacrifice all the screen, touchpad and keyboard customisation when changing 'modes'.

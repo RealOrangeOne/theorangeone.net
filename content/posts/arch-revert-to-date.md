@@ -3,8 +3,7 @@ title: Revert Arch linux packages to specific date
 date: 2017-09-11
 image: https://www.lumalab.net/download/archlogo/arch-logo-shiny-dark.png
 subtitle: Arch is well known for going wrong, but today was the first time this affected me doing my job
-tags:
-    - arch
+tags: [arch, linux]
 ---
 
 I'm one of those Arch users who _apparently_ doesn't use arch properly: I install updates daily, including packages from the AUR. This has the great benefit of giving me the most up-to-date packages available from upstream. However the downside of meaning I have the latest packages from upstream, meaning if something breaks, even temporarily, it breaks for me.

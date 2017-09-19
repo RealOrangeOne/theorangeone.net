@@ -1,6 +1,7 @@
 ---
 title: My Dotfiles
 repo: RealOrangeOne/dotfiles
+tags: [arch, linux]
 ---
 
 ### What are dotfiles?
