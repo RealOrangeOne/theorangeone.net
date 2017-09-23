@@ -1,0 +1,7 @@
+{{ range where .Site.Pages.ByTitle "Kind" "page" }}
+  {{ if eq .Section "" }}
+    <li class="top-level">
+      {{ partial "navbar/link-item.html" . }}
+    </li>
+  {{ end }}
+{{ end }}

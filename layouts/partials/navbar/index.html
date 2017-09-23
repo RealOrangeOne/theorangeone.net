@@ -1,37 +1,15 @@
+
 <header id="header" {{ if .IsHome }}class="alt"{{ end }}>
   <h1><a href="/" class="navbar-brand">{{ title .Site.Title }}</a></h1>
   <nav id="nav">
     <ul>
-      {{ $home := .Site.GetPage "home" }}
-      {{ range where .Site.Pages.ByTitle "Kind" "section" }}
-        {{ if eq .Parent $home }}
-          {{ $sorted_pages := sort .Site.Pages (default "Title" .Params.sort_by) (default "asc" .Params.sort_order)}}
-          {{ $valid_children :=  where $sorted_pages ".Parent" "!=" nil }}
-          {{ $children := where $valid_children ".Parent.UniqueID" .UniqueID }}
-          {{ $children := where $children ".Params.hide_in_nav" "!=" "true" }}
-          <li class="top-level">
-            {{ partial "navbar/link-item.html" . }}
-            {{ if $children }}
-              <ul>
-                {{ range first .Site.Params.nav_items $children }}
-                  <li>
-                    {{ partial "navbar/link-item.html" . }}
-                    <ul>{{ range .Pages }}<li>{{ partial "navbar/link-item.html" . }}</li>{{ end }}</ul>
-                  </li>
-                {{ end }}
-                {{ if ge (len $children) .Site.Params.nav_items }}
-                  <li><a href="{{ .Permalink }}"><i>See more</i></a></li>
-                {{ end }}
-              </ul>
-            {{ end }}
-          </li>
-        {{ end }}
-      {{ end }}
+      {{ partial "navbar/sections.html" . }}
 
-      {{ range where .Site.Pages.ByTitle "Kind" "page" }}
-        {{ if eq .Section "" }}<li class="top-level">{{ partial "navbar/link-item.html" . }}</li>{{ end }}
-      {{ end }}
-      <li class="top-level"><a class="show-mobile" href="/">Home</a></li>
+      {{ partial "navbar/pages.html" . }}
+
+      <li class="top-level">
+        <a class="show-mobile" href="/">Home</a>
+      </li>
     </ul>
   </nav>
 </header>
