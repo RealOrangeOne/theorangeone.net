@@ -7,7 +7,7 @@
       "date": "{{ .Date }}",
       "url": "{{ .Permalink }}",
       "link": "{{ .RelPermalink }}",
-      "link_title": "{{ .LinkTitle }}"
+      "link_title": "{{ .LinkTitle }}",
       "parent": "{{ if .Parent }}{{ lower .Parent.Title }}{{ end }}",
       "tags": {{ jsonify .Params.tags }}
     }
