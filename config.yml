@@ -43,6 +43,6 @@ disableHugoGeneratorInject: true
 enableEmoji: true
 MetaDataFormat: yaml
 
-pygmentsCodeFencesGuessSyntax: true
-PygmentsCodeFences: true
-pygmentsuseclasses: true
+pygmentsCodefencesGuessSyntax: true
+pygmentsCodefences: true
+pygmentsUseClasses: true
