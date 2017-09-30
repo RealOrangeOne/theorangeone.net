@@ -60,9 +60,16 @@ accounts:
     link: https://www.npmjs.com/~TheOrangeOne/
     icon: fa-file-code-o
 
+  keybase:
+    name: keybase
+    username: RealOrangeOne
+    link: https://keybase.io/realorangeone
+    icon: fa-key
+
 footer_accounts:
   - github
   - twitter
   - reddit
   - flickr
   - bitbucket
+  - keybase
