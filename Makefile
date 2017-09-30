@@ -19,7 +19,7 @@ build: install
 	cp static/keybase.txt public/keybase.txt
 
 server: build
-	hugo server
+	hugo server --noHTTPCache
 
 
 clean:
