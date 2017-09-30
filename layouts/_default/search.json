@@ -1,0 +1,8 @@
+{{ $valid_pages :=  where (where .Site.Pages.ByTitle "Kind" "page") ".Parent" "!=" nil }}
+
+{
+  {{ range $i, $e := $valid_pages }}
+    {{ if $i }}, {{ end }}
+    {{ partial "page_data.json" . }}
+  {{ end }}
+}

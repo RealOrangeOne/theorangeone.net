@@ -1,0 +1,8 @@
+# {{ .Title | plainify }}
+
+{{ .RawContent | safeHTML }}
+
+{{ $valid_pages :=  where (where .Site.Pages.ByTitle "Kind" "page") ".Parent" "!=" nil }}
+{{ range $valid_pages }}
+    - ![{{ title .LinkTitle }}]({{ .Permalink }})
+{{ end }}

@@ -1,15 +1,6 @@
 {
   {{ range $i, $e := .Data.Pages.ByTitle }}
     {{ if $i }}, {{ end }}
-    "{{ .RelPermalink }}": {
-      "id": "{{ .UniqueID }}",
-      "title": "{{ lower .Title }}",
-      "date": "{{ .Date }}",
-      "url": "{{ .Permalink }}",
-      "link": "{{ .RelPermalink }}",
-      "link_title": "{{ .LinkTitle }}",
-      "parent": "{{ if .Parent }}{{ lower .Parent.Title }}{{ end }}",
-      "tags": {{ jsonify .Params.tags }}
-    }
+    {{ partial "page_data.json" . }}
   {{ end }}
 }

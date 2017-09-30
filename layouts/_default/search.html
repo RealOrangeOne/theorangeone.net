@@ -1,0 +1,12 @@
+{{ partial "page_start.html" . }}
+<section id="main" class="container">
+  {{ partial "content.html" . }}
+
+  <div class="row search-results">
+    {{ $valid_pages :=  where (where .Site.Pages.ByTitle "Kind" "page") ".Parent" "!=" nil }}
+    {{ range $valid_pages }}
+      {{ partial "box_image.html" . }}
+    {{ end }}
+  </div>
+</section>
+{{ partial "page_end.html" . }}
