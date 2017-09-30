@@ -1,3 +1,15 @@
 {{ $id := default (.Get 0) .Page.Params.gist }}
 {{ $data := getJSON "https://api.github.com/gists/" $id }}
-<script src='{{ $data.html_url }}.js'></script>
+
+{{ range $i, $e := $data.files }}
+  <h5>
+    <a href="{{ $data.html_url }}#file-{{ $i }}">
+      <strong>{{ $i }}</strong>
+    </a>
+    &nbsp;&nbsp;
+    <a href="{{ $e.raw_url }}">
+      <i>View Raw</i>
+    </a>
+  </h5>
+  {{ highlight $e.content $e.language "" }}
+{{ end }}
