@@ -1,10 +1,15 @@
 {{ partial "page_start.html" . }}
 <section id="main" class="container">
   {{ partial "content.html" . }}
+  <div class="search-input-container">
+    <input id="search" type="text" placeholder="Search &#8981;"/>
+  </div>
 
   <div class="row search-results">
-    {{ $valid_pages :=  where (where .Site.Pages.ByTitle "Kind" "page") ".Parent" "!=" nil }}
-    {{ range $valid_pages }}
+    {{ $valid_pages :=  where .Site.Pages ".Parent" "!=" nil }}
+    {{ $valid_pages := where $valid_pages "Kind" "page" }}
+    {{ $valid_pages := where $valid_pages ".UniqueID" "!=" .UniqueID }}
+    {{ range (sort $valid_pages ".LinkTitle") }}
       {{ partial "box_image.html" . }}
     {{ end }}
   </div>

@@ -9,6 +9,7 @@ require('club-alpha/assets/js/util');
 require('lightgallery/dist/js/lightgallery');
 require('lg-thumbnail/dist/lg-thumbnail');
 require('./alpha/main');
+require('./search');
 
 
 $('.image').each(function () {  // setup div-image hybrids
