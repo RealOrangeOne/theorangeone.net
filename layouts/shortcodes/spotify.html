@@ -1,0 +1,41 @@
+{{ $ident := .Get 0 }}
+
+{{ $playlist := getJSON "http://spotify-public-proxy.theorangeone.net/playlist/" $ident }}
+
+<div class="playlist">
+  <a href="{{ $playlist.url }}">
+    <h3>
+      {{ $playlist.name }}
+    </h3>
+  </a>
+
+  <table>
+    <thead>
+    <tr>
+      <th></th>
+      <th>Track</th>
+      <th>Artist</th>
+      <th>Album</th>
+    </tr>
+    </thead>
+    <tbody>
+      {{ range sort $playlist.tracks "name" }}
+        <tr>
+          <td>
+            <span>
+              <a class="icon" href="{{ .preview_url }}"><i class="fa fa-play"></i></a>
+            </span>
+          </td>
+          <td><a href="{{ .url }}">{{ .name }}</a></td>
+          <td>
+            {{ range $i, $e := .artists }}{{ if $i }}, {{ end }}{{ .name }}{{ end }}
+          </td>
+          <td>{{ .album.name }}</td>
+        </tr>
+      {{ end }}
+      <tr><td colspan="4">
+        <a href="{{ $playlist.url }}">View playlist on Spotify</a>
+      </td></tr>
+    </tbody>
+  </table>
+</div>
