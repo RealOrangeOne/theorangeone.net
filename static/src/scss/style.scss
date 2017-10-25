@@ -97,6 +97,11 @@ table td {
   background-color: #000;
 }
 
+#index-header {
+  height: 90vh;
+  background-image: url('/img/header.jpg')
+}
+
 footer {
   color: $gray-700;
   a {
