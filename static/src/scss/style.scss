@@ -98,12 +98,18 @@ table td {
 }
 
 #index-header {
-  height: 90vh;
-  background-image: url('/img/header.jpg')
+  background-image: url('/img/header.jpg');
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 footer {
   color: $gray-700;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+
   a {
     color: $gray-700;
 
