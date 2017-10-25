@@ -78,3 +78,21 @@ code {
 table td {
   vertical-align: middle;
 }
+
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .navbar-brand {
+    font-size: $font-size-base;
+  }
+
+  .nav-link {
+    padding-left: $font-size-base !important;
+    padding-right: $font-size-base !important;
+  }
+}
+
+.bg-black {
+  background-color: #000;
+}
