@@ -96,3 +96,14 @@ table td {
 .bg-black {
   background-color: #000;
 }
+
+footer {
+  color: $gray-700;
+  a {
+    color: $gray-700;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
