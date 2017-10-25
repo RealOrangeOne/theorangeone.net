@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div id="main">
+  <div class="container">
+    {{ $paginator := .Paginate (.Data.Pages.GroupByDate "2006-01") }}
+    <h1 class="display-4">{{ .Title }}</h1>
+    {{ range $paginator.PageGroups }}
+      {{ $month := (print .Key "-01") }}
+      <h3 class="mt-5">
+        {{ if ne .Key "0001-01" }}
+          {{ dateFormat "2006-01" $month }}
+        {{ end }}
+      </h3>
+      {{ range .Pages.ByDate }}
+        <div class="media list-page-item mb-3">
+          <div class="d-none d-md-block align-self-center img-wrapper mr-3">
+            <img src="{{ .Params.image }}" alt="{{ .Title }} image" />
+          </div>
+          <div class="media-body">
+            <a href="{{ .Permalink }}">
+              <h5 class="mt-0">{{ .Title }}</h5>
+            </a>
+            <p>{{ .Summary }}</p>
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}

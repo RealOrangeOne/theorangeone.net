@@ -118,3 +118,21 @@ footer {
     }
   }
 }
+
+#main {
+  margin-top: $spacer * 6;
+}
+
+.list-page-item {
+  .img-wrapper {
+    width: 20%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  a {
+    color: #e89980;
+  }
+}
