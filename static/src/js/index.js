@@ -27,6 +27,14 @@ $(document).ready(function () {
     preload: 2,
     download: false
   });
+
+  // HACK: ToC has blank li if no initial header
+  $('#TableOfContents > ul > li').each(function () {
+    var ele = $(this);
+    if (ele.children('a').length === 0) {
+      ele.parent().replaceWith(ele.find('ul').eq(0));
+    }
+  });
 });
 
 $('.navbar-brand').bind('click', function (event) {
