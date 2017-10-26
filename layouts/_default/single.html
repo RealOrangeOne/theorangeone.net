@@ -8,12 +8,10 @@
     <h5 class="my-3">{{ .Params.subtitle }}</h5>
     <p>
       <span class="pr-4">{{ .Date.Format "2006-01-02" }}</span>
-      {{ if .Params.tags }}
-        {{ range .Params.tags }}
-          <a href="/tags/{{ urlize . }}" class="badge badge-dark mr-2" style="font-size: 1rem">
-            <i class="fa fa-tag"></i> {{ . }}
-          </a>
-        {{ end }}
+      {{ range .Params.tags }}
+        <a href="/tags/{{ urlize . }}" class="badge badge-dark mr-2" style="font-size: 1rem">
+          <i class="fa fa-tag"></i> {{ . }}
+        </a>
       {{ end }}
     </p>
     <hr />
