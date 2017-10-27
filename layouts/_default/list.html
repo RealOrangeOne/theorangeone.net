@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <div id="main">
+    <div class="container">
+      {{ partial "content.html" . }}
+      <hr />
+      {{ $parent := . }}
+      {{ $sorted_pages := sort .Site.Pages (default "Title" .Params.sort_by) (default "asc" .Params.sort_order)}}
+      {{ $valid_pages :=  where $sorted_pages ".Parent" "!=" nil }}
+      {{ $valid_pages :=  where $valid_pages ".Params.hide_in_list" "!=" "true" }}
+      {{ range where $valid_pages ".Parent.UniqueID" $parent.UniqueID }}
+        {{ partial "list_item.html" . }}
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

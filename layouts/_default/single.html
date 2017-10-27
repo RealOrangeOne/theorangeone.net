@@ -1,26 +1,7 @@
 {{ define "main" }}
 <div id="main">
   <div class="container">
-    {{ if .Params.image }}
-      <img class="mb-3" src="{{ .Params.image }}" style="width: 100%; max-height: 30vh"/>
-    {{ end }}
-    <h1 class="display-5">{{ .Title }}</h1>
-    <h5 class="my-3">{{ .Params.subtitle }}</h5>
-    <p>
-      <span class="pr-4" title='{{ .Date.Format "January 2 2006" }}'>{{ .Date.Format "2006-01-02" }}</span>
-      {{ range .Params.tags }}
-        <a href="/tags/{{ urlize . }}" class="badge badge-dark mr-2" style="font-size: 1rem">
-          <i class="fa fa-tag"></i> {{ . }}
-        </a>
-      {{ end }}
-    </p>
-    <hr />
-    <div class="content mt-3">
-      <div class="float-md-right ml-4">
-        {{ .TableOfContents }}
-      </div>
-      {{ .Content }}
-    </div>
+    {{ partial "content.html" . }}
   </div>
 </div>
 {{ end }}
