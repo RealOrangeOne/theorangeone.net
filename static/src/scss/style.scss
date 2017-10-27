@@ -153,3 +153,19 @@ footer {
 ul ul, ol ol {
   padding-left: $spacer * 1.5;
 }
+
+pre.chroma {
+  padding: $spacer;
+  margin: $spacer 0;
+}
+
+.content {
+  h1, h2, h3, h4, h5, h6 {
+   margin-top: $spacer;
+  }
+
+  code {
+    color: #f8f8f2;
+    background-color: #272822;
+  }
+}

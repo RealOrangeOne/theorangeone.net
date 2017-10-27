@@ -10,7 +10,7 @@ build: install
 	rm -rf $(OUTPUT_DIR)
 	rm -rf $(STATIC_BUILD)
 	mkdir -p $(STATIC_BUILD)/js $(STATIC_BUILD)/css
-	hugo gen chromastyles --style=tango > $(STATIC_SRC)/scss/highlight.css
+	hugo gen chromastyles --style=monokai > $(STATIC_SRC)/scss/highlight.css
 	$(NODE_BIN)/browserify $(STATIC_SRC)/js/index.js -o $(STATIC_BUILD)/js/app.js
 	$(NODE_BIN)/node-sass $(STATIC_SRC)/scss/style.scss $(STATIC_BUILD)/css/style.css --source-map-embed
 	cp -r $(BASEDIR)/node_modules/font-awesome/fonts $(STATIC_BUILD)/fonts
