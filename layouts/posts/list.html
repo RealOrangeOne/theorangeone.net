@@ -11,7 +11,9 @@
       {{ range .Pages.ByDate }}
         <div class="media list-page-item mb-3">
           <div class="d-none d-md-block align-self-center img-wrapper mr-3">
-            <img src="{{ .Params.image }}" alt="{{ .Title }} image" />
+            <a href="{{ .Permalink }}">
+              <img src="{{ .Params.image }}" alt="{{ .Title }} image" />
+            </a>
           </div>
           <div class="media-body">
             <a href="{{ .Permalink }}">
