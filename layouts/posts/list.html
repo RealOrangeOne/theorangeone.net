@@ -6,7 +6,7 @@
     {{ range $paginator.PageGroups }}
       {{ $month := (print .Key "-01") }}
       <h3 class="mt-5">
-        <time class="posts-archive-month" datetime="{{ $month }}">{{ dateFormat "2006-01" $month }}</time>
+        <time datetime="{{ $month }}" title='{{ dateFormat "January 2006" $month }}'>{{ dateFormat "2006-01" $month }}</time>
       </h3>
       {{ range .Pages.ByDate }}
         <div class="media list-page-item mb-3">
