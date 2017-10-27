@@ -6,6 +6,16 @@ $fa-font-path: "../fonts";
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
+$primary: #e89980;
+
+a {
+  color: $primary;
+
+  &:hover {
+    color: #ff7f00;
+  }
+}
+
 pre code {
   margin: 0;
   border: 0;
@@ -131,10 +141,6 @@ footer {
 
   img {
     width: 100%;
-  }
-
-  a {
-    color: #e89980;
   }
 }
 
