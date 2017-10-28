@@ -1,0 +1,24 @@
+{{ $valid_children := where (where .Site.Pages ".Parent" "!=" nil) ".Params.hide_in_nav" "!=" "true" }}
+
+{{ $home := .Site.GetPage "home" }}
+
+{{ range where .Site.Pages.ByTitle "Kind" "section" }}
+  {{ if eq .Parent $home }}
+    {{ $sorted_pages := sort $valid_children (default "Title" .Params.sort_by) (default "asc" .Params.sort_order)}}
+    {{ $children := where $sorted_pages ".Parent.UniqueID" .UniqueID }}
+    <li class="nav-item{{ if $children }} dropdown{{ end }}">
+      <a href="{{ .Permalink }}" class="nav-link{{ if $children }}{{ end }}"{{ if $children }} data-toggle="dropdown"{{ end }}><code>~/{{ .LinkTitle }}</code></a>
+      {{ if $children }}
+        <div class="dropdown-menu">
+          {{ range first .Site.Params.nav_items $children }}
+            <a class="dropdown-item" href="{{ .Permalink }}"><code>{{ .LinkTitle }}</code></a>
+          {{ end }}
+          {{ if ge (len $children) .Site.Params.nav_items }}
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item font-italic" href="{{ .Permalink }}"><code>See More</code></a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </li>
+  {{ end }}
+{{ end }}
