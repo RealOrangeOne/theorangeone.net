@@ -8,6 +8,10 @@ $fa-font-path: "../fonts";
 
 $primary: #e89980;
 
+html, body {
+  height: 100%;
+}
+
 a {
   color: $primary;
 
@@ -108,11 +112,11 @@ table td {
   background-color: #000;
 }
 
+
 #index-header {
   background-image: url('/img/header.jpg');
-  height: 100%;
+  height: calc(100% - 150px);
   width: 100%;
-  position: absolute;
 }
 
 footer {
@@ -120,6 +124,7 @@ footer {
   bottom: 0;
   width: 100%;
   position: static;
+  height: 150px;
 
   a {
     color: $gray-700;
