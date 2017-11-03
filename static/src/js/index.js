@@ -39,7 +39,7 @@ $(document).ready(function () {
   });
 });
 
-$('.navbar-brand').bind('click', function (event) {
+$('.navbar-brand').on('click', function (event) {
   if ($('html').scrollTop() > 100) {
     $('html, body').stop().animate({
       scrollTop: 0
@@ -48,4 +48,8 @@ $('.navbar-brand').bind('click', function (event) {
     window.location = '/';
   }
   event.preventDefault();
+});
+
+$('.nav-item.dropdown').on('click', function () {
+  window.location = $(this).find('a').attr('href');
 });

@@ -169,3 +169,7 @@ pre.chroma {
     background-color: #272822;
   }
 }
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
