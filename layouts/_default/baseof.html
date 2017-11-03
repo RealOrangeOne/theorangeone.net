@@ -24,17 +24,16 @@
       {{ partial "nav_pages.html" . }}
     </ul>
 
-    <div class="d-none d-sm-block">
+    <div class="d-none d-lg-block">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa fa-rss"></i></a>
-        </li>
+        {{ range .Site.Data.social.navbar_accounts }}
+        {{ $account := index $.Site.Data.social.accounts . }}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ $account.link }}">
+              <i class="fa {{ $account.icon }}" title="{{ $account.name }}"></i>
+            </a>
+          </li>
+        {{ end }}
       </ul>
     </div>
   </div>
@@ -53,9 +52,10 @@
       </div>
       <div class="col-sm-6">
         <h3 class="text-right">
-          <a href=""><i class="mx-1 fa fa-github" aria-hidden="true"></i></a>
-          <a href=""><i class="mx-1 fa fa-twitter" aria-hidden="true"></i></a>
-          <a href=""><i class="mx-1 fa fa-rss" aria-hidden="true"></i></a>
+          {{ range .Site.Data.social.footer_accounts }}
+          {{ $account := index $.Site.Data.social.accounts . }}
+            <a href="{{ $account.link }}"><i class="mx-1 fa {{ $account.icon }}" aria-hidden="true" title="{{ $account.name }}"></i></a>
+          {{ end }}
         </h3>
       </div>
     </div>
