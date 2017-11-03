@@ -29,10 +29,12 @@ $(document).ready(function () {
   });
 
   // HACK: ToC has blank li if no initial header
-  $('#TableOfContents > ul > li').each(function () {
+  $('#TableOfContents').each(function () {
     var ele = $(this);
-    if (ele.children('a').length === 0) {
-      ele.parent().replaceWith(ele.find('ul').eq(0));
+    if (ele.find('a').length <= 3) {
+      ele.remove();
+    } else if (ele.children('ul').children('li').length === 1) {
+      ele.children('ul').replaceWith(ele.children('ul').children('li').children('ul'));
     }
   });
 });
