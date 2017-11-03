@@ -49,7 +49,3 @@ $('.navbar-brand').on('click', function (event) {
   }
   event.preventDefault();
 });
-
-$('.nav-item.dropdown').on('click', function () {
-  window.location = $(this).find('a').attr('href');
-});
