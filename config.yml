@@ -5,10 +5,10 @@ title: TheOrangeOne
 params:
   author: TheOrangeOne
   author_name: Jake Howard
-  summary_length: 125
-  summary_length_long: 200
   nav_items: 5
   index_items: 6
+
+summaryLength: 40
 
 outputFormats:
   markdown:
