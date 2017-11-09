@@ -6,7 +6,8 @@ $fa-font-path: "../fonts";
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
-$primary: #e89980;
+$primary: #E89980;
+$orange: #FF7F00;
 
 html, body {
   height: 100%;
@@ -16,7 +17,7 @@ a {
   color: $primary;
 
   &:hover {
-    color: #ff7f00;
+    color: $orange;
   }
 }
 
@@ -103,34 +104,34 @@ table td {
   }
 
   .nav-link {
-    padding-left: $font-size-base !important;
     padding-right: $font-size-base !important;
+    padding-left: $font-size-base !important;
   }
 }
 
 .bg-black {
-  background-color: #000;
+  background-color: $black;
 }
 
 
 #index-header {
-  background-image: url('/img/header.jpg');
-  height: calc(100% - 110px);
+  background-image: url("/img/header.jpg");
   width: 100%;
+  height: calc(100% - 110px);
 }
 
 footer {
-  color: $gray-700;
+  position: static;
   bottom: 0;
   width: 100%;
-  position: static;
   height: 110px;
+  color: $gray-700;
 
   a {
     color: $gray-700;
 
     &:hover {
-      color: #000;
+      color: $black;
     }
   }
 }
@@ -160,17 +161,12 @@ ul ul, ol ol {
 }
 
 pre.chroma {
-  padding: $spacer;
   margin: $spacer 0;
+  padding: $spacer;
 }
 
 .content {
   h1, h2, h3, h4, h5, h6 {
-   margin-top: $spacer;
-  }
-
-  code {
-    color: #f8f8f2;
-    background-color: #272822;
+    margin-top: $spacer;
   }
 }
