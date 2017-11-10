@@ -2,7 +2,7 @@
   <div class="mb-3 image" data-image="{{ .Params.image }}" style="width: 100%; height: 30vh"></div>
 {{ end }}
 <h1 class="display-5">{{ .Title }}</h1>
-<h5 class="my-3">{{ .Params.subtitle }}</h5>
+<h5 class="my-3">{{ partial "subtitle.html" . }}</h5>
 <p>
   {{ if .Params.date }}
     <span class="pr-4" title='{{ .Date.Format "January 2 2006" }}'>{{ .Date.Format "2006-01-02" }}</span>
