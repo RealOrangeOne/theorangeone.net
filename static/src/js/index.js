@@ -3,7 +3,6 @@
 require('./jquery-global');
 require('bootstrap');
 
-// Install alpha things
 require('lightgallery/dist/js/lightgallery');
 require('lg-thumbnail/dist/lg-thumbnail');
 
