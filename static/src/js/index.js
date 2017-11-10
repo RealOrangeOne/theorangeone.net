@@ -6,7 +6,6 @@ require('bootstrap');
 // Install alpha things
 require('lightgallery/dist/js/lightgallery');
 require('lg-thumbnail/dist/lg-thumbnail');
-require('./search');
 
 
 $('.image').each(function () {  // setup div-image hybrids
