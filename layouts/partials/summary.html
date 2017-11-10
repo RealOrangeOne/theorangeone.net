@@ -2,15 +2,11 @@
   {{ .Summary | plainify | chomp }}{{ if .Truncated }}&hellip;{{ end }}
 {{ else if .Params.subtitle }}
   {{ .Params.subtitle | markdownify }}
-{{ else if .Params.repo }}
-  {{ if eq .Params.force_summary false }}
-    {{ (getJSON "https://api.github.com/repos/" .Params.repo).description }}
-  {{ end }}
-{{ else if .Params.gist }}
-  {{ if eq .Params.force_summary false }}
-    {{ (getJSON "https://api.github.com/gists/" .Params.gist).description }}
-  {{ end }}
-{{ else }}
+{{ else if .Content }}
   {{ .Summary | plainify | chomp }}{{ if .Truncated }}&hellip;{{ end }}
+{{ else if .Params.repo }}
+  {{ (getJSON "https://api.github.com/repos/" .Params.repo).description }}
+{{ else if .Params.gist }}
+  {{ (getJSON "https://api.github.com/gists/" .Params.gist).description }}
 {{ end }}
 
