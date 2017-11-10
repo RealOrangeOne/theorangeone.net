@@ -18,5 +18,5 @@ Being at college for 2 years, meant I was able to enter 2 years of competitions,
 ### Post 2015
 Unfortunately, after I left college, I also left behind entering Student Robotics as a competitor. Fortunately however, [they're always looking for volunteers](https://studentrobotics.org/volunteer/) to help run the competition itself, as a _Blue Shirt_. The college kept on working, and keep [their website](http://robotics.collycomp.uk/) updated.
 
-## SmallPiece
-[Smallpiece](/robotics/smallpiece) is a competition run in part by members of Student Robotics. It's basically the entire Student Robotics year, compressed into just 5 days! Details on this can be found on the [Smallpiece](/robotics/smallpiece) page. 
+## Smallpeice
+[Smallpeice](/robotics/smallpeice) is a competition run in part by members of Student Robotics. It's basically the entire Student Robotics year, compressed into just 5 days! Details on this can be found on the [Smallpeice](/robotics/smallpeice) page. 
