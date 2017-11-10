@@ -1,1 +1,2 @@
-{{ .Summary }}{{ if .Truncated }}&hellip;{{ end }}
+{{ .Summary | plainify | chomp }}{{ if .Truncated }}&hellip;{{ end }}
+
