@@ -28,8 +28,8 @@
           </td>
           <td>{{ .album.name }}</td>
           <td>
-            <audio controls class="mejs__player">
-              <source src="{{ .preview_url }}" type="audio/mpeg">
+            <audio controls class="mejs__player" data-plyr='{"controls": ["play", "progress"]}'>
+              <source src="{{ .preview_url }}" type="audio/mpeg" />
             </audio>
           </td>
         </tr>
