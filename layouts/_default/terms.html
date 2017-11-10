@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <div id="main">
+    <div class="container">
+      {{ partial "content.html" . }}
+      {{ if .Content }}
+        <hr />
+      {{ end }}
+      {{ range .Pages.ByTitle }}
+        {{ partial "list_item.html" . }}
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
