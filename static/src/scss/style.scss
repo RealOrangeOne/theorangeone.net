@@ -5,6 +5,7 @@ $fa-font-path: "../fonts";
 
 @import "node_modules/lightgallery/src/sass/lightgallery";
 @import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/plyr/src/scss/plyr";
 
 $primary: #E89980;
 $orange: #FF7F00;
@@ -167,4 +168,8 @@ pre.chroma {
   h1, h2, h3, h4, h5, h6 {
     margin-top: $spacer;
   }
+}
+
+.plyr {
+  min-width: initial;
 }

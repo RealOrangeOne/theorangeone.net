@@ -13,25 +13,25 @@
     <caption><a href="{{ $playlist.url }}">View playlist on Spotify</a></caption>
     <thead>
     <tr>
-      <th scope="row"></th>
       <th scope="row">Track</th>
       <th scope="row">Artist</th>
       <th scope="row">Album</th>
+      <th scope="row"></th>
     </tr>
     </thead>
     <tbody>
       {{ range sort $playlist.tracks "name" }}
         <tr>
-          <td>
-            <span>
-              <a class="icon" href="{{ .preview_url }}"><i class="fa fa-play"></i></a>
-            </span>
-          </td>
           <td><a href="{{ .url }}">{{ .name }}</a></td>
           <td>
             {{ range $i, $e := .artists }}{{ if $i }}, {{ end }}{{ .name }}{{ end }}
           </td>
           <td>{{ .album.name }}</td>
+          <td>
+            <audio controls class="mejs__player">
+              <source src="{{ .preview_url }}" type="audio/mpeg">
+            </audio>
+          </td>
         </tr>
       {{ end }}
     </tbody>

@@ -6,6 +6,13 @@ require('bootstrap');
 require('lightgallery/dist/js/lightgallery');
 require('lg-thumbnail/dist/lg-thumbnail');
 
+require('plyr').setup({
+  controls: [
+    'play',
+    'progress'
+  ]
+});
+
 
 $('.image').each(function () {  // setup div-image hybrids
   var ele = $(this);
