@@ -7,18 +7,18 @@ $fa-font-path: "../fonts";
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "node_modules/plyr/src/scss/plyr";
 
-$primary: #E89980;
-$orange: #FF7F00;
+$primary: #E85537;
 
 html, body {
   height: 100%;
 }
 
 a {
+  transition: color 0.5s;
   color: $primary;
 
   &:hover {
-    color: $orange;
+    color: $black;
   }
 }
 
