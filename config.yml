@@ -7,6 +7,7 @@ params:
   author_name: Jake Howard
   nav_items: 5
   index_items: 6
+  iso8601: "2006-01-02T15:04:05"
 
 summaryLength: 40
 
