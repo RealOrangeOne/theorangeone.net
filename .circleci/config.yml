@@ -4,6 +4,8 @@ jobs:
     build:
         docker:
             - image: circleci/node:6.10
+        environment:
+            - npm_config_loglevel: info
         steps:
             - checkout
             - run:
