@@ -10,6 +10,9 @@ jobs:
                 name: Install Hugo
                 command: wget https://github.com/gohugoio/hugo/releases/download/v0.29/hugo_0.29_Linux-64bit.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
             - run:
+                name: Install dependencies
+                command: npm install
+            - run:
                 name: Build site
                 command: make build
             - run:
