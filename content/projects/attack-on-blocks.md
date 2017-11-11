@@ -1,7 +1,6 @@
 ---
 title: Attack on blocks game
 repo: RealOrangeOne/attack-on-blocks
-download_link: https://github.com/RealOrangeOne/attack-on-blocks/archive/master.zip
 ---
 
 Attack on Blocks is a space invaders style game I wrote for my IT coursework, for the games development unit. We could make any game we wanted, provided it could be done within the time limits, was very easy to play, and easily run on the college computers (which were pretty terrible).

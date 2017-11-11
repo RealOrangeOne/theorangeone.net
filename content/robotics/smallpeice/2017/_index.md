@@ -3,7 +3,6 @@ title: Smallpeice 2017
 image: https://farm5.staticflickr.com/4426/35552704294_5aa52e2ed6_k_d.jpg
 linkTitle: 2017
 date: 2017-08-05
-show_images: true
 ---
 
 Smallpeice 2017 was my first experience into the realm of Smallpeice's _Computing and Micro Electronics_ course. This took place between the 29th July and 5th August, for me. The students were only around 31st to 4th.
