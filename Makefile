@@ -6,6 +6,10 @@ STATIC_BUILD=$(BASEDIR)/static/build
 OUTPUT_DIR=$(BASEDIR)/public
 
 
+release: build
+	$(NODE_BIN)/speedpack $(OUTPUT_DIR) -o $(OUTPUT_DIR)
+
+
 build: install
 	rm -rf $(OUTPUT_DIR)
 	rm -rf $(STATIC_BUILD)
