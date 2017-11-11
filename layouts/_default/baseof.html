@@ -16,30 +16,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm navbar-dark bg-black fixed-top">
-  <a class="navbar-brand" href="{{ .Site.BaseURL }}"><code>/home/{{ lower .Site.Title }}</code></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav mr-auto">
-      {{ partial "nav_pages.html" . }}
-    </ul>
-
-    <div class="d-none d-lg-block">
-      <ul class="navbar-nav">
-        {{ range .Site.Data.social.navbar_accounts }}
-        {{ $account := index $.Site.Data.social.accounts . }}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ $account.link }}">
-              <i class="fa {{ $account.icon }}" title="{{ $account.name }}"></i>
-            </a>
-          </li>
-        {{ end }}
-      </ul>
-    </div>
-  </div>
-</nav>
+{{ partial "navbar.html" . }}
 
 {{ block "main" . }}{{ end }}
 
