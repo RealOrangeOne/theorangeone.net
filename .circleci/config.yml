@@ -5,7 +5,7 @@ jobs:
         docker:
             - image: circleci/node:6.10
         environment:
-            - npm_config_loglevel: info
+            - npm_config_loglevel: notice
         steps:
             - checkout
             - run:
