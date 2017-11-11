@@ -68,11 +68,11 @@ code {
 #light-gallery {
   a {
     display: inline-block;
+    margin-bottom: $grid-gutter-width;
     border-bottom: 0;
     cursor: zoom-in;
     width: 100%;
     overflow: hidden;
-    margin-bottom: $grid-gutter-width;
 
     img {
       transition: opacity 0.5s;
