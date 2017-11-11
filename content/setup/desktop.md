@@ -8,7 +8,7 @@ My setup is my everything, I use my computer daily to browse the internet, work 
 
 Over the years, my setup has evolved from a single monitor i5 computer, to a triple monitor AMD FX-based monster.
 
-{{% pcpartpicker ZhMzr7 %}}
+{{% pcpartpicker 7wswP6 %}}
 
 ### Next Generation
 
@@ -16,7 +16,7 @@ I've been using the current generation for around 5 years now, and it's worked p
 
 The next generation of my build isn't actually a thing yet, but I'm actively working on what it's going to look like and the components inside it. You can find the current parts list at the link below, the list is always changing.
 
-##### [Next-Gen Parts List]()
+{{% pcpartpicker W26kLk %}}
 
 #### OS
 I use Arch Linux on all my machines now, But some days I miss the windows-only applications / games, so I plan to use a virtual machine running windows, with a graphics card hardware pass-through to it to run windows applications, and play windows-only games. I got the idea for doing this from [here](https://www.youtube.com/watch?v=16dbAUrtMX4) and [here](https://www.youtube.com/watch?v=aLeWg11ZBn0).
@@ -27,4 +27,4 @@ The first generation was the first custom build I'd ever done. When I first buil
 
 Many of the parts from this build, including DVD drive, RAM and card reader, still live on in the current generation. The card reader and DVD were bought so I'd never need to buy another again!
 
-{{% pcpartpicker zZ8pvV %}}
+{{% pcpartpicker wPrZLk %}}

@@ -1,13 +1,6 @@
-{{ $id := .Get 0 }}
-{{ $data := getJSON "https://uk.pcpartpicker.com/qapi/partlist/markup/?mode=markdown&partlist=" $id }}
-
 <p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#collapse{{ $id }}" aria-expanded="false" aria-controls="collapse{{ $id }}">
-    View Parts List
+  <a class="" href="https://uk.pcpartpicker.com/user/TheOrangeOne/saved/#view={{ .Get 0 }}">
+    <i class="fa fa-desktop"></i>
+    View on PCPartPicker
   </a>
-  <div class="collapse" id="collapse{{ $id }}">
-    <div class="card card-block">
-      <p>{{ $data.content | markdownify }}</p>
-    </div>
-  </div>
 </p>
