@@ -24,7 +24,7 @@
     "lg-thumbnail": "1.0.3",
     "lightgallery": "1.4.0",
     "plyr": "2.0.17",
-    "speedpack": "0.1.4",
+    "speedpack": "git://github.com/realorangeone/speedpack.git#all",
     "tstatic": "1.1.0"
   }
 }
