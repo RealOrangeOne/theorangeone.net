@@ -6,7 +6,7 @@ subtitle: Incredibly secure, easy to use, but are it's trade-offs worth it?
 tags: [security]
 ---
 
-Throughout my life, I've had many different email providers, starting with [hotmail](https://hotmail.com) almost 10 years ago. Recently, I've been focusing more on ways I can secure my emails. No, I may not have anything to hide, but [that doesn't matter](http://www.ted.com/talks/glenn_greenwald_why_privacy_matters)!
+Throughout my life, I've had many different email providers, starting with [Hotmail](https://hotmail.com) almost 10 years ago. Recently, I've been focusing more on ways I can secure my emails. No, I may not have anything to hide, but [that doesn't matter](http://www.ted.com/talks/glenn_greenwald_why_privacy_matters)!
 
 Originally I thought the best way to keep things secure, and out of the hands of any government body was to host it all myself. This came with a number of problems, mostly due to my lack of experience running anything like this, which lead to problems with my spam filter blocking legitimate emails, and any emails I did send ending up in their spam folder.
 

@@ -15,7 +15,7 @@ One of our team members, Andy, had a birthday over the week, Wednesday. Apparent
 
 I can't take the credit for the idea, but I can for the execution. As I was the one running tinker time, I informed students of our plan, quietly, then we called Andy into the room for an unrelated reason, and I took to the stage:
 
-> Is there an Andy Busse in the audience? Andy, a little, Alistair-sized birdie told me it was your birthday yesterday. And so, from everyone here from Sourcebots, Smallpeice, and everyone else in the room, we'd like to wish you a happy birthday. Now, I you all know the words, so, 1, 2, 3...
+> Is there an Andy Busse in the audience? Andy, a little, Alistair-sized birdie told me it was your birthday yesterday. And so, from everyone here from SourceBots, Smallpeice, and everyone else in the room, we'd like to wish you a happy birthday. Now, I you all know the words, so, 1, 2, 3...
 
 And so, all the students and staff proceeded to sing him _Happy Birthday_. I neglected to consider filming this, but needless to say Andy wasn't exactly thrilled with his oh-so public celebration.
 
