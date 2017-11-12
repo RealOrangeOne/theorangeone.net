@@ -101,3 +101,6 @@ systemd
 mirrorlist
 pacman
 MortenLinderud
+StartBootstrap
+Hugo
+Vec
