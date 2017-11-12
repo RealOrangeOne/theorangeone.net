@@ -32,7 +32,7 @@ $(document).ready(function () {
   $('#TableOfContents').each(function () {
     var ele = $(this);
     if (ele.find('a').length <= 3) {
-      ele.remove();
+      ele.parent().remove();
     } else if (ele.children('ul').children('li').length === 1) {
       ele.children('ul').replaceWith(ele.children('ul').children('li').children('ul'));
     }
