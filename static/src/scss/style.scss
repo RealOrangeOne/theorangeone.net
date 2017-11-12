@@ -175,3 +175,8 @@ pre.chroma {
 .plyr {
   min-width: initial;
 }
+
+p code {
+  @extend .chroma;
+  padding: $spacer * 0.25;
+}
