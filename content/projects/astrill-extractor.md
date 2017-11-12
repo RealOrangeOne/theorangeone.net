@@ -9,7 +9,7 @@ The export step is really simple, you just login to the web portal, create an en
 
 {{% gist %}}
 
-The above script will split out the files and save them into separate directories for each config file. These files can then be imported and used in an openvpn-compatable application.
+The above script will split out the files and save them into separate directories for each config file. These files can then be imported and used in an OpenVPN-compatable application.
 
 ### Is it even needed?
 Certain network managers do support importing `.ovpn` files directly, and sets everything up for you, including the files for the keys etc, without needing to extract them before. Gnome's `network-manager` does this. This does make my script useless to me, but hopefully someone will find it useful!

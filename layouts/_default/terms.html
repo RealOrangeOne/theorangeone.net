@@ -1,10 +1,13 @@
-{{ partial "page_start.html" . }}
-  <section id="main" class="container">
-    {{ partial "content.html" . }}
-    <div class="row">
+{{ define "main" }}
+  <div id="main">
+    <div class="container">
+      {{ partial "content.html" . }}
+      {{ if .Content }}
+        <hr />
+      {{ end }}
       {{ range .Pages.ByTitle }}
-        {{ partial "box_image.html" . }}
+        {{ partial "list_item.html" . }}
       {{ end }}
     </div>
-  </section>
-{{ partial "page_end.html" . }}
+  </div>
+{{ end }}

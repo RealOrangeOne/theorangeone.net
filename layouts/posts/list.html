@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div id="main">
+  <div class="container">
+    {{ $paginator := .Paginate (.Data.Pages.GroupByDate "2006-01") }}
+    <h1 class="display-4">{{ .Title }}</h1>
+    {{ range $paginator.PageGroups }}
+      {{ $month := (print .Key "-01") }}
+      <h3 class="mt-5">
+        <time datetime="{{ $month }}" title='{{ dateFormat "January 2006" $month }}'>{{ dateFormat "2006-01" $month }}</time>
+      </h3>
+      {{ range .Pages.ByDate }}
+        {{ partial "list_item.html" . }}
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}

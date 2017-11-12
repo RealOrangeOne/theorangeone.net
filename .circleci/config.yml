@@ -1,0 +1,22 @@
+version: 2.0
+
+jobs:
+    build:
+        docker:
+            - image: circleci/node:6.10
+        environment:
+            - npm_config_loglevel: notice
+        steps:
+            - checkout
+            - run:
+                name: Install Hugo
+                command: wget https://github.com/gohugoio/hugo/releases/download/v0.29/hugo_0.29_Linux-64bit.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
+            - run:
+                name: Install dependencies
+                command: npm install
+            - run:
+                name: Build site
+                command: make release
+            - run:
+                name: Run Tests
+                command: make test

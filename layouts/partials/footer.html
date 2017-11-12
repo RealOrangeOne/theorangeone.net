@@ -1,21 +1,20 @@
-<footer id="footer">
-  <ul class="icons">
-    {{ range .Site.Data.social.footer_accounts }}
-    {{ $account := index $.Site.Data.social.accounts . }}
-      <li><a href="{{ $account.link }}" class="icon {{ $account.icon }}">
-        <span class="label">{{ $account.name }}</span>
-      </a></li>
-    {{ end }}
-  </ul>
-  <ul class="copyright">
-    <li>&copy; {{ title .Site.Params.author }} {{ now.Year }}.</li>
-    {{ if .OutputFormats.Get "txt" }}
-      {{ with  .OutputFormats.Get "txt" }}
-        <li><a href="{{ .Permalink }}">View Raw</a></li>
-      {{ end }}
-    {{ else }}
-      <li><a href="{{ .Site.Data.social.accounts.github.link }}theorangeone.net">View Source</a></li>
-    {{ end }}
-    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-  </ul>
+<footer class="bg-light p-5 {{ if eq .IsHome false }}mt-5{{ end }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <p>
+          &copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>.
+        </p>
+        <p></p>
+      </div>
+      <div class="col-sm-6">
+        <h3 class="text-right">
+          {{ range .Site.Data.social.footer_accounts }}
+          {{ $account := index $.Site.Data.social.accounts . }}
+          <a href="{{ $account.link }}"><i class="mx-1 fa {{ $account.icon }}" aria-hidden="true" title="{{ $account.name }}"></i></a>
+          {{ end }}
+        </h3>
+      </div>
+    </div>
+  </div>
 </footer>

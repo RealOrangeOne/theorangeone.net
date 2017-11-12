@@ -2,7 +2,6 @@
 title: Student Robotics
 linktitle: Robotics
 image: https://c2.staticflickr.com/8/7674/17308375182_a172a341d6_h.jpg
-show_images: true
 ---
 
 Student Robotics is the the place where my development knowledge really started to grow. Thanks to the other people in my team teaching me. I had never done anything robotics related, and so when my computing teacher initially told us about it, I wasn't really interested. After I found out that my friend was also doing it, I signed up, and went along to the kickstart. From then on I was hooked, getting involved with all aspects of the development and design, as well as helping out other teams on the IRC room.
@@ -17,6 +16,3 @@ Being at college for 2 years, meant I was able to enter 2 years of competitions,
 
 ### Post 2015
 Unfortunately, after I left college, I also left behind entering Student Robotics as a competitor. Fortunately however, [they're always looking for volunteers](https://studentrobotics.org/volunteer/) to help run the competition itself, as a _Blue Shirt_. The college kept on working, and keep [their website](http://robotics.collycomp.uk/) updated.
-
-## SmallPiece
-[Smallpiece](/robotics/smallpiece) is a competition run in part by members of Student Robotics. It's basically the entire Student Robotics year, compressed into just 5 days! Details on this can be found on the [Smallpiece](/robotics/smallpiece) page. 

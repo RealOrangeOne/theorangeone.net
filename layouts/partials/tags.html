@@ -1,9 +1,0 @@
-{{ if .Params.tags }}
-  <div class="align-center" id="tags">
-    {{ range .Params.tags }}
-      <h5><a href="/tags/{{ urlize . }}" class="badge badge-dark">
-        <i class="fa fa-tag"></i> {{ . }}
-      </a></h5>
-    {{ end }}
-  </div>
-{{ end }}

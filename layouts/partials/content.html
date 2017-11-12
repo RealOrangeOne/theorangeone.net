@@ -1,18 +1,25 @@
-<header>
-  <h2>{{ title .Title }}</h2>
-  {{ partial "subtitle_string.html" . }}
-
-  {{ if .Params.date }}
-    <small title="{{ .Date.Format "January 2 2006" }}">{{ .Date.Format "2006-01-02" }}</small>
-  {{ end }}
-</header>
-{{ if .Content }}
-  <div class="box">
-    {{ if .Params.image }}
-      <span class="image featured main" data-image="{{ .Params.image }}"></span>
-    {{ end }}
-    {{ .Content }}
-  </div>
+{{ if .Params.image }}
+  <div class="mb-3 image header-image" data-image="{{ .Params.image }}"></div>
 {{ end }}
+<h1 class="display-5">{{ .Title }}</h1>
+<h5 class="my-3">{{ partial "subtitle.html" . }}</h5>
+<p>
+  {{ if .Params.date }}
+    <span class="pr-4" title='{{ .Date.Format "January 2 2006" }}'>{{ .Date.Format "2006-01-02" }}</span>
+  {{ end }}
 
-{{ partial "tags.html" . }}
+  {{ range .Params.tags }}
+    <a href="/tags/{{ urlize . }}" class="badge badge-dark tag mr-2">
+      <i class="fa fa-tag"></i> {{ . }}
+    </a>
+  {{ end }}
+</p>
+<hr />
+<div class="content mt-3">
+  {{ if .TableOfContents }}
+    <div class="float-lg-right ml-3 bg-light p-3">
+      {{ .TableOfContents }}
+    </div>
+  {{ end }}
+  {{ .Content }}
+</div>

@@ -3,13 +3,10 @@
 require('./jquery-global');
 require('bootstrap');
 
-// Install alpha things
-require('club-alpha/assets/js/jquery.dropotron.min');
-require('club-alpha/assets/js/util');
 require('lightgallery/dist/js/lightgallery');
 require('lg-thumbnail/dist/lg-thumbnail');
-require('./alpha/main');
-require('./search');
+
+require('plyr').setup();
 
 
 $('.image').each(function () {  // setup div-image hybrids
@@ -30,9 +27,19 @@ $(document).ready(function () {
     preload: 2,
     download: false
   });
+
+  // HACK: ToC has blank li if no initial header
+  $('#TableOfContents').each(function () {
+    var ele = $(this);
+    if (ele.find('a').length <= 3) {
+      ele.parent().remove();
+    } else if (ele.children('ul').children('li').length === 1) {
+      ele.children('ul').replaceWith(ele.children('ul').children('li').children('ul'));
+    }
+  });
 });
 
-$('.navbar-brand').bind('click', function (event) {
+$('.navbar-brand').on('click', function (event) {
   if ($('html').scrollTop() > 100) {
     $('html, body').stop().animate({
       scrollTop: 0

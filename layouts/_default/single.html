@@ -1,5 +1,7 @@
-{{ partial "page_start.html" . }}
-	<section id="main" class="container">
-		{{ partial "content.html" . }}
-	</section>
-{{ partial "page_end.html" . }}
+{{ define "main" }}
+<div id="main">
+  <div class="container">
+    {{ partial "content.html" . }}
+  </div>
+</div>
+{{ end }}
