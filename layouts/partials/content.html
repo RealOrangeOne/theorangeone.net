@@ -16,8 +16,10 @@
 </p>
 <hr />
 <div class="content mt-3">
-  <div class="float-lg-right ml-3 bg-light p-3">
-    {{ .TableOfContents }}
-  </div>
+  {{ if .TableOfContents }}
+    <div class="float-lg-right ml-3 bg-light p-3">
+      {{ .TableOfContents }}
+    </div>
+  {{ end }}
   {{ .Content }}
 </div>
