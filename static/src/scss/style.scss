@@ -180,3 +180,12 @@ p code {
   @extend .chroma;
   padding: $spacer * 0.25;
 }
+
+.header-image {
+  width: 100%;
+  height: 35vh;
+}
+
+.tag {
+  font-size: 1rem;
+}

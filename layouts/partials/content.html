@@ -1,5 +1,5 @@
 {{ if .Params.image }}
-  <div class="mb-3 image" data-image="{{ .Params.image }}" style="width: 100%; height: 30vh"></div>
+  <div class="mb-3 image header-image" data-image="{{ .Params.image }}"></div>
 {{ end }}
 <h1 class="display-5">{{ .Title }}</h1>
 <h5 class="my-3">{{ partial "subtitle.html" . }}</h5>
@@ -9,7 +9,7 @@
   {{ end }}
 
   {{ range .Params.tags }}
-    <a href="/tags/{{ urlize . }}" class="badge badge-dark mr-2" style="font-size: 1rem">
+    <a href="/tags/{{ urlize . }}" class="badge badge-dark tag mr-2">
       <i class="fa fa-tag"></i> {{ . }}
     </a>
   {{ end }}
