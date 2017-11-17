@@ -4,11 +4,11 @@
 {{ range $i, $e := $data.files }}
   <h5>
     <a href="{{ $data.html_url }}#file-{{ $i }}">
-      <strong>{{ $i }}</strong>
+      <code class="font-weight-bold">{{ $i }}</code>
     </a>
     &nbsp;&nbsp;
     <a href="{{ $e.raw_url }}">
-      <i>View Raw</i>
+      <small class="font-italic">View Raw</small>
     </a>
   </h5>
   {{ highlight $e.content $e.language "linenos=inline" }}
