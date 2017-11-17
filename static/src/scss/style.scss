@@ -176,7 +176,7 @@ pre.chroma {
   min-width: initial;
 }
 
-p code {
+p code, li code {
   @extend .chroma;
   padding: $spacer * 0.25;
 }
