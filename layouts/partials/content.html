@@ -3,17 +3,7 @@
 {{ end }}
 <h1 class="display-5">{{ .Title }}</h1>
 <h5 class="my-3">{{ partial "subtitle.html" . }}</h5>
-<p>
-  {{ if .Params.date }}
-    <span class="pr-4" title='{{ .Date.Format "January 2 2006" }}'>{{ .Date.Format "2006-01-02" }}</span>
-  {{ end }}
-
-  {{ range .Params.tags }}
-    <a href="/tags/{{ urlize . }}" class="badge badge-dark tag mr-2">
-      <i class="fa fa-tag"></i> {{ . }}
-    </a>
-  {{ end }}
-</p>
+<p>{{ partial "content-details.html" . }}</p>
 <hr />
 <div class="content mt-3">
   {{ if .TableOfContents }}
