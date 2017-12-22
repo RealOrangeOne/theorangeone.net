@@ -151,6 +151,8 @@ footer {
 }
 
 #TableOfContents {
+  font-size: $font-size-base;
+
   & > ul {
     margin-bottom: 0;
     padding-left: $spacer;
@@ -167,7 +169,7 @@ pre.chroma {
 }
 
 .content {
-  font-size: 1.2rem;
+  font-size: $font-size-lg;
 
   h1, h2, h3, h4, h5, h6 {
     margin-top: $spacer;
