@@ -1,0 +1,5 @@
+{{ $repo := default (.Get 0) .Page.Params.repo }}
+
+<a class="btn btn-outline-dark my-2" href="https://github.com/{{ $repo }}">
+  <i class="fa fa-github"></i> View on GitHub
+</a>

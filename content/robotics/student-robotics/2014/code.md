@@ -3,11 +3,9 @@ title: Code
 repo: SR-CLY/2014
 ---
 
-2014 is one of the only years in which we released the full source code for our robot. There's a link to our [GitHub organisation](https://github.com/SR-CLY/) below. I've mapped SR user accounts to GitHub user accounts to make commit history more accurate.
+2014 is one of the only years in which we released the [full source code](https://github.com/SR-CLY/2014) for our robot, to our [GitHub organisation](https://github.com/SR-CLY/).
 
-<ul class="actions fir">
-  <li><a class="button special fit" href="https://github.com/SR-CLY/2014">View Source</a></li>
-</ul>
+{{% repobutton %}}
 
 ## GRAP!
 
