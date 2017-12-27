@@ -187,6 +187,11 @@ pre.chroma {
   h1, h2, h3, h4, h5, h6 {
     margin-top: $spacer;
   }
+
+  blockquote {
+    padding-left: $spacer * 1.2;
+    border-left: $spacer * 0.2 solid lightgray;
+  }
 }
 
 .plyr {
