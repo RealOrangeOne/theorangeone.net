@@ -5,8 +5,8 @@ linkTitle: 2017
 date: 2017-08-05
 ---
 
-Smallpeice 2017 was my first experience into the realm of Smallpeice's _Computing and Micro Electronics_ course. This took place between the 29th July and 5th August, for me. The students were only around 31st to 4th.
+Smallpeice 2017 was my first experience into the realm of Smallpeice's [_Computing and Micro Electronics_](https://www.smallpeicetrust.org.uk/courses/computing-and-microelectronics/) course. This took place between the 29th July and 5th August, for me. The students were only around 31st to 4th.
 
 ## The Game 
 
-This year, teams competed in a game called _Tin Can Rally_, a take on a previous [Student Robotics](/robotics) game. Teams had to get around the arena circuit as many times as possible. Each time they passed a quarter marker, they gained a point. If they were carrying one of the 6 tokens in the arena when crossing the line, they would gain an additional point for each. The game was also shorter than standard SR games, at only 2 minutes.   
+This year, teams competed in a game called _Tin Can Rally_, a take on a previous [Student Robotics](/robotics/student-robotics) game. Teams had to get around the arena circuit as many times as possible. Each time they passed a quarter marker, they gained a point. If they were carrying one of the 6 tokens in the arena when crossing the line, they would gain an additional point for each. The game was also shorter than standard SR games, at only 2 minutes.   
