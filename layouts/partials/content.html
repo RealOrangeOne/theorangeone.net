@@ -1,6 +1,7 @@
 {{ if .Params.image }}
   <div class="mb-3 image header-image" data-image="{{ .Params.image }}"></div>
 {{ end }}
+{{ partial "breadcrumbs/index.html" . }}
 <h1 class="display-5">{{ .Title }}</h1>
 <h5 class="my-3">{{ partial "subtitle.html" . }}</h5>
 <p>{{ partial "content-details.html" . }}</p>

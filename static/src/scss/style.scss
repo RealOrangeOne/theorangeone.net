@@ -211,3 +211,16 @@ p code, li code {
 .tag {
   font-size: 1rem;
 }
+
+.breadcrumb {
+  background-color: initial;
+  padding: 0;
+  font-size: $spacer * 0.9;
+  margin-bottom: 0;
+  margin-top: $spacer * 1.5;
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    padding: 0 0.2rem;
+    color: $black;
+  }
+}
