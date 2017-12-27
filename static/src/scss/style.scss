@@ -189,8 +189,8 @@ pre.chroma {
   }
 
   blockquote {
+    border-left: $spacer * 0.2 solid $light;
     padding-left: $spacer * 1.2;
-    border-left: $spacer * 0.2 solid lightgray;
   }
 
   img {
@@ -217,11 +217,11 @@ p code, li code {
 }
 
 .breadcrumb {
+  margin-top: $spacer * 1.5;
+  margin-bottom: 0;
   background-color: initial;
   padding: 0;
   font-size: $spacer * 0.9;
-  margin-bottom: 0;
-  margin-top: $spacer * 1.5;
 
   .breadcrumb-item + .breadcrumb-item::before {
     padding: 0 0.2rem;
