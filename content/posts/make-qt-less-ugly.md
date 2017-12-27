@@ -1,6 +1,7 @@
 ---
 title: Make QT look less ugly
 date: 2017-12-27
+image: /img/qt-gtk-after.png
 ---
 
 As anyone who's used an application written with the QT UI framework will know, they don't always look the best, and certainly don't fit in with the rest of your desktops theme in the way GTK does. Certain themes support styling both GTK and QT applications, however most don't.
