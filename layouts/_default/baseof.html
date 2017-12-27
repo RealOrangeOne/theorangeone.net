@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}/img/logo-transparent.png" />
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css" />
 
-    <title>{{ .Title }} :: {{ .Site.Title }}</title>
+    <title>{{ partial "title-item.html" (dict "page" . "current" .)}}{{ .Site.Title }}</title>
 
     {{ partial "metadata.html" . }}
   </head>
