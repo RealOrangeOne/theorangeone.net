@@ -8,7 +8,7 @@
       <h3 class="mt-5">
         <time datetime="{{ $month }}" title='{{ dateFormat "January 2006" $month }}'>{{ dateFormat "2006-01" $month }}</time>
       </h3>
-      {{ range .Pages.ByDate }}
+      {{ range (sort .Pages "Date" "desc") }}
         {{ partial "list_item.html" . }}
       {{ end }}
     {{ end }}
