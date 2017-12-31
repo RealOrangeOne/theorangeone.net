@@ -3,10 +3,12 @@
 require('./jquery-global');
 require('bootstrap');
 
+
 require('lightgallery/dist/js/lightgallery');
 require('lg-thumbnail/dist/lg-thumbnail');
 
 require('plyr').setup();
+var Clipboard = require('clipboard');
 
 
 $('.image').each(function () {  // setup div-image hybrids
@@ -47,5 +49,16 @@ $('.navbar-brand').on('click', function (event) {
   } else {
     window.location = '/';
   }
+  event.preventDefault();
+});
+
+var clipboard = new Clipboard('a');
+clipboard.on('success', function (e) {
+  var ele = $(e.trigger);
+  ele.find('i').attr('class', 'fa fa-check');
+  ele.attr('title', 'Copied!');
+});
+
+$('[data-clipboard-text]').on('click', function (event) {
   event.preventDefault();
 });
