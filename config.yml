@@ -32,17 +32,15 @@ outputs:
 
 staticDir: "static/build"
 
-buildDrafts: false
 buildFuture: true
-buildExpired: true
 
-enableGitInfo: false
 enableRobotsTXT: true
-rssLimit: 100
+rssLimit: 10000
 
 disableHugoGeneratorInject: true
 enableEmoji: true
 MetaDataFormat: yaml
+stepAnalysis: true
 
 pygmentsCodefencesGuessSyntax: true
 pygmentsCodefences: true
