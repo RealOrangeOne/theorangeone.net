@@ -42,7 +42,7 @@ node_modules:
 
 test:
 	$(NODE_BIN)/sass-lint -vqc .sass-lint.yml
-	$(NODE_BIN)/eslint $(STATIC_SRC)/js --ignore-pattern *.min.js
+	$(NODE_BIN)/eslint $(STATIC_SRC)/js
 	$(NODE_BIN)/yamllint data/*.yml
 	$(NODE_BIN)/yamllint config.yml
 	$(NODE_BIN)/mdspell --en-gb -ranx 'content/**/*.*'
