@@ -3,5 +3,13 @@
   <div class="container">
     {{ partial "content.html" . }}
   </div>
+  <div class="container mt-3 text-center">
+    <small>Share this post</small>
+    <h3>
+      <a href="https://twitter.com/intent/tweet?text={{ .Permalink }}"><i class="mx-1 fa fa-twitter" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"><i class="mx-1 fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="http://www.reddit.com/submit?url={{ .Permalink }}"><i class="mx-1 fa fa-reddit" aria-hidden="true"></i></a>
+    </h3>
+  </div>
 </div>
 {{ end }}
