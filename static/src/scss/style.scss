@@ -18,6 +18,14 @@ a {
   &:hover {
     color: $black;
   }
+
+  &.colour-invert {
+    color: $black;
+
+    &:hover {
+      color: $primary;
+    }
+  }
 }
 
 pre code {
