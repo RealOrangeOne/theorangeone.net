@@ -4,67 +4,67 @@ accounts:
     name: GitHub
     username: RealOrangeOne
     link: https://github.com/RealOrangeOne/
-    icon: fa-github
+    icon: fab fa-github
 
   twitter:
     name: Twitter
     username: RealOrangeOne
     link: https://twitter.com/RealOrangeOne/
-    icon: fa-twitter
+    icon: fab fa-twitter
 
   reddit:
     name: Reddit
     username: RealOrangeOne
     link: https://reddit.com/u/RealOrangeOne/
-    icon: fa-reddit
+    icon: fab fa-reddit
 
   flickr:
     name: Flickr
     username: TheOrangeOne
     link: https://flickr.com/photos/TheOrangeOne/
-    icon: fa-flickr
+    icon: fab fa-flickr
 
   bitbucket:
     name: BitBucket
     username: TheOrangeOne
     link: https://bitbucket.com/TheOrangeOne/
-    icon: fa-bitbucket
+    icon: fab fa-bitbucket
 
   trello:
     name: Trello
     username: TheOrangeOne
     link: https://trello.com/TheOrangeOne/
-    icon: fa-trello
+    icon: fab fa-trello
 
   freenode:
     name: Freenode
     username: TheOrangeOne
     link: https://webchat.freenode.net/
-    icon: fa-rss
+    icon: fas fa-rss
 
   pcpartpicker:
     name: PCPartPicker
     username: TheOrangeOne
     link: https://uk.pcpartpicker.com/user/TheOrangeOne/
-    icon: fa-desktop
+    icon: fas fa-desktop
 
   codepen:
     name: CodePen
     username: TheOrangeOne
     link: https://codepen.io/TheOrangeOne/
-    icon: fa-codepen
+    icon: fab fa-codepen
 
   npm:
     name: NPM
     username: TheOrangeOne
     link: https://www.npmjs.com/~TheOrangeOne/
-    icon: fa-file-code-o
+    icon: fab fa-npm
 
   keybase:
     name: Keybase
     username: RealOrangeOne
     link: https://keybase.io/realorangeone
-    icon: fa-key
+    icon: fas fa-key
 
 footer_accounts:
   - github

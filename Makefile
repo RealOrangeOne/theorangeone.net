@@ -17,7 +17,6 @@ build: install
 	hugo gen chromastyles --style=monokai > $(STATIC_SRC)/scss/highlight.css
 	$(NODE_BIN)/browserify $(STATIC_SRC)/js/index.js -o $(STATIC_BUILD)/js/app.js
 	$(NODE_BIN)/node-sass $(STATIC_SRC)/scss/style.scss $(STATIC_BUILD)/css/style.css --source-map-embed
-	cp -r $(BASEDIR)/node_modules/font-awesome/fonts $(STATIC_BUILD)/fonts
 	cp -r $(BASEDIR)/node_modules/lightgallery/dist/fonts $(STATIC_BUILD)
 	cp -r $(STATIC_SRC)/img $(STATIC_BUILD)/img
 	@hugo -vDEF --stepAnalysis

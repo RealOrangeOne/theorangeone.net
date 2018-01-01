@@ -14,7 +14,7 @@
         {{ $account := index $.Site.Data.social.accounts . }}
         <li class="nav-item">
           <a class="nav-link" href="{{ $account.link }}">
-            <i class="fa {{ $account.icon }}" title="{{ $account.name }}"></i>
+            <i class="{{ $account.icon }}" title="{{ $account.name }}"></i>
           </a>
         </li>
         {{ end }}

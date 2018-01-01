@@ -1,6 +1,7 @@
 'use strict';
 
 require('./jquery-global');
+require('./fa');
 require('bootstrap');
 
 
@@ -55,7 +56,7 @@ $('.navbar-brand').on('click', function (event) {
 var clipboard = new Clipboard('a');
 clipboard.on('success', function (e) {
   var ele = $(e.trigger);
-  ele.find('i').attr('class', 'fa fa-check');
+  ele.find('i').attr('class', 'fas fa-check');
   ele.attr('title', 'Copied!');
 });
 

@@ -2,7 +2,7 @@
   {{ range $i, $e := sort .Site.Data.social.accounts "name" }}
     <div class="col-sm-3 mt-3">
       <div class="card text-center">
-        <h1 class="display-3"><i class="fa {{ $e.icon }}"></i></h1>
+        <h1 class="display-3"><i class="{{ $e.icon }}"></i></h1>
         <div class="card-body">
           <h3>{{ $e.name }}</h3>
           <a href="{{ $e.link }}">
