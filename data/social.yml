@@ -66,6 +66,24 @@ accounts:
     link: https://keybase.io/realorangeone
     icon: fas fa-key
 
+  youtube:
+    name: YouTube
+    username: TheOrangeOneOfficial
+    link: https://www.youtube.com/user/TheOrangeOneOfficial/
+    icon: fab fa-youtube
+
+  stack-overflow:
+    name: Stack Overflow
+    username: TheOrangeOne
+    link: https://stackoverflow.com/users/5134369/theorangeone
+    icon: fab fa-stack-overflow
+
+  stack-exchange:
+    name: Stack Exchange
+    username: TheOrangeOne
+    link: https://stackexchange.com/users/6652941/theorangeone
+    icon: fab fa-stack-exchange
+
 footer_accounts:
   - github
   - twitter
