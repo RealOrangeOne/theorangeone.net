@@ -84,6 +84,12 @@ accounts:
     link: https://stackexchange.com/users/6652941/theorangeone
     icon: fab fa-stack-exchange
 
+  hacker-news:
+    name: Hacker News
+    username: theorangeone
+    link: https://news.ycombinator.com/user?id=theorangeone
+    icon: fab fa-hacker-news-square
+
 footer_accounts:
   - github
   - twitter
