@@ -1,3 +1,5 @@
+'use strict';
+
 var fontawesome = require('@fortawesome/fontawesome');
 var solid = require('@fortawesome/fontawesome-free-solid');
 var regular = require('@fortawesome/fontawesome-free-regular');
