@@ -1,7 +1,7 @@
 ---
 title: My Stack - 2017 Edition
 date: 2017-12-31
-image: /img/editing-my-stack-2017.png
+image: resource:editing-my-stack
 hide_header_image: true
 ---
 
