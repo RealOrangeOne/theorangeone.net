@@ -13,7 +13,9 @@ My current distro of choice is [Arch](https://www.archlinux.org/), specifically 
 ## Desktop
 My current desktop of choice is [i3](https://i3wm.org/). After spending a lot of time using [Gnome](https://www.gnome.org/), and always having windows either full screen or split, I tried out i3 in an attempt to use fewer resources, and it's amazing. Admittedly i3 doesn't look quite as nice, but it's far cleaner, and structured, and that's enough for me!
 
-![Editing this post](/img/editing-my-stack-2017.png)
+{{% resource src="editing-my-stack" %}}
+Editing my stack, in caret
+{{% /resource %}}
 
 # Editors
 ## Code
@@ -28,7 +30,9 @@ If I'm just editing a file quickly, whether it be config from the terminal, or a
 # Shell
 Whilst I use [ZSH](https://www.zsh.org/), I'm not a fan of the [super fancy themes](https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes) for it, which display your current git branch, node version, time, all that jazz. My terminal is a take on the default colourised Debian terminal, with a lambda symbol who's colour changes depending on the return code of the previous command.
 
-![My Shell Prompt](/img/shell-prompt-2017.png)
+{{% resource src="shell-prompt" %}}
+My shell prompt
+{{% /resource %}}
 
 I do have a fair number of plugins and aliases, thanks to both [oh my ZSH](http://ohmyz.sh/) and [my custom config](https://github.com/RealOrangeOne/dotfiles/tree/master/modules/shell/files).
 

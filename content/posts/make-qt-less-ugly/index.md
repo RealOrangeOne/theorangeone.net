@@ -7,7 +7,9 @@ hide_header_image: true
 
 As anyone who's used an application written with the QT UI framework will know, they don't always look the best, and certainly don't fit in with the rest of your desktops theme in the way GTK does. Certain themes support styling both GTK and QT applications, however most don't.
 
-![QT looking fairly terrible](/img/qt-gtk-before.png)
+{{% resource src="qt-gtk-before" %}}
+KeePassXC, before it looked pretty
+{{% /resource %}}
 
 Fortunately, there's a solution, and it comes in the form of a _Theme engine_. Theme engines act as a small compatibility layer, allowing certain frameworks to render as if they were others. With this, we can tell QT applications to render as if they were GTK.
 
@@ -22,4 +24,6 @@ Installing the environment variable can't be done in your `.bashrc`, as variable
 
 After install, simply reboot, and your apps should fit in far, _far_ better with the rest of your desktop.
 
-![QT looking far nicer!](/img/qt-gtk-after.png)
+{{% resource src="qt-gtk-after" %}}
+KeePassXC, with GTK looks much nicer!
+{{% /resource %}}
