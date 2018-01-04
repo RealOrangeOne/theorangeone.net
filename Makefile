@@ -13,6 +13,7 @@ release: build
 build: install
 	rm -rf $(OUTPUT_DIR)
 	rm -rf $(STATIC_BUILD)
+	rm -rf $(BASEDIR)/resources
 	mkdir -p $(STATIC_BUILD)/js $(STATIC_BUILD)/css
 	hugo gen chromastyles --style=monokai > $(STATIC_SRC)/scss/highlight.css
 	$(NODE_BIN)/browserify $(STATIC_SRC)/js/index.js -o $(STATIC_BUILD)/js/app.js
