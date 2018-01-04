@@ -19,13 +19,13 @@ build: install
 	$(NODE_BIN)/node-sass $(STATIC_SRC)/scss/style.scss $(STATIC_BUILD)/css/style.css --source-map-embed
 	cp -r $(BASEDIR)/node_modules/lightgallery/dist/fonts $(STATIC_BUILD)
 	cp -r $(STATIC_SRC)/img $(STATIC_BUILD)/img
-	@hugo -vDEF --stepAnalysis
+	@hugo -vDEF --stepAnalysis --gc
 	mkdir -p $(OUTPUT_DIR)/.well-known/
 	cp static/keybase.txt public/keybase.txt
 	cp static/security.txt public/.well-known/security.txt
 
 server: build
-	hugo server --noHTTPCache --disableFastRender
+	hugo server --noHTTPCache --disableFastRender --gc
 
 
 clean:
