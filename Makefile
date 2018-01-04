@@ -1,5 +1,5 @@
 BASEDIR=$(PWD)
-NODE_BIN=node_modules/.bin
+NODE_BIN=$(BASEDIR)/node_modules/.bin
 
 STATIC_SRC=$(BASEDIR)/static/src
 STATIC_BUILD=$(BASEDIR)/static/build
@@ -21,8 +21,8 @@ build: install
 	cp -r $(STATIC_SRC)/img $(STATIC_BUILD)/img
 	@hugo -vDEF --stepAnalysis --gc
 	mkdir -p $(OUTPUT_DIR)/.well-known/
-	cp static/keybase.txt public/keybase.txt
-	cp static/security.txt public/.well-known/security.txt
+	cp $(BASEDIR)/static/keybase.txt $(OUTPUT_DIR)/keybase.txt
+	cp $(BASEDIR)/static/security.txt $(OUTPUT_DIR)/.well-known/security.txt
 
 server: build
 	hugo server --noHTTPCache --disableFastRender --gc
