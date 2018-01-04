@@ -227,3 +227,4 @@ ENV/
 
 # End of https://www.gitignore.io/api/hugo,node,python,jetbrains
 static/src/scss/highlight.css
+resources/
