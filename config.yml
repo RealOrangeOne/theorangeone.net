@@ -45,3 +45,8 @@ stepAnalysis: true
 pygmentsCodefencesGuessSyntax: true
 pygmentsCodefences: true
 pygmentsUseClasses: true
+
+imaging:
+    resampleFilter: Lanczos
+    quality: 100
+
