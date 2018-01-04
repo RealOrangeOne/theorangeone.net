@@ -2,7 +2,12 @@
   {{ if .Params.image }}
     <div class="d-none d-md-block align-self-center img-wrapper mr-3">
       <a href="{{ .Permalink }}">
-        <div class="image" data-image="{{ .Params.image }}"></div>
+        {{ .Scratch.Set "image" .Params.image }}
+        {{ if hasPrefix .Params.image "resource:" }}
+          {{ $resource := .Resources.GetByPrefix (replace .Params.image "resource:" "") }}
+          {{ .Scratch.Set "image" ($resource.Resize "300x").Permalink }}
+        {{ end }}
+        <div class="image" data-image='{{ .Scratch.Get "image" }}'></div>
       </a>
     </div>
   {{ end }}
