@@ -1,5 +1,10 @@
 {{ if .Params.image }}{{ if not .Params.hide_header_image }}
-  <div class="mb-3 image header-image" data-image="{{ .Params.image }}"></div>
+  {{ .Scratch.Set "image" .Params.image }}
+  {{ if hasPrefix .Params.image "resource:" }}
+    {{ $resource := .Resources.GetByPrefix (replace .Params.image "resource:" "") }}
+    {{ .Scratch.Set "image" $resource.Permalink }}
+  {{ end }}
+  <div class="mb-3 image header-image" data-image='{{ .Scratch.Get "image" }}'></div>
 {{ end }}{{ end }}
 {{ partial "breadcrumbs/index.html" . }}
 <h1 class="display-5">{{ .Title }}</h1>
