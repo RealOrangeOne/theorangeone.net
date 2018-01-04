@@ -1,0 +1,28 @@
+{{ $original := .Page.Resources.GetByPrefix (.Get "src") }}
+{{ $options := .Get "options" }}
+
+{{ .Scratch.Set "image" $original }}
+
+{{ if $options }}
+  {{ $command := (default "Resize" (.Get "command")) }}
+  {{ if eq $command "Fit"}}
+    {{ .Scratch.Set "image" ($original.Fit $options) }}
+  {{ else if eq $command "Resize"}}
+    {{ .Scratch.Set "image" ($original.Resize $options) }}
+  {{ else if eq $command "Fill"}}
+    {{ .Scratch.Set "image" ($original.Fill $options) }}
+  {{ end }}
+{{ end }}
+
+{{ $image := .Scratch.Get "image" }}
+
+{{ if .Inner }}
+  <figure>
+    <img src="{{ $image.Permalink }}" class='{{ .Get "class" }}' />
+    <figcaption>
+      <small>{{ .Inner }}</small>
+    </figcaption>
+  </figure>
+{{ else }}
+  <img src="{{ $image.Permalink }}" class='{{ .Get "class" }}' />
+{{ end }}
