@@ -46,7 +46,7 @@ test:
 	$(NODE_BIN)/eslint $(STATIC_SRC)/js
 	$(NODE_BIN)/yamllint data/*.yml
 	$(NODE_BIN)/yamllint config.yml
-	$(NODE_BIN)/mdspell --en-gb -ranx 'content/**/*.*'
+	$(NODE_BIN)/mdspell --en-gb -ranx 'content/**/*.md'
 
 
 .PHONY: build clean install test
