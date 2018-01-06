@@ -1,7 +1,7 @@
 {{ $home := .Site.GetPage "home" }}
 
 {{ $sections := where (where .Site.Pages.ByTitle "Kind" "section") "Parent.UniqueID" $home.UniqueID }}
-{{ $pages := where (where .Site.Pages.ByTitle "Kind" "page") "Section" "" }}
+{{ $pages := where .Site.RegularPages.ByTitle "Section" "" }}
 {{ $nav_pages := union $pages $sections }}
 
 {{ range sort $nav_pages "LinkTitle" }}
