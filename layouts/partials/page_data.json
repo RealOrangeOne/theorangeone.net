@@ -5,6 +5,8 @@
   "url": "{{ .Permalink }}",
   "link": "{{ .RelPermalink }}",
   "link_title": "{{ .LinkTitle }}",
+  "words": {{ .FuzzyWordCount }},
+  "reading_time": {{ .ReadingTime }},
   "parent": "{{ if .Parent }}{{ lower .Parent.Title }}{{ end }}",
   "tags": {{ jsonify .Params.tags }}
 }
