@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-black fixed-top">
-  <a class="navbar-brand" href="{{ .Site.BaseURL }}"><code>/home/{{ lower .Site.Title }}</code></a>
+  <a class="navbar-brand" href='{{ absURL "" }}'><code>/home/{{ lower .Site.Title }}</code></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
