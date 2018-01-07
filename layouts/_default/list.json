@@ -1,6 +1,6 @@
 {
   {{ range $i, $e := .Data.Pages.ByTitle }}
     {{ if $i }}, {{ end }}
-    {{ partial "page_data.json" . }}
+    "{{ .RelPermalink }}": {{ partial "page_data.json" . }}
   {{ end }}
 }

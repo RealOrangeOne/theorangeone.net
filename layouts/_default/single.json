@@ -1,12 +1,1 @@
-{
-  "id": "{{ .UniqueID }}",
-  "title": "{{ .Title }}",
-  "date_published": "{{ .Date }}",
-  "image": "{{ absURL .Params.image }}",
-  "url": "{{ .Permalink }}",
-  "content_html": {{ jsonify .Content }},
-  "content_text": {{ jsonify .RawContent }},
-  "summary": {{ jsonify .Summary }},
-  "banner_image": "{{ absURL .Params.image }}",
-  "tags": {{ jsonify .Params.tags }}
-}
+{{ partial "page_data.json" . }}

@@ -1,12 +1,16 @@
-"{{ .RelPermalink }}": {
+{
   "id": "{{ .UniqueID }}",
-  "title": "{{ lower .Title }}",
+  "title": "{{ .Title }}",
+  "image": "{{ absURL .Params.image }}",
   "date": "{{ .Date }}",
   "url": "{{ .Permalink }}",
   "link": "{{ .RelPermalink }}",
   "link_title": "{{ .LinkTitle }}",
+  "content_html": {{ jsonify (.Content | plainify | chomp | htmlUnescape) }},
+  "content_text": {{ jsonify .RawContent }},
+  "summary": {{ jsonify (.Summary | plainify | chomp | htmlUnescape) }},
   "words": {{ .FuzzyWordCount }},
   "reading_time": {{ .ReadingTime }},
-  "parent": "{{ if .Parent }}{{ lower .Parent.Title }}{{ end }}",
+  "parent": "{{ if .Parent }}{{ .Parent.Title }}{{ end }}",
   "tags": {{ jsonify .Params.tags }}
 }
