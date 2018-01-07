@@ -50,3 +50,5 @@ imaging:
     resampleFilter: Lanczos
     quality: 100
 
+blackfriday:
+    smartypants: false
