@@ -1,16 +1,17 @@
-{{ $ident := .Get 0 }}
+{{ $user := .Get 0 }}
+{{ $playlist_id := .Get 1 }}
 
-{{ $playlist := getJSON "http://spotify-public-proxy.theorangeone.net/playlist/" $ident }}
+{{ $playlist := getJSON "http://spotify-public-proxy.theorangeone.net/v1/users/" $user "/playlists/" $playlist_id }}
 
 <div class="playlist">
-  <a href="{{ $playlist.url }}">
+  <a href="{{ $playlist.external_urls.spotify }}">
     <h3>
       {{ $playlist.name }}
     </h3>
   </a>
 
   <table class="table table-hover table-striped">
-    <caption><a href="{{ $playlist.url }}">View playlist on Spotify</a></caption>
+    <caption><a href="{{ $playlist.external_urls.spotify }}">View playlist on Spotify</a></caption>
     <thead>
     <tr>
       <th scope="row">Track</th>
@@ -20,19 +21,21 @@
     </tr>
     </thead>
     <tbody>
-      {{ range sort $playlist.tracks "name" }}
-        <tr>
-          <td><a href="{{ .url }}">{{ .name }}</a></td>
-          <td>
-            {{ range $i, $e := .artists }}{{ if $i }}, {{ end }}{{ .name }}{{ end }}
-          </td>
-          <td>{{ .album.name }}</td>
-          <td>
-            <audio controls class="mejs__player" data-plyr='{"controls": ["play", "progress"]}'>
-              <source src="{{ .preview_url }}" type="audio/mpeg" />
-            </audio>
-          </td>
-        </tr>
+      {{ range sort $playlist.tracks.items "track.name" }}
+        {{ with .track }}
+          <tr>
+            <td><a href="{{ .external_urls.spotify }}">{{ .name }}</a></td>
+            <td>
+              {{ range $i, $e := .artists }}{{ if $i }}, {{ end }}{{ .name }}{{ end }}
+            </td>
+            <td>{{ .album.name }}</td>
+            <td>
+              <audio controls class="mejs__player" data-plyr='{"controls": ["play", "progress"]}'>
+                <source src="{{ .preview_url }}" type="audio/mpeg" />
+              </audio>
+            </td>
+          </tr>
+        {{ end }}
       {{ end }}
     </tbody>
   </table>
