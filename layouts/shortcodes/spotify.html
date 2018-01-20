@@ -14,16 +14,20 @@
     <caption><a href="{{ $playlist.external_urls.spotify }}">View playlist on Spotify</a></caption>
     <thead>
     <tr>
+      <th scope="row"></th>
       <th scope="row">Track</th>
       <th scope="row">Artist</th>
       <th scope="row">Album</th>
-      <th scope="row"></th>
+      <th scope="row">Preview</th>
     </tr>
     </thead>
     <tbody>
       {{ range sort $playlist.tracks.items "track.name" }}
         {{ with .track }}
           <tr>
+            {{ with index (last 1 .album.images) 0 }}
+              <td><div class="image" data-image="{{ .url }}"></div></td>
+            {{ end }}
             <td><a href="{{ .external_urls.spotify }}">{{ .name }}</a></td>
             <td>
               {{ range $i, $e := .artists }}{{ if $i }}, {{ end }}{{ .name }}{{ end }}
