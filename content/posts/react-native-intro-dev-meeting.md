@@ -16,4 +16,8 @@ The slides from my talk are available on my [GitHub](https://github.com/RealOran
 
 React Native is a tricky platform to get started on, but once you understand the _qwerks_, I believe it truly is the future of cross-platform mobile development!
 
-[Click here to view the slides](https://realorangeone.github.io/react-native-intro-dev-meeting/)
+{{< iframe src="https://react-native-intro-dev-meeting.netlify.com/" >}}
+The Presentation
+{{< /iframe >}}
+
+{{% repobutton %}}

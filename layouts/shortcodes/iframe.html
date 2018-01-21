@@ -1,0 +1,10 @@
+{{ if .Inner }}
+  <figure>
+    <iframe src='{{ .Get "src" }}' class='{{ .Get "class" }}'></iframe>
+    <figcaption>
+      <small>{{ .Inner }} <a href='{{ .Get "src" }}' class="d-inline-block">View Full</a></small>
+    </figcaption>
+  </figure>
+{{ else }}
+  <iframe src='{{ .Get "src" }}' class='{{ .Get "class" }}'></iframe>
+{{ end }}
