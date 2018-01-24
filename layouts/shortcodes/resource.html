@@ -1,4 +1,4 @@
-{{ $original := .Page.Resources.GetByPrefix (.Get "src") }}
+{{ $original := .Page.Resources.GetMatch (.Get "src") }}
 {{ $options := .Get "options" }}
 
 {{ .Scratch.Set "image" $original }}

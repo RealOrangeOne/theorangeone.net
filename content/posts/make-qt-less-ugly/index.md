@@ -1,7 +1,7 @@
 ---
 title: Make QT look less ugly
 date: 2017-12-27
-image: resource:qt-gtk-after
+image: resource:qt-gtk-after.png
 hide_header_image: true
 ---
 
