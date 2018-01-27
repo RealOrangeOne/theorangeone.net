@@ -4,12 +4,13 @@ require('./jquery-global');
 require('./fa');
 require('bootstrap');
 
-
 require('lightgallery/dist/js/lightgallery');
 require('lg-thumbnail/dist/lg-thumbnail');
 
 require('plyr').setup();
 var Clipboard = require('clipboard');
+
+var mermaid = require('mermaid');
 
 
 $('.image').each(function () {  // setup div-image hybrids
@@ -39,6 +40,10 @@ $(document).ready(function () {
     } else if (ele.children('ul').children('li').length === 1) {
       ele.children('ul').replaceWith(ele.children('ul').children('li').children('ul'));
     }
+  });
+
+  mermaid.initialize({
+    startOnLoad: true
   });
 });
 
