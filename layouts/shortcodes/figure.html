@@ -1,0 +1,10 @@
+{{ if .Inner }}
+  <figure>
+    <img src='{{ .Get "src" }}' class='{{ .Get "class" }}' />
+    <figcaption>
+      <small>{{ .Inner }}</small>
+    </figcaption>
+  </figure>
+{{ else }}
+  <img src='{{ .Get "src" }}' class='{{ .Get "class" }}' />
+{{ end }}
