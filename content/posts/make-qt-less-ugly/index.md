@@ -7,7 +7,7 @@ hide_header_image: true
 
 As anyone who's used an application written with the QT UI framework will know, they don't always look the best, and certainly don't fit in with the rest of your desktops theme in the way GTK does. Certain themes support styling both GTK and QT applications, however most don't.
 
-{{% resource src="qt-gtk-before" %}}
+{{% resource src="qt-gtk-before.png" %}}
 KeePassXC, before it looked pretty
 {{% /resource %}}
 
@@ -24,6 +24,6 @@ Installing the environment variable can't be done in your `.bashrc`, as variable
 
 After install, simply reboot, and your apps should fit in far, _far_ better with the rest of your desktop.
 
-{{% resource src="qt-gtk-after" %}}
+{{% resource src="qt-gtk-after.png" %}}
 KeePassXC, with GTK looks much nicer!
 {{% /resource %}}
