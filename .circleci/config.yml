@@ -10,7 +10,7 @@ jobs:
             - checkout
             - run:
                 name: Install Hugo
-                command: wget https://github.com/gohugoio/hugo/releases/download/v0.34/hugo_0.34_Linux-64bit.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
+                command: wget https://github.com/gohugoio/hugo/releases/download/v0.35/hugo_0.35_Linux-64bit.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
             - run:
                 name: Install dependencies
                 command: npm install
