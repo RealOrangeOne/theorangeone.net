@@ -1,18 +1,18 @@
 <div class="media list-page-item mb-3">
   {{ if .Params.image }}
     <div class="d-none d-md-block align-self-center img-wrapper mr-3">
-      <a href="{{ .Permalink }}">
+      <a href="{{ .RelPermalink }}">
         {{ .Scratch.Set "image" .Params.image }}
         {{ if hasPrefix .Params.image "resource:" }}
           {{ $resource := .Resources.GetMatch (replace .Params.image "resource:" "") }}
-          {{ .Scratch.Set "image" ($resource.Resize "300x").Permalink }}
+          {{ .Scratch.Set "image" ($resource.Resize "300x").RelPermalink }}
         {{ end }}
         <div class="image" data-image='{{ .Scratch.Get "image" }}'></div>
       </a>
     </div>
   {{ end }}
   <div class="media-body">
-    <a href="{{ .Permalink }}">
+    <a href="{{ .RelPermalink }}">
       <h5 class="my-0">{{ .Title }}</h5>
     </a>
     <small>{{ partial "content-details.html" . }}</small>

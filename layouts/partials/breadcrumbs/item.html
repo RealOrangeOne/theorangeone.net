@@ -3,5 +3,5 @@
 {{ end }}{{ end }}
 
 {{ if ne .page .current }}
-  <li class="breadcrumb-item"><a href="{{ .page.Permalink }}">{{ .page.LinkTitle }}</a></li>
+  <li class="breadcrumb-item"><a href="{{ .page.RelPermalink }}">{{ .page.LinkTitle }}</a></li>
 {{ end }}

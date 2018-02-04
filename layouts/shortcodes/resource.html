@@ -18,11 +18,11 @@
 
 {{ if .Inner }}
   <figure>
-    <img src="{{ $image.Permalink }}" class='{{ .Get "class" }}' />
+    <img src="{{ $image.RelPermalink }}" class='{{ .Get "class" }}' />
     <figcaption>
       <small>{{ .Inner }}</small>
     </figcaption>
   </figure>
 {{ else }}
-  <img src="{{ $image.Permalink }}" class='{{ .Get "class" }}' />
+  <img src="{{ $image.RelPermalink }}" class='{{ .Get "class" }}' />
 {{ end }}
