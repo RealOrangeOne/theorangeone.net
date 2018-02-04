@@ -48,7 +48,13 @@ test:
 	$(NODE_BIN)/yamllint data/*.yml
 	$(NODE_BIN)/yamllint config.yml
 	$(NODE_BIN)/mdspell --en-gb -ranx 'content/**/*.md'
-	$(NODE_BIN)/blcl -ro ./public/
+	$(NODE_BIN)/blcl -ro ./public/ \
+		--exclude "open.spotify.com"\
+		--exclude "p.scdn.co"\
+		--exclude "staticflickr.com"\
+		--exclude "twitter.com/intent"\
+		--exclude "facebook.com/sharer"\
+		--exclude "reddit.com/submit"
 
 
 .PHONY: build clean install test
