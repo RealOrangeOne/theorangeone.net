@@ -52,7 +52,7 @@ ssh -A intermediary-user@intermediary -W server-user@localhost:12345
 After giving your credentials twice (once for the intermediary, then again for the final server), you should be met with a standard shell, on the destination server.
 
 #### Making connection easier
-SSH has many configuration options available to ease this process, such as using keys for authentication over passwords, and transparently connecting to the intermediary server when trying to connect to the server. These techniques are most commonly used when interfacing with an [SSH Bastion](https://tenmilesquare.com/using-ssh-through-a-bastion-host-transparently/).
+SSH has many configuration options available to ease this process, such as using keys for authentication over passwords, and transparently connecting to the intermediary server when trying to connect to the server.
 
 My personal tool of choice for managing config like this is [`assh`](https://github.com/moul/advanced-ssh-config).
 
