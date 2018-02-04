@@ -57,7 +57,7 @@ accounts:
   npm:
     name: NPM
     username: TheOrangeOne
-    link: https://www.npmjs.com/~TheOrangeOne/
+    link: https://www.npmjs.com/~theorangeone/
     icon: fab fa-npm
 
   keybase:
