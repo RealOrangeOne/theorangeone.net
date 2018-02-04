@@ -6,7 +6,7 @@ subtitle: A JSON file to help decode morse-code
 
 It's not often people need to decode text into morse code (and visa-versa), but if I had something like this when I needed to, it would have saved me hours of time!
 
-I originally needed this for the [Student Robotics 2015](/robotics/2015/) entry, to convert a string message into morse code that would be transmitted using LEDs, for aesthetics and debugging. Unfortunately due to a fixed time frame, this idea was scraped before it could be fully implemented. However, the decoder worked perfectly!
+I originally needed this for the [Student Robotics 2015](/robotics/student-robotics/2015/) entry, to convert a string message into morse code that would be transmitted using LEDs, for aesthetics and debugging. Unfortunately due to a fixed time frame, this idea was scraped before it could be fully implemented. However, the decoder worked perfectly!
 
 ## Usage
 
