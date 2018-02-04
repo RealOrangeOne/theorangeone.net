@@ -23,7 +23,7 @@ I use Arch Linux on all my machines now, But some days I miss the windows-only a
 
 ## Previous Generations
 
-The first generation was the first custom build I'd ever done. When I first built it, I wasn't really into gaming, or any kind of heavy workflow for that matter, so it wasn't particularly powerful, although compared to my old [Dell Inspiron 1525](http://amzn.eu/44JQAYL), it was pretty damn incredible!
+The first generation was the first custom build I'd ever done. When I first built it, I wasn't really into gaming, or any kind of heavy workflow for that matter, so it wasn't particularly powerful, although compared to my old Dell Inspiron 1525, it was pretty damn incredible!
 
 Many of the parts from this build, including DVD drive, RAM and card reader, still live on in the current generation. The card reader and DVD were bought so I'd never need to buy another again!
 
