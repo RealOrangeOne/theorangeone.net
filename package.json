@@ -10,6 +10,7 @@
   },
   "author": "Jake Howard <git@theorangeone.net>",
   "devDependencies": {
+    "broken-link-checker-local": "0.1.1",
     "browserify": "14.5.0",
     "eslint-config-dabapps": "github:dabapps/eslint-config-dabapps#v3.0.0",
     "markdown-spellcheck": "1.2.0",

@@ -48,6 +48,7 @@ test:
 	$(NODE_BIN)/yamllint data/*.yml
 	$(NODE_BIN)/yamllint config.yml
 	$(NODE_BIN)/mdspell --en-gb -ranx 'content/**/*.md'
+	$(NODE_BIN)/blcl -ro ./public/
 
 
 .PHONY: build clean install test
