@@ -11,6 +11,6 @@ As was announced at kickstart, the game for this year is a take on the classic g
 
 The 'flags' are 25 centimetres cubes of wood on caster wheels weighing roughly 2 kilograms. The rules prevent us from lifting them, so the idea is to drag them around!
 
-To see a copy of the rules from the competition, [Click Here](https://www.studentrobotics.org/resources/2015/rulebook.pdf)!
+To see a copy of the rules from the competition, [Click Here](https://web.archive.org/web/20160303205015/https://www.studentrobotics.org/resources/2015/rulebook.pdf)!
 
 {{% youtube egV3PY1qaSM %}}

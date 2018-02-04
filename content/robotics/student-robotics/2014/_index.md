@@ -10,6 +10,6 @@ Welcome to the homepage of Collyer's Student Robotics 2014 team. Originally, thi
 
 The game for this year was called _Slots_. Teams competed to get as many of their tokens into a scoring zone in 3 minutes. Teams would also get extra points if they could get the token into a zones 'slot', an area the size of a token, raised by around 3 centimetres.
 
-To see a copy of the rules from the competition, [Click Here](https://www.studentrobotics.org/resources/2014/rulebook.pdf)!
+To see a copy of the rules from the competition, [Click Here](https://web.archive.org/web/20160303205015/https://www.studentrobotics.org/resources/2014/rulebook.pdf)!
 
 {{% youtube DL0iLDzHKig %}}
