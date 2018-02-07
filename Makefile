@@ -54,7 +54,8 @@ test:
 		--exclude "staticflickr.com"\
 		--exclude "twitter.com/intent"\
 		--exclude "facebook.com/sharer"\
-		--exclude "reddit.com/submit"
+		--exclude "reddit.com/submit"\
+		--exclude "html5up.net/"
 
 
 .PHONY: build clean install test
