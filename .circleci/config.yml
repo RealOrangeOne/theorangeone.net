@@ -11,9 +11,15 @@ jobs:
             - run:
                 name: Install Hugo
                 command: wget https://github.com/gohugoio/hugo/releases/download/v0.35/hugo_0.35_Linux-64bit.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
+            - restore_cache:
+                key: npm-{{ checksum "package.json" }}
             - run:
                 name: Install dependencies
                 command: npm install
+            - save_cache:
+                key: npm-{{ checksum "package.json" }}
+                paths:
+                - node_modules
             - run:
                 name: Build site
                 command: make release
