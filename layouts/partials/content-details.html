@@ -1,4 +1,4 @@
-  {{ if .Params.date }}
+  {{ if not .Date.IsZero }}
   <span class="pr-1" title='{{ .Date.Format "January 2 2006" }}'>{{ .Date.Format "2006-01-02" }}</span>
   {{ end }}
 
