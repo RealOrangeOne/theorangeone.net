@@ -111,6 +111,11 @@ table td {
     padding-right: $font-size-base !important;
     padding-left: $font-size-base !important;
   }
+
+  .nav-link code, .navbar-brand code {
+    background-color: inherit;
+    font-size: 90%;
+  }
 }
 
 .bg-black {
