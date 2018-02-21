@@ -1,8 +1,8 @@
 {{ define "main" }}
-  <header id="index-header" class="d-flex align-items-center">
+  <header id="index-header" class="d-flex align-items-center image" data-image="{{ .Params.image }}">
     <div class="text-center m-auto text-light">
       <h1 class="display-1">{{ .Site.Params.author_name }}</h1>
-      <p class="lead">{{ .RawContent }}</p>
+      <h2 class="lead">{{ .Content }}</h2>
     </div>
   </header>
 {{ end }}
