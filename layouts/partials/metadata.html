@@ -1,28 +1,47 @@
+{{ if .Params.image }}
+  {{ if hasPrefix .Params.image "resource:" }}
+    {{ $resource := .Resources.GetMatch (replace .Params.image "resource:" "") }}
+    {{ .Scratch.Set "image" ($resource.Fill "800x418").Permalink }}
+  {{ else }}
+    {{ .Scratch.Set "image" .Params.image}}
+  {{ end }}
+{{ end }}
+
+{{ $image := .Scratch.Get "image" }}
+
+
+{{/* Twitter-specific tags */}}
 <meta name="twitter:dnt" content="on" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="{{ .Site.Data.social.accounts.twitter.username }}" />
 <meta name="twitter:title" content="{{ .Title | htmlUnescape }}" />
 <meta name="twitter:description" content="{{ .Summary | plainify | chomp | htmlUnescape }}{{ if .Truncated }}...{{ end }}" />
 <meta name="twitter:creator" content="{{ .Site.Data.social.accounts.twitter.username }}" />
-{{ if .Params.image }}
-  <meta name="twitter:image" content="{{ absURL .Params.image }}" />
+
+{{ if $image }}
+  <meta name="twitter:image" content="{{ absURL $image }}" />
   <meta name="twitter:image:alt" content="{{ .Title | htmlUnescape }}" />
 {{ end }}
 
+
+{{/* OpenGraph tags*/}}
 <meta property="og:title" content="{{ .Title | htmlUnescape }}" />
 <meta property="og:type" content="{{ .Kind }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-{{ if .Params.image }}
-  <meta property="og:image" content="{{ absURL .Params.image }}" />
-{{ end }}
 <meta property="og:description" content="{{ .Summary | plainify | chomp | htmlUnescape }}{{ if .Truncated }}...{{ end }}" />
 <meta property="og:site_name" content="{{ title .Site.Title | htmlUnescape }}" />
 <meta property="og:locale" content="{{ .Site.Language.Lang }}" />
 
+{{ if $image }}
+  <meta property="og:image" content="{{ absURL $image }}" />
+{{ end }}
+
+
 <meta itemprop="name" content="{{ .Title | htmlUnescape }}" />
 <meta itemprop="description" content="{{ .Summary | plainify | chomp | htmlUnescape }}{{ if .Truncated }}...{{ end }}" />
-{{ if .Params.image }}
-  <meta itemprop="image" content="{{ absURL .Params.image }}" />
+
+{{ if $image }}
+  <meta itemprop="image" content="{{ absURL $image }}" />
 {{ end }}
 
 <meta name="article:author" content="{{ title .Site.Params.author }}" />
@@ -32,6 +51,7 @@
 <meta name="description" content="{{ .Summary | plainify | chomp | htmlUnescape }}{{ if .Truncated }}...{{ end }}" />
 <meta name="author" content="{{ title .Site.Params.author }}" />
 <meta name="canonical" content="{{ .Permalink }}" />
+
 
 {{ range .AlternativeOutputFormats }}
   <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}">
