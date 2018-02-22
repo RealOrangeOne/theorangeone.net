@@ -8,8 +8,10 @@
       {{ if (index .Pages 0).Date.IsZero }}
         <hr class="my-5" />
       {{ else }}
-        <h3 class="mt-5">
-          <time datetime="{{ $month }}" title='{{ dateFormat "January 2006" $month }}'>{{ dateFormat "2006-01" $month }}</time>
+        <h3 class="mt-5" id="{{ $month }}">
+          <a href="#{{ $month }}" class="no-color-change">
+            <time datetime="{{ $month }}" title='{{ dateFormat "January 2006" $month }}'>{{ dateFormat "2006-01" $month }}</time>
+          </a>
         </h3>
       {{ end }}
       {{ range (sort .Pages "Date" "desc") }}

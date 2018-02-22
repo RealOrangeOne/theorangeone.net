@@ -257,3 +257,9 @@ p code, li code {
 .mermaid {
   font-size: $font-size-base;
 }
+
+a.no-color-change {
+  &, &:hover {
+    color: inherit;
+  }
+}
