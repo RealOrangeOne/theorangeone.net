@@ -11,7 +11,7 @@ I've been using [KeePassXC](https://keepassxc.org/) since not long after it's in
 - It's got all the features I need, like TOTP and Browser Integration
 - Cross platform (not KeePassXC specific)
 
-2.3 is the first major release since the split from KeePassX, and it brings with it a lot of new features:
+[2.3](https://keepassxc.org/blog/2018-02-28-2.3-released/) is the first major release since the split from KeePassX, and it brings with it a lot of new features:
 
 - Support for the [KDBX4](https://keepass.info/help/kb/kdbx_4.html) database format
 - Support for binary key files, over the legacy XML format
