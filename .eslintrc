@@ -1,9 +1,10 @@
 {
   "extends": [
     "dabapps/commonjs",
-    "dabapps/browser",
+    "dabapps/browser"
   ],
   "globals": {
-    "$": true
+    "mermaid": true
+
   }
 }

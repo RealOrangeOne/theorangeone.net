@@ -1,6 +1,6 @@
 'use strict';
 
-require('./jquery-global');
+var $ = require('./jquery-global');
 require('./fa');
 require('bootstrap');
 
