@@ -8,6 +8,9 @@
     "type": "git",
     "url": "git@github:RealOrangeOne/theorangeone.net"
   },
+  "engine": {
+    "node": "8.10.0"
+  },
   "author": "Jake Howard <git@theorangeone.net>",
   "devDependencies": {
     "broken-link-checker-local": "0.1.1",
