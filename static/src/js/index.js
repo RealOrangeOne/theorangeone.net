@@ -10,8 +10,6 @@ require('lg-thumbnail/dist/lg-thumbnail');
 require('plyr').setup();
 var Clipboard = require('clipboard');
 
-var mermaid = require('mermaid');
-
 
 $('.image').each(function () {  // setup div-image hybrids
   var ele = $(this);
