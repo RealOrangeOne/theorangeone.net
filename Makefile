@@ -20,7 +20,7 @@ build: install
 	$(NODE_BIN)/node-sass $(STATIC_SRC)/scss/style.scss $(STATIC_BUILD)/css/style.css --source-map-embed
 	cp -r $(BASEDIR)/node_modules/lightgallery/dist/fonts $(STATIC_BUILD)
 	cp -r $(STATIC_SRC)/img $(STATIC_BUILD)/img
-	cp node_modules/mermaid/dist/mermaid.min.js $(STATIC_BUILD)/js/mermaid.js
+	cp node_modules/mermaid/dist/mermaid.min.js $(STATIC_BUILD)/js/mermaid.min.js
 	@hugo -vDEF --stepAnalysis --gc
 	mkdir -p $(OUTPUT_DIR)/.well-known/
 	cp $(BASEDIR)/static/keybase.txt $(OUTPUT_DIR)/keybase.txt
