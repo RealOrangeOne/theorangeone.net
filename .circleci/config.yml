@@ -10,7 +10,7 @@ jobs:
             - checkout
             - run:
                 name: Install Hugo
-                command: wget https://github.com/gohugoio/hugo/releases/download/v0.36/hugo_0.36_Linux-64bit.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
+                command: wget https://github.com/gohugoio/hugo/releases/download/v0.38.2/hugo_0.38.2_Linux-64bit.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
             - restore_cache:
                 key: npm-{{ checksum "package-lock.json" }}
             - run:
