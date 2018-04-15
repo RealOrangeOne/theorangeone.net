@@ -90,3 +90,8 @@ revealjs
 OnlyOffice
 speakerdeck
 slideshare
+CircleCI
+artifacts
+artifact
+buildpack
+heroku-like
