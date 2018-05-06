@@ -1,15 +1,17 @@
 {{ $id := default (.Get 0) .Page.Params.gist }}
 {{ $data := getJSON "https://api.github.com/gists/" $id }}
 
-{{ range $i, $e := $data.files }}
-  <h5>
-    <a href="{{ $data.html_url }}#file-{{ $i }}">
-      <code class="font-weight-bold">{{ $i }}</code>
-    </a>
-    &nbsp;&nbsp;
-    <a href="{{ $e.raw_url }}">
-      <small class="font-italic">View Raw</small>
-    </a>
-  </h5>
-  {{ highlight $e.content $e.language "linenos=inline" }}
-{{ end }}
+<div class="gist">
+  {{ range $i, $e := $data.files }}
+    <h5 class="mb-0">
+      <a href="{{ $data.html_url }}#file-{{ $i }}">
+        <code class="font-weight-bold pl-2">{{ $i }}</code>
+      </a>
+      &nbsp;&nbsp;
+      <a href="{{ $e.raw_url }}">
+        <small class="font-italic">View Raw</small>
+      </a>
+    </h5>
+    {{ highlight $e.content $e.language "linenos=inline" }}
+  {{ end }}
+</div>

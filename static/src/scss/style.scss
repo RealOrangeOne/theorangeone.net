@@ -188,6 +188,10 @@ ul ul, ol ol {
 pre.chroma {
   margin: $spacer 0;
   padding: $spacer;
+
+  .highlight & {
+    margin-top: 0;
+  }
 }
 
 .content {
