@@ -11,19 +11,29 @@ params:
 
 summaryLength: 40
 
+
+mediaTypes:
+  "application/atom":
+    suffix: atom
 outputFormats:
   markdown:
     name: "txt"
     mediaType: "text/plain"
     isPlainText: true
+  atom:
+    name: "atom"
+    mediaType: "application/atom"
+    isPlainText: false
 outputs:
   home:
     - "html"
     - "rss"
+    - "atom"
     - "json"
   section:
     - "html"
     - "rss"
+    - "atom"
     - "txt"
   page:
     - "html"
