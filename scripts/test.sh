@@ -16,4 +16,4 @@ blcl -ro ./public/ \
     --exclude "staticflickr.com"\
     --exclude "twitter.com/intent"\
     --exclude "facebook.com/sharer"\
-    --exclude "reddit.com/submit" || true
+    --exclude "reddit.com/submit"
