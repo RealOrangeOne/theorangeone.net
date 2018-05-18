@@ -13,15 +13,19 @@
   {{ .Scratch.Set "image" ($original.Fill $options) }}
 {{ end }}
 
-{{ $image := .Scratch.Get "image" }}
+
+{{ define "img" }}
+  {{ $image := .Scratch.Get "image" }}
+  <img src='{{ $image.RelPermalink }}' class='{{ .Get "class" }}' alt="{{ .Inner | plainify }}" />
+{{ end }}
 
 {{ if .Inner }}
   <figure>
-    <img src="{{ $image.RelPermalink }}" class='{{ .Get "class" }}' />
+    {{ template "img" . }}
     <figcaption>
       <small>{{ .Inner }}</small>
     </figcaption>
   </figure>
 {{ else }}
-  <img src="{{ $image.RelPermalink }}" class='{{ .Get "class" }}' />
+  {{ template "img" . }}
 {{ end }}
