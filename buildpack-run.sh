@@ -1,1 +1,1 @@
-./scripts/build.sh
+scripts/release.sh
