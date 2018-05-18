@@ -5,4 +5,4 @@ STATIC_SRC=$BASEDIR/static/src
 STATIC_BUILD=$BASEDIR/static/build
 OUTPUT_DIR=$BASEDIR/public
 
-export PATH=$BASEDIR/node_modules/.bin/:$PATH
+export PATH=$NODE_BIN:$BASEDIR/bin:$PATH
