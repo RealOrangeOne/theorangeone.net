@@ -1,7 +1,7 @@
 {{ $user := .Get 0 }}
 {{ $playlist_id := .Get 1 }}
 
-{{ $playlist := getJSON "http://spotify-public-proxy.theorangeone.net/v1/users/" $user "/playlists/" $playlist_id }}
+{{ $playlist := getJSON "https://spotify-public-proxy.herokuapp.com/v1/users/" $user "/playlists/" $playlist_id }}
 
 <div class="playlist">
   <a href="{{ $playlist.external_urls.spotify }}">
