@@ -7,7 +7,6 @@ require('bootstrap');
 require('lightgallery/dist/js/lightgallery');
 require('lg-thumbnail/dist/lg-thumbnail');
 
-require('plyr').setup();
 var Clipboard = require('clipboard');
 
 
