@@ -1,9 +1,6 @@
 {
   "name": "theorangeone.net",
   "version": "1.0.0",
-  "scripts": {
-    "start": "tstatic public/"
-  },
   "repository": {
     "type": "git",
     "url": "git@github:RealOrangeOne/theorangeone.net"
@@ -34,7 +31,6 @@
     "mermaid": "7.1.2",
     "plyr": "2.0.17",
     "popper.js": "1.14.3",
-    "speedpack": "0.2.0",
-    "tstatic": "1.2.0"
+    "speedpack": "0.2.0"
   }
 }
