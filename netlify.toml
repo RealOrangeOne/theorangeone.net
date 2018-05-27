@@ -7,3 +7,12 @@
     HUGO_ENV = "production"
     NODE_ENV = "production"
     NPM_CONFIG_PRODUCTION = "false"
+
+[[headers]]
+    for = "/*"
+    [headers.values]
+        X-Frame-Options = "SAMEORIGIN"
+        X-XSS-Protection = "1; mode=block"
+        X-Content-Type-Options = "nosniff"
+        Referrer-Policy = "same-origin"
+        Strict-Transport-Security = "max-age=5184000"
