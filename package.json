@@ -30,7 +30,6 @@
     "lightgallery": "1.6.9",
     "mermaid": "7.1.2",
     "plyr": "2.0.17",
-    "popper.js": "1.14.3",
-    "speedpack": "0.2.0"
+    "popper.js": "1.14.3"
   }
 }
