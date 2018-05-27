@@ -22,7 +22,7 @@ jobs:
                 - node_modules
             - run:
                 name: Build site
-                command: ./scripts/release.sh
+                command: ./scripts/build.sh
             - run:
                 name: Run Tests
                 command: ./scripts/test.sh
