@@ -5,3 +5,5 @@
 [context.production.environment]
     HUGO_VERSION = "0.40.3"
     HUGO_ENV = "production"
+    NODE_ENV = "production"
+    NPM_CONFIG_PRODUCTION = "false"
