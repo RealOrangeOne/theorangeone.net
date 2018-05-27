@@ -3,7 +3,7 @@ version: 2.0
 jobs:
     build:
         docker:
-            - image: circleci/node:8.10
+            - image: circleci/node:8.11.2
         environment:
             - npm_config_loglevel: notice
         steps:
