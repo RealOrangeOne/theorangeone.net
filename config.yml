@@ -47,8 +47,11 @@ pygmentsCodefences: true
 pygmentsUseClasses: true
 
 imaging:
-    resampleFilter: Lanczos
-    quality: 100
+  resampleFilter: Lanczos
+  quality: 100
 
 blackfriday:
-    smartypants: false
+  smartypants: false
+
+theme:
+  - utils

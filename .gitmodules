@@ -1,0 +1,3 @@
+[submodule "themes/utils"]
+	path = themes/utils
+	url = https://github.com/RealOrangeOne/hugo-theme-utils
