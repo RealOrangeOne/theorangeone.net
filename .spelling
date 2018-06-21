@@ -95,3 +95,6 @@ artifacts
 artifact
 buildpack
 heroku-like
+builtin
+init
+ethernet
