@@ -27,6 +27,12 @@
     "lightgallery": "1.6.11",
     "mermaid": "7.1.2",
     "popper.js": "1.14.3",
-    "speedpack": "0.2.0"
-  }
+    "speedpack": "0.2.0",
+    "snyk": "^1.85.0"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
