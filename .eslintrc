@@ -4,7 +4,7 @@
     "dabapps/browser"
   ],
   "globals": {
-    "mermaid": true
-
+    "mermaid": true,
+    "$": true
   }
 }

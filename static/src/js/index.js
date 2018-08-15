@@ -1,11 +1,6 @@
 'use strict';
 
-var $ = require('./jquery-global');
 require('./fa');
-require('bootstrap');
-
-require('lightgallery/dist/js/lightgallery');
-require('lg-thumbnail/dist/lg-thumbnail');
 
 var Clipboard = require('clipboard');
 
