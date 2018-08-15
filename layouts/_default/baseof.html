@@ -8,7 +8,8 @@
     <meta name="superfish" content="nofish" />
     <meta name="application-name" content="{{ .Site.Title }}" />
     <link rel="icon" type="image/png" href='{{ relURL "/img/logo-transparent.png" }}'/>
-    <link rel="stylesheet" href='{{ relURL "/css/style.css" }}' />
+
+    {{ partial "style.html" "scss/style.scss" }}
 
     <title>{{ partial "title-item.html" (dict "page" . "current" .)}}{{ .Site.Title }}</title>
 
@@ -21,11 +22,11 @@
 
     {{ partial "footer.html" . }}
 
-    <script src='{{ relURL "/js/jquery.min.js" }}'></script>
-    <script src='{{ relURL "/js/lightgallery.js" }}'></script>
-    <script src='{{ relURL "/js/lg-thumbnail.min.js" }}'></script>
-    <script src='{{ relURL "/js/bootstrap.min.js" }}'></script>
-    <script src='{{ relURL "/js/mermaid.min.js" }}'></script>
-    <script src='{{ relURL "/js/app.js" }}'></script>
+    {{ partial "script.html" "js/jquery.min.js" }}
+    {{ partial "script.html" "js/lightgallery.js" }}
+    {{ partial "script.html" "js/lg-thumbnail.min.js" }}
+    {{ partial "script.html" "js/bootstrap.min.js" }}
+    {{ partial "script.html" "js/mermaid.min.js" }}
+    {{ partial "script.html" "js/app.js" }}
   </body>
 </html>
