@@ -1,5 +1,7 @@
 {{ define "main" }}
-  <header id="index-header" class="d-flex align-items-center image" data-image="{{ .Params.image }}">
+
+{{ $header_image := resources.Get "img/header.jpg" | fingerprint }}
+  <header id="index-header" class="d-flex align-items-center image" data-image="{{ $header_image.RelPermalink }}">
     <div class="text-center m-auto text-light">
       <h1 class="display-1">{{ .Site.Params.author_name }}</h1>
       <h2 class="lead">{{ .Content }}</h2>
