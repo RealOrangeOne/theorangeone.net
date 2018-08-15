@@ -9,12 +9,3 @@ eslint $STATIC_SRC/js
 yamllint data/*.yml
 yamllint config.yml
 mdspell --en-gb -ranx 'content/**/*.md'
-
-blcl -ro ./public/ \
-    --exclude "open.spotify.com"\
-    --exclude "p.scdn.co"\
-    --exclude "html5up.net"\
-    --exclude "staticflickr.com"\
-    --exclude "twitter.com/intent"\
-    --exclude "facebook.com/sharer"\
-    --exclude "reddit.com/submit"
