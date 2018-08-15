@@ -1,4 +1,4 @@
-{{ .page.Title }} {{ if ne .age .current }}::{{ end }}
+{{ .page.Title }} ::
 
 {{ if .page.Parent }}{{ if not .page.Parent.IsHome }}
 {{ partial "title-item.html" (dict "page" .page.Parent "current" .current)  }}
