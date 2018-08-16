@@ -1,1 +1,0 @@
-{{ partial "page_data.json" . }}

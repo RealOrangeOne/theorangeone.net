@@ -1,3 +1,0 @@
-# {{ .Title | plainify }}
-
-{{ .RawContent | safeHTML }}

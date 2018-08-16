@@ -11,25 +11,6 @@ params:
 
 summaryLength: 40
 
-outputFormats:
-  markdown:
-    name: "txt"
-    mediaType: "text/plain"
-    isPlainText: true
-outputs:
-  home:
-    - "html"
-    - "rss"
-    - "json"
-  section:
-    - "html"
-    - "rss"
-    - "txt"
-  page:
-    - "html"
-    - "txt"
-    - "json"
-
 staticDir: "static/build"
 
 buildFuture: true
