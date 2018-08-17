@@ -2,6 +2,8 @@ baseURL: https://theorangeone.net
 languageCode: en-gb
 title: TheOrangeOne
 
+timeout: 20000
+
 params:
   author: TheOrangeOne
   author_name: Jake Howard
