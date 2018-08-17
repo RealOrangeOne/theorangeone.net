@@ -1,0 +1,47 @@
+{{ define "main" }}
+<div id="main">
+  <div class="container">
+    {{ partial "content.html" . }}
+
+    {{ $user := default .Site.Data.social.accounts.spotify.username .Params.user }}
+
+    {{ $playlist := getJSON "https://spotify-public-proxy.herokuapp.com/v1/users/" $user "/playlists/" .Params.playlist }}
+
+    <div class="playlist">
+      <h3>
+        <i class="fab fa-spotify"></i>
+        <a href="{{ $playlist.external_urls.spotify }}">
+          {{ $playlist.name }}
+        </a>
+      </h3>
+
+      <table class="table table-hover table-striped">
+        <thead>
+        <tr>
+          <th scope="row"></th>
+          <th scope="row">Track</th>
+          <th scope="row">Artist</th>
+          <th scope="row">Album</th>
+        </tr>
+        </thead>
+        <tbody>
+          {{ range sort $playlist.tracks.items "track.name" }}
+            {{ with .track }}
+              <tr>
+                {{ with index (last 1 .album.images) 0 }}
+                  <td><div class="image" data-image="{{ .url }}"></div></td>
+                {{ end }}
+                <td><a href="{{ .external_urls.spotify }}">{{ .name }}</a></td>
+                <td>
+                  {{ range $i, $e := .artists }}{{ if $i }}, {{ end }}{{ .name }}{{ end }}
+                </td>
+                <td>{{ .album.name }}</td>
+              </tr>
+            {{ end }}
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{{ end }}

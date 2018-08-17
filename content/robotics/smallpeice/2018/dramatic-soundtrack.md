@@ -1,7 +1,5 @@
 ---
 title: Dramatic Soundtrack
+layout: spotify
+playlist: 5VvONyDmSpdErqseA75Vad
 ---
-
-<!--more-->
-
-{{% spotify "theorangeone97" "5VvONyDmSpdErqseA75Vad" %}}

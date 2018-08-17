@@ -90,6 +90,12 @@ accounts:
     link: https://news.ycombinator.com/user?id=theorangeone
     icon: fab fa-hacker-news-square
 
+  spotify:
+    name: Spotify
+    username: theorangeone97
+    link: https://open.spotify.com/user/theorangeone97
+    icon: fab fa-spotify
+
 footer_accounts:
   - github
   - twitter
