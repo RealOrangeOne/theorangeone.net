@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div id="main">
+  <div class="container">
+    {{ partial "content.html" . }}
+
+    {{ $id := .Params.photoset }}
+    {{ $query := querify "format" "json" "nojsoncallback" "1" "api_key" .Site.Data.flickr.api_key  }}
+
+    {{ $method := querify "method" "flickr.photosets.getPhotos" "user_id" .Site.Data.flickr.user_id "photoset_id" $id "extras" "url_l" }}
+    {{ $photoset_orig:= (getJSON "https://api.flickr.com/services/rest/?" $query "&" $method).photoset }}
+
+    {{ $method := querify "method" "flickr.photosets.getPhotos" "user_id" .Site.Data.flickr.user_id "photoset_id" $id "extras" "url_sq" }}
+    {{ $photoset_thumb := (getJSON "https://api.flickr.com/services/rest/?" $query "&" $method).photoset }}
+
+    <div id="light-gallery" class="row">
+    {{ range $index, $element := $photoset_orig.photo }}
+      {{ $thumb := (index $photoset_thumb.photo $index).url_sq }}
+      <a href="{{ $element.url_l }}" title="{{ $element.title }}" class="col-2">
+        <img src="{{ $thumb }}" alt="{{ $element.title }}"/>
+      </a>
+    {{ end }}
+    </div>
+
+    <h4>
+      <a href="{{ .Site.Data.social.accounts.flickr.link }}sets/{{ $id }}/">
+        View entire <i>{{ $photoset_orig.title }}</i> album on Flickr
+      </a>
+    </h4>
+  </div>
+</div>
+{{ end }}
