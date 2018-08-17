@@ -3,7 +3,7 @@ title: Robot
 image: https://c2.staticflickr.com/8/7726/17309695331_584e7de16c_z.jpg
 ---
 
-Our entry for 2015, _Alice_, was a massive improvement over last years model, in both design, and the code for it. Before ALICE was built, the design team built us a very basic chassis using scrap parts from 2014, which allowed us to write a large amount of the code base before we even had the robot built. Originally I wanted the final chassis to be built before the end of January, so we had a lot of time to test out the design for the robot and test using the final, in reality, it was closer to the middle of march before this was a reality.
+Our entry for 2015, _A.L.I.C.E_, was a massive improvement over last years model, in both design, and the code for it. Before ALICE was built, the design team built us a very basic chassis using scrap parts from 2014, which allowed us to write a large amount of the code base before we even had the robot built. Originally I wanted the final chassis to be built before the end of January, so we had a lot of time to test out the design for the robot and test using the final, in reality, it was closer to the middle of march before this was a reality.
 
 The entire chassis was made from sheets of plywood, which we laser cut in college, allowing us to be very precise in the design of the robot to make sure that all the pieces would fit together properly, making the chassis less likely to break.
 
