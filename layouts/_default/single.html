@@ -3,16 +3,6 @@
   <div class="container">
     {{ partial "content.html" . }}
   </div>
-  {{ if .Section }}
-    <div class="container mt-3 text-center">
-      <small>Share this page</small>
-      <h3>
-        <a href="https://twitter.com/intent/tweet?text={{ .Permalink }}"><i class="mx-1 fab fa-twitter" aria-hidden="true"></i></a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"><i class="mx-1 fab fa-facebook" aria-hidden="true"></i></a>
-        <a href="http://www.reddit.com/submit?url={{ .Permalink }}"><i class="mx-1 fab fa-reddit" aria-hidden="true"></i></a>
-        <a href="{{ .Permalink }}" data-clipboard-text="{{ .Permalink }}" title="Copy link to clipboard"><i class="mx-1 fas fa-copy" aria-hidden="true"></i></a>
-      </h3>
-    </div>
-  {{ end }}
+  {{ partial "share.html" . }}
 </div>
 {{ end }}
