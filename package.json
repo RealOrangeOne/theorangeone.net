@@ -19,7 +19,7 @@
     "@fortawesome/fontawesome-free-brands": "5.0.13",
     "@fortawesome/fontawesome-free-regular": "5.0.13",
     "@fortawesome/fontawesome-free-solid": "5.0.13",
-    "bootstrap": "4.1.1",
+    "bootstrap": "4.1.2",
     "clipboard": "1.7.1",
     "jquery": "3.3.1",
     "lg-thumbnail": "1.1.0",
