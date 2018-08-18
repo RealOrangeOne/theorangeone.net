@@ -4,6 +4,6 @@ set -e
 
 source ./scripts/common.sh
 
-bash ./scripts/build.sh
+export HUGO_ARGS="--minify"
 
-speedpack $OUTPUT_DIR -o $OUTPUT_DIR
+./scripts/build.sh

@@ -22,7 +22,7 @@ cp $BASEDIR/node_modules/mermaid/dist/mermaid.min.js $STATIC_BUILD/js/mermaid.mi
 parcel build $STATIC_SRC/js/index.js -d $STATIC_BUILD/js/ -o app.js
 cp -r $STATIC_SRC/scss/* $STATIC_BUILD/scss/
 
-hugo -vDEF --stepAnalysis --gc
+hugo -vDEF --stepAnalysis --gc $HUGO_ARGS
 
 mkdir -p $OUTPUT_DIR/.well-known/
 cp $BASEDIR/static/keybase.txt $OUTPUT_DIR/keybase.txt
