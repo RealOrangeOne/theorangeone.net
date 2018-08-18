@@ -13,7 +13,7 @@ jobs:
                 command: git submodule sync && git submodule update --init
             - run:
                 name: Install Hugo
-                command: wget https://github.com/gohugoio/hugo/releases/download/v0.46/hugo_extended_0.46_Linux_64bit.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
+                command: wget https://github.com/gohugoio/hugo/releases/download/v0.47/hugo_extended_0.47_Linux_64bit.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
             - restore_cache:
                 key: npm-{{ checksum "package-lock.json" }}
             - run:
