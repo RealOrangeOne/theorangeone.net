@@ -11,7 +11,7 @@
 
     {{ partial "style.html" "scss/style.scss" }}
 
-    <title>{{ partial "title-item.html" (dict "page" . "current" .)}}{{ .Site.Title }}</title>
+    <title>{{ partial "title-item.html" . }}{{ .Site.Title }}</title>
 
     {{ partial "metadata.html" . }}
   </head>

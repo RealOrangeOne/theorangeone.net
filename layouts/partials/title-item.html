@@ -1,5 +1,5 @@
-{{ .page.Title }} ::
+{{ .Title }} ::
 
-{{ if .page.Parent }}{{ if not .page.Parent.IsHome }}
-{{ partial "title-item.html" (dict "page" .page.Parent "current" .current)  }}
+{{ if .Parent }}{{ if not .Parent.IsHome }}
+    {{ partial "title-item.html" .Parent  }}
 {{ end }}{{ end }}
