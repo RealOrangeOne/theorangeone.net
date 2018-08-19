@@ -5,11 +5,9 @@
       {{ if .Content }}
         <hr />
       {{ end }}
-      {{ $parent := . }}
-      {{ $sorted_pages := sort .Site.Pages (default "Title" .Params.sort_by) (default "asc" .Params.sort_order)}}
+      {{ $sorted_pages := sort .Site.Pages "Title" "asc" }}
       {{ $valid_pages :=  where $sorted_pages ".Parent" "!=" nil }}
-      {{ $valid_pages :=  where $valid_pages ".Params.hide_in_list" "!=" "true" }}
-      {{ range where $valid_pages ".Parent.UniqueID" $parent.UniqueID }}
+      {{ range where $valid_pages ".Parent.UniqueID" .UniqueID }}
         {{ partial "list_item.html" . }}
       {{ end }}
     </div>
