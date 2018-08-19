@@ -11,12 +11,12 @@
     <div class="d-none d-lg-block">
       <ul class="navbar-nav">
         {{ range .Site.Data.social.navbar_accounts }}
-        {{ $account := index $.Site.Data.social.accounts . }}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ $account.link }}">
-            <i class="{{ $account.icon }}" title="{{ $account.name }}"></i>
-          </a>
-        </li>
+          {{ $account := index $.Site.Data.social.accounts . }}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ $account.link }}">
+              <i class="{{ $account.icon }}" title="{{ $account.name }}"></i>
+            </a>
+          </li>
         {{ end }}
       </ul>
     </div>

@@ -1,5 +1,5 @@
 {{ if .page.Parent }}{{ if not .page.Parent.IsHome }}
-{{ partial "breadcrumbs/item.html" (dict "page" .page.Parent "current" .current)  }}
+  {{ partial "breadcrumbs/item.html" (dict "page" .page.Parent "current" .current)  }}
 {{ end }}{{ end }}
 
 {{ if ne .page .current }}
