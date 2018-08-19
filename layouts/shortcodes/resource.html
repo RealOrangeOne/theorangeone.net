@@ -1,18 +1,7 @@
 {{ $original := .Page.Resources.GetMatch (.Get "src") }}
 {{ $options := default "1000x" (.Get "options") }}
 
-{{ .Scratch.Set "image" $original }}
-
-{{ $command := (default "Resize" (.Get "command")) }}
-
-{{ if eq $command "Fit"}}
-  {{ .Scratch.Set "image" ($original.Fit $options) }}
-{{ else if eq $command "Resize"}}
-  {{ .Scratch.Set "image" ($original.Resize $options) }}
-{{ else if eq $command "Fill"}}
-  {{ .Scratch.Set "image" ($original.Fill $options) }}
-{{ end }}
-
+{{ .Scratch.Set "image" ($original.Resize $options) }}
 
 {{ define "img" }}
   {{ $image := .Scratch.Get "image" }}

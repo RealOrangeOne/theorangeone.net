@@ -1,5 +1,3 @@
-{{ $style := default "btn-outline-dark" (.Get "style" )}}
-
-<a class="btn {{ $style }} my-2" href='{{ .Get "src" }}'>
+<a class="btn btn-outline-dark my-2" href='{{ .Get "src" }}'>
   {{ .Inner }}
 </a>
