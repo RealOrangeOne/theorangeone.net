@@ -1,10 +1,9 @@
 {{ define "main" }}
 <div id="main">
   <div class="container">
-    {{ $paginator := .Paginate (.Data.Pages.GroupByDate "2006-01") }}
     <h1 class="display-4">{{ .Title }}</h1>
-    {{ range $paginator.PageGroups }}
-      {{ $month := (print .Key "-01") }}
+    {{ range .Data.Pages.GroupByDate "2006-01" }}
+      {{ $month := print .Key "-01" }}
       {{ if (index .Pages 0).Date.IsZero }}
         <hr class="my-5" />
       {{ else }}
