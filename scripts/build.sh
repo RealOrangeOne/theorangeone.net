@@ -26,4 +26,3 @@ hugo -vDEF --stepAnalysis --gc $HUGO_ARGS
 
 mkdir -p $OUTPUT_DIR/.well-known/
 cp $BASEDIR/static/keybase.txt $OUTPUT_DIR/keybase.txt
-cp $BASEDIR/static/security.txt $OUTPUT_DIR/.well-known/security.txt
