@@ -3,7 +3,7 @@
     command = "./scripts/netlify.sh"
 
 [build.environment]
-    HUGO_VERSION = "0.47.1"
+    HUGO_VERSION = "0.49"
     NODE_ENV = "production"
     NPM_CONFIG_PRODUCTION = "false"
 
