@@ -54,7 +54,7 @@ var clipboard = new Clipboard('a');
 clipboard.on('success', function (e) {
   var ele = $(e.trigger);
   ele.find('i').attr('class', 'fas fa-check');
-  ele.attr('title', 'Copied!');
+  alert('Copied "' + ele.data('clipboard-text') + '" to clipboard!');
 });
 
 $('[data-clipboard-text]').on('click', function (event) {
