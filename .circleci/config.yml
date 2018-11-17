@@ -29,6 +29,3 @@ jobs:
             - run:
                 name: Run Tests
                 command: ./scripts/test.sh
-            - run:
-                name: Audit
-                command: npm audit
