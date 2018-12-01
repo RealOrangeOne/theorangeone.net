@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" href='{{ (resources.Get "/img/logo-transparent.png" | fingerprint).RelPermalink }}'/>
 
     {{ partial "style.html" "scss/style.scss" }}
+    {{ partial "style.html" "css/font-awesome.min.css" }}
 
     <title>{{ partial "title-item.html" . }}{{ .Site.Title }}</title>
 

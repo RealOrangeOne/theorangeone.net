@@ -7,10 +7,12 @@ source ./scripts/common.sh
 rm -rf $OUTPUT_DIR
 rm -rf $STATIC_BUILD
 rm -rf $BASEDIR/resources
-mkdir -p $STATIC_BUILD/js
+mkdir -p $STATIC_BUILD/js $STATIC_BUILD/css
 cp -r $BASEDIR/node_modules/lightgallery/dist/fonts $STATIC_BUILD
 cp -r $STATIC_SRC/img $STATIC_BUILD/img
 cp -r $BASEDIR/node_modules/lightgallery/dist/img/* $STATIC_BUILD/img
+cp -r $BASEDIR/node_modules/@fortawesome/fontawesome-free/css/all.min.css $STATIC_BUILD/css/font-awesome.min.css
+cp -r $BASEDIR/node_modules/@fortawesome/fontawesome-free/webfonts $STATIC_BUILD
 
 cp $BASEDIR/node_modules/jquery/dist/jquery.min.js $STATIC_BUILD/js/jquery.min.js
 cp $BASEDIR/node_modules/lightgallery/dist/js/lightgallery.js $STATIC_BUILD/js/lightgallery.js

@@ -1,7 +1,5 @@
 'use strict';
 
-require('./fa');
-
 var Clipboard = require('clipboard');
 
 
