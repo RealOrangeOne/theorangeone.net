@@ -2,10 +2,10 @@
 
 var Clipboard = require('clipboard');
 
-function waitFor(global, callback) {
+function waitFor(obj, property, callback) {
   // Wait for a property to exist on window before runnig callback
   var intervalId = setInterval(function () {
-    if (window[global]) {
+    if (obj.hasOwnProperty(property)) {
       clearInterval(intervalId);
       callback();
     }
@@ -24,12 +24,14 @@ $('.image').each(function () {  // setup div-image hybrids
 
 
 $(document).ready(function () {
-  $('#light-gallery').lightGallery({
-    thumbnail:true,
-    animateThumb: false,
-    showThumbByDefault: false,
-    preload: 2,
-    download: false
+  waitFor($.fn, 'lightGallery', function () {
+    $('#light-gallery').lightGallery({
+      thumbnail:true,
+      animateThumb: false,
+      showThumbByDefault: false,
+      preload: 2,
+      download: false
+    });
   });
 
   // HACK: ToC has blank li if no initial header
@@ -42,7 +44,7 @@ $(document).ready(function () {
     }
   });
 
-  waitFor('mermaid', function () {
+  waitFor(window, 'mermaid', function () {
     mermaid.initialize({
       startOnLoad: true
     });
