@@ -21,7 +21,7 @@ cp $BASEDIR/node_modules/mermaid/dist/mermaid.min.js $STATIC_BUILD/js/mermaid.mi
 
 browserify $STATIC_SRC/js/index.js -o $STATIC_BUILD/js/app.js
 cp -r $STATIC_SRC/scss $STATIC_BUILD/scss
-hugo gen chromastyles --style=tango > $STATIC_BUILD/scss/highlight.scss
+hugo gen chromastyles --style=tango > $STATIC_BUILD/css/highlight.css
 
 hugo -vDEF --stepAnalysis --gc $HUGO_ARGS
 
