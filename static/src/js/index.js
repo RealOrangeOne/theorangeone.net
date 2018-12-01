@@ -2,6 +2,16 @@
 
 var Clipboard = require('clipboard');
 
+function waitFor(global, callback) {
+  // Wait for a property to exist on window before runnig callback
+  var intervalId = setInterval(function () {
+    if (window[global]) {
+      clearInterval(intervalId);
+      callback();
+    }
+  }, 100);
+}
+
 
 $('.image').each(function () {  // setup div-image hybrids
   var ele = $(this);
@@ -32,9 +42,12 @@ $(document).ready(function () {
     }
   });
 
-  mermaid.initialize({
-    startOnLoad: true
+  waitFor('mermaid', function () {
+    mermaid.initialize({
+      startOnLoad: true
+    });
   });
+
 });
 
 $('.navbar-brand').on('click', function (event) {
