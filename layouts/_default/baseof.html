@@ -15,7 +15,7 @@
 
     {{ partial "metadata.html" . }}
 
-    {{ if .Site.IsServer }}
+    {{ if not .Site.IsServer }}
       {{ partial "matomo.html" . }}
     {{ end }}
   </head>
