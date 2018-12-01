@@ -26,10 +26,10 @@ $(document).ready(function() {
   waitFor($.fn, 'lightGallery', function() {
     $('#light-gallery').lightGallery({
       thumbnail: true,
-      animateThumb: false,
+      animateThumb: true,
       showThumbByDefault: false,
-      preload: 2,
       download: false,
+      share: false,
     });
   });
 
