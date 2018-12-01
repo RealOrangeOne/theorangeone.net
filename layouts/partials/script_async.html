@@ -1,2 +1,2 @@
 {{ $script := resources.Get . | minify | fingerprint }}
-<script type="text/javascript" async src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+<script type="text/javascript" async defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
