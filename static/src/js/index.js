@@ -9,7 +9,7 @@ function waitFor(obj, property, callback) {
       clearInterval(intervalId);
       callback();
     }
-  }, 100);
+  }, 500);
 }
 
 $('.image').each(function() {
