@@ -13,6 +13,10 @@
     {{ partial "style.html" "css/font-awesome.min.css" }}
     {{ partial "style.html" "css/highlight.css" }}
 
+    {{ if eq .Params.layout "flickr" }}
+      {{ partial "style.html" "css/lightgallery.min.css" }}
+    {{ end }}
+
     <title>{{ partial "title-item.html" . }}{{ .Site.Title }}</title>
 
     {{ partial "metadata.html" . }}
@@ -28,10 +32,24 @@
 
     {{ partial "footer.html" . }}
 
+    {{ $raw_content := "" }}
+
+    {{ if .Content }}
+      {{ $raw_content = .RawContent }}
+    {{ end }}
+
     {{ partial "script.html" "js/jquery.js" }}
-    {{ partial "script_async.html" "js/lightgallery.js" }}
+
+    {{ if eq .Params.layout "flickr" }}
+      {{ partial "script_async.html" "js/lightgallery.js" }}
+    {{ end }}
+
     {{ partial "script_async.html" "js/bootstrap.js" }}
-    {{ partial "script_async.html" "js/mermaid.js" }}
+
+    {{ if in $raw_content "{{<mermaid" }}
+      {{ partial "script_async.html" "js/mermaid.js" }}
+    {{ end }}
+
     {{ partial "script_async.html" "js/app.js" }}
   </body>
 </html>

@@ -12,6 +12,7 @@ cp -r $BASEDIR/node_modules/lightgallery/dist/fonts $STATIC_BUILD
 cp -r $STATIC_SRC/img $STATIC_BUILD/img
 cp -r $BASEDIR/node_modules/lightgallery/dist/img/* $STATIC_BUILD/img
 cp -r $BASEDIR/node_modules/@fortawesome/fontawesome-free/css/all.min.css $STATIC_BUILD/css/font-awesome.min.css
+cp $BASEDIR/node_modules/lightgallery/dist/css/lightgallery.min.css $STATIC_BUILD/css/lightgallery.min.css
 cp -r $BASEDIR/node_modules/@fortawesome/fontawesome-free/webfonts $STATIC_BUILD
 
 cp $BASEDIR/node_modules/jquery/dist/jquery.min.js $STATIC_BUILD/js/jquery.js

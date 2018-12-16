@@ -6,7 +6,7 @@ image: resource:user-settings.png
 
 VPNs are a way of accessing application which sit on a separate network using an encrypted tunnel. Contrary to popular belief, they are not designed to be used for anonymising your internet habits. Whilst VPNs are designed to enable a client to access the servers network, it's possible to use them to provide a server to access to its client's network. With this, and a simple HTTP server, it's possible to open up applications on your home network to the internet, without the need for a static IP, or a port forward!
 
-{{< mermaid caption="Network layout" >}}
+{{<mermaid caption="Network layout">}}
 graph LR
 
 A[End Users]
@@ -20,7 +20,7 @@ end
 A-->B
 C---B
 C-->D
-{{< /mermaid >}}
+{{</mermaid>}}
 
 ## Requirements
 
