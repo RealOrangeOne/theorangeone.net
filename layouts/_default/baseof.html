@@ -10,11 +10,11 @@
     <link rel="icon" type="image/png" href='{{ (resources.Get "/img/logo-transparent.png" | fingerprint).RelPermalink }}'/>
 
     {{ partial "style.html" "scss/style.scss" }}
-    {{ partial "style.html" "css/font-awesome.min.css" }}
+    {{ partial "style.html" "css/font-awesome.css" }}
     {{ partial "style.html" "css/highlight.css" }}
 
     {{ if eq .Params.layout "flickr" }}
-      {{ partial "style.html" "css/lightgallery.min.css" }}
+      {{ partial "style.html" "css/lightgallery.css" }}
     {{ end }}
 
     <title>{{ partial "title-item.html" . }}{{ .Site.Title }}</title>
