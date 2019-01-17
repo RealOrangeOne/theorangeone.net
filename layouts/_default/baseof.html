@@ -20,10 +20,6 @@
     <title>{{ partial "title-item.html" . }}{{ .Site.Title }}</title>
 
     {{ partial "metadata.html" . }}
-
-    {{ if not .Site.IsServer }}
-      {{ partial "matomo.html" . }}
-    {{ end }}
   </head>
   <body>
     {{ partial "navbar.html" . }}
