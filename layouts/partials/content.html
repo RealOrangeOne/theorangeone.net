@@ -7,15 +7,19 @@
   <div class="mb-3 image header-image" data-image='{{ .Scratch.Get "image" }}'></div>
 {{ end }}{{ end }}
 {{ partial "breadcrumbs/index.html" . }}
-<h1 class="display-5">{{ .Title }}</h1>
+<h1 class="display-4">{{ .Title }}</h1>
 <h5 class="my-3">{{ partial "subtitle.html" . }}</h5>
-<p>{{ partial "content-details.html" . }}</p>
-<hr />
-<div class="content mt-3">
-  {{ if .TableOfContents }}
-    <div class="float-lg-right ml-lg-3 mb-2 bg-light p-3">
-      {{ .TableOfContents }}
-    </div>
-  {{ end }}
-  {{ .Content }}
-</div>
+{{ if ne .Kind "section" }}
+  <p>{{ partial "content-details.html" . }}</p>
+{{ end }}
+{{ if .Content }}
+  <hr />
+  <div class="content mt-3">
+    {{ if .TableOfContents }}
+      <div class="float-lg-right ml-lg-3 mb-2 bg-light p-3">
+        {{ .TableOfContents }}
+      </div>
+    {{ end }}
+    {{ .Content }}
+  </div>
+{{ end }}

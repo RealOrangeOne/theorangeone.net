@@ -1,7 +1,10 @@
 {{ define "main" }}
 <div id="main">
   <div class="container">
-    <h1 class="display-4">{{ .Title }}</h1>
+    {{ partial "content.html" . }}
+    {{ if .Content }}
+        <hr />
+    {{ end }}
     {{ range .Data.Pages.GroupByDate "2006-01" }}
       {{ $month := print .Key "-01" }}
       {{ if (index .Pages 0).Date.IsZero }}
