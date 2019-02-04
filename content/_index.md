@@ -1,4 +1,4 @@
 ---
 title: Homepage
 ---
-Part Developer. Part SysAdmin. Part Hacker. All Nerd!
+Part Developer. Part SysAdmin. Part InfoSec. All Nerd!
