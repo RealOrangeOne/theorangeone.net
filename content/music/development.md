@@ -1,6 +1,5 @@
 ---
 title: Development Playlist
-tags: [music]
 layout: spotify
 playlist: 4SLjpGGoOoiCDhc9sgNx8w
 ---
