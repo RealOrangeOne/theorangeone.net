@@ -1,0 +1,5 @@
+---
+title: Robotics
+aliases:
+    - /robotics/
+---
