@@ -3,7 +3,7 @@ title: Backgrounds
 repo: RealOrangeOne/tbg
 ---
 
-Even though I use i3, a window manager well known for being minimal, and black, I still like having desktop wallpapers. It makes my desktop feel far less plan, and my lock screens far less boring. I'm not one for keeping things the same, and so my backgrounds cycle, every minute. 
+Even though I use i3, a window manager well known for being minimal, and black, I still like having desktop wallpapers. It makes my desktop feel far less plan, and my lock screens far less boring. I'm not one for keeping things the same, and so my backgrounds cycle, every minute. The background images can be found [here]({{< relref "backgrounds" >}}).
 
 When I started, I used [variety](http://peterlevi.com/variety/), an incredibly powerful application to scrape images from a variety of locations. Variety however uses far too much memory for my liking, so, I wrote a replacement!
 
@@ -17,19 +17,10 @@ My lock screen of choice is [`betterlockscreen`](https://github.com/pavanjadhaw/
 Lock Screen Example
 {{< /figure >}}
 
-Using `tbg`, I can set the background using `feh`, then build the cache for `betterlockscreen`. This is part of the issue which makes cycling an image very expensive. 
+Using `tbg`, I can set the background using `feh`, then build the cache for `betterlockscreen`. This is part of the issue which makes cycling an image very expensive.
 
 ```text
 exec --no-startup-id tbg ~/Pictures/Backgrounds/ -m 1 -c "betterlockscreen -u /_"
 ```
 
 Adding the above to my i3 config selects an image from `~/Pictures/Backgrounds/` every minute, sets it as my background, and builds the `betterlockscreen` cache with it. i3 handles running this application to make sure it's executed correctly on start-up.
-
-## My Backgrounds
-As with most things, I synchronise my backgrounds between devices. I've also made them publicly accessible. 
-
-{{< button src="https://bg.theorangeone.net/" >}}
-See My Backgrounds
-{{< /button >}}
-
-Disclaimer: None of these images have been created by me. I've tried to keep track of where they came from in `sources.txt`, however some are missing from the list.
