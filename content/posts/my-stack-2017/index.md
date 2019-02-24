@@ -5,7 +5,7 @@ image: resource:editing-my-stack.png
 hide_header_image: true
 ---
 
-As a software engineer and perfectionist, I have my machines setup in a very specific way, so I can do my job properly and have everything just the way I like it. Thanks to my [dotfiles](/projects/dotfiles), I have everything syncing up between machines, meaning the tools I use are setup correctly, the same, everywhere.
+As a software engineer and perfectionist, I have my machines setup in a very specific way, so I can do my job properly and have everything just the way I like it. Thanks to my [dotfiles]({{< relref "dotfiles" >}}), I have everything syncing up between machines, meaning the tools I use are setup correctly, the same, everywhere.
 
 # OS
 My current distro of choice is [Arch](https://www.archlinux.org/), specifically [Antergos](https://antergos.com/). My main reason for choosing arch is the [AUR](https://aur.archlinux.org/). Almost every package I can think of is packaged there, often by the community. It's great to be able to install things through 1 method and have everything update in a single command. Antergos is also far easier to install than raw arch, and has little to no bloat that comes with it.
@@ -51,10 +51,9 @@ I've switched around password managers _a lot_, but I'm currently settled on [Ke
 # Email
 My personal email provider of choice is [Mailfence](https://mailfence.com/), for now. I've experimented a lot with both [FastMail](https://www.fastmail.com/) and [ProtonMail](https://protonmail.com/) in the past. ProtonMail is great for security and privacy, but is lacking far too heavily in features. FastMail is the inverse, it's interface and feature-set are amazing, but their privacy / security policies aren't good enough for me.
 
-Mailfence supports all the standard features a mail client should, and has a nice set of [security features](https://mailfence.com/en/secure-email.jsp). 
+Mailfence supports all the standard features a mail client should, and has a nice set of [security features](https://mailfence.com/en/secure-email.jsp).
 
 ## Email client
 For an email client, I use [Thunderbird](https://www.mozilla.org/en-US/thunderbird/). For linux, there's nothing quite like it out there! [Nylas](https://www.nylas.com/nylas-mail/) looked promising, but the fact it stored all data in the cloud (no longer an issue), and was far too bulky for a simple email client. Nylas mail is no longer supported, but I keep a good eye on [nylas-mail-lives](https://github.com/nylas-mail-lives/nylas-mail), a community fork to keep it alive.
 
 Thunderbird with a few additional extensions is amazingly powerful. My personal favourite being [Markdown Here](https://addons.mozilla.org/en-US/firefox/addon/markdown-here/), which converts markdown to email HTML ready for sending.
-
