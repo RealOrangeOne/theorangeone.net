@@ -1,6 +1,7 @@
 ---
 title: Chill Soundtrack
 layout: spotify
+tags: [robotics]
 playlist: 2YDsE6BLEdjTSXhFRnVXq9
 ---
 

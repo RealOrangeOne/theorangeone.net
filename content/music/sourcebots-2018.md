@@ -1,5 +1,6 @@
 ---
 title: SourceBots 2018
+tags: [robotics]
 layout: spotify
 playlist: 2mowt6maj0vhLUdrnCKtnw
 ---
