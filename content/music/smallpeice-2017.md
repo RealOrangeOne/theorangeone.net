@@ -1,5 +1,5 @@
 ---
-title: Soundtrack
+title: Smallpeice 2017
 layout: spotify
 playlist: 4ZaS9NTwF1erqqpE1IxHlP
 ---
