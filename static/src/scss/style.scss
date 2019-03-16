@@ -104,9 +104,9 @@ table td {
 }
 
 .navbar {
+  background-color: $black;
   padding-top: 0;
   padding-bottom: 0;
-  background-color: $black;
 
   .navbar-brand {
     font-size: $font-size-base;
@@ -131,10 +131,10 @@ table td {
 footer {
   position: static;
   bottom: 0;
+  background-color: $black;
   width: 100%;
   height: 110px;
   color: lighten($black, 50);
-  background-color: $black;
 
   a {
     color: inherit;
@@ -270,6 +270,6 @@ a.no-color-change {
 }
 
 .about-card {
-  background-color: $body-bg;
   border: 1px solid $body-color;
+  background-color: $body-bg;
 }
