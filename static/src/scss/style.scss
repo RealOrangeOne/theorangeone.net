@@ -3,8 +3,12 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
 
+$body-color: $gray-300;
+
+
 html, body {
   height: 100%;
+  color: $body-color;
 }
 
 a {
@@ -12,11 +16,11 @@ a {
   color: $primary;
 
   &:hover {
-    color: $black;
+    color: $body-color;
   }
 
   &.colour-invert {
-    color: $black;
+    color: $body-color;
 
     &:hover {
       color: $primary;
@@ -95,9 +99,14 @@ table td {
   vertical-align: middle;
 }
 
+.table-dark {
+  color: $body-color;
+}
+
 .navbar {
   padding-top: 0;
   padding-bottom: 0;
+  background-color: $black;
 
   .navbar-brand {
     font-size: $font-size-base;
@@ -113,11 +122,6 @@ table td {
     font-size: 90%;
   }
 }
-
-.bg-black {
-  background-color: $black;
-}
-
 
 #index-header {
   width: 100%;
@@ -242,7 +246,7 @@ p, li, h1, h2, h3, h4, h5, h6 {
   font-size: $spacer * 0.9;
 
   .breadcrumb-item + .breadcrumb-item::before {
-    color: $black;
+    color: $body-color;
   }
 }
 
@@ -265,4 +269,9 @@ a.no-color-change {
   &, &:hover {
     color: inherit;
   }
+}
+
+.about-card {
+  background-color: $body-bg;
+  border: 1px solid $body-color;
 }
