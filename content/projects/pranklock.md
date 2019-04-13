@@ -1,5 +1,5 @@
 ---
-title: pranklock
+title: Prank Lock
 repo: RealOrangeOne/pranklock
 ---
 
