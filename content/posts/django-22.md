@@ -1,6 +1,7 @@
 ---
 title: Django 2.2
 date: 2019-04-01
+tags: [programming]
 ---
 
 April marks the release of Django 2.2, the latest LTS version of the popular Python web framework. Django 2.2 marks almost 2 years of development since the last LTS release, 1.11 in April 2017, and brings with it some very large improvements and changes which naturally come with a major version increase.
