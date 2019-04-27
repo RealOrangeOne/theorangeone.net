@@ -4,7 +4,7 @@
     <title>{{ .Title }}</title>
     <link>{{ .Permalink }}</link>
     <description>Recent content in {{ .Title }}</description>
-    <generator>Hugo {{ .Hugo.Version }} -- gohugo.io</generator>
+    <generator>Hugo {{ hugo.Version }} -- gohugo.io</generator>
     <language>{{ .Site.LanguageCode }}</language>
     <copyright>{{ partial "copyright.html" . | html }}</copyright>
     <managingEditor>{{ .Site.Params.author }}</managingEditor>

@@ -1,6 +1,6 @@
 {{ $home := .Site.GetPage "home" }}
 
-{{ $sections := where (where .Site.Pages.ByTitle "Kind" "section") "Parent.UniqueID" $home.UniqueID }}
+{{ $sections := where (where .Site.Pages.ByTitle "Kind" "section") "Parent.File.UniqueID" $home.File.UniqueID }}
 {{ $pages := where .Site.RegularPages.ByTitle "Section" "" }}
 {{ $nav_pages := union $pages $sections }}
 

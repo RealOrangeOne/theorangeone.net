@@ -3,7 +3,7 @@
     command = "./scripts/release.sh"
 
 [build.environment]
-    HUGO_VERSION = "0.54.0"
+    HUGO_VERSION = "0.55.4"
     NODE_ENV = "production"
     NPM_CONFIG_PRODUCTION = "false"
 

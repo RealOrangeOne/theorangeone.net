@@ -24,7 +24,7 @@ browserify $STATIC_SRC/js/index.js -o $STATIC_BUILD/js/app.js
 cp -r $STATIC_SRC/scss $STATIC_BUILD/scss
 hugo gen chromastyles --style=monokai > $STATIC_BUILD/css/highlight.css
 
-hugo -vDEF --stepAnalysis --gc $HUGO_ARGS
+hugo -vDEF --gc $HUGO_ARGS
 
 cp $BASEDIR/static/keybase.txt $OUTPUT_DIR/keybase.txt
 
