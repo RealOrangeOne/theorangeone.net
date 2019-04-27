@@ -12,7 +12,6 @@ Django historically works off the LTS pattern of software releasing, providing 2
 
 The bump between 1.11 and 2.2 also bought with it the updates from 2.0 and 2.1. Those features which have been being used by users for 18 months finally come to those who need the stability of an LTS release. I've not delved too far into the 2.x releases so far, as most of what I do strongly benefits from using an LTS-based version.
 
-
 ## Python 2
 
 Ironically named, Django 2 is the first Django release to completely drop support for Python 2. Django 2.2 will require at least 3.5. Python 2 (commonly referred to as 'legacy python') will retire [in 2020](https://pythonclock.org/), so it's great to see Django dropping support well beforehand so users can start migrating their larger codebases. For years there's been a debate as to which major version of python is better: 2 or 3. Considering Python 2 now has an end-of-life date, and the performance gap is now a non-issue, hopefully this debate is over.
@@ -22,7 +21,6 @@ Ironically named, Django 2 is the first Django release to completely drop suppor
 In previous versions, Django's URL system relied heavily on regular expressions to match paths to views. This works fine for very simple data types (like integers, which can simply be `\d+`), but more complex data structures lead to more interesting URL patterns. In the past, I've had to resort to a simpler URL pattern, and then doing more URL validation in the view, which is less than ideal. UUIDs were famously very difficult to do, with many people resorting to `[0-9a-f-]+`, whereas the correct regex is in fact [`[0-9a-f]{12}4[0-9a-f]{3}[89ab][0-9a-f]{15}\Z`](https://stackoverflow.com/a/18359032).
 
 Thankfully, Django 2.0 fixed this, by drastically simplifying the URL routing syntax to allow for special keywords to be in place of RegEx capture groups. The new syntax is available with the new `path` function:
-
 
 ```python
 path('articles/<int:year>/', views.year_archive),
@@ -43,7 +41,6 @@ This is a significant improvement over the previous methods. The intention is to
 - `path` (any non-empty string)
 
 ## Django Admin
-
 
 ### Mobile-friendly
 
@@ -156,7 +153,6 @@ Django now has some built-in support for protecting against these kinds of attac
 ```
 
 This can then be used by JavaScript directly by getting the tag by ID. If you still need to inject data directly into JavaScript source, `django-argonauts` still provides additional functionality.
-
 
 ## Constraints
 
