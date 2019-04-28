@@ -1,9 +1,9 @@
-  {{ if not .Date.IsZero }}
+{{ if not .Date.IsZero }}
   <span class="pr-1" title='{{ .Date.Format "January 2 2006" }}'>{{ .Date.Format "2006-01-02" }}</span>
-  {{ end }}
+{{ end }}
 
-  {{ if .Params.tags }}
-    {{ range $i, $e := .Params.tags }}
-      <a href="/tags/{{ urlize . }}" class="mr-1">#{{ . }}</a>
-    {{ end }}
+{{ if .Params.tags }}
+  {{ range $i, $e := .Params.tags }}
+    <a href="/tags/{{ urlize . }}" class="mr-1">#{{ . }}</a>
   {{ end }}
+{{ end }}
