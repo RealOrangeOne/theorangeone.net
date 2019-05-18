@@ -47,5 +47,9 @@
     {{ end }}
 
     {{ partial "script_async.html" "js/app.js" }}
+
+    {{ if not .Site.IsServer }}
+      {{ partial "fathom.html" }}
+    {{ end }}
   </body>
 </html>
