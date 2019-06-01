@@ -21,6 +21,8 @@ cp $BASEDIR/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js $STATIC_BUILD
 cp $BASEDIR/node_modules/mermaid/dist/mermaid.min.js $STATIC_BUILD/js/mermaid.js
 
 browserify $STATIC_SRC/js/index.js -o $STATIC_BUILD/js/app.js
+browserify $STATIC_SRC/js/sentry.js -t envify -o $STATIC_BUILD/js/sentry.js
+
 cp -r $STATIC_SRC/scss $STATIC_BUILD/scss
 hugo gen chromastyles --style=monokai > $STATIC_BUILD/css/highlight.css
 

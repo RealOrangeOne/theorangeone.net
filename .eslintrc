@@ -5,6 +5,7 @@
   ],
   "globals": {
     "mermaid": true,
-    "$": true
+    "$": true,
+    "process": true
   }
 }
