@@ -15,7 +15,7 @@ I synchronise these files with git, and publish them [on GitHub](https://github.
 
 ### Previous iterations
 
-Previously, my dotfiles used  puppet](https://puppet.com/), which is fairly overkill for what I'm using it for, and was incredibly complicated compared to Ansible. Ansible bought with it many other benefits:
+Previously, my dotfiles used [puppet](https://puppet.com/), which is fairly overkill for what I'm using it for, and was incredibly complicated compared to Ansible. Ansible bought with it many other benefits:
 
 - Simpler configuration. YAML vs Puppet
 - Wider variety of 1st party modules
