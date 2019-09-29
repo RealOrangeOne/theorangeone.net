@@ -2,8 +2,10 @@
   <span class="pr-2" title='{{ .Date.Format "January 2 2006" }}'><i class="far fa-calendar-alt pr-1"></i>{{ .Date.Format "2006-01-02" }}</span>
 {{ end }}
 
-{{ if .ReadingTime }}
-  <span class="pr-2"><i class="far fa-clock pr-1"></i>{{ .ReadingTime }} minutes</span>
+{{ if not .Parent.IsHome }}
+  {{ if gt .ReadingTime 2 }}
+    <span class="pr-2"><i class="far fa-clock pr-1"></i>{{ .ReadingTime }} minutes</span>
+  {{ end }}
 {{ end }}
 
 {{ if .Params.tags }}
