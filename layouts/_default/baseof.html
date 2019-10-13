@@ -7,7 +7,7 @@
     <link rel="alternate" type="application/rss+xml" href="{{ .Site.RSSLink }}" />
     <meta name="superfish" content="nofish" />
     <meta name="application-name" content="{{ .Site.Title }}" />
-    <link rel="icon" type="image/png" href='{{ ((resources.Get "/img/logo-transparent.png" | fingerprint).Resize "100x").RelPermalink }}'/>
+    {{ partial "favicon.html" }}
 
     {{ partial "style.html" "scss/style.scss" }}
     {{ partial "style.html" "css/font-awesome.css" }}

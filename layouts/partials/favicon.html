@@ -1,0 +1,7 @@
+{{ $image := "/img/logo-transparent.png" }}
+{{ $sizes := slice 16 32 64 100 200 }}
+
+{{ range $sizes }}
+  {{ $sizes := printf "%dx%d" . . }}
+  <link rel="icon" type="image/png" sizes="{{ $sizes }}" href='{{ ((resources.Get $image | fingerprint).Resize $sizes).RelPermalink }}'/> -->
+{{ end }}
