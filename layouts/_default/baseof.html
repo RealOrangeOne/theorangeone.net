@@ -51,7 +51,7 @@
     {{ partial "script_async.html" "js/app.js" }}
 
     {{ if not .Site.IsServer }}
-      {{ partial "matomo.html" }}
+      {{ partial "matomo.html" . }}
     {{ end }}
   </body>
 </html>
