@@ -26,7 +26,7 @@ browserify $STATIC_SRC/js/sentry.js -t envify -o $STATIC_BUILD/js/sentry.js
 cp -r $STATIC_SRC/scss $STATIC_BUILD/scss
 hugo gen chromastyles --style=monokai > $STATIC_BUILD/css/highlight.css
 
-hugo -vDEF --gc $HUGO_ARGS
+hugo -vDEF --gc $@
 
 cp $BASEDIR/static/keybase.txt $OUTPUT_DIR/keybase.txt
 
