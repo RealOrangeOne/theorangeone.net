@@ -18,10 +18,10 @@ cp -r $BASEDIR/node_modules/@fortawesome/fontawesome-free/webfonts $STATIC_BUILD
 cp $BASEDIR/node_modules/jquery/dist/jquery.min.js $STATIC_BUILD/js/jquery.js
 cp $BASEDIR/node_modules/lightgallery/dist/js/lightgallery-all.min.js $STATIC_BUILD/js/lightgallery.js
 cp $BASEDIR/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js $STATIC_BUILD/js/bootstrap.js
-cp $BASEDIR/node_modules/mermaid/dist/mermaid.min.js $STATIC_BUILD/js/mermaid.js
 
 browserify $STATIC_SRC/js/index.js -o $STATIC_BUILD/js/app.js
 browserify $STATIC_SRC/js/sentry.js -t envify -o $STATIC_BUILD/js/sentry.js
+browserify $STATIC_SRC/js/mermaid.js -o $STATIC_BUILD/js/mermaid.js
 
 cp -r $STATIC_SRC/scss $STATIC_BUILD/scss
 hugo gen chromastyles --style=monokai > $STATIC_BUILD/css/highlight.css

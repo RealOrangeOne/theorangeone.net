@@ -28,10 +28,10 @@
 
     {{ partial "footer.html" . }}
 
-    {{ $raw_content := "" }}
+    {{ $content := "" }}
 
     {{ if .Content }}
-      {{ $raw_content = .RawContent }}
+      {{ $content = .Content | htmlEscape }}
     {{ end }}
 
     {{ partial "script.html" "js/jquery.js" }}
@@ -44,7 +44,7 @@
 
     {{ partial "script_async.html" "js/bootstrap.js" }}
 
-    {{ if in $raw_content "{{<mermaid" }}
+    {{ if in $content "mermaid-shortcode" }}
       {{ partial "script_async.html" "js/mermaid.js" }}
     {{ end }}
 

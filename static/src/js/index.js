@@ -47,12 +47,6 @@ $(document).ready(function() {
       );
     }
   });
-
-  waitFor(window, 'mermaid', function() {
-    mermaid.initialize({
-      startOnLoad: true,
-    });
-  });
 });
 
 $('.navbar-brand').on('click', function(event) {
