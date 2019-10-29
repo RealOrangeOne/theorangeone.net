@@ -3,7 +3,7 @@
 var Clipboard = require('clipboard');
 
 function waitFor(obj, property, callback) {
-  // Wait for a property to exist on window before runnig callback
+  // Wait for a property to exist on window before running callback
   var intervalId = setInterval(function() {
     if (obj.hasOwnProperty(property)) {
       clearInterval(intervalId);
@@ -11,16 +11,6 @@ function waitFor(obj, property, callback) {
     }
   }, 500);
 }
-
-$('.image').each(function() {
-  // setup div-image hybrids
-  var ele = $(this);
-  if (ele.data('image')) {
-    ele.css('background-image', 'url(' + ele.data('image') + ')');
-  } else {
-    ele.removeClass('image');
-  }
-});
 
 $(document).ready(function() {
   waitFor($.fn, 'lightGallery', function() {
@@ -31,6 +21,12 @@ $(document).ready(function() {
       download: false,
       share: false,
     });
+  });
+
+  new Clipboard('a').on('success', function(e) {
+    var ele = $(e.trigger);
+    ele.find('i').attr('class', 'fas fa-check');
+    alert('Copied "' + ele.data('clipboard-text') + '" to clipboard!');
   });
 
   // HACK: ToC has blank li if no initial header
@@ -45,6 +41,16 @@ $(document).ready(function() {
           .children('li')
           .children('ul')
       );
+    }
+  });
+
+  $('.image').each(function() {
+    // setup div-image hybrids
+    var ele = $(this);
+    if (ele.data('image')) {
+      ele.css('background-image', 'url(' + ele.data('image') + ')');
+    } else {
+      ele.removeClass('image');
     }
   });
 });
@@ -63,13 +69,6 @@ $('.navbar-brand').on('click', function(event) {
     window.location = '/';
   }
   event.preventDefault();
-});
-
-var clipboard = new Clipboard('a');
-clipboard.on('success', function(e) {
-  var ele = $(e.trigger);
-  ele.find('i').attr('class', 'fas fa-check');
-  alert('Copied "' + ele.data('clipboard-text') + '" to clipboard!');
 });
 
 $('[data-clipboard-text]').on('click', function(event) {
