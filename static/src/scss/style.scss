@@ -11,10 +11,10 @@ html, body {
 }
 
 a {
-  transition: color 0.5s;
   color: $primary;
 
   &:hover {
+    transition: color 0.5s;
     color: $body-color;
   }
 
