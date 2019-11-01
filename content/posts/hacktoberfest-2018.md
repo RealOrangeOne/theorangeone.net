@@ -2,6 +2,7 @@
 title: Hacktoberfest 2018
 date: 2018-11-01
 image: https://pbs.twimg.com/media/DqdlUEHWoAAWk30.jpg
+tags: [programming]
 ---
 
 Hacktoberfest is a great initiative created by DigitalOcean and GitHub to get more developers contributing to open-source projects. After opening a set number of pull requests to open-source projects, they're rewarded with branded swag. As someone who does a lot of development in their free time, it's not hard for me to find some open source projects, and contribute where possible. Generally it's to improve or add features I need, rather than simply closing issues, but that's just me.
