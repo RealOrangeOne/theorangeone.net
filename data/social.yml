@@ -48,12 +48,6 @@ accounts:
     link: https://uk.pcpartpicker.com/user/TheOrangeOne/
     icon: fas fa-desktop
 
-  codepen:
-    name: CodePen
-    username: TheOrangeOne
-    link: https://codepen.io/TheOrangeOne/
-    icon: fab fa-codepen
-
   npm:
     name: NPM
     username: TheOrangeOne
