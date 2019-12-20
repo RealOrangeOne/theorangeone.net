@@ -9,7 +9,6 @@
   "devDependencies": {
     "broken-link-checker-local": "0.2.1",
     "eslint-config-dabapps": "4.0.0",
-    "markdown-spellcheck": "1.3.1",
     "parcel-bundler": "1.12.4",
     "sass-lint": "1.13.1",
     "yaml-lint": "1.2.4"
