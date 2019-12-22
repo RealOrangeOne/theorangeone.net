@@ -78,9 +78,9 @@ OpenVPN Access Server is free for 2 concurrent users. For this, we only need, so
 
 Once the script has finished, you'll need to set the password for the builtin user. Run `sudo passwd openvpn` to do this. Open the _"Admin UI"_ URL displayed after the init script. It's probably `https://<ip>:943/admin`. Here, you can login as the `openvpn` user.
 
-{{% resource src="landing-screen.png" %}}
+{{< resource src="landing-screen.png" >}}
 Landing page for OpenVPN admin panel
-{{% /resource %}}
+{{< /resource >}}
 
 ### Create the client account
 
@@ -90,9 +90,9 @@ Once logged in, click _"User Permissions"_ in the sidebar, and create a new user
 
 The new VPN user needs to be told to allow traffic to flow to other devices on its network. To do this, we need to enable a feature called _"VPN Gateway"_. Under the user settings, switch the related radio button to _Yes_, and enter the subnets you want to be accessible. These should be 1 per line, and in the format `192.168.1.0/24`. You will also need to enable access from _"all server side private subnets"_ and _"all other VPN clients"_.
 
-{{% resource src="user-settings.png" %}}
+{{< resource src="user-settings.png" >}}
 Make sure your user settings look roughly like this.
-{{% /resource %}}
+{{< /resource >}}
 
 
 ### Set up the client device

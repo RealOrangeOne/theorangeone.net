@@ -12,7 +12,7 @@
   <figure class="text-center">
     {{ template "img" . }}
     <figcaption class="text-center">
-      <small>{{ .Inner }}</small>
+      <small>{{ .Inner | markdownify }}</small>
     </figcaption>
   </figure>
 {{ else }}

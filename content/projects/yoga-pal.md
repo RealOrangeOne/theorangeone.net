@@ -28,4 +28,4 @@ $ yoga disable touch
 
 Problem solved!
 
-Whilst I've only tested this on my laptop, there's no reason it shouldn't work on others too! If it doesn't, submit an [issue](https://github.com/{{% param "repo" %}}/issues/)!
+Whilst I've only tested this on my laptop, there's no reason it shouldn't work on others too! If it doesn't, submit an [issue](https://github.com/{{< param "repo" >}}/issues/)!

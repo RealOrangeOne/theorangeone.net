@@ -43,9 +43,9 @@ When it comes to creating the database for WordPress, it's really very simple. J
 
 In simple terms, Wordfence is a firewall for WordPress. It monitors the requests to your application, and blocks suspicious activity, and attempts to block brute-force attempts. The nicest feature I found was the check for commonly exposed configuration files, and prompting to remove them.
 
-{{% resource src="wordfence.png" %}}
+{{< resource src="wordfence.png" >}}
 Categories Wordfence protects
-{{% /resource %}}
+{{< /resource >}}
 
 
 ## Validate your work

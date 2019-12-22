@@ -7,7 +7,7 @@ Astrill, my VPN of choice, allows you to export OpenVPN config files for all it'
 
 The export step is really simple, you just login to the web portal, create an entry for your machine, and export the config files. Their tutorial for this can be found [here](http://wiki.astrill.com/index.php/Astrill_Setup_Manual:How_to_configure_OpenVPN_with_Network_Manager_on_Linux). The only problem is that some applications won't accept the certificates embedded into the file like astrill provide. (Gnome does, but I only realised that whilst writing this).
 
-{{% gist %}}
+{{< gist >}}
 
 The above script will split out the files and save them into separate directories for each config file. These files can then be imported and used in an OpenVPN-compatable application.
 

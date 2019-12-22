@@ -5,7 +5,7 @@ repo: RealOrangeOne/circleci-artifact-proxy
 
 My favourite feature of [CircleCI](https://circleci.com/), besides the fact it's the fastest CI I've used, and support docker natively, is artifacts. Artifacts allow you to store files from your build, and download them from the web interface. This means you can use the interface to build mobile apps, installers, or even disk images! The artifacts can be easily downloaded from the web UI, however the URLs aren't discoverable, which makes automatically generating links to builds difficult.
 
-A very important missing feature, is the ability to just get a download link for the latest build available. This would make using CircleCI as a file host for documents, or various other things, great! 
+A very important missing feature, is the ability to just get a download link for the latest build available. This would make using CircleCI as a file host for documents, or various other things, great!
 
 My proxy enables both these features. URLs become discoverable, and allow referencing the latest build. Using the [CircleCI API](https://circleci.com/docs/api/v1-reference/), it gets the less-discoverable URLs from the artifacts, and stream it back to the client.
 
@@ -15,5 +15,4 @@ The server is written in [Rust](https://rust-lang.org/), using [rocket](https://
 
 The server is already deployable in heroku-like environments, with [the rust buildpack](https://github.com/emk/heroku-buildpack-rust). It should also be very simple to build a docker container or custom deployment workflow around it.
 
-{{% repobutton %}}
-
+{{< repobutton >}}

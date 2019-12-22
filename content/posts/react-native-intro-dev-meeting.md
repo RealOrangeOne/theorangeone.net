@@ -20,4 +20,4 @@ React Native is a tricky platform to get started on, but once you understand the
 The Presentation
 {{< /iframe >}}
 
-{{% repobutton %}}
+{{< repobutton >}}
