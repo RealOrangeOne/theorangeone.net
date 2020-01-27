@@ -1,3 +1,0 @@
----
-title: Student Robotics
----
