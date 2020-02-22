@@ -6,12 +6,8 @@
         <hr />
       {{ end }}
       {{ $unique_id := .File.UniqueID }}
-      {{ range .Site.Pages.ByTitle }}
-        {{ if .Parent }}
-          {{ if eq .Parent.File.UniqueID $unique_id }}
-            {{ partial "list_item.html" . }}
-          {{ end }}
-        {{ end }}
+      {{ range .Pages.ByTitle }}
+        {{ partial "list_item.html" . }}
       {{ end }}
     </div>
   </div>

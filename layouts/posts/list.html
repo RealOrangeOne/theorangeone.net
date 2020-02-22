@@ -5,7 +5,7 @@
     {{ if .Content }}
         <hr />
     {{ end }}
-    {{ range .Data.Pages.GroupByDate "2006-01" }}
+    {{ range .Pages.GroupByDate "2006-01" }}
       {{ $month := print .Key "-01" }}
       {{ if (index .Pages 0).Date.IsZero }}
         <hr class="my-5" />
