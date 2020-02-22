@@ -3,5 +3,5 @@
 
 {{ range $sizes }}
   {{ $sizes := printf "%dx%d" . . }}
-  <link rel="icon" type="image/png" sizes="{{ $sizes }}" href='{{ ((resources.Get $image | fingerprint).Resize $sizes).RelPermalink }}'/> -->
+  <link rel="icon" type="image/png" sizes="{{ $sizes }}" href='{{ ((resources.Get $image | fingerprint).Resize $sizes).RelPermalink }}'/>
 {{ end }}
