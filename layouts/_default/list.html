@@ -5,7 +5,6 @@
       {{ if .Content }}
         <hr />
       {{ end }}
-      {{ $unique_id := .File.UniqueID }}
       {{ range .Pages.ByTitle }}
         {{ partial "list_item.html" . }}
       {{ end }}
