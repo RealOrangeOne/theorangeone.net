@@ -8,7 +8,7 @@
   "author": "Jake Howard <git@theorangeone.net>",
   "devDependencies": {
     "broken-link-checker-local": "0.2.1",
-    "eslint-config-dabapps": "5.0.0",
+    "eslint-config-dabapps": "5.1.0",
     "parcel-bundler": "1.12.4",
     "sass-lint": "1.13.1",
     "yaml-lint": "1.2.4"
