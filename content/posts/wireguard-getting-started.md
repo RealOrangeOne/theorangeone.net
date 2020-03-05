@@ -58,7 +58,7 @@ ListenPort = 51820  # The port for wireguard to listen on (51820 is the standard
 # Specify 1 "Peer" block for each connecting device
 [Peer]
 PublicKey = <client publickey>  # The clients public key
-AllowedIPs = 10.1.10.0/24  # The IP and mask the client should be assigned
+AllowedIPs = 10.1.10.2/32  # The IP and mask the client should be assigned
 ```
 
 Yes, that's really it! This isn't just a simple config, Wireguard just has a super simple configuration!
@@ -73,7 +73,7 @@ PrivateKey = <client privatekey>  # The clients private key
 [Peer]
 PublicKey = <servers publickey>  # The servers public key
 Endpoint = <servers ip>:51820  # The IP (or hostname) of the server, along with the port wireguard is listening on
-AllowedIPs = 10.1.10.2/32  # The IPs and masks the client should route through the tunnel
+AllowedIPs = 10.1.10.2/24  # The IPs and masks the client should route through the tunnel
 
 PersistentKeepalive = 25  # Ensure connections remain active, especially useful over NAT
 ```
