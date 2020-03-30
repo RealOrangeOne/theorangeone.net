@@ -1,6 +1,4 @@
-'use strict';
-
-var mermaid = require('mermaid');
+let mermaid = require('mermaid');
 
 $(document).ready(function() {
   mermaid.initialize({

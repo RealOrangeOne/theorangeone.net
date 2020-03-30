@@ -1,11 +1,9 @@
-'use strict';
-
-var Clipboard = require('clipboard');
+const Clipboard = require('clipboard');
 
 function waitFor(obj, property, callback) {
   // Wait for a property to exist on window before running callback
-  var intervalId = setInterval(function() {
-    if (obj.hasOwnProperty(property)) {
+  const intervalId = setInterval(function() {
+    if (property in obj) {
       clearInterval(intervalId);
       callback();
     }
@@ -24,14 +22,14 @@ $(document).ready(function() {
   });
 
   new Clipboard('a').on('success', function(e) {
-    var ele = $(e.trigger);
+    const ele = $(e.trigger);
     ele.find('i').attr('class', 'fas fa-check');
     alert('Copied "' + ele.data('clipboard-text') + '" to clipboard!');
   });
 
   // HACK: ToC has blank li if no initial header
   $('#TableOfContents').each(function() {
-    var ele = $(this);
+    let ele = $(this);
     if (ele.find('a').length <= 3) {
       ele.parent().remove();
     } else if (ele.children('ul').children('li').length === 1) {
@@ -46,7 +44,7 @@ $(document).ready(function() {
 
   $('.image').each(function() {
     // setup div-image hybrids
-    var ele = $(this);
+    const ele = $(this);
     if (ele.data('image')) {
       ele.css('background-image', 'url(' + ele.data('image') + ')');
     } else {
