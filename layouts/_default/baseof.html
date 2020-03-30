@@ -36,8 +36,6 @@
 
     {{ partial "script.html" "js/jquery.js" }}
 
-    {{ partial "script_async.html" "js/sentry.js" }}
-
     {{ if eq .Params.layout "flickr" }}
       {{ partial "script_async.html" "js/lightgallery.js" }}
     {{ end }}

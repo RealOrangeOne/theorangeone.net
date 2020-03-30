@@ -19,7 +19,7 @@ cp $BASEDIR/node_modules/jquery/dist/jquery.min.js $STATIC_BUILD/js/jquery.js
 cp $BASEDIR/node_modules/lightgallery/dist/js/lightgallery-all.min.js $STATIC_BUILD/js/lightgallery.js
 cp $BASEDIR/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js $STATIC_BUILD/js/bootstrap.js
 
-parcel build -d $STATIC_BUILD/js/ $STATIC_SRC/js/app.js $STATIC_SRC/js/sentry.js $STATIC_SRC/js/mermaid.js
+parcel build -d $STATIC_BUILD/js/ $STATIC_SRC/js/app.js $STATIC_SRC/js/mermaid.js
 
 cp -r $STATIC_SRC/scss $STATIC_BUILD/scss
 hugo gen chromastyles --style=monokai > $STATIC_BUILD/css/highlight.css

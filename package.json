@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.12.1",
-    "@sentry/browser": "5.15.0",
     "bootstrap": "4.4.1",
     "clipboard": "2.0.6",
     "jquery": "3.4.1",
