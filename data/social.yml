@@ -30,12 +30,6 @@ accounts:
     link: https://bitbucket.com/TheOrangeOne/
     icon: fab fa-bitbucket
 
-  trello:
-    name: Trello
-    username: TheOrangeOne
-    link: https://trello.com/TheOrangeOne/
-    icon: fab fa-trello
-
   freenode:
     name: Freenode
     username: TheOrangeOne
@@ -59,12 +53,6 @@ accounts:
     username: RealOrangeOne
     link: https://keybase.io/realorangeone
     icon: fas fa-key
-
-  youtube:
-    name: YouTube
-    username: TheOrangeOneOfficial
-    link: https://www.youtube.com/user/TheOrangeOneOfficial/
-    icon: fab fa-youtube
 
   stack-overflow:
     name: Stack Overflow
