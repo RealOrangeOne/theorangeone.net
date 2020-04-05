@@ -2,9 +2,4 @@
   {{ .Summary | chomp }}{{ if .Truncated }}&hellip;{{ end }}
 {{ else if .Params.subtitle }}
   {{ .Params.subtitle | markdownify }}
-{{ else if .Params.repo }}
-  {{ (getJSON "https://api.github.com/repos/" .Params.repo).description }}
-{{ else if .Params.gist }}
-  {{ (getJSON "https://api.github.com/gists/" .Params.gist).description }}
 {{ end }}
-

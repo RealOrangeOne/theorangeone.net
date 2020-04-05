@@ -8,7 +8,9 @@
 {{ end }}{{ end }}
 {{ partial "breadcrumbs/index.html" . }}
 <h1 class="display-4">{{ .Title }}</h1>
-<h5 class="my-3">{{ partial "subtitle.html" . }}</h5>
+{{ if .Params.subtitle }}
+  <h5 class="my-3">{{ markdownify .Params.subtitle }}</h5>
+{{ end }}
 {{ if ne .Kind "section" }}
   <p>{{ partial "content-details.html" . }}</p>
 {{ end }}
