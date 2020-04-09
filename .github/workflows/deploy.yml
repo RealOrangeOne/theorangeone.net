@@ -11,6 +11,8 @@ jobs:
     steps:
 
       - uses: actions/checkout@v1
+        with:
+          submodules: true
 
       - name: Build production container
         run: docker build --tag docker.pkg.github.com/${GITHUB_REPOSITORY,,}/prod:latest .
