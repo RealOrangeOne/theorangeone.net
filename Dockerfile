@@ -4,7 +4,7 @@ FROM jojomi/hugo:0.68.3 as hugo
 RUN chmod 0777 /usr/local/sbin/hugo
 
 # Site Build
-FROM node:lts-buster-slim as build
+FROM node:lts-slim as build
 
 ENV NODE_ENV production
 
