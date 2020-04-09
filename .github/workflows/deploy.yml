@@ -15,10 +15,10 @@ jobs:
           submodules: true
 
       - name: Build production container
-        run: docker build --tag docker.pkg.github.com/${GITHUB_REPOSITORY,,}/prod:latest .
+        run: docker build --tag docker.pkg.github.com/${GITHUB_REPOSITORY,,}/theorangeone.net:latest .
 
       - name: Log into GitHub Docker Registry
         run: echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com -u ${GITHUB_REPOSITORY%/*} --password-stdin
 
       - name: Push the Docker container
-        run: docker push docker.pkg.github.com/${GITHUB_REPOSITORY,,}/prod:latest
+        run: docker push docker.pkg.github.com/${GITHUB_REPOSITORY,,}/theorangeone.net:latest
