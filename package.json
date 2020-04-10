@@ -19,7 +19,6 @@
     "jquery": "3.4.1",
     "lg-thumbnail": "1.1.0",
     "lightgallery": "1.6.12",
-    "mermaid": "8.4.8",
     "parcel-bundler": "1.12.4"
   }
 }

@@ -257,7 +257,12 @@ p, li, h1, h2, h3, h4, h5, h6 {
 }
 
 .mermaid {
-  font-size: $font-size-base;
+  text-align: center;
+
+  img {
+    width: auto;
+    max-width: 100%;
+  }
 }
 
 a.no-color-change {

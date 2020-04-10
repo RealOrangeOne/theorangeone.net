@@ -1,7 +1,9 @@
-<figure>
-  <div class="mermaid mermaid-shortcode" align="center">
-    {{ safeHTML .Inner }}
-  </div>
+
+{{ $mermaidData := dict "theme" "default" }}
+{{ $data := dict "code" .Inner "mermaid" $mermaidData }}
+
+<figure class="mermaid">
+  <img src="https://mermaid.ink/img/{{ $data | jsonify | base64Encode }}" />
   <figcaption class="text-center">
     <small>{{ .Get "caption" }}</small>
   </figcaption>
