@@ -1,4 +1,4 @@
-let mermaid = require('mermaid');
+const mermaid = require('mermaid');
 
 $(document).ready(function() {
   mermaid.initialize({
