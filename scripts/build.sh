@@ -30,3 +30,5 @@ cp $BASEDIR/static/keybase.txt $OUTPUT_DIR/keybase.txt
 
 mkdir -p $OUTPUT_DIR/.well-known/matrix
 cp $BASEDIR/static/matrix.json $OUTPUT_DIR/.well-known/matrix/server
+
+touch $OUTPUT_DIR/ping.txt
