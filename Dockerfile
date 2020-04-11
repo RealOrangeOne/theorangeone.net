@@ -9,12 +9,12 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y ca-certificates
 
-ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb /tmp/hugo.deb
-RUN dpkg -i /tmp/hugo.deb
-
 COPY . /app
 
 RUN npm ci --production
+
+ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb /tmp/hugo.deb
+RUN dpkg -i /tmp/hugo.deb
 
 RUN ./scripts/release.sh
 
