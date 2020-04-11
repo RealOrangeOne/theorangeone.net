@@ -90,7 +90,7 @@ Whilst working, I listen to a *lot* of music. I, like the rest of the sane world
 
 ## Storage
 
-Most file storage lives on my server, through [Nextcloud](https://nextcloud.com/). As every thread on [/r/selfhosted](reddit.com/r/selfhosted/) agrees, there's nothing better. Nextcloud works on all platforms, is reasonably simple to setup, and has apps/plugins to support basically everything.
+Most file storage lives on my server, through [Nextcloud](https://nextcloud.com/). As every thread on [/r/selfhosted](https://reddit.com/r/selfhosted/) agrees, there's nothing better. Nextcloud works on all platforms, is reasonably simple to setup, and has apps/plugins to support basically everything.
 
 For the sake of simplicity and performance, I don't install that many plugins for extra features. No calendar, chat, contacts, notes, or anything like that. Nextcloud deals with nothing but storage for me. Anything else is probably better handled by a bespoke application, anyway.
 
