@@ -5,7 +5,7 @@
 
 {{ define "img" }}
   {{ $image := .Scratch.Get "image" }}
-  <img src='{{ $image.RelPermalink }}' class='{{ .Get "class" }}' alt="{{ .Inner | plainify }}" style="max-width: 60%;" />
+  <img src='{{ $image.RelPermalink }}' class='{{ .Get "class" }}' alt="{{ .Inner | plainify }}" style="max-width: 90%;" />
 {{ end }}
 
 {{ if .Inner }}
