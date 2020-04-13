@@ -16,7 +16,7 @@
     "@fortawesome/fontawesome-free": "5.13.0",
     "bootstrap": "4.4.1",
     "clipboard": "2.0.6",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "lg-thumbnail": "1.1.0",
     "lightgallery": "1.6.12",
     "parcel-bundler": "1.12.4"
