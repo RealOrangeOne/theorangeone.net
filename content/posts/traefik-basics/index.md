@@ -190,7 +190,7 @@ To add more applications, just start more compose files with more configuration.
 
 ## Should you use Traefik?
 
-This is a more difficult question than it may seem. Personally I'm super happy I migrated from Nginx to traefik, and I know plenty of others you feel the same. If you're trying to manage a number of different docker containers on 1 machine, then traefik is something worth looking into.
+This is a more difficult question than it may seem. Personally I'm super happy I migrated from Nginx to traefik, and I know plenty of others who feel the same. If you're trying to manage a number of different docker containers on 1 machine, then traefik is something worth looking into.
 
 However, if you've just got a couple services, and you're comfortable with Nginx, why rock the boat? Both traefik and nginx are reverse proxies, and they're both really good, you're not going to see performance, security, or really simplicity gains by switching. With that said if you're using docker, it's worth a look into anyway.
 
