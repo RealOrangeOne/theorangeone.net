@@ -181,7 +181,7 @@ B-. 127.0.0.1:8448 .->E
 
 Historically, the most common reverse proxies have been [Apache](https://httpd.apache.org/) and [Nginx](https://nginx.org/), both of which function as full web servers as well as simple reverse proxies. There's no real difference, just use the one you're most comfortable with. However, If you're new to this, I definitely recommend Nginx!
 
-However, if you're using docker, I recommend giving [Traefik](https://docs.traefik.io/) a look. It's a reverse proxy, with automatic SSL provisioning, and auto-discovery of docker containers (once you label them). Traefik can also forward bare TCP and UDP traffic, however I've not played around with those much. With that said, if you're comfortable with Nginx, there's no real need to migrate, it just saves to being explicit with everything.
+However, if you're using docker, I recommend giving [Traefik](https://docs.traefik.io/) a look. It's a reverse proxy, with automatic SSL provisioning, and auto-discovery of docker containers (once you label them). Traefik can also forward bare TCP and UDP traffic, however I've not played around with those much. With that said, if you're comfortable with Nginx, there's no real need to migrate, it just saves to being explicit with everything. Check [this]({{<relref "traefik-basics" >}}) out for some traefik basics.
 
 ## Security
 
