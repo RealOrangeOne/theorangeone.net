@@ -1,10 +1,9 @@
 ---
 title: Hugo Theme RevealJS
-date: 2018-03-10
 repo: RealOrangeOne/hugo-theme-revealjs
 ---
 
-RevealJS is a versatile front-end framework for creating slide show presentations in your browser using HTML. It's designed to be easy to use, and create high-quality presentations. 
+RevealJS is a versatile front-end framework for creating slide show presentations in your browser using HTML. It's designed to be easy to use, and create high-quality presentations.
 
 To create a presentation with RevealJS, you'll still need a server to run the presentation from. It's certainly possible to access presentations by opening a single file in your web browser of choice, but this is 2018, that's no fun! When we use a file server, it's also likely easier to serve and share your presentations with others, without needing 3rd-party services like [slideshare](https://www.slideshare.net), [slides](https://slides.com/) and [speakerdeck](https://speakerdeck.com/).
 
