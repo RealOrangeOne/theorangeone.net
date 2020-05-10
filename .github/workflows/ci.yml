@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Build image
-        run: docker build . --tag ${GITHUB_REPOSITORY,,}
+        run: docker-compose build
 
       - name: Show image info
         run: docker images
