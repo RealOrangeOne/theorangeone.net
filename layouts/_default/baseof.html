@@ -28,12 +28,6 @@
 
     {{ partial "footer.html" . }}
 
-    {{ $content := "" }}
-
-    {{ if .Content }}
-      {{ $content = .Content | htmlEscape }}
-    {{ end }}
-
     {{ partial "script.html" "js/jquery.js" }}
 
     {{ if eq .Params.layout "flickr" }}
