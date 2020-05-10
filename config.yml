@@ -31,7 +31,6 @@ pygmentsUseClasses: true
 
 imaging:
   resampleFilter: Lanczos
-  quality: 100
 
 markup:
   goldmark:
