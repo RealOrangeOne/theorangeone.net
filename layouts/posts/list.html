@@ -2,9 +2,11 @@
 <div id="main">
   <div class="container">
     {{ partial "content.html" . }}
-    {{ if .Content }}
-        <hr />
+
+    {{ with .OutputFormats.Get "rss" }}
+      <p class="float-right"><a href="{{ .Permalink }}"><i class="fas fa-rss"></i> Subscribe</a></p>
     {{ end }}
+
     {{ range .Pages.GroupByDate "2006-01" }}
       {{ $month := print .Key "-01" }}
       {{ if (index .Pages 0).Date.IsZero }}
