@@ -5,7 +5,7 @@ image: resource:editing-my-stack.png
 hide_header_image: true
 ---
 
-Last year, I wrote {{< pagelink "posts/my-stack-2017" >}}, and now it's time for a follow-up. A year is a long time, and my day-to-day stack has changed quite a bit since then.
+Last year, I wrote [_My stack 2017_]({{< relref "posts/my-stack-2017" >}}), and now it's time for a follow-up. A year is a long time, and my day-to-day stack has changed quite a bit since then.
 
 # OS
 

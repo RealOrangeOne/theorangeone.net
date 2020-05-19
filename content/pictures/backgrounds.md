@@ -2,10 +2,8 @@
 title: Backgrounds
 ---
 
-As with most things, I synchronise my backgrounds between devices. I've also made them publicly accessible.
+As with most things, I synchronise my backgrounds between devices. I've also made them publicly accessible. I use [`tbg`]({{< relref "tbg" >}}) to set them on my machines.
 
-{{< button src="https://bg.theorangeone.net/" >}}
-See My Backgrounds
-{{< /button >}}
+<iframe src="https://bg.theorangeone.net/"></iframe>
 
-Disclaimer: None of these images have been created by me. I've tried to keep track of where they came from in `sources.txt`, however some are missing from the list.
+Disclaimer: None of these images have been created by me. I've tried to keep track of where they came from in [`sources.txt`](https://bg.theorangeone.net/), however some are missing from the list.
