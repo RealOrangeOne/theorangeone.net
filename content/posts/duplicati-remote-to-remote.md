@@ -40,6 +40,8 @@ rclone:
     - "./mounts:/mnt:shared"
 ```
 
+`SYS_ADMIN` and `apparmor:unconfined` are both required to allow the docker container to mount filesystems.
+
 Then, mount the `mounts` directory into your Duplicati container:
 
 ```yml
