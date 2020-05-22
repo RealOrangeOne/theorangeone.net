@@ -48,7 +48,7 @@ volumes:
   - "./mounts:/source/mounts:shared"
 ```
 
-Note the use of `:shared` on the end of both mounts. This is important as it allowed docker to pass through the FUSE mounted filesystems correctly. Removing this from either side will prevent the filesystems being exposed correctly.
+Note the use of `:shared` on the end of both mounts. This is important as it allows docker to pass through the FUSE mounted filesystems correctly. Removing this from either side will prevent the filesystems being exposed correctly.
 
 Next step is to setup your rclone remote, which is best done through the rclone CLI. I recommend installing and configuring your remotes locally, and copying the config over, as it lest you ensure everything works correctly without having to jump around docker.
 
