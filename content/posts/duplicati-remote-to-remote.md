@@ -64,7 +64,9 @@ Now start the containers, and you should be set!
 
 ## Does it work?
 
-Yes, yes it does! Duplicati can backup remotes now, which is great! Unfortunately backups are now very network intensive, which means the backups can be a lot slower than just reading off the local filesystem, but that's mostly fine.   For that reason I wouldn't recommend this for huge datasets. If you're running Duplicati on a fast network connection, it's probably fine, but best test before relying on it!
+Yes, yes it does! Duplicati can backup remotes now, which is great! Unfortunately backups are now very network intensive, which means the backups can be a lot slower than just reading off the local filesystem, but that's mostly fine. For that reason I wouldn't recommend this for huge datasets. If you're running Duplicati on a fast network connection, it's probably fine, but best test before relying on it!
+
+I'm running it right now for some backups, take a look at [my setup](https://github.com/RealOrangeOne/infrastructure/tree/master/ansible/roles/intersect-docker/files/duplicati).
 
 ## _"But what about other backup tools, like Restic?"_
 
