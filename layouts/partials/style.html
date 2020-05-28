@@ -1,8 +1,2 @@
-{{ $style := resources.Get .  }}
-
-{{ if strings.HasSuffix . ".scss" }}
-  {{ $style = toCSS $style }}
-{{ end }}
-
-{{ $style = minify $style | fingerprint}}
+{{ $style := resources.Get . | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
