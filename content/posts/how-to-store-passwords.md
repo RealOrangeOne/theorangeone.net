@@ -34,7 +34,7 @@ Imagine a smoothie maker. You put fruit in, it mixes it up, and you get a smooth
 
 An interesting characteristic of passwords is that that two slightly similar inputs can give completely different answers.
 
-There are many different hashing algorithms, although the most common are the SHA family, specifically SHA265 and SHA512. SHA1 and MD5 are whilst better than nothing, considered insecure. Base64 is not a hash!
+There are many hashing algorithms, although the most common are the SHA family, specifically SHA265 and SHA512. SHA1 and MD5 are whilst better than nothing, considered insecure. Base64 is not a hash!
 
 When storing a users' password, rather than storing the password, you store the hash. To authenticate, just look for rows where the username is the provided username, and the password is the hash of the provided password.
 
@@ -42,7 +42,7 @@ When storing a users' password, rather than storing the password, you store the 
 
 Whilst hashes aren't reversible directly, you can just search for them. Take the value `{{< md5 "foobar" >}}`. You can't take that value and reverse it back into the input `foobar`, but you can literally [search it online](https://duckduckgo.com/?q={{< md5 "foobar" >}}) and find the result. This is thanks to rainbow tables.
 
-Rainbow are a huge table of mappings between hashes and their plaintext counterparts. Bruteforcing a hash can take a long time, but looking up a hash in a rainbow table will take a few seconds at most. The rainbow table for seven letter passwords hashed with SHA1 is just 50GB. [Project rainbowcrack](https://project-rainbowcrack.com/table.htm) has a list of them for download.
+Rainbow are a huge table of mappings between hashes and their plaintext counterparts. Bruteforcing a hash can take a long time, but looking up a hash in a rainbow table will take a few seconds at most. The rainbow table for seven letter passwords hashed with SHA1 is just 50 GB. [Project rainbowcrack](https://project-rainbowcrack.com/table.htm) has a list of them for download.
 
 Hashing also has the drawback of repeatability. Given the same input, a hash will always return the same output. This means that if people are using the same password, they'll have the same hash. Combined with things like password resets, it can become fairly simple to work them out, and [fun](https://xkcd.com/1286/).
 
@@ -58,7 +58,7 @@ The salt doesn't need to be protected in itself, as it's not private information
 
 ### Peppering
 
-[Peppering](https://en.wikipedia.org/wiki/Pepper_(cryptography)) is a technique similar to salting, in that it further strengthens hashes, however it's done in a different way. Rather than using a different salt per user and storing it with the user, peppering uses a single shared key, which must remain private. The objective of peppering is to ensure that even if the database is compromised, there's still missing data which would be needed to perform brute forcing: the pepper.
+[Peppering](https://en.wikipedia.org/wiki/Pepper_(cryptography)) is a technique similar to salting, in that it further strengthens hashes, however it's done slightly differently. Rather than using a different salt per user and storing it with the user, peppering uses a single shared key, which must remain private. The objective of peppering is to ensure that even if the database is compromised, there's still missing data which would be needed to perform brute forcing: the pepper.
 
 #### Why not?
 
@@ -74,15 +74,15 @@ The point of key derivation is to implement everything I've said above. It takes
 
 ### Why not?
 
-Key derivation is designed to be slow - Not critically slow, but slow enough. This can add a considerable overhead to any bulk tasks involving passwords. With that said, this is a good thing, and shouldn't be changed or avoided. If you're creating a lot of users during tests, you may get quite a performance improvement by weakening your hashing during tests. I've seen improvements of nearly 30% using just this.
+Key derivation is designed to be slow; Not critically slow, but slow enough. This can add a considerable overhead to any bulk tasks involving passwords. With that said, this is a good thing, and shouldn't be changed or avoided. If you're creating a lot of users during tests, you may get quite a performance improvement by weakening your hashing during tests. I've seen improvements of nearly 30% using just this.
 
 ## Comparison timing
 
-Once a user has logged in, you've hashed their password using only the best practices, you've pulled what their password should be from the database, it's time to compare them. They're both strings, so `==` should work, right? Well yes, but actually no. Comparing strings is incredibly well optimised, for good reason! Lots of fundamental parts of programming depend on strings being compared as quickly as possible. However when it comes to security, this isn't necessarily what we want.
+Once a user has logged in, you've hashed their password using only the best practices, you've pulled what their password should be from the database, it's time to compare them. They're both strings, so `==` should work, right? Well yes, but actually no. Comparing strings is incredibly well optimized, for good reason! Lots of fundamental parts of programming depend on strings being compared as quickly as possible. However, when it comes to security, this isn't necessarily what we want.
 
-Many methods of string comparison have a number of cases to short circuit, and run faster than a regular character-by-character comparison. Even then when running a character-by-character comparison, it's good practice to abort as soon as you've got one character which doesn't match. When comparing hashes, these short circuits are counter-productive. By accurately measuring how long the system takes to check your password, you can gain insight about what the true hashes value is, and therefore begin to crack it. This is known as a [timing attack](https://en.wikipedia.org/wiki/Timing_attack).
+Many methods of string comparison have a number of cases to short circuit, and run faster than a regular character-by-character comparison. Even then when running a character-by-character comparison, it is good practice to abort as soon as you've got one character which doesn't match. When comparing hashes, these short circuits are counter-productive. By accurately measuring how long the system takes to check your password, you can gain insight about what the true hashes value is, and therefore begin to crack it. This is known as a [timing attack](https://en.wikipedia.org/wiki/Timing_attack).
 
-Any time you're comparing values in a secure context, you should a constant-time algorithm. The time required for these is always relative to the length of the values, and doesn't short circuit. For example, like the following Python:
+Any time you're comparing values in a secure context, you should a constant-time algorithm. The time required is relative to the length of the values, and doesn't short circuit. For example, like the following Python:
 
 ```python
 def constant_time_compare(val1, val2):
@@ -112,6 +112,6 @@ def verify(self, password, encoded):
 
 [Thanks, Django!](https://github.com/django/django/blob/20a8a443f012907843450c0b6f6a34a9fc8138f3/django/contrib/auth/hashers.py#L235)
 
-But of course, the strongest password  and the most secure storage mechanism won't protect you from human error!
+But of course, the strongest password and the most secure storage mechanism won't protect you from human error!
 
 [![Security](https://imgs.xkcd.com/comics/security.png)](https://xkcd.com/538/)
