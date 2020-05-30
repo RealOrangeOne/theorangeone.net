@@ -97,7 +97,7 @@ def constant_time_compare(val1, val2):
 
 ## Concluding
 
-Storing passwords is pretty simple, right? Whilst the above sounds fairly complicated, in reality it's simple. The advise for now is only valid for now, for right now. In a few months, years or even days from now, this could all be obsolete. The best thing you can do is to not store passwords yourself and let someone else, someone who's up-to-date with security practices, to define it for you.
+Storing passwords is pretty simple, right? Whilst the above sounds fairly complicated, in reality it's simple. The advice for now is only valid for now, for right now. In a few months, years or even days from now, this could all be obsolete. The best thing you can do is to not store passwords yourself and let someone else, someone who's up-to-date with security practices, to define it for you.
 
 ```python
 def encode(self, password, salt, iterations):
