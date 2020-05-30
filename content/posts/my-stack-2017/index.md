@@ -8,7 +8,7 @@ hide_header_image: true
 As a software engineer and perfectionist, I have my machines setup in a very specific way, so I can do my job properly and have everything just the way I like it. Thanks to my [dotfiles]({{< relref "projects/dotfiles" >}}), I have everything syncing up between machines, meaning the tools I use are setup correctly, the same, everywhere.
 
 # OS
-My current distro of choice is [Arch](https://www.archlinux.org/), specifically [Antergos](https://antergos.com/). My main reason for choosing arch is the [AUR](https://aur.archlinux.org/). Almost every package I can think of is packaged there, often by the community. It's great to be able to install things through 1 method and have everything update in a single command. Antergos is also far easier to install than raw arch, and has little to no bloat that comes with it.
+My current distro of choice is [Arch](https://www.archlinux.org/), specifically [Antergos](https://antergos.com/). My main reason for choosing arch is the [AUR](https://aur.archlinux.org/). Almost every package I can think of is packaged there, often by the community. It's great to be able to install things through one method and have everything update in a single command. Antergos is also far easier to install than raw arch, and has little to no bloat that comes with it.
 
 ## Desktop
 My current desktop of choice is [i3](https://i3wm.org/). After spending a lot of time using [Gnome](https://www.gnome.org/), and always having windows either full screen or split, I tried out i3 in an attempt to use fewer resources, and it's amazing. Admittedly i3 doesn't look quite as nice, but it's far cleaner, and structured, and that's enough for me!
@@ -19,7 +19,7 @@ Editing my stack, in caret
 
 # Editors
 ## Code
-My primary editor is [IntelliJ](https://www.jetbrains.com/idea/). [PyCharm](https://www.jetbrains.com/pycharm/) would be a better fit, as I spend much of my time writing Python, but as I have a strong dislike of Jetbrains' approach of having [an editor per language](https://www.jetbrains.com/products.html), IntelliJ has the best support for all languages, in 1 editor. As an IDE, it has more features than I could ever need, and is more than fast enough for editing the large projects I work on. I have a fairly large number of plugins installed, and even more of the default ones disabled.
+My primary editor is [IntelliJ](https://www.jetbrains.com/idea/). [PyCharm](https://www.jetbrains.com/pycharm/) would be a better fit, as I spend much of my time writing Python, but as I have a strong dislike of Jetbrains' approach of having [an editor per language](https://www.jetbrains.com/products.html), IntelliJ has the best support for all languages, in one editor. As an IDE, it has more features than I could ever need, and is more than fast enough for editing the large projects I work on. I have a fairly large number of plugins installed, and even more of the default ones disabled.
 
 ## Markdown
 [Caret](https://caret.io/) is absolutely awesome! The fact it's not open source does hurt a little. Compared to [ghostwriter](https://wereturtle.github.io/ghostwriter/), which is both free and open source, it's got some far nicer features such as a command palette and true live reload. Version 4 is [coming soon](https://twitter.com/careteditor/status/943816379618250752), hopefully this brings yet more features, but I fear asking for it to be open-sourced is going too far!

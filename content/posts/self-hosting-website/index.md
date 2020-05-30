@@ -15,17 +15,17 @@ At the time, my website was hosted on [Netlify](https://www.netlify.com/). If yo
 
 To get the site working on my home server, the build process would need to change slightly. Netlify automatically discovers the tasks which need doing to install dependencies for your site, and then let you provide a single command to build the site. In my case, all I needed was [Hugo](https://gohugo.io/), NodeJS, and a [specific bash script](https://github.com/RealOrangeOne/theorangeone.net/blob/master/scripts/build.sh) to run. My home server runs is basically a docker host, so the site would need to run from inside a container.
 
-[The container](https://github.com/RealOrangeOne/theorangeone.net/blob/master/Dockerfile) I wrote for this is incredibly simple. Because the website is a static site, the running container doesn't need any fancy additional runtime, just NGINX, making the container tiny! To help with this, the container is split into 2 stages:
+[The container](https://github.com/RealOrangeOne/theorangeone.net/blob/master/Dockerfile) I wrote for this is incredibly simple. Because the website is a static site, the running container doesn't need any fancy additional runtime, just NGINX, making the container tiny! To help with this, the container is split into two stages:
 
-Stage 1 is based off the nodejs container, where it installs Hugo, installs the production node dependencies, and runs the same custom bash script to build the site into the `public/` directory.
+Stage one is based off the nodejs container, where it installs Hugo, installs the production node dependencies, and runs the same custom bash script to build the site into the `public/` directory.
 
-Stage 2 uses a completely different container as the base, `nginx:latest-alpine`. This ensures the runtime is as minimal as possible. Stage 2 copies the `public/` directory from stage 1 into the server root, and installs a [custom NGINX config](https://github.com/RealOrangeOne/theorangeone.net/blob/master/nginx.conf). This custom config adds a few additional headers, recommended by [securityheaders.io](https://securityheaders.com/), enables `X-Forwarded-For`, and sets up logging to be used by a [GoAccess container for analytics]({{< relref "goaccess-analytics" >}}).
+Stage two uses a completely different container as the base, `nginx:latest-alpine`. This ensures the runtime is as minimal as possible. Stage two copies the `public/` directory from stage one into the server root, and installs a [custom NGINX config](https://github.com/RealOrangeOne/theorangeone.net/blob/master/nginx.conf). This custom config adds a few additional headers, recommended by [securityheaders.io](https://securityheaders.com/), enables `X-Forwarded-For`, and sets up logging to be used by a [GoAccess container for analytics]({{< relref "goaccess-analytics" >}}).
 
 ## Deployment
 
 This container is built using GitHub actions, automatically on push, and then uploaded to GitHubs package registry. A [docker-compose configuration](https://github.com/RealOrangeOne/infrastructure/blob/master/ansible/roles/docker/files/theorangeone.net/docker-compose.yml) is pre-installed on my server, pointed at this container, and with the necessary Traefik rules to route traffic correctly.
 
-To maintain auto-deployment functionality, something I find really important, I run [watchtower](https://containrrr.github.io/watchtower/). Watchtower polls the upstream of all containers I depend on, and when there's changes, automatically pulls and restarts them. The poll interval is 5 minutes, so it's a slower update than Netlify, but for my needs it's fine. Generally this is ill-advised as it can cause containers to update unexpectedly, but I pin containers properly, so i'm not worried.
+To maintain auto-deployment functionality, something I find really important, I run [watchtower](https://containrrr.github.io/watchtower/). Watchtower polls the upstream of all containers I depend on, and when there's changes, automatically pulls and restarts them. The poll interval is five minutes, so it's a slower update than Netlify, but for my needs it's fine. Generally this is ill-advised as it can cause containers to update unexpectedly, but I pin containers properly, so i'm not worried.
 
 ## Success?
 

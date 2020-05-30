@@ -4,9 +4,9 @@ date: 2019-04-01
 tags: [programming]
 ---
 
-April marks the release of Django 2.2, the latest LTS version of the popular Python web framework. Django 2.2 marks almost 2 years of development since the last LTS release, 1.11 in April 2017, and brings with it some very large improvements and changes which naturally come with a major version bump.
+April marks the release of Django 2.2, the latest LTS version of the popular Python web framework. Django 2.2 marks almost two years of development since the last LTS release, 1.11 in April 2017, and brings with it some very large improvements and changes which naturally come with a major version bump.
 
-Django historically works off the LTS pattern of software releasing, providing 2 channels. LTS versions are maintained far longer than regular versions, and receive regular bug fixes and security patches in line with the main release channel.
+Django historically works off the LTS pattern of software releasing, providing two channels. LTS versions are maintained far longer than regular versions, and receive regular bug fixes and security patches in line with the main release channel.
 
 ![Django update cycle](https://static.djangoproject.com/img/release-roadmap.png)
 
@@ -166,7 +166,7 @@ This can then be used by JavaScript directly by getting the tag by ID. If you st
 
 ## Constraints
 
-The new constraints API in Django 2.2 allows for far greater control of database-level validation on model fields than previously available in field validators, because they're applied at the model level, rather than the field level. Django 2.2 comes with 2 built-in constraints: `UniqueConstraint` and `CheckConstraint`. Both constraints are executed at the database level (as additional queries rather than column-level constraints), which whilst making them faster when doing complex relationship-level validation, also increases the number of queries executed when modifying a model instance.
+The new constraints API in Django 2.2 allows for far greater control of database-level validation on model fields than previously available in field validators, because they're applied at the model level, rather than the field level. Django 2.2 comes with two built-in constraints: `UniqueConstraint` and `CheckConstraint`. Both constraints are executed at the database level (as additional queries rather than column-level constraints), which whilst making them faster when doing complex relationship-level validation, also increases the number of queries executed when modifying a model instance.
 
 `UniqueConstranint` creates a unique constraint with any number of fields, in much the same way `unique_together` worked. `UniqueConstraint` also provides an additional `condition` argument, which specifies additional `Q` objects which must also apply. For example, `UniqueConstraint(fields=['user'], condition=Q(status='DRAFT')` ensures that each user only has one draft.
 

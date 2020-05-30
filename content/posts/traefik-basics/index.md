@@ -8,7 +8,7 @@ image: https://docs.traefik.io/assets/img/traefik-architecture.png
 
 ## Basic concepts
 
-Traefik has 4 fundamental concepts: Entrypoints, routers, middleware and services. In that order.
+Traefik has four fundamental concepts: Entrypoints, routers, middleware and services. In that order.
 
 [Entrypoints](https://docs.traefik.io/routing/entrypoints/) are the ports Traefik listens for traffic on. Generally you'd want one for port 80 and another for 443.
 
@@ -151,7 +151,7 @@ And now, all traffic which hits our `web` endpoint will be immediately redirecte
 
 So, what does a fully configured traefik setup look like? I'm glad you asked!
 
-First, you'll need to setup and install traefik, which can be done with a very simple docker-compose file, as shown above. Your default configuration will need to define at least 1 entrypoint.
+First, you'll need to setup and install traefik, which can be done with a very simple docker-compose file, as shown above. Your default configuration will need to define at least one entrypoint.
 
 Once you already have traefik installed and setup, adding services is very simple:
 
@@ -190,7 +190,7 @@ To add more applications, just start more compose files with more configuration.
 
 ## Should you use Traefik?
 
-This is a more difficult question than it may seem. Personally I'm super happy I migrated from Nginx to traefik, and I know plenty of others who feel the same. If you're trying to manage a number of different docker containers on 1 machine, then traefik is something worth looking into.
+This is a more difficult question than it may seem. Personally I'm super happy I migrated from Nginx to traefik, and I know plenty of others who feel the same. If you're trying to manage a number of different docker containers on one machine, then traefik is something worth looking into.
 
 However, if you've just got a couple services, and you're comfortable with Nginx, why rock the boat? Both traefik and nginx are reverse proxies, and they're both really good, you're not going to see performance, security, or really simplicity gains by switching. With that said if you're using docker, it's worth a look into anyway.
 

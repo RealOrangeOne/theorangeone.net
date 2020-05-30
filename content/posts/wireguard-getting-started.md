@@ -11,7 +11,7 @@ Wireguard is taking the VPN world by storm, coming very close to the current cha
 
 https://www.wireguard.com/
 
-Wireguard is not only lighter weight than OpenVPN, it's simpler, smaller, and most importantly does less. The final point may to some seem like a bad thing, but is actually great! The Unix Philosophy defines that tools should do 1 thing, and do it well. Wireguard simply creates networks and tunnels, no funky networking, no custom authentication, no complexity.
+Wireguard is not only lighter weight than OpenVPN, it's simpler, smaller, and most importantly does less. The final point may to some seem like a bad thing, but is actually great! The Unix Philosophy defines that tools should do one thing, and do it well. Wireguard simply creates networks and tunnels, no funky networking, no custom authentication, no complexity.
 
 
 ## Getting started with Wireguard
@@ -38,7 +38,7 @@ Wireguard comes with commands to generate the key-pairs securely:
 wg genkey | tee privatekey | wg pubkey > publickey
 ```
 
-This creates 2 files, `publickey` and `privatekey` which contain, well, the public and private keys. For security reasons, you should generate the keys on the device which requires the private key, rather than generating them all on the server, and distributing the private key.
+This creates two files, `publickey` and `privatekey` which contain, well, the public and private keys. For security reasons, you should generate the keys on the device which requires the private key, rather than generating them all on the server, and distributing the private key.
 
 ### Configuration
 
@@ -55,7 +55,7 @@ PrivateKey = <server privatekey>  # The servers private key
 ListenPort = 51820  # The port for wireguard to listen on (51820 is the standard)
 
 
-# Specify 1 "Peer" block for each connecting device
+# Specify one "Peer" block for each connecting device
 [Peer]
 PublicKey = <client publickey>  # The clients public key
 AllowedIPs = 10.1.10.2/32  # The IP and mask the client should be assigned
@@ -99,6 +99,6 @@ To connect a client, you can also run `wg-quick up <interface>`, and again, you'
 
 That's it!
 
-There's now an encrypted tunnel setup between your 2 machines, which can be used to send any kind of traffic over, whether it be web traffic, media streaming, or email (if you're reading this guide and thinking about using the tunnel for email, please don't!).
+There's now an encrypted tunnel setup between your two machines, which can be used to send any kind of traffic over, whether it be web traffic, media streaming, or email (if you're reading this guide and thinking about using the tunnel for email, please don't!).
 
 If your needs are simply to forward traffic via another computer / network, or connect devices to the network of another, look past OpenVPN and give Wireguard a shot!

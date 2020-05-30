@@ -6,7 +6,7 @@ date: 2020-03-06
 
 ## What is Wireguard?
 
-The website defines it as "... extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography.". Which basically means it's a VPN, but sane. The point of a VPN is to allow 2 machines to talk to eachother, no matter how the network inbetween is setup.
+The website defines it as "... extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography.". Which basically means it's a VPN, but sane. The point of a VPN is to allow two machines to talk to eachother, no matter how the network inbetween is setup.
 
 ## Modern Features
 
@@ -14,7 +14,7 @@ Wireguard has a lot of nice, modern features.
 
 Roaming, If I shut my laptop, go home, and open it again, the tunnel will be in the same state: just fine! None of this weird messed up state issues where you have to disconnect and reconnect.
 
-Configuration is also incredibly simple. There's just 1 file of configuration, none of this multiple file fun like OpenVPN. Just a single ini file for the server, and a single, very similar, ini file for the client.
+Configuration is also incredibly simple. There's just one file of configuration, none of this multiple file fun like OpenVPN. Just a single ini file for the server, and a single, very similar, ini file for the client.
 
 Wireguard's authentication model is incredibly simple. The client and server share public keys, and add them to their config files. If you've ever provisioned SSH keys, you'll feel right at home!
 
@@ -48,7 +48,7 @@ Wireguard is incredibly fast. Take these benchmarks from the Wireguard website, 
 Wireguard benchmarks. [src](https://www.Wireguard.com/performance/#results)
 {{< /resource >}}
 
-Not only is Wireguard significantly faster than OpenVPN, and sligtly faster still than IPSec, there's an important extra bit of detail. The Wireguard version was the only one not maxing out the CPU, meaning whatever's limitting Wireguard's score, it's not Wireguard itself, it's likely something far more fundemental like networking overhead, seeing as 1011mb is pretty close to 1 gigabit.
+Not only is Wireguard significantly faster than OpenVPN, and sligtly faster still than IPSec, there's an important extra bit of detail. The Wireguard version was the only one not maxing out the CPU, meaning whatever's limitting Wireguard's score, it's not Wireguard itself, it's likely something far more fundemental like networking overhead, seeing as 1011mb is pretty close to one gigabit.
 
 What's yet more scary impressive is this [quote](https://www.Wireguard.com/performance/#performance-roadmap):
 

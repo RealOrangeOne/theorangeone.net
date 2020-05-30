@@ -11,7 +11,7 @@ For reasons unknown, only HTTP ports (80, 443) are available from machines other
 With coursework requiring deployment onto this server now, access to SSH is essential (besides FTP, but who really wants to use that?). But, how to get SSH access to a server, without needing to use the terrible _RemoteApp_?
 
 ## SSH Reverse Tunnels
-SSH has the ability to create a reverse tunnel between 2 machines, by using a 3rd as a gateway. Assuming the destination server has the ability to SSH out of its firewall, a separate SSH connection can use that connection as a tunnel to communicate.
+SSH has the ability to create a reverse tunnel between two machines, by using a 3rd as a gateway. Assuming the destination server has the ability to SSH out of its firewall, a separate SSH connection can use that connection as a tunnel to communicate.
 
 {{<mermaid caption="Network layout">}}
 graph LR

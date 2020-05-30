@@ -12,7 +12,7 @@ If you're using scripts hosted by yourself, then SRI can help prevent against ma
 
 ## Using SRI with Django
 
-SRI has been around for a while, as has Django, but no one has put the 2 together it seems. That's where [`django-sri`](https://github.com/{{< param "repo" >}}/) comes in.
+SRI has been around for a while, as has Django, but no one has put the two together it seems. That's where [`django-sri`](https://github.com/{{< param "repo" >}}/) comes in.
 
 By installing and configuring it correctly, you're given a new `sri_static` template tag, which outputs a fully formed `script` or `link` tag, with the required integrity checks setup.
 

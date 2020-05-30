@@ -4,9 +4,9 @@ date: 2019-04-27
 tags: [programming]
 ---
 
-Object-Oriented Programming (OOP) teaches that classes can have 2 kinds of attributes: Instance and Static. Instance variables are attached to a specific instance of the class, and each has separate memory locations. Static variables are tied to the class itself, and are shared between instances.
+Object-Oriented Programming (OOP) teaches that classes can have two kinds of attributes: Instance and Static. Instance variables are attached to a specific instance of the class, and each has separate memory locations. Static variables are tied to the class itself, and are shared between instances.
 
-The difference between the 2 can be seen clearly in OOP-purist languages like Java. `static` denotes that the variable is static and attached to the class directly.
+The difference between the two can be seen clearly in OOP-purist languages like Java. `static` denotes that the variable is static and attached to the class directly.
 
 ```java
 public class A {
@@ -91,7 +91,7 @@ If it were overriding the `'items'` list rather than appending to it, the issue 
 
 ## The solution
 
-There's 2 key ways of fixing the above code: either do OOP properly (in Python), or stop storing things at the object level entirely. I personally lean much more towards the latter, although it may involve a larger refactor.
+There's two key ways of fixing the above code: either do OOP properly (in Python), or stop storing things at the object level entirely. I personally lean much more towards the latter, although it may involve a larger refactor.
 
 ```python
 
@@ -117,4 +117,4 @@ Both of these solve the issue by recreating the `'items'` list for each instance
 
 ## The takeaway
 
-If there's 1 thing to take from this, it's not to store things at the object level unless you really have to. Fetching from an API likely doesn't need to store the responses themselves on the instance, and definitely doesn't statically. Defining variables on the class and in the constructor do different things in Python vs other languages.
+If there's one thing to take from this, it's not to store things at the object level unless you really have to. Fetching from an API likely doesn't need to store the responses themselves on the instance, and definitely doesn't statically. Defining variables on the class and in the constructor do different things in Python vs other languages.

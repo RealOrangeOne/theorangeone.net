@@ -13,7 +13,7 @@ Another unfortunate side-effect of the new WYSIWYG text editor, is the lack of a
 
 ## Restoring the previous UI
 
-Fortunately, it's possible to restore the old UI in all its glory, with the installation of 2 extra apps. Disable the Text extension, enable these, and you'll be good to go!
+Fortunately, it's possible to restore the old UI in all its glory, with the installation of two extra apps. Disable the Text extension, enable these, and you'll be good to go!
 
 ### [`files_texteditor`](https://github.com/nextcloud/files_texteditor/)
 

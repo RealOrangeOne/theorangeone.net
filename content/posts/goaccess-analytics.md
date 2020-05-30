@@ -11,7 +11,7 @@ A quick internet search shows a plethora of alternatives which respect privacy, 
 
 - [Matomo](https://matomo.org/) is bulky, and overkill for what I need. Not to mention tracks _way_ too much!
 - [Fathom](https://usefathom.com/) used to be great, but is now closed source, and the previous "community edition" codebase has little support and is pretty buggy
-- [GoatCounter](https://www.goatcounter.com/) is 1 instance per site, and is a bit weird to work with. And then there's the name.
+- [GoatCounter](https://www.goatcounter.com/) is one instance per site, and is a bit weird to work with. And then there's the name.
 
 ## Enter GoAccess
 

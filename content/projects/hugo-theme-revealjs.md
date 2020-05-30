@@ -20,7 +20,7 @@ Hugo is my static site generator of choice, it's powering [this website](https:/
 If we combine revealjs and a static site generator, we get many benefits. Besides the obvious fact we get to write our content as markdown rather than raw HTML (revealjs does natively support this, but conversion is done in the browser), we also get the ability to use the niceties they offer to make content development easier.
 
 ## `hugo-theme-revealjs`
-`hugo-theme-revealjs` is a theme for Hugo which combines the 2: a powerful static site generator, with a powerful presentation framework. The theme makes writing content east, especially for those who like content organised. Each slide is a separate markdown file, which can be grouped into sections to form the vertical slide groups Reveal is famous for. All settings and configuration options for Reveal are accessible through this theme, in an attempt to make it versatile and usable by all people.
+`hugo-theme-revealjs` is a theme for Hugo which combines the two: a powerful static site generator, with a powerful presentation framework. The theme makes writing content east, especially for those who like content organised. Each slide is a separate markdown file, which can be grouped into sections to form the vertical slide groups Reveal is famous for. All settings and configuration options for Reveal are accessible through this theme, in an attempt to make it versatile and usable by all people.
 
 The source for the theme is on [GitHub](https://github.com/RealOrangeOne/hugo-theme-revealjs), and can be [installed](https://gohugo.io/themes/installing-and-using-themes/) as if it were any other theme.
 

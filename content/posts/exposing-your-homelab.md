@@ -12,7 +12,7 @@ One thing I see a lot is people recommending how they do it, or stating how some
 
 ## Techniques
 
-I don't think there is 1 right answer which is applicable for everyone in all cases. There's always a trade off between complexity, security, and features. Here's the most commonly suggested one:
+I don't think there is one right answer which is applicable for everyone in all cases. There's always a trade off between complexity, security, and features. Here's the most commonly suggested one:
 
 ### Don't
 
@@ -77,7 +77,7 @@ Another potential downside, however niche, is that public IPs of residential loc
 
 ### VPN only
 
-In short, a VPN allows you to bridge 2 isolated networks together. You can use a VPN to access the devices behind your home firewall, from anywhere with an internet connection.
+In short, a VPN allows you to bridge two isolated networks together. You can use a VPN to access the devices behind your home firewall, from anywhere with an internet connection.
 
 This method works in a very similar way to the Port forward technique above, however rather than opening the ports needed for web traffic, you open up the ports needed for a VPN server, and tunnel your traffic through that. This removes the ability for just anyone to access your applications, and requires you to install client software on any devices which require access, but yields a very secure and versatile connection model. You will however still need to manage dynamic DNS if your house doesn't have a static IP.
 
@@ -118,7 +118,7 @@ VPN servers are incredibly lightweight, and will easily run on a Raspberry Pi. [
 
 An alternative to opening ports and directing users straight to your home router, you can use a VPN as a gateway. This allows you to forward ports to inside your home, but without actually port forwarding. No modifications to your home network are necessary. Users are pointed towards a VPS server, which accepts connections, and forwards the traffic down a VPN tunnel, to your home server.
 
-Because the VPS is doing nothing but pushing traffic, there's almost no resource usage. My gateway server is a 1 core, 512mb RAM machine and it sits at around 1% CPU usage, and about 60mb RAM.
+Because the VPS is doing nothing but pushing traffic, there's almost no resource usage. My gateway server is a one core, 512mb RAM machine and it sits at around 1% CPU usage, and about 60mb RAM.
 
 By using a VPS as a gateway, there's no need to account for dynamic IPs. If your home IP changes, the VPN client in your home will have reconnected to the server automatically, and traffic continue to flow. Users never need to know or care what your home IP is, as traffic always flows via the VPS.
 
@@ -199,4 +199,4 @@ There's many reasons to expose your lab to the internet. Access to your services
 
 Personally, I run a VPN gateway on [Vultr](https://www.vultr.com/?ref=7167289), and it works really well for my needs. If I don't want a service exposed to the public, I can connect to the VPN tunnel myself and access applications through that.
 
-Like many other things, there's no 1 right way to expose your homelab, there's always tradeoffs. Hopefully now you've got everything you need to make an informed decision.
+Like many other things, there's no one right way to expose your homelab, there's always tradeoffs. Hopefully now you've got everything you need to make an informed decision.

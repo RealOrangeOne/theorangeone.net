@@ -13,7 +13,7 @@ This year marks the 3rd year of my pattern for publishing a "My Stack" post, not
 
 For the last couple years, I've been an avid [Antergos](https://web.archive.org/web/20190903082315/https://antergos.com/) user, but May of this year saw [the project end](https://web.archive.org/web/20190809064653/https://antergos.com/blog/antergos-linux-project-ends), forcing me to move. With all my [dotfiles]({{< relref "dotfiles" >}}) configured for an arch-based base, I had little choice than moving to Arch. [Manjaro](https://manjaro.org/) also looked promising, but I'd wanted to move to Vanilla [Arch](https://www.archlinux.org/) for a while, so this felt like as good of a time as any.
 
-7 months later, I've only hard migrated 3 machines, the rest still run Antergos, and they still run fine. The Antergos repos don't exist any more, but Antergos was really just an installer for vanilla arch with an extra repo, so the fact everything still _just works_ doesn't surprise me.
+7 months later, I've only hard migrated three machines, the rest still run Antergos, and they still run fine. The Antergos repos don't exist any more, but Antergos was really just an installer for vanilla arch with an extra repo, so the fact everything still _just works_ doesn't surprise me.
 
 
 ## Desktop Environment
@@ -24,7 +24,7 @@ I'm still an i3 user. I recently [tried using macOS]({{< relref "macos-review" >
 
 My editor situation also hasn't changed much in the last year. I still use [VSCode](https://code.visualstudio.com/), although the config has been slightly thinned out so remove extensions I don't use. I recently tried switching back to [IntelliJ](https://www.jetbrains.com/idea/), for the far superior intellisense, but it just didn't feel right, and felt incredibly heavy, not to mention the lack of automatable configuration.
 
-Last year I used [GhostWriter](https://github.com/wereturtle/ghostwriter/) for my markdown editing, but recently I transitioned that into VSCode so I don't need to remember 2 sets of keyboard shortcuts. The fancy WYSIWIG formatting from GhostWriter wasn't a benefit to me, but it's still my recommended markdown editor.
+Last year I used [GhostWriter](https://github.com/wereturtle/ghostwriter/) for my markdown editing, but recently I transitioned that into VSCode so I don't need to remember two sets of keyboard shortcuts. The fancy WYSIWIG formatting from GhostWriter wasn't a benefit to me, but it's still my recommended markdown editor.
 
 [Vim](https://www.vim.org/) is still my terminal editor of choice, but I am looking for something simpler. Some friends often preach [Nano](https://www.nano-editor.org/), which can apparently do many of the editing features Vim has, but the muscle memory is quite hard to get rid of. My [dotfiles]({{< relref "dotfiles" >}}) currently sync a custom Vim configuration, which much like my VSCode configuration, I've also thinned out, but I think there's more thinning to do.
 
@@ -78,7 +78,7 @@ As a client, I still quite like [Thunderbird](https://www.thunderbird.net/). I t
 
 ## RSS
 
-For the last 2 or so years now, I've been a heavy RSS user. I've fully replaced YouTube subscriptions with it, because the subscription management is famously garbage.
+For the last two or so years now, I've been a heavy RSS user. I've fully replaced YouTube subscriptions with it, because the subscription management is famously garbage.
 
 As an aggregator, I use [tt-rss](https://tt-rss.org/). [Last year]({{< relref "my-stack-2018" >}}) I said the UI was hard to get to grips with, but after spending more and more time with [FreshRSS](https://www.freshrss.org/), their UI got on my nerves even more.
 

@@ -26,7 +26,7 @@ Flameshot in action
 My primarily editor is now [VSCode](https://code.visualstudio.com/), because it's faster and lighter-weight than IntelliJ. All the features I need from a large editor, but doesn't take 10 minutes to load! Because VSCode stores its configuration in plain files, in a very simple way, it's easy to sync it between machines, [which I do](https://github.com/RealOrangeOne/dotfiles/blob/master/tasks/vscode.yml).
 
 ## Markdown
-Last year, I was a fan of [Caret](https://caret.io/), and was eagerly awaiting version 4, which was in beta last year. 1 year on, and still no closer to seeing anything. It's for that reason I've switched back to [GhostWriter](https://github.com/wereturtle/ghostwriter/). Also because free and open source is great!
+Last year, I was a fan of [Caret](https://caret.io/), and was eagerly awaiting version 4, which was in beta last year. one year on, and still no closer to seeing anything. It's for that reason I've switched back to [GhostWriter](https://github.com/wereturtle/ghostwriter/). Also because free and open source is great!
 
 ## Quick files edits
 Nothing beats [Vim](http://www.vim.org/) for anything like this. I've switched my default editor for git commit messages, and have it installed on all my servers. I'm still unfamiliar with many of the advanced keyboard shortcuts, but I can navigate around a file just well enough for me.
@@ -64,7 +64,7 @@ After realising that the benefits of [Mailfence](https://mailfence.com/) weren't
 My email client has stayed the same. There really is nothing close to [Thunderbird](https://www.thunderbird.net/en-GB/) on Linux! Mailspring does look nice, but it's still not quite feature-complete for my needs. And the fact Thunderbird is also a calendar app is quite useful too!
 
 # RSS
-It might seem outdated, but I still quite like RSS. For me, it acts as a nice way to read content from various sources, all in 1 place. I can also use it to watch YouTube videos, without having to deal with YouTube itself! [FreshRSS](https://www.freshrss.org/) is my aggregator of choice, with [FeedReader](https://jangernert.github.io/FeedReader/) as the desktop client. I tried [Tiny Tiny RSS](https://tt-rss.org/), but the UI didn't work for me.
+It might seem outdated, but I still quite like RSS. For me, it acts as a nice way to read content from various sources, all in one place. I can also use it to watch YouTube videos, without having to deal with YouTube itself! [FreshRSS](https://www.freshrss.org/) is my aggregator of choice, with [FeedReader](https://jangernert.github.io/FeedReader/) as the desktop client. I tried [Tiny Tiny RSS](https://tt-rss.org/), but the UI didn't work for me.
 
 # Mobile Podcast Player
 

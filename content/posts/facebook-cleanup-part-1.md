@@ -15,7 +15,7 @@ It's now 2019, and my plan for this new year is to slowly go through my Facebook
 
 ### Cleaning up posts - Facebook memories
 
-[Facebook memories](https://www.facebook.com/help/439014052921484/) shows you things you did on Facebook on this day day in previous years. Using this, you can go through things posted to your Facebook, and delete them, slowly but surely. Spending a minute or so a day over the course of a year to clean up Facebook really works! I've been doing this for just over 2 weeks, and I've already deleted 22 posts!
+[Facebook memories](https://www.facebook.com/help/439014052921484/) shows you things you did on Facebook on this day day in previous years. Using this, you can go through things posted to your Facebook, and delete them, slowly but surely. Spending a minute or so a day over the course of a year to clean up Facebook really works! I've been doing this for just over two weeks, and I've already deleted 22 posts!
 
 ### Unliking pages
 

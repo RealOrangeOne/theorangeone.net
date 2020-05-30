@@ -17,7 +17,7 @@ The issue is caused by a lack of `A2DP`, a Bluetooth profile for transmitting st
 After a large amount of searching, I came across a number of solutions, none of which worked. From trying some alternative software, to modifying config for `bluetoothd`, no change.
 
 ## The Solution
-If there's 1 thing I know, it's that there's an [AUR](https://aur.archlinux.org/) package for just about everything. Surprisingly, there was even a package which fixed my issue entirely: [`pulseaudio-bluetooth-a2dp-gdm-fix`](https://aur.archlinux.org/packages/pulseaudio-bluetooth-a2dp-gdm-fix/).
+If there's one thing I know, it's that there's an [AUR](https://aur.archlinux.org/) package for just about everything. Surprisingly, there was even a package which fixed my issue entirely: [`pulseaudio-bluetooth-a2dp-gdm-fix`](https://aur.archlinux.org/packages/pulseaudio-bluetooth-a2dp-gdm-fix/).
 
 ### Fixing
 1. `yaourt -S pulseaudio-bluetooth-a2dp-gdm-fix`

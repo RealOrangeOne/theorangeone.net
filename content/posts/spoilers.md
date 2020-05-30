@@ -6,11 +6,11 @@ subtitle: Just don't be a dick - It's not that difficult!
 
 Spoiling movies is something which has plagued people since forever. If something dramatic happens, of course people don't want to find out by just being told, they want to watch and experience it for themselves. Unfortunately, it seems many people take pride and pleasure in spoiling films for people.
 
-In the last 2 weeks, we've had both Season 8 of Game of Thrones, and Avengers endgame released. Both of which are long-awaited finales to large franchises, and all contain story points which should not be spoiled. I've never quite been able to understand how it's so difficult to not talk about spoilers, whether this be on the internet, in a professional environment, or even down the pub. No matter where you are, you're going to bump into people who won't have seen it yet, and don't appreciate having to hear you talk about it.
+In the last two weeks, we've had both Season eight of Game of Thrones, and Avengers endgame released. Both of which are long-awaited finales to large franchises, and all contain story points which should not be spoiled. I've never quite been able to understand how it's so difficult to not talk about spoilers, whether this be on the internet, in a professional environment, or even down the pub. No matter where you are, you're going to bump into people who won't have seen it yet, and don't appreciate having to hear you talk about it.
 
 ## Cardinal Rules
 
-There's 2 really simply rules when it comes to spoilers:
+There's two really simply rules when it comes to spoilers:
 
 1. If you've seen a film with a plot point which could be considered a plot spoiler, be careful where you talk about it. Be careful of anyone in earshot, and don't have conversations in public channels.
 2. If you simply _have_ to talk about something, check that those around either don't care, have already seen it, or are far enough away they can't hear you

@@ -27,7 +27,7 @@ Both `true` and `false` are incredibly simple, even if you nothing about C. And 
 
 `nologin` does a little more than false, but it's still very simple code to read: [`nologin.c`](https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git/tree/login-utils/nologin.c)
 
-Once executed, `nologin` will try and read `/etc/nologin.txt` to get a custom message to show the user. If it exists, it prints that and exits with code 1. If it doesn't exist, it shows the default message, and exits with code 1. This customization makes it much more user friendly, although because the file is global, 1 system can only have 1 configured message.
+Once executed, `nologin` will try and read `/etc/nologin.txt` to get a custom message to show the user. If it exists, it prints that and exits with code 1. If it doesn't exist, it shows the default message, and exits with code 1. This customization makes it much more user friendly, although because the file is global, one system can only have one configured message.
 
 ## `rssh`
 

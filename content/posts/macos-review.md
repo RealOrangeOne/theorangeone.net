@@ -3,9 +3,9 @@ title: macOS - A Linux Guys Perspective
 date: 2019-10-01
 ---
 
-For the last 4 years, I've been spending every working day off a Dell Optiplex. With an after-market SSD upgrade, and a little extra memory, it makes a pretty good work machine. When it comes to needing to work away from my desk, it's a little annoying having only a desktop. For the last 10 months, I've been asking for a laptop which, because _reasons_, has to be a macbook.
+For the last four years, I've been spending every working day off a Dell Optiplex. With an after-market SSD upgrade, and a little extra memory, it makes a pretty good work machine. When it comes to needing to work away from my desk, it's a little annoying having only a desktop. For the last 10 months, I've been asking for a laptop which, because _reasons_, has to be a macbook.
 
-Last week, I got my macbook! With 1 condition: I had to give macOS a try, for a whole week. And so, with every intention of installing Linux on it afterwards, I gave it a shot.
+Last week, I got my macbook! With one condition: I had to give macOS a try, for a whole week. And so, with every intention of installing Linux on it afterwards, I gave it a shot.
 
 ## The Review
 
@@ -57,7 +57,7 @@ Historically, package installation on macOS has been in the form of `.dmg` files
 
 `brew` is the command-line package manager for macOS, allowing simple installation of almost any application and service for macOS. `brew cask` is an extension for this, designed specifically for GUI applications. It also means each application has to update in its own special way.
 
-As someone who's used to the AUR, this felt great! 1 command to install and update almost any application I need.
+As someone who's used to the AUR, this felt great! one command to install and update almost any application I need.
 
 #### Global emoji-picker is awesome!
 
@@ -87,7 +87,7 @@ Apple maintain a comprehensive, but unnecessarily complex [support page](https:/
 
 Just, WHY?!
 
-Trackpad acceleration feels reasonably natural, flicking around content as if you're actually touching it. On a scroll-wheel, not so much. It just means depending on how quickly you're scrolling, 1 notch could be 1 line or several, it depends on how the OS is feeling. I use an MX Master, which has a ratchet-free scrolling mode, which makes the acceleration even more noticeable, and even more annoying.
+Trackpad acceleration feels reasonably natural, flicking around content as if you're actually touching it. On a scroll-wheel, not so much. It just means depending on how quickly you're scrolling, one notch could be one line or several, it depends on how the OS is feeling. I use an MX Master, which has a ratchet-free scrolling mode, which makes the acceleration even more noticeable, and even more annoying.
 
 What's more, is that whilst you can disable trackpad scrolling, you can't disable scroll-wheel acceleration, not without using 3rd-party applications, many of which look like somewhat hacky scripts (not that I'm against those!).
 

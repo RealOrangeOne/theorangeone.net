@@ -6,11 +6,11 @@ date: 2019-05-29
 
 I've been an arch user for many years, and a linux user for even longer, but I've never installed arch from scratch. I was an Antergos user for many years, but after its demise, I needed an alternative. In a [previous post]({{< relref replacing-antergos >}}), I spoke of attempting to install vanilla arch from scratch on my laptop. As I write this, it works well, really well. Everything installed correctly, complete with EFI boot, encrypted partitions and sleep state.
 
-Speaking to those who have installed arch before, they say _"oh, it's simple"_ and _"it only takes like 20 minutes"_. Both those statements are wrong! To go from booting into an arch ISO to a login shell of a remotely usable system took around 3 hours, and countless browser tabs. I hit a lot of hurdles which, in hindsight, I definitely should have seen coming, and almost certainly already knew. But if they tripped me up, they'll almost certainly have tripped someone else up.
+Speaking to those who have installed arch before, they say _"oh, it's simple"_ and _"it only takes like 20 minutes"_. Both those statements are wrong! To go from booting into an arch ISO to a login shell of a remotely usable system took around three hours, and countless browser tabs. I hit a lot of hurdles which, in hindsight, I definitely should have seen coming, and almost certainly already knew. But if they tripped me up, they'll almost certainly have tripped someone else up.
 
 ## Gotchas
 
-So here's my 1 stop shop of the things which caught me up during the install and setup process. Whilst I did this install on my [XPS 15], it's all pretty generic.
+So here's my one stop shop of the things which caught me up during the install and setup process. Whilst I did this install on my [XPS 15], it's all pretty generic.
 
 ### Use a wired network
 
@@ -27,7 +27,7 @@ I use a standard UK-ISO layout, which isn't the default on the arch installer. I
 
 Many applications I use are installed from the AUR, it's the main reason I switched to arch in the first place. To my knowledge, there are no AUR helpers available in any of the default repos. Antergos provided `yay`, my AUR tool of choice, in their additional repo. Because Antergos is no more, and I don't want to install a package from a _deprecated_ repo, I had to install it manually using `makepkg`.
 
-The `yay` git repository has [instructions](https://github.com/Jguer/yay#installation) on how to do this, but it's quite literally 3 commands!
+The `yay` git repository has [instructions](https://github.com/Jguer/yay#installation) on how to do this, but it's quite literally three commands!
 
 After this, `yay` will update itself from the AUR package once an update is available.
 
@@ -64,4 +64,4 @@ For my install, there were a couple of sites I used in particular which were use
 
 Once the installation was complete, it was as simple as cloning [my dotfiles]({{< relref dotfiles >}}), and waiting for a complete system. There were a couple of issues with that, but mostly because of packages previously installed with Antergos, which I now had to explicitly install.
 
-1 machine down, 3 to go...
+One machine down, three to go...

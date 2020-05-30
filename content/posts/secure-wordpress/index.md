@@ -7,7 +7,7 @@ In terms of security, [WordPress](https://wordpress.org), and PHP in general for
 
 Recently, I was approached by an old friend to setup a small-scale online store and blog. After doing lots of research into cheap, static options, I eventually settled on WordPress and WooCommerce, on the advice of a colleague. Having never setup a site like this, which relies on being secure, and fairly fast, it was going to be a challenge, and doing it on a shoestring budget was going to make things harder!
 
-And so, after 2 weeks of on-and-off poking, research, re-installation and optimisation, and [an oddly timed twitter thread with @CryptoSeb](https://twitter.com/CryptoSeb/status/1035611479800721408), I eventually settled on a setup on how to do it which is secure, fast, and satisfies my inner DevOps' OCD.
+And so, after two weeks of on-and-off poking, research, re-installation and optimisation, and [an oddly timed twitter thread with @CryptoSeb](https://twitter.com/CryptoSeb/status/1035611479800721408), I eventually settled on a setup on how to do it which is secure, fast, and satisfies my inner DevOps' OCD.
 
 ## OS
 

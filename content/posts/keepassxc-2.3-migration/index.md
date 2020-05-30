@@ -30,7 +30,7 @@ The settings I'm using for my database
 {{< /resource >}}
 
 ### Mobile
-If you're planning to use your database on less-powerful hardware, such as a phone, you'll want to set the transformation rounds low. Argon2 is far more computationally intensive compared to PBKDF2. Using the 1-second benchmark button suggests using just 23 rounds. Where before I used 20,000 rounds of PBKDF2, I now use just 5 rounds of Argon2, to ensure it opens in reasonable time on my phone.
+If you're planning to use your database on less-powerful hardware, such as a phone, you'll want to set the transformation rounds low. Argon2 is far more computationally intensive compared to PBKDF2. Using the 1-second benchmark button suggests using just 23 rounds. Where before I used 20,000 rounds of PBKDF2, I now use just five rounds of Argon2, to ensure it opens in reasonable time on my phone.
 
 ## New Key Files
 The new key file format enables using any file as a key file for your database, rather than the XML format. This means rather than using a 45-bit key in an XML file, you can use any file of any size.
@@ -55,7 +55,7 @@ To use the new key, you need to change the key file in the master key settings (
 Once the key is installed, I backed up the old key offline (just in case), and deleted it.
 
 ## Native Messaging
-Native messaging is a way of 2 processes communicating in a secure-ish manor. In this case, it means the browser can communicate with KeePassXC in a way that means other applications can't.
+Native messaging is a way of two processes communicating in a secure-ish manor. In this case, it means the browser can communicate with KeePassXC in a way that means other applications can't.
 
 Before, the browser communicated with KeePassXC over HTTP, using the [KeePassHTTP](https://github.com/pfn/keepasshttp) protocol. This had the benefit of being very easy to implement a client for, as it's just standard web traffic. The down side is that it involved starting a web server on an internal port, meaning any process on your computer could connect to the web server and thus communicate with KeePassXC, this includes browser sessions. Although requests had to be signed, it still isn't very good for security.
 

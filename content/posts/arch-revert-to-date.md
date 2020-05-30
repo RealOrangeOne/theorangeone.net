@@ -18,7 +18,7 @@ django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: /hom
 
 As this was a work machine, I didn't have the time to research into the correct solution. I knew this was something to do with updates, because that's all that had changed between the last time it worked and now. But I had a feeling rolling back updates to a given date, especially on arch, would be fairly painful. Much to my surprise, it was super simple!
 
-After frantically googling, so my boss didn't notice my downtime, I found [this](https://www.ostechnix.com/downgrade-packages-specific-date-arch-linux/) article, which solved my needs completely. A simple config edit, and 1 command, and I was back to working. 
+After frantically googling, so my boss didn't notice my downtime, I found [this](https://www.ostechnix.com/downgrade-packages-specific-date-arch-linux/) article, which solved my needs completely. A simple config edit, and one command, and I was back to working.
 
 ## Doing the rollback
 The way this solution works is by rather than using the current state of the package repos, we use an archive from a specific date.
@@ -47,7 +47,7 @@ Depending on what packages have been downgraded, you may have to reboot to apply
 To revert, just restore the backup of the pacman mirrorlist, and re-run the above pacman command.
 
 ## Outdated Packages
-Generally, having out of date packages on your system is a bad idea. Not only for security reasons, but stability and compatibility. [The article](https://www.ostechnix.com/downgrade-packages-specific-date-arch-linux/) goes through a couple more too.  
+Generally, having out of date packages on your system is a bad idea. Not only for security reasons, but stability and compatibility. [The article](https://www.ostechnix.com/downgrade-packages-specific-date-arch-linux/) goes through a couple more too.
 
 ## Actually solving my issue
-A few days later, After [posting this article on twitter](https://twitter.com/RealOrangeOne/status/907591524644466688), I had a discussion with [@MortenLinderud](https://twitter.com/MortenLinderud) about the issue, who [pointed out](https://twitter.com/MortenLinderud/status/908262748718596096) that the library had already been fixed. So after updating `psycopg2`, my issue went away! 
+A few days later, After [posting this article on twitter](https://twitter.com/RealOrangeOne/status/907591524644466688), I had a discussion with [@MortenLinderud](https://twitter.com/MortenLinderud) about the issue, who [pointed out](https://twitter.com/MortenLinderud/status/908262748718596096) that the library had already been fixed. So after updating `psycopg2`, my issue went away!

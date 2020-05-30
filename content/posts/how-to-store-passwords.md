@@ -28,11 +28,11 @@ If you get breached, and your password database is stolen, then the attacker can
 
 ## Hashing
 
-A hash is a way of converting 1 value into another in such a way it's impossible to reverse.
+A hash is a way of converting one value into another in such a way it's impossible to reverse.
 
 Imagine a smoothie maker. You put fruit in, it mixes it up, and you get a smoothie out of it. Now no matter what you do, there's no machine which could take a smoothie, and give you the fruit back whole. Now yes given a smoothie you could probably tell me which kinds of fruits are in there, but what about which *specific* fruits? Given a strawberry smoothie, and a picture of a million strawberries, could you tell me which strawberries were in there?
 
-An interesting characteristic of passwords is that that 2 slightly similar inputs can give completely different answers.
+An interesting characteristic of passwords is that that two slightly similar inputs can give completely different answers.
 
 There are many different hashing algorithms, although the most common are the SHA family, specifically SHA265 and SHA512. SHA1 and MD5 are whilst better than nothing, considered insecure. Base64 is not a hash!
 
@@ -42,7 +42,7 @@ When storing a users' password, rather than storing the password, you store the 
 
 Whilst hashes aren't reversible directly, you can just search for them. Take the value `{{< md5 "foobar" >}}`. You can't take that value and reverse it back into the input `foobar`, but you can literally [search it online](https://duckduckgo.com/?q={{< md5 "foobar" >}}) and find the result. This is thanks to rainbow tables.
 
-Rainbow are a huge table of mappings between hashes and their plaintext counterparts. Bruteforcing a hash can take a long time, but looking up a hash in a rainbow table will take a few seconds at most. The rainbow table for 7 letter passwords hashed with SHA1 is just 50GB. [Project rainbowcrack](https://project-rainbowcrack.com/table.htm) has a list of them for download.
+Rainbow are a huge table of mappings between hashes and their plaintext counterparts. Bruteforcing a hash can take a long time, but looking up a hash in a rainbow table will take a few seconds at most. The rainbow table for seven letter passwords hashed with SHA1 is just 50GB. [Project rainbowcrack](https://project-rainbowcrack.com/table.htm) has a list of them for download.
 
 Hashing also has the drawback of repeatability. Given the same input, a hash will always return the same output. This means that if people are using the same password, they'll have the same hash. Combined with things like password resets, it can become fairly simple to work them out, and [fun](https://xkcd.com/1286/).
 
@@ -50,7 +50,7 @@ Hashing also has the drawback of repeatability. Given the same input, a hash wil
 
 Want to make your food taste stronger? Add salt to it. Want to make your hashing stronger, [add salt to it](https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/)!
 
-The idea of a salt is to prevent the 2 main shortcomings with hashing on its own: Users with the same password having the same hash, and rainbow tables. It does this in the same way.
+The idea of a salt is to prevent the two main shortcomings with hashing on its own: Users with the same password having the same hash, and rainbow tables. It does this in the same way.
 
 A salt is an additional piece of information added into the hashing process. By ensuring the salt is different for each user, even users with the same password would have a different password hash. Some people use the users email address as a salt, but really it should be a completely random value. The important thing is that it's completely different for users.
 
@@ -80,7 +80,7 @@ Key derivation is designed to be slow - Not critically slow, but slow enough. Th
 
 Once a user has logged in, you've hashed their password using only the best practices, you've pulled what their password should be from the database, it's time to compare them. They're both strings, so `==` should work, right? Well yes, but actually no. Comparing strings is incredibly well optimised, for good reason! Lots of fundamental parts of programming depend on strings being compared as quickly as possible. However when it comes to security, this isn't necessarily what we want.
 
-Many methods of string comparison have a number of cases to short circuit, and run faster than a regular character-by-character comparison. Even then when running a character-by-character comparison, it's good practice to abort as soon as you've got 1 character which doesn't match. When comparing hashes, these short circuits are counter-productive. By accurately measuring how long the system takes to check your password, you can gain insight about what the true hashes value is, and therefore begin to crack it. This is known as a [timing attack](https://en.wikipedia.org/wiki/Timing_attack).
+Many methods of string comparison have a number of cases to short circuit, and run faster than a regular character-by-character comparison. Even then when running a character-by-character comparison, it's good practice to abort as soon as you've got one character which doesn't match. When comparing hashes, these short circuits are counter-productive. By accurately measuring how long the system takes to check your password, you can gain insight about what the true hashes value is, and therefore begin to crack it. This is known as a [timing attack](https://en.wikipedia.org/wiki/Timing_attack).
 
 Any time you're comparing values in a secure context, you should a constant-time algorithm. The time required for these is always relative to the length of the values, and doesn't short circuit. For example, like the following Python:
 
