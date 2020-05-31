@@ -14,7 +14,7 @@ If you're using scripts hosted by yourself, then SRI can help prevent against ma
 
 SRI has been around for a while, as has Django, but no one has put the two together it seems. That's where [`django-sri`](https://github.com/{{< param "repo" >}}/) comes in.
 
-By installing and configuring it correctly, you're given a new `sri_static` template tag, which outputs a fully formed `script` or `link` tag, with the required integrity checks setup.
+By installing and configuring it correctly, you're given a new `sri_static` template tag, which outputs a fully formed `script` or `link` tag, with the required integrity checks set up.
 
 ```
 {% sri_static "index.js" %} <!-- Will output "<script src='/static/index.js' integrity='sha256-...'></script>" -->
@@ -22,4 +22,4 @@ By installing and configuring it correctly, you're given a new `sri_static` temp
 
 The integrity hash is calculated at request time, but is cached in memory to improve performance. The hashing is dome with `hashlib`, which is both fast and won't block the [GIL](https://docs.python.org/3/glossary.html#term-gil).
 
-interested in giving it a try? [Go install it](https://github.com/{{< param "repo" >}}/#installation)! This integration doesn't support remote assets, but that's coming!
+Interested in giving it a try? [Go install it](https://github.com/{{< param "repo" >}}/#installation)! This integration doesn't support remote assets, but that's coming!

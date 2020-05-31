@@ -4,14 +4,14 @@ repo: RealOrangeOne/dotfiles
 tags: [arch, linux]
 ---
 
-[Dotfiles](https://wiki.archlinux.org/index.php/Dotfiles) are a way for people to store settings and preferences to make setting up a new computer that much easier. I use both my laptop, desktop and work machine almost every day, and want them to be setup in an almost identical way.
+[Dotfiles](https://wiki.archlinux.org/index.php/Dotfiles) are a way for people to store settings and preferences to make setting up a new computer that much easier. I use both my laptop, desktop and work machine almost every day, and want them to be set up in an almost identical way.
 
-Most people store their dotfiles in version control. This is a great solution as it's possible to add authentication before accessing them, and stores a complete version history. It also means they're public
+Most people store their dotfiles in version control. This is a great solution as it's possible to add authentication before accessing them, and stores a complete version history. It also means they're public.
 
 ## _My_ Dotfiles
-[My Dotfiles](https://github.com/RealOrangeOne/dotfiles) are built using [Ansible](https://www.ansible.com/). Ansible is an open-source configuration management tool designed to help administer many servers with a single configuration. As people started using Ansible for configuration of the local machine (as I am), Ansible made some optimisations so commands run better locally.
+[My Dotfiles](https://github.com/RealOrangeOne/dotfiles) are built using [Ansible](https://www.ansible.com/). Ansible is an open-source configuration management tool designed to help administer many servers with a single configuration. As people started using Ansible for configuration of the local machine (as I am), Ansible made some optimizations so commands run better locally.
 
-I synchronise these files with git, and publish them [on GitHub](https://github.com/RealOrangeOne/dotfiles).
+I synchronize these files with git, and publish them [on GitHub](https://github.com/RealOrangeOne/dotfiles).
 
 ### Previous iterations
 

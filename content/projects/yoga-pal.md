@@ -5,7 +5,7 @@ subtitle: Control screen rotation, touch screen, and trackpad using the terminal
 tags: [linux]
 ---
 
-Once I started work, I bought myself a _Lenovo Yoga 3 14"_ laptop, because I needed a thin and light laptop for trains and the office. This came with windows, which within 10 minutes was running Ubuntu Gnome! Ubuntu greatly increased the performance, but I had to sacrifice all the screen, touchpad and keyboard customisation when changing 'modes'.
+Once I started work, I bought myself a _Lenovo Yoga 3 14"_ laptop, because I needed a thin and light laptop for trains and the office. This came with windows, which within 10 minutes was running Ubuntu Gnome! Ubuntu greatly increased the performance, but I had to sacrifice all the screen, touchpad and keyboard customization when changing 'modes'.
 
 I found [this thread](https://askubuntu.com/questions/450066/rotate-touchscreen-and-disable-the-touchpad-on-yoga-2-pro-in-rotated-mode) with someone else trying to find a solution to this, to find a nice way of rotating the screen when in tablet mode. On the thread was a really nice simple [script](https://askubuntu.com/a/485685/432138) that rotated the screen perfectly, and did the touchscreen too.
 
