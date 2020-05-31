@@ -7,7 +7,7 @@ Wireguard is taking the VPN world by storm, coming very close to the current cha
 
 ## What is wireguard?
 
-> WireGuard® is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache. It intends to be considerably more performant than OpenVPN. WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many different circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. It is currently under heavy development, but already it might be regarded as the most secure, easiest to use, and simplest VPN solution in the industry.
+> WireGuard® is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache. It intends to be considerably more performant than OpenVPN. WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. It is currently under heavy development, but already it might be regarded as the most secure, easiest to use, and simplest VPN solution in the industry.
 
 https://www.wireguard.com/
 
@@ -16,7 +16,7 @@ Wireguard is not only lighter weight than OpenVPN, it's simpler, smaller, and mo
 
 ## Getting started with Wireguard
 
-There is an [official quick start guide](https://www.wireguard.com/quickstart/), however as someone just getting started with wireguard, and has little experience in the Linux network stack, it was a lot to try and understand at once. There is however a much simpler way of getting started: `wg-quick`.
+There is an [official quick start guide](https://www.wireguard.com/quickstart/), however as someone just getting started with wireguard, and with little experience in the Linux network stack, it was a lot to understand at once. There is however a much simpler way of getting started: `wg-quick`.
 
 `wg-quick` creates standard wireguard tunnels, but generates the underlying commands for you, even printing them as it goes, so you can see how it's working.
 
@@ -44,7 +44,7 @@ This creates two files, `publickey` and `privatekey` which contain, well, the pu
 
 Wireguard's configuration lives in `ini` files in `/etc/wireguard/*.conf`, where `*` is the name of the wireguard interface (that'll be useful later).
 
-Be sure to take care when specifying keys. Be sure to specify the correct keys for the correct device, else you'll receive configuration error
+Be sure to take care when specifying keys. Be sure to specify the correct keys for the correct device, else you'll receive configuration error.
 
 #### Server configuration
 
@@ -99,6 +99,6 @@ To connect a client, you can also run `wg-quick up <interface>`, and again, you'
 
 That's it!
 
-There's now an encrypted tunnel setup between your two machines, which can be used to send any kind of traffic over, whether it be web traffic, media streaming, or email (if you're reading this guide and thinking about using the tunnel for email, please don't!).
+There's now an encrypted tunnel set up between your two machines, which can be used to send any kind of traffic over, whether it be web traffic, media streaming, or email (if you're reading this guide and thinking about using the tunnel for email, please don't!).
 
 If your needs are simply to forward traffic via another computer / network, or connect devices to the network of another, look past OpenVPN and give Wireguard a shot!

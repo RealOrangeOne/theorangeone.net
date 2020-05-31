@@ -8,7 +8,7 @@ In the current lockdown situation, a lot of people are starting to eye up that o
 
 Naturally, once you've got something set up in your home, you might want to access it outside the house. Whether it be some bulk storage using [Nextcloud](https://nextcloud.com/), Feed aggregator using RSS, [HomeAssistant](https://www.home-assistant.io/) or even an IRC bouncer. I see questions about this pop up quite a lot, both on [r/selfhosted](https://www.reddit.com/r/selfhosted/) or the [SelfHosted](https://selfhosted.show/) podcast's [discord](https://discord.gg/n49fgkp) (go join by the way!).
 
-One thing I see a lot is people recommending how they do it, or stating how someone should do it (I'm guilty of both!), but very few give multiple answers, and contrast between them. For someone getting started, it's almost as important to understand _why_ a given approach is important, as it is the approach itself.
+One thing I see a lot is people recommending how they do it, or stating how someone should do it (I'm guilty of both!), but very few people give multiple answers, and contrast between them. For someone getting started, it's almost as important to understand _why_ a given approach is important, as it is the approach itself.
 
 ## Techniques
 
@@ -71,7 +71,7 @@ C-->E
 C-->F
 {{</mermaid>}}
 
-The main caveat with this falls around dynamic IPs. Most residential IPs won't give your home a static IP. If you restart your router, or leave it long enough, you'll get a fresh IP. It might be the same, it might not. For this reason, it's not enough to simply set and forget your home's IP, because at some point, it'll change. For this reason you'll also need to run something which periodically updates your DNS records based on your home IP.
+The main caveat falls around dynamic IPs. Most residential IPs won't give your home a static IP. If you restart your router, or leave it long enough, you'll get a fresh IP. It might be the same, it might not. For this reason, it's not enough to simply set and forget your home's IP, because at some point, it'll change. For this reason you'll also need to run something which periodically updates your DNS records based on your home IP.
 
 Another potential downside, however niche, is that public IPs of residential locations can be used to track down the location. If you're worried about that, or super paranoid, this might not be the solution for you! Because traffic flows direct, it also means that in the event of a spike of network traffic, your home internet connection may be impacted.
 
@@ -109,7 +109,7 @@ E-->G
 E-->H
 {{</mermaid>}}
 
-Because traffic flows between your device and the VPN server in your house over an encrypted VPN connection, it's incredibly secure regardless of what's going over it - even unencrypted HTTP traffic. This means that assuming your VPN is setup properly, it doesn't matter how the applications themselves are setup.
+Because traffic flows between your device and the VPN server in your house over an encrypted VPN connection, it's incredibly secure regardless of what's going over it - even unencrypted HTTP traffic. This means that assuming your VPN is configured properly, it doesn't matter how the applications themselves are set up.
 
 VPN servers are incredibly lightweight, and will easily run on a Raspberry Pi. [PiVPN](https://www.pivpn.io/) in a great and simple way to get started. Contrary to its name, it can be installed on any Debian-based machine.
 
@@ -160,7 +160,7 @@ If you're interested in setting up something like this, I've written articles fo
 
 ## Reverse Proxies
 
-A key component of any of the above techniques is a reverse proxy. A reverse proxy is designed to handle all traffic coming to your server, and route it to the right application. Whether this be some PHP application, a docker container, or a completely different machine. The routing is done based on a path or domain, or both, which allows you to serve many many applications all from the same site.
+A key component of any of the above techniques is a reverse proxy. A reverse proxy is designed to handle all traffic coming to your server, and route it to the right application. Whether this be some PHP application, a docker container, or a completely different machine. The routing is done based on a path or domain, or both, which allows you to serve many applications all from the same site.
 
 {{<mermaid caption="Reverse proxy routing traffic based on a domain, and mapping it to the correct service">}}
 graph LR
@@ -195,7 +195,7 @@ There are slightly different privacy and security characteristics of each of the
 
 Having a homelab is great, as a learning opportunity, hobby, and a way to take back your privacy. Installing different pieces of software is very well documented, however no one really talks about how to expose them to the internet, properly.
 
-There's many reasons to expose your lab to the internet. Access to your services outside the house, allowing other people access to your services, or hosting completely public services like a blog.
+There are many reasons to expose your lab to the internet. Access to your services outside the house, allowing other people access to your services, or hosting completely public services like a blog.
 
 Personally, I run a VPN gateway on [Vultr](https://www.vultr.com/?ref=7167289), and it works really well for my needs. If I don't want a service exposed to the public, I can connect to the VPN tunnel myself and access applications through that.
 

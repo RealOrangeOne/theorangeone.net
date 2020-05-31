@@ -43,11 +43,11 @@ The method suggested in the [implementation PR](https://github.com/keepassxreboo
 
     dd if=/dev/urandom of=keyfile.key bs=2048 count=1
 
-This generates a 2048-bit key file using the system's random number generator. This is perfectly secure enough to generate random numbers, but, I like to use something even more secure:
+This generates a 2048-bit key file using the system's random number generator which is perfectly secure enough to generate random numbers, but, I like to use something even more secure:
 
     head -c 65535 /dev/zero | openssl enc -aes-256-ctr -pass pass:"$(dd if=/dev/urandom bs=128 count=1 2>/dev/null | base64)" -nosalt  > keyfile.key
 
-[This](https://serverfault.com/a/714412) uses a mixture of OpenSSL, and the system's random number generator. I don't exactly know what the command is doing, but it looks more complex, so that must mean it's more cryptographically secure, right?
+[The above](https://serverfault.com/a/714412) uses a mixture of OpenSSL, and the system's random number generator. I don't exactly know what the command is doing, but it looks more complex, so that must mean it's more cryptographically secure, right?
 
 ### Install the new key
 To use the new key, you need to change the key file in the master key settings (Database > Change master key). Select the new key, and enter your current password, and apply. As this re-encrypts the database with a new master key, you can enter a new password here to change it.
@@ -57,7 +57,7 @@ Once the key is installed, I backed up the old key offline (just in case), and d
 ## Native Messaging
 Native messaging is a way of two processes communicating in a secure-ish manor. In this case, it means the browser can communicate with KeePassXC in a way that means other applications can't.
 
-Before, the browser communicated with KeePassXC over HTTP, using the [KeePassHTTP](https://github.com/pfn/keepasshttp) protocol. This had the benefit of being very easy to implement a client for, as it's just standard web traffic. The down side is that it involved starting a web server on an internal port, meaning any process on your computer could connect to the web server and thus communicate with KeePassXC, this includes browser sessions. Although requests had to be signed, it still isn't very good for security.
+Before, the browser communicated with KeePassXC over HTTP, using the [KeePassHTTP](https://github.com/pfn/keepasshttp) protocol. This had the benefit of being very easy to implement a client for, as it's just standard web traffic. The downside is that it involved starting a web server on an internal port, meaning any process on your computer could connect to the web server and thus communicate with KeePassXC, this includes browser sessions. Although requests had to be signed, it still isn't very good for security.
 
 As this change is such a large one, there's an [Official migration guide](https://keepassxc.org/docs/keepassxc-browser-migration/), which walks through how to do it correctly.
 

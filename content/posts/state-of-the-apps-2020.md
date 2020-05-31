@@ -11,7 +11,7 @@ This year marks the 3rd year of my pattern for publishing a "My Stack" post, not
 
 ## OS
 
-For the last couple years, I've been an avid [Antergos](https://web.archive.org/web/20190903082315/https://antergos.com/) user, but May of this year saw [the project end](https://web.archive.org/web/20190809064653/https://antergos.com/blog/antergos-linux-project-ends), forcing me to move. With all my [dotfiles]({{< relref "dotfiles" >}}) configured for an arch-based base, I had little choice than moving to Arch. [Manjaro](https://manjaro.org/) also looked promising, but I'd wanted to move to Vanilla [Arch](https://www.archlinux.org/) for a while, so this felt like as good of a time as any.
+For the last couple years, I've been an avid [Antergos](https://web.archive.org/web/20190903082315/https://antergos.com/) user, but May of this year saw [the project end](https://web.archive.org/web/20190809064653/https://antergos.com/blog/antergos-linux-project-ends), forcing me to move. With all my [dotfiles]({{< relref "dotfiles" >}}) configured for an arch-based base, I had little choice other than moving to Arch. [Manjaro](https://manjaro.org/) also looked promising, but I'd wanted to move to Vanilla [Arch](https://www.archlinux.org/) for a while, so this felt like as good of a time as any.
 
 7 months later, I've only hard migrated three machines, the rest still run Antergos, and they still run fine. The Antergos repos don't exist any more, but Antergos was really just an installer for vanilla arch with an extra repo, so the fact everything still _just works_ doesn't surprise me.
 
@@ -24,13 +24,13 @@ I'm still an i3 user. I recently [tried using macOS]({{< relref "macos-review" >
 
 My editor situation also hasn't changed much in the last year. I still use [VSCode](https://code.visualstudio.com/), although the config has been slightly thinned out so remove extensions I don't use. I recently tried switching back to [IntelliJ](https://www.jetbrains.com/idea/), for the far superior intellisense, but it just didn't feel right, and felt incredibly heavy, not to mention the lack of automatable configuration.
 
-Last year I used [GhostWriter](https://github.com/wereturtle/ghostwriter/) for my markdown editing, but recently I transitioned that into VSCode so I don't need to remember two sets of keyboard shortcuts. The fancy WYSIWIG formatting from GhostWriter wasn't a benefit to me, but it's still my recommended markdown editor.
+Last year I used [GhostWriter](https://github.com/wereturtle/ghostwriter/) for my markdown editing, but recently I transitioned that into VSCode, so I don't need to remember two sets of keyboard shortcuts. The fancy WYSIWIG formatting from GhostWriter wasn't a benefit to me, but it's still my recommended markdown editor.
 
 [Vim](https://www.vim.org/) is still my terminal editor of choice, but I am looking for something simpler. Some friends often preach [Nano](https://www.nano-editor.org/), which can apparently do many of the editing features Vim has, but the muscle memory is quite hard to get rid of. My [dotfiles]({{< relref "dotfiles" >}}) currently sync a custom Vim configuration, which much like my VSCode configuration, I've also thinned out, but I think there's more thinning to do.
 
 ## Shell
 
-Naturally, I do spent much of my time in the shell. I still use [ZSH](https://www.zsh.org/), [Alacritty](https://github.com/jwilm/alacritty/) and [Tmux](https://github.com/tmux/tmux), and it fulfils everything I want to do. my only gripe is that clipboard management is pretty weird, somewhere.
+Naturally, I do spend much of my time in the shell. I still use [ZSH](https://www.zsh.org/), [Alacritty](https://github.com/jwilm/alacritty/) and [Tmux](https://github.com/tmux/tmux), and it fulfils everything I want to do. my only gripe is that clipboard management is pretty weird, somewhere.
 
 Copying multi-line text from the terminal into the system clipboard just doesn't work, and I've not been able to work out why. My current solution is [`tmux-yank`](https://github.com/tmux-plugins/tmux-yank), but that changes the mechanism to copy to the clipboard, which takes a lot to remember. Some day I'll work out what the issue is and fix things, I hope. But for now, this is fine.
 
@@ -60,25 +60,25 @@ Password management is something I feel quite strongly about. Really, everyone s
 
 <div style="max-width:854px; margin: 0 auto"><div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://embed.ted.com/talks/glenn_greenwald_why_privacy_matters" width="854" height="480" style="position:absolute;left:0;top:0;width:100%;height:100%" frameborder="0" scrolling="no" allowfullscreen></iframe></div></div>
 
-Currently, I use [Enpass](https://www.enpass.io/). Enpass has a crazy amount of features, and can by synced between devices using my Nextcloud server. Enpass isn't open-source, which annoys me, but really it's the best there is. The only real feature keeping me is the versatility of entries. Entries are really just a list of fields. Each field can have various different types, be private, or contain files, email addresses or TOTP tokens. [KDBX](https://keepass.info/help/kb/kdbx_4.html), the format behind [KeePass](https://keepass.info/) doesn't support this in quite the same way. You can add random other entries, but it's not the same. The day this is added to KeePass, I'm switching, immediately.
+Currently, I use [Enpass](https://www.enpass.io/). Enpass has a crazy amount of features, and can be synced between devices using my Nextcloud server. Enpass isn't open-source, which annoys me, but really it's the best there is. The only real feature keeping me is the versatility of entries. Entries are really just a list of fields. Each field can have various different types, be private, or contain files, email addresses or TOTP tokens. [KDBX](https://keepass.info/help/kb/kdbx_4.html), the format behind [KeePass](https://keepass.info/) doesn't support this in quite the same way. You can add random other entries, but it's not the same. The day this is added to KeePass, I'm switching, immediately.
 
 ## VPN
 
-If you frequent public WiFi, you need a VPN. I don't think VPNs are necessary for everyday use (even though my phone is always connected to one), but if you're on a public or untrusted network, you definitely need one.
+If you frequent public Wi-Fi, you need a VPN. I don't think VPNs are necessary for everyday use (even though my phone is always connected to one), but if you're on a public or untrusted network, you definitely need one.
 
 Probably the most famous is [NordVPN](https://nordvpn.com/), simply because of the amount of advertising they do. I don't trust them very much.
 
-My current VPN of choice is [Private Internet Access](https://www.privateinternetaccess.com/) (PIA). They have pretty good clients, a large number of servers, and a SOCKS5 proxy, which is often handy. PIA was recently bought out, and [reddit](https://www.reddit.com/r/Piracy/comments/dyqdno/private_internet_access_bought_out_by_cyber_ghost/) wasn't to happy about this. Since that they've open-sourced their desktop client, and have committed to improving transparency. I'm personally a large fan of [Mullvad](https://mullvad.net/en/), and they're definitely a close second, but for now, I think I'm sticking with PIA.
+My current VPN of choice is [Private Internet Access](https://www.privateinternetaccess.com/) (PIA). They have pretty good clients, lots of servers, and a SOCKS5 proxy, which is often handy. PIA was recently bought out, and [reddit](https://www.reddit.com/r/Piracy/comments/dyqdno/private_internet_access_bought_out_by_cyber_ghost/) wasn't too happy about this. Since that they've open-sourced their desktop client, and have committed to improving transparency. I'm personally a large fan of [Mullvad](https://mullvad.net/en/), and they're definitely a close second, but for now, I think I'm sticking with PIA.
 
 ## Email
 
-I've been a pretty loyal [Fastmail](https://ref.fm/u19842056) user for a couple years now. It's not encrypted at rest like [ProtonMail](https://protonmail.com/), but they claim very high levels of privacy, and the feature list is incredible!
+I've been a pretty loyal [Fastmail](https://ref.fm/u19842056) user for a couple of years now. It's not encrypted at rest like [ProtonMail](https://protonmail.com/), but they claim very high levels of privacy, and the feature list is incredible!
 
 As a client, I still quite like [Thunderbird](https://www.thunderbird.net/). I tried [Mailspring](https://getmailspring.com/), [Evolution](https://wiki.gnome.org/Apps/Evolution/), and just the web UI, but Thunderbird is really nice in terms of features and performance, and the calendar integration is really handy. Since Mozilla stopped supporting it, the community has picked it back up, and there's now full-time work being done on it, and it's improving quite a lot. But there's still quite a long way to go before it's really ready to start recommending to people.
 
 ## RSS
 
-For the last two or so years now, I've been a heavy RSS user. I've fully replaced YouTube subscriptions with it, because the subscription management is famously garbage.
+For the last two or so years now, I've been a heavy RSS user. I've fully replaced YouTube subscriptions with it, because the subscription management is famously rubbish.
 
 As an aggregator, I use [tt-rss](https://tt-rss.org/). [Last year]({{< relref "my-stack-2018" >}}) I said the UI was hard to get to grips with, but after spending more and more time with [FreshRSS](https://www.freshrss.org/), their UI got on my nerves even more.
 
@@ -90,7 +90,7 @@ Whilst working, I listen to a *lot* of music. I, like the rest of the sane world
 
 ## Storage
 
-Most file storage lives on my server, through [Nextcloud](https://nextcloud.com/). As every thread on [/r/selfhosted](https://reddit.com/r/selfhosted/) agrees, there's nothing better. Nextcloud works on all platforms, is reasonably simple to setup, and has apps/plugins to support basically everything.
+Most file storage lives on my server, through [Nextcloud](https://nextcloud.com/). As every thread on [/r/selfhosted](https://reddit.com/r/selfhosted/) agrees, there's nothing better. Nextcloud works on all platforms, is reasonably simple to set up, and has apps/plugins to support basically everything.
 
 For the sake of simplicity and performance, I don't install that many plugins for extra features. No calendar, chat, contacts, notes, or anything like that. Nextcloud deals with nothing but storage for me. Anything else is probably better handled by a bespoke application, anyway.
 
@@ -102,6 +102,6 @@ I'm still a [Pocketcasts](https://www.pocketcasts.com/) user, but recent updates
 
 ## Notes
 
-This is a category i'm in desperate need of improving. I currently use [Turtl](https://turtlapp.com/), which is a nice, self-hosted, encrypted notes app, but it's not very active, and the interface is a bit clunky, but as features go, it's perfect!
+This is a category I'm in desperate need of improving. I currently use [Turtl](https://turtlapp.com/), which is a nice, self-hosted, encrypted notes app, but it's not very active, and the interface is a bit clunky, but as features go, it's perfect!
 
-Most of the note apps seem to be designed for larger notes, rather than tiny bits of text / lists, but it seems that's a niche. I think Turtl may be here to stay, but i'm still on the lookout.
+Most of the note apps seem to be designed for larger notes, rather than tiny bits of text / lists, but it seems that's a niche. I think Turtl may be here to stay, but I'm still on the lookout.

@@ -4,7 +4,7 @@ date: 2018-01-23
 subtitle: Using an SSH reverse tunnel to bypass a firewall
 ---
 
-My university has a development sever, which it uses to host our coursework without the need to setup a development environment locally. It also enables lecturers to mark our work in a controlled environment, without needing to spin up an environment, and run untrusted code on their machines, a security hole I'm more than likely to take advantage of!
+My university has a development sever, which it uses to host our coursework without the need to set up a development environment locally. It also enables lecturers to mark our work in a controlled environment, without needing to spin up an environment, and run untrusted code on their machines, a security hole I'm more than likely to take advantage of!
 
 For reasons unknown, only HTTP ports (80, 443) are available from machines other than those permanently on-site (even eduroam doesn't work!). Their solution to this problem is _RemoteApp_, which, like most windows products, doesn't work very well under Linux!
 

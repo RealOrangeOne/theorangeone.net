@@ -41,7 +41,7 @@ Alternative extensions are available, although many of the more powerful ones co
 
 On most _sane_ Operating Systems, Home/end operate differently depending on focus. When in a textbox, they control the cursor on the line, and the window everywhere else. On macOS, it seems to be different. Home / End always controls the page, whilst `CMD` + arrows control the cursor. I mostly had this issue with Firefox.
 
-A part of me likes the fact it's explicit and different, but the muscle memory is too much to get over! It's also very rare
+A part of me likes the fact it's explicit and different, but the muscle memory is too much to get over! It's also very rare.
 
 ### Screen brightness varies
 
@@ -57,7 +57,7 @@ Historically, package installation on macOS has been in the form of `.dmg` files
 
 `brew` is the command-line package manager for macOS, allowing simple installation of almost any application and service for macOS. `brew cask` is an extension for this, designed specifically for GUI applications. It also means each application has to update in its own special way.
 
-As someone who's used to the AUR, this felt great! one command to install and update almost any application I need.
+As someone who's used to the AUR, this felt great! One command to install and update almost any application I need.
 
 #### Global emoji-picker is awesome!
 
@@ -81,7 +81,7 @@ No matter how many times I removed them, some applications kept returning to the
 
 Anyone who's used macOS will know that its support for screenshots was clearly not designed for users in mind. Standard keyboards have an incredibly useful 'Print Screen' key, which captures the screen, and is aptly named. macOS has the _equally obvious_ `CMD + Shift + 4`.
 
-Apple maintain a comprehensive, but unnecessarily complex [support page](https://support.apple.com/en-us/HT201361) on how to take screenshots. There are many 3rd-party applications available to make this process easier, my personal favourites being [Skitch](https://evernote.com/products/skitch) and [Lightshot](https://app.prntscr.com/en/index.html).
+Apple maintains a comprehensive, but unnecessarily complex [support page](https://support.apple.com/en-us/HT201361) on how to take screenshots. There are many 3rd-party applications available to make this process easier, my personal favourites being [Skitch](https://evernote.com/products/skitch) and [Lightshot](https://app.prntscr.com/en/index.html).
 
 ### Scroll-wheel acceleration
 

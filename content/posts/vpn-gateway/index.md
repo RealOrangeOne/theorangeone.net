@@ -4,7 +4,7 @@ date: 2018-06-21
 image: resource:user-settings.png
 ---
 
-VPNs are a way of accessing application which sit on a separate network using an encrypted tunnel. Contrary to popular belief, they are not designed to be used for anonymising your internet habits. Whilst VPNs are designed to enable a client to access the servers network, it's possible to use them to provide a server to access to its client's network. With this, and a simple HTTP server, it's possible to open up applications on your home network to the internet, without the need for a static IP, or a port forward!
+VPNs are a way of accessing application which sit on a separate network using an encrypted tunnel. Contrary to popular belief, they are not designed to anonymize your internet habits. Whilst VPNs are designed to enable a client to access the servers network, it's possible to use them to provide a server to access to its client's network. With this, and a simple HTTP server, it's possible to open up applications on your home network to the internet, without the need for a static IP, or a port forward!
 
 {{<mermaid caption="Network layout">}}
 graph LR
@@ -74,9 +74,9 @@ Do you wish to login to the Admin UI as "openvpn"?
 > Press ENTER for default [yes]: yes
 ```
 
-OpenVPN Access Server is free for two concurrent users. For this, we only need, so no need to enter a license key.
+OpenVPN Access Server is free for two concurrent users. For this, we only need, so no need to enter a licence key.
 
-Once the script has finished, you'll need to set the password for the builtin user. Run `sudo passwd openvpn` to do this. Open the _"Admin UI"_ URL displayed after the init script. It's probably `https://<ip>:943/admin`. Here, you can login as the `openvpn` user.
+Once the script has finished, you'll need to set the password for the builtin user. Run `sudo passwd openvpn` to do this. Open the _"Admin UI"_ URL displayed after the init script. It's probably `https://<ip>:943/admin`. Here, you can log in as the `openvpn` user.
 
 {{< resource src="landing-screen.png" >}}
 Landing page for OpenVPN admin panel
@@ -141,7 +141,7 @@ There's a [thread](https://forums.whirlpool.net.au/archive/2493314) online descr
 sudo iptables -t nat -A POSTROUTING -o eno1 -j MASQUERADE
 ```
 
-Replace `eno1` with the ethernet interface of your Pi, not the VPN one. `iptables` clears its configuration on reboot, so to make sure this rule is automatically applied, you'll need to setup something like [`iptables-persistent`](http://www.microhowto.info/howto/make_the_configuration_of_iptables_persistent_on_debian.html).
+Replace `eno1` with the ethernet interface of your Pi, not the VPN one. `iptables` clears its configuration on reboot, so to make sure this rule is automatically applied, you'll need to set up something like [`iptables-persistent`](http://www.microhowto.info/howto/make_the_configuration_of_iptables_persistent_on_debian.html).
 
 ## Setting up a reverse proxy
 
@@ -159,4 +159,4 @@ server {
 }
 ```
 
-And that's it! No port forwarding, no device enumeration, no service enumeration, no hacks. Any device on your network can be made accessible to the world, but only when you want them to. And because it's forwarding using a VPN, it doesn't have to be simply web traffic!
+And that's it! No port forwarding, no device enumeration, no service enumeration, no hacks. Any device on your network can be made accessible to the world, but only when you want them to. And because it's forwarding using a VPN, it doesn't have to be simply HTTP traffic!

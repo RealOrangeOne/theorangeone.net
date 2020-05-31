@@ -17,7 +17,7 @@ Unfortunately, there were some issues:
 - HTTP traffic is unencrypted over the VPN
 - OpenVPN isn't great at repairing flakey connections
 
-Don't get me wrong, none of these issues are actually that bad - I'm just a perfectionist with time to kill! After doing some research, I found an alternative solution which solves all these issues, and is far simpler to setup. By simplifying the VPN setup, and moving the reverse proxy inside the private network, everything gets much nicer!
+Don't get me wrong, none of these issues are actually that bad - I'm just a perfectionist with time to kill! After doing some research, I found an alternative solution which solves all these issues, and is far simpler to set up. By simplifying the VPN setup, and moving the reverse proxy inside the private network, everything gets much nicer!
 
 # Requirements
 
@@ -49,7 +49,7 @@ HAProxy is generally used as a load balancer, but it works perfectly fine with a
 
 When building a tunnel like this, it's important for each end of the tunnel to reconnect in the event of issues. This was an incredibly annoying caveat with OpenVPN, but wireguard deals with this very well.
 
-To do this, we simply enable a systemd service, based on the name of the config file. If the config if `/etc/wireguard/my-tun.conf`, then enable `wg-quick@my-tun.service`.
+To do this, we simply enable a systemd service, based on the name of the config file. If the config is at `/etc/wireguard/my-tun.conf`, then enable `wg-quick@my-tun.service`.
 
 ## Forward traffic down the tunnel
 
@@ -64,7 +64,7 @@ listen https
   server default 10.1.10.2:443 send-proxy
 ```
 
-Once this is added, restart HAProxy, and you're done. Open the remote IP on on the port you set it to listen on, and watch as you see a request from the client be responded to. And because this is in TCP mode, this traffic can be anything (TCP based, obviously). Need something secure, setup an SSL cert with NGINX, and that'll work with no further configuration
+Once this is added, restart HAProxy, and you're done. Open the remote IP on the port you set it to listen on, and watch as you see a request from the client be responded to. And because this is in TCP mode, this traffic can be anything (TCP based, obviously). Need something secure, set up an SSL cert with NGINX, and that'll work with no further configuration.
 
 ## Maintaining IPs
 
@@ -72,7 +72,7 @@ An unfortunate downside with this approach is that because HAProxy proxies the p
 
 The solution to this in the TCP world is [proxy protocol](https://www.haproxy.com/blog/haproxy/proxy-protocol/). Proxy Protocol isn't an additional protocol in itself, it's an extension to TCP which allows a forwarded IP to be added separate to the source, which can then be used downstream to get the correct IP.
 
-Proxy Protocol does have some issues, namely with how it's implemented with NGINX. Because of how it's implemented, if a `server` is setup to accept proxy protocol requests, it *only* accepts proxy protocol - Sending regular packets results in an error, and vice versa. This probably isn't a massive issue, just something to consider.
+Proxy Protocol does have some issues, namely with how it's implemented with NGINX. Because of how it's implemented, if a `server` is set up to accept proxy protocol requests, it *only* accepts proxy protocol - Sending regular packets results in an error, and vice versa. This probably isn't a massive issue, just something to consider.
 
 If you're using docker, [Traefik](https://docs.traefik.io/) accepts both proxy protocol and regular traffic at the same time, so I recommend checking that out!
 

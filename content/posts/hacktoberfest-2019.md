@@ -13,7 +13,7 @@ In [2018]({{< relref "hacktoberfest-2018" >}}), I submitted a total of 10 pull r
 
 ## My contributions
 
-Whilst DigitalOcean did have an official checker this year, it was garbage! Not only was it incredibly slow, but it was only possible to see _your_ pull requests, rather than any user. Instead, the third-party [Hacktoberfest Checker](https://hacktoberfestchecker.jenko.me/user/RealOrangeOne) shows the relevant pull requests.
+Whilst DigitalOcean did have an official checker this year, it was pretty bad! Not only was it incredibly slow, but it was only possible to see _your_ pull requests, rather than any user. Instead, the third-party [Hacktoberfest Checker](https://hacktoberfestchecker.jenko.me/user/RealOrangeOne) shows the relevant pull requests.
 
 ### 3 Contributions to `srobo/team-emails`
 
@@ -68,4 +68,4 @@ Whilst DigitalOcean did have an official checker this year, it was garbage! Not 
 
 ## Overview
 
-As with last year, I personally consider many of these contributions invalid, primarily because they don't really fit with the spirit of Hacktoberfest. Namely, all those under the `srobo` organisation don't especially fit, and the ones on my own repos. Excluding those, there's still more than enough to get my t-shirt!
+As with last year, I personally consider many of these contributions invalid, primarily because they don't really fit with the spirit of Hacktoberfest. Namely, all those under the `srobo` organization don't especially fit, and the ones on my own repos. Excluding those, there's still more than enough to get my t-shirt!

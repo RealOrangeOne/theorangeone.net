@@ -4,7 +4,7 @@ date: 2020-05-01
 image: https://docs.traefik.io/assets/img/traefik-architecture.png
 ---
 
-[Traefik](https://docs.traefik.io/) is a cloud native reverse proxy. Which is basically a fancy way of saying it's a reverse proxy with some fancy features. Namely fancy features around auto-discovery, and deep integration with technologies like Docker and Kubernetes.
+[Traefik](https://docs.traefik.io/) is a cloud native reverse proxy, which is basically a fancy way of saying it's a reverse proxy with some fancy features. Specifically it has fancy features around auto-discovery, and deep integration with technologies like Docker and Kubernetes.
 
 ## Basic concepts
 
@@ -40,11 +40,11 @@ One thing to note about this is the `network_mode: host`. Traefik needs to be ab
 
 ## Traefik configuration
 
-Traefik configuration is split in 2. Traefik's primary configuration can be either YAML or TOML. Configuration for the services themselves can live in many different places. For docker-compose, it's done using container labels.
+Traefik configuration is split in 2. Traefik's primary configuration can be either YAML or TOML. Configuration for the services themselves can live in many places. For docker-compose, it's done using container labels.
 
 Traefiks main configuration allows you to configure the entrypoints for traefik to listen on, how TLS is configured, and where traefik should look for services.
 
-The docker configuration for traefik is probably what turns most people off of it. Traefik's configuration may seem verbose to achieve something which would be very straightforward with Nginx or alike. But if you approach things in a different way, they can be very clean.
+The docker configuration for traefik is probably what turns most people off of it. Traefik's configuration may seem verbose to achieve something which would be very straightforward with Nginx or alike. But if you approach things differently, they can be very clean.
 
 My typical configuration is very simple:
 
@@ -56,7 +56,7 @@ labels:
   - "traefik.http.routers.foo.tls.certresolver=le"
 ```
 
-Here, I instruct traefik to route traffic for `sub.example.com` to this container, and issue a certificate for it. Everything else, traefik works out for itself. Which port should traffic be routed to? Use the `EXPOSE` command from the Dockerfile!Which entrypoints to listen on? Listen on them all!
+Here, I instruct traefik to route traffic for `sub.example.com` to this container, and issue a certificate for it. Everything else, traefik works out for itself. Which port should traffic be routed to? Use the `EXPOSE` command from the Dockerfile! Which entrypoints to listen on? Listen on them all!
 
 The obvious omission is HTTPS redirection. I do this using a service which listens on any domain, and issues a redirect, whether traefik knows about the domain or not. Since 2.2.0, traefik now as this [built in](https://docs.traefik.io/routing/entrypoints/#redirection).
 
@@ -130,7 +130,7 @@ http:
         - hsts
 ```
 
-The services is set to `ping@internal` just because routers need a service. The ping service is built-in to Traefik, and just returns `200 OK` to all requests, not that it'll be hit, as the `redirectScheme` middleware will redirect traffic before it hits the service.
+The service is set to `ping@internal` because routers need a service. The ping service is built-in to Traefik, and just returns `200 OK` to all requests, not that it'll be hit, as the `redirectScheme` middleware will redirect traffic before it hits the service.
 
 Now, we just add our newly created file provider:
 
@@ -151,11 +151,11 @@ And now, all traffic which hits our `web` endpoint will be immediately redirecte
 
 So, what does a fully configured traefik setup look like? I'm glad you asked!
 
-First, you'll need to setup and install traefik, which can be done with a very simple docker-compose file, as shown above. Your default configuration will need to define at least one entrypoint.
+First, you'll need to set up and install traefik, which can be done with a very simple docker-compose file, as shown above. Your default configuration will need to define at least one entrypoint.
 
 Once you already have traefik installed and setup, adding services is very simple:
 
-Step 1, pick an application, find a container, and write a minimal compose file:
+Step 1: pick an application, find a container, and write a minimal compose file:
 
 ```yml
 version: "2.3"
@@ -167,7 +167,7 @@ services:
     restart: unless-stopped
 ```
 
-Step 2, add the absolute minimum traefik configuration:
+Step 2: add the absolute minimum traefik configuration:
 
 ```yml
 version: "2.3"
@@ -182,9 +182,9 @@ services:
       - "traefik.http.routers.whoami.rule=Host(`whoami.example.com`)"
 ```
 
-Step 3, start your new service with `docker-compose up -d`, and wait a few seconds for traefik to notice it. You can check on the progress of this by refreshing the dashboard until it appears.
+Step 3: start your new service with `docker-compose up -d`, and wait a few seconds for traefik to notice it. You can check on the progress of this by refreshing the dashboard until it appears.
 
-Step 4, visit the URL in your browser, and notice traffic being routed correctly.
+Step 4: visit the URL in your browser, and notice traffic being routed correctly.
 
 To add more applications, just start more compose files with more configuration. Traefik will pick up on new containers automatically and start routing traffic, no restart required.
 
@@ -192,6 +192,6 @@ To add more applications, just start more compose files with more configuration.
 
 This is a more difficult question than it may seem. Personally I'm super happy I migrated from Nginx to traefik, and I know plenty of others who feel the same. If you're trying to manage a number of different docker containers on one machine, then traefik is something worth looking into.
 
-However, if you've just got a couple services, and you're comfortable with Nginx, why rock the boat? Both traefik and nginx are reverse proxies, and they're both really good, you're not going to see performance, security, or really simplicity gains by switching. With that said if you're using docker, it's worth a look into anyway.
+However, if you've just got a couple services, and you're comfortable with Nginx, why rock the boat? Both traefik and nginx are reverse proxies, and they're both great. You're not going to see performance, security, or really simplicity gains simply from switching. With that said if you're using docker, it's worth a look into anyway.
 
 Using Traefik using only the file provider is definitely not a good idea, and nginx is definitely a better tool for the job!

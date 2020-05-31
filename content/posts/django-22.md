@@ -6,7 +6,7 @@ tags: [programming]
 
 April marks the release of Django 2.2, the latest LTS version of the popular Python web framework. Django 2.2 marks almost two years of development since the last LTS release, 1.11 in April 2017, and brings with it some very large improvements and changes which naturally come with a major version bump.
 
-Django historically works off the LTS pattern of software releasing, providing two channels. LTS versions are maintained far longer than regular versions, and receive regular bug fixes and security patches in line with the main release channel.
+Django historically works off the LTS pattern of software releasing, providing two channels. LTS releases are maintained far longer than regular versions, and receive regular bug fixes and security patches in line with the main release channel.
 
 ![Django update cycle](https://static.djangoproject.com/img/release-roadmap.png)
 
@@ -70,7 +70,7 @@ Anyone who's opened files with Python, you'll have seen the context manager patt
 with open("file.txt", "w") as f:
     file.write("Hello world")
 ```
-This pattern can now be used with Django files from file / image fields. This results in slightly cleaner code which is less prone to leaving handles open to files which aren't needed anymore.
+This pattern can now be used with Django files from file / image fields. This results in slightly cleaner code which is less prone to leaving handles open to files which aren't needed any more.
 
 ## New Database functions
 
@@ -128,7 +128,7 @@ With all these new functions, focusing around maths and string manipulation, dat
 
 `QuerySet.iterator` is an efficient way of loading very large datasets into Django to be used. Simply iterating over a queryset loads the entire result set into memory, and then iterates over it as a `list`. `.iterator` uses cursors and pagination to chunk up the data, so a much smaller amount of data is stored in memory at once.
 
-The new ability to specify a chunk size allows tuning of this to improve performance. The default is 2000, which represents something [close to how it worked before](https://www.postgresql.org/message-id/4D2F2C71.8080805%40dndg.it)
+The new ability to specify a chunk size allows tuning of this to improve performance. The default is 2000, which represents something [close to how it worked before](https://www.postgresql.org/message-id/4D2F2C71.8080805%40dndg.it).
 
 ### `QuerySet.values_list` can return named tuples
 
@@ -154,7 +154,7 @@ Even though this exists, please don't use it in production!
 
 ## Secure JSON serialization into HTML
 
-Anyone who's had to dump JSON blobs into HTML pages should have come across [`django-argonauts`](https://github.com/fusionbox/django-argonauts) (if you're doing this _without_ `django-argonauts`, fear). `django-argonauts` helps prevent multiple different classes of XSS attacks, which there's great examples of on the [project's README](https://github.com/fusionbox/django-argonauts#filter).
+Anyone who has dumped JSON blobs into HTML pages should have come across [`django-argonauts`](https://github.com/fusionbox/django-argonauts) (if you're doing this _without_ `django-argonauts`, fear). `django-argonauts` helps prevent multiple different classes of XSS attacks, which there are great examples of in the [project's README](https://github.com/fusionbox/django-argonauts#filter).
 
 Django now has some built-in support for protecting against these kinds of attacks, from the new `json_script` filter. This takes an object in template context, serializes it to JSON (securely), and wraps it in a `script` tag, resulting in:
 
@@ -201,9 +201,9 @@ Now, `request` objects have a `headers` attribute which allows a far more sane A
 
 ## Use of `sqlparse`
 
-In previous versions, Django's ORM handled every aspect of constructing SQL queries. This added a lot of additional, and arguably unnecessary code to the core of Django. Django 2.2 adds a new dependency which takes care of this: `sqlparse`. `sqlparse` is a library to handle AST parsing of SQL, allowing the conversion from SQL text to Python objects, and vice versa. This doesn't extract Django's ORM into an external package, just remove a small section of it in favour of a existing library.
+In previous versions, Django's ORM handled every aspect of constructing SQL queries. This added a lot of additional, and arguably unnecessary code to the core of Django. Django 2.2 adds a new dependency which takes care of this: `sqlparse`. `sqlparse` is a library to handle AST parsing of SQL, allowing the conversion from SQL text to Python objects, and vice versa. This doesn't extract Django's ORM into an external package, just remove a small section of it in favour of an existing library.
 
-Using an external library brings with it many benefits. There's now less code inside the core Django codebase, meaning there's less for the core developers to manage and tie in to Django's release cycle. **(Wild speculation alert!)** It also _might_ mean it gets faster. Society is built on specialisation, therefore hopefully a library designed to do SQL parsing will be faster and more robust than the one originally written for Django, and also takes some of the strain off the Django core team!
+Using an external library brings with it many benefits. There's now less code inside the core Django codebase, meaning there's less for the core developers to manage and tie in to Django's release cycle. **(Wild speculation alert!)** It also _might_ mean it gets faster. Society is built on specialization, therefore hopefully a library designed to do SQL parsing will be faster and more robust than the one originally written for Django, and also takes some strain off the Django core team!
 
 ## Watchman
 
@@ -213,7 +213,7 @@ Watchman support isn't enabled by default. It requires an additional optional de
 
 ## Database instrumentation
 
-Django supports many different ways of modifying the querying and model lifecycle, from executing arbitrary SQL, to using signals to listen for specific model events. Django 2.0 introduces instrumentation, which allows intermediary code to be executed for each query, enabling modification, logging, and any other munging of queries and data you need.
+Django supports many ways of modifying the querying and model lifecycle, from executing arbitrary SQL, to using signals to listen for specific model events. Django 2.0 introduces instrumentation, which allows intermediary code to be executed for each query, enabling modification, logging, and any other munging of queries and data you need.
 
 An interesting use for this would be explicitly disabling queries in certain parts of the code, with [`django-zen-queries`](https://github.com/dabapps/django-zen-queries) (ships in https://github.com/dabapps/django-zen-queries/pull/12).
 

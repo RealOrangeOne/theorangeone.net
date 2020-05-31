@@ -25,7 +25,7 @@ Stage two uses a completely different container as the base, `nginx:latest-alpin
 
 This container is built using GitHub actions, automatically on push, and then uploaded to GitHubs package registry. A [docker-compose configuration](https://github.com/RealOrangeOne/infrastructure/blob/master/ansible/roles/docker/files/theorangeone.net/docker-compose.yml) is pre-installed on my server, pointed at this container, and with the necessary Traefik rules to route traffic correctly.
 
-To maintain auto-deployment functionality, something I find really important, I run [watchtower](https://containrrr.github.io/watchtower/). Watchtower polls the upstream of all containers I depend on, and when there's changes, automatically pulls and restarts them. The poll interval is five minutes, so it's a slower update than Netlify, but for my needs it's fine. Generally this is ill-advised as it can cause containers to update unexpectedly, but I pin containers properly, so i'm not worried.
+To maintain auto-deployment functionality, something I find really important, I run [watchtower](https://containrrr.github.io/watchtower/). Watchtower polls the repositories of all the containers I depend on, and when there are changes, automatically pulls and restarts them. The poll interval is five minutes, so it's a slower update than Netlify, but for my needs it's fine. Generally this is ill-advised as it can cause containers to update unexpectedly, but I pin containers properly, so I'm not worried.
 
 ## Success?
 

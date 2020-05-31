@@ -5,7 +5,7 @@ image: resource:editing-my-stack.png
 hide_header_image: true
 ---
 
-As a software engineer and perfectionist, I have my machines setup in a very specific way, so I can do my job properly and have everything just the way I like it. Thanks to my [dotfiles]({{< relref "projects/dotfiles" >}}), I have everything syncing up between machines, meaning the tools I use are setup correctly, the same, everywhere.
+As a software engineer and perfectionist, I have my machines set up in a very specific way, so I can do my job properly and have everything just the way I like it. Thanks to my [dotfiles]({{< relref "projects/dotfiles" >}}), I have everything syncing up between machines, meaning the tools I use are configured correctly, the same, everywhere.
 
 # OS
 My current distro of choice is [Arch](https://www.archlinux.org/), specifically [Antergos](https://antergos.com/). My main reason for choosing arch is the [AUR](https://aur.archlinux.org/). Almost every package I can think of is packaged there, often by the community. It's great to be able to install things through one method and have everything update in a single command. Antergos is also far easier to install than raw arch, and has little to no bloat that comes with it.
@@ -28,7 +28,7 @@ My primary editor is [IntelliJ](https://www.jetbrains.com/idea/). [PyCharm](http
 If I'm just editing a file quickly, whether it be config from the terminal, or a quick script, I really like [Vim](http://www.vim.org/) for this. It's insanely fast and lightweight. I have a [custom `vimrc`](https://github.com/amix/vimrc) installed to change it to support more features than stock.
 
 # Shell
-Whilst I use [ZSH](https://www.zsh.org/), I'm not a fan of the [super fancy themes](https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes) for it, which display your current git branch, node version, time, all that jazz. My terminal is a take on the default colourised Debian terminal, with a lambda symbol who's colour changes depending on the return code of the previous command.
+Whilst I use [ZSH](https://www.zsh.org/), I'm not a fan of the [super fancy themes](https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes) for it, which display your current git branch, node version, time, all that jazz. My terminal is a take on the default colourized Debian terminal, with a lambda symbol who's colour changes depending on the return code of the previous command.
 
 {{< resource src="shell-prompt.png" >}}
 My shell prompt
@@ -43,7 +43,7 @@ I do have a fair number of plugins and aliases, thanks to both [oh my ZSH](http:
 I've been a [Firefox](https://www.mozilla.org/en-GB/firefox/) user for as long as I can remember, and I've got no reason to stop now. In the recent [Quantum](https://blog.mozilla.org/blog/2017/11/14/introducing-firefox-quantum/) update, it's only got faster! I've seen some very promising things from [Vivaldi](https://vivaldi.com/), but it's missing some key features, and is a little too buggy for me to use full-time.
 
 ## For development
-I currently switch between [Firefox](#browser) and [Chromium](https://www.chromium.org/) right now for development. Currently chromium's dev tools are quite a bit nicer than Firefox's, and I've had issues with some projects causing Firefox to spike my CPU and cause my system to crash.
+I currently switch between [Firefox](#browser) and [Chromium](https://www.chromium.org/) right now for development. Chromium's dev tools are quite a bit nicer than Firefox's, and I've had issues with some projects causing Firefox to spike my CPU and cause my system to crash.
 
 # Password manager
 I've switched around password managers _a lot_, but I'm currently settled on [KeePassXC](https://keepassxc.org/), a community fork of [KeePassX](https://www.keepassx.org/), which is a cross-platform fork of [KeePass](https://keepass.info/). When it comes to cross-platform password managers, there's very little out there that's also open-source. I can access password on both my linux machines, and [my phone](https://github.com/PhilippC/keepass2android), and my windows OS when I occasionally have to use it. The [browser integration](https://addons.mozilla.org/en-US/firefox/addon/keepasshttp-connector/) is also pretty nice too!

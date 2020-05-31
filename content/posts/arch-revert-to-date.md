@@ -6,7 +6,7 @@ subtitle: Arch is well known for going wrong, but today was the first time this 
 tags: [arch, linux]
 ---
 
-I'm one of those Arch users who _apparently_ doesn't use arch properly: I install updates daily, including packages from the AUR. This has the great benefit of giving me the most up-to-date packages available from upstream. However the downside of meaning I have the latest packages from upstream, meaning if something breaks, even temporarily, it breaks for me.
+I'm one of those Arch users who _apparently_ doesn't use arch properly: I install updates daily, including packages from the AUR. This has the great benefit of giving me the most up-to-date packages available from upstream. However, the downside of meaning I have the latest packages from upstream, meaning if something breaks, even temporarily, it breaks for me.
 
 I'm also one of those _crazy_ people who uses arch on my work machine. Craziness aside, it's never caused me an issue, until today.
 

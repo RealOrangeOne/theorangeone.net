@@ -9,7 +9,7 @@ Hacktoberfest is a great initiative created by DigitalOcean and GitHub to get mo
 
 Last year, I also entered, but due to some delivery issues, I never got the T-Shirt ([I'm still annoyed!](https://twitter.com/RealOrangeOne/status/949781289254703106)). So this year I'm making sure I get it!
 
-As someone who does a lot of development on GitHub, the messages behind hacktoberfest are somewhat lost on me. I already open lots of pull requests against projects, and know how to do them properly, but I know others don't. By the looks of the global statistics, I can safely see it works! I still try and recommend to every dev to sign up to hacktoberfest, even if they don't proactively look for issues. If it raises awareness for open source projects, gets more people into helping the community, and results in better software, then what's there to lose!
+As someone who does a lot of development on GitHub, the messages behind hacktoberfest are somewhat lost on me. I already open lots of pull requests against projects, and know how to do them properly, but I know others don't. By the looks of the global statistics, I can safely see it works! I still recommend every dev sign up to hacktoberfest, even if they don't proactively look for issues. If it raises awareness for open source projects, gets more people into helping the community, and results in better software, then what's there to lose!
 
 ## My Contributions
 

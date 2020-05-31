@@ -6,15 +6,15 @@ subtitle: Incredibly secure, easy to use, but are it's trade-offs worth it?
 tags: [security]
 ---
 
-Throughout my life, I've had many different email providers, starting with [Hotmail](https://hotmail.com) almost 10 years ago. Recently, I've been focusing more on ways I can secure my emails. No, I may not have anything to hide, but [that doesn't matter](http://www.ted.com/talks/glenn_greenwald_why_privacy_matters)!
+Throughout my life, I've had numerous email providers, starting with [Hotmail](https://hotmail.com) almost 10 years ago. Recently, I've been focusing more on ways I can secure my emails. No, I may not have anything to hide, but [that doesn't matter](http://www.ted.com/talks/glenn_greenwald_why_privacy_matters)!
 
 Originally I thought the best way to keep things secure, and out of the hands of any government body was to host it all myself. This came with a number of problems, mostly due to my lack of experience running anything like this, which lead to problems with my spam filter blocking legitimate emails, and any emails I did send ending up in their spam folder.
 
 After searching around for a while, I stumbled on _ProtonMail_, who claimed to be the most secure email host ever. One of their founders did a [TED talk](https://www.ted.com/talks/andy_yen_think_your_email_s_private_think_again), which sold me on the platform.
 
-ProtonMail use a combination of [open-source technologies](https://github.com/protonmail), a closed-access platform, and swiss data centers to protect emails better than anyone else! The only way you can access your emails is by using their custom apps for Android, iOS, and web. Whilst this is annoying, and means it isn't accessible through protocols such as IMAP and POP3, which would considerably lower the security.
+ProtonMail uses a combination of [open-source technologies](https://github.com/protonmail), a closed-access platform, and swiss data centers to protect emails better than anyone else! The only way you can access your emails is by using their custom apps for Android, iOS, and web. Whilst this is annoying, and means it isn't accessible through protocols such as IMAP and POP3, which would considerably lower the security.
 
-Back in April, I signed up to ProtonMail's _Plus_ tier, and switched all my domains to use their servers as an email provider. The setup process itself was incredibly simple, it walks you through every DNS record you needed to create, so all I had to do was copy-paste!
+Back in April, I signed up to ProtonMail's _Plus_ tier, and switched all my domains to use their servers as an email provider. The set up process itself was incredibly simple, it walks you through every DNS record you needed to create, so all I had to do was copy-paste!
 
 # Experience
 

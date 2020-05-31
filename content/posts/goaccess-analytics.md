@@ -3,7 +3,7 @@ title: Privacy-respecting analytics with GoAccess
 date: 2020-04-10
 ---
 
-Recently, I decided to try and put some analytics on my website. Would be nice to see what view number are like and what pages get the most traffic.
+Recently, I decided to put some analytics on my website. Would be nice to see what view number are like and what pages get the most traffic.
 
 Most people would just stick [Google Analytics](https://analytics.google.com/) on and be done with. But the privacy implications off that are huge and terrible, not to mention any self-respecting privacy extension would block it almost immediately.
 
@@ -15,7 +15,7 @@ A quick internet search shows a plethora of alternatives which respect privacy, 
 
 ## Enter GoAccess
 
-[GoAccess](https://goaccess.io/) is an amazing tool to find and analyse log files, and build a report. The report is just simple boring analytics, nothing complex, plain and simple! The reports can either be in the form of a terminal ncurses-line interface, or a HTML report. This HTML report is a single file, so there's no complex server required. The HTML report also supports live update through websockets.
+[GoAccess](https://goaccess.io/) is an amazing tool to find and analyse log files, and build a report. The report is just simple boring analytics, nothing complex, plain and simple! The reports can either be in the form of a terminal ncurses-line interface, or an HTML report. This HTML report is a single file, so there's no complex server required. The HTML report also supports live update through websockets.
 
 Unfortunately, this websocket functionality requires GoAccess to be exposed on a fixed port relative to the report, which wasn't ideal to my use case. It'd be yet another service to expose, ports to map, firewall rules to open, far too much hassle.
 

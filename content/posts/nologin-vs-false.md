@@ -5,7 +5,7 @@ date: 2020-03-05
 tags: [linux,security]
 ---
 
-When disabling a user account on a Linux box, it's good practice to also change the shell to something which, well, isn't a shell. The point of these shells is rather than presenting the user with a prompt to execute further commands , it returns a failure code, and log out the user.
+When disabling a user account on a Linux box, it is good practice to also change the shell to something which, well, isn't a shell. The point of these shells is rather than presenting the user with a prompt to execute further commands, it returns a failure code, and log out the user.
 
 If you look around, people recommend a couple different things to set as the user's shell: `/bin/nologin` and `/bin/false`. Not once have I seen someone say why to use either, nor what the differences are.
 
@@ -19,15 +19,15 @@ The source code itself is slightly misleading. `false` is actually an extension 
 
 The real logic actually lives there: [`true.c`](https://git.savannah.gnu.org/cgit/coreutils.git/tree/src/true.c)
 
-Both `true` and `false` are incredibly simple, even if you nothing about C. And as a result are incredibly fast.
+Both `true` and `false` are incredibly simple, even if you know nothing about C. And as a result are incredibly fast.
 
 ## `/bin/nologin`
 
-`nologin` is designed to do exactly what we want it to. It's specifically designedo to prevent login by being set as a user's shell.
+`nologin` is designed to do exactly what we want it to. It's specifically designed to prevent login by being set as a user's shell.
 
 `nologin` does a little more than false, but it's still very simple code to read: [`nologin.c`](https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git/tree/login-utils/nologin.c)
 
-Once executed, `nologin` will try and read `/etc/nologin.txt` to get a custom message to show the user. If it exists, it prints that and exits with code 1. If it doesn't exist, it shows the default message, and exits with code 1. This customization makes it much more user friendly, although because the file is global, one system can only have one configured message.
+Once executed, `nologin` will try to read `/etc/nologin.txt` to get a custom message to show the user. If it exists, it prints that and exits with code 1. If it doesn't exist, it shows the default message, and exits with code 1. This customization makes it much more user-friendly, although because the file is global, one system can only have one configured message.
 
 ## `rssh`
 
@@ -39,6 +39,6 @@ Once executed, `nologin` will try and read `/etc/nologin.txt` to get a custom me
 
 Realistically, it doesn't really matter. The point of a disabled prompt is to exit with a fail quickly, which both `false` and `nologin` do. So long as you block access, it really doesn't matter how.
 
-If you're hyper paranoid, use `false`, as it's simpler and smaller. But you'll want to pair that with a whole lot more lockdown if you want things that locked down. Alternatively, if you want it to be more obvivous what's going on, use `nologin`, as its name makes a bit more sense, and terminates with a message.
+If you're hyper paranoid, use `false`, as it's simpler and smaller. But you'll lot more than just use `false` if you want things that locked down. Alternatively, if you want it to be more obvious what's going on, use `nologin`, as its name makes a bit more sense, and terminates with a message.
 
 `rssh` solves a specific issue. It's best not to use it unless you need its features, but if you do need them, it's a valuable tool in the kit!

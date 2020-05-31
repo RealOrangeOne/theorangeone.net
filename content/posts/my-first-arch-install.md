@@ -10,13 +10,13 @@ Speaking to those who have installed arch before, they say _"oh, it's simple"_ a
 
 ## Gotchas
 
-So here's my one stop shop of the things which caught me up during the install and setup process. Whilst I did this install on my [XPS 15], it's all pretty generic.
+So here's my one stop shop of the things which caught me up during the install and set up process. Whilst I did this install on my XPS 15, it's all pretty generic.
 
 ### Use a wired network
 
 For someone who's never had to configure a network interface manually from the terminal, it's quite a scary thing to get a wireless network working. In contrast, a wired network _just worked_ (once the `dhcpcd` service is started), even using a sketchy type-c adapter.
 
-The wired network was both more stable, came up faster, and had a faster network speed than a wireless one, which is critical when doing an OS install. Network cutting out basically means restarting the `pacstrap` step again, which can be annoying on a 3MB/s connection.
+The wired network was both more stable, came up faster, and had a faster network speed than a wireless one, which is critical when doing an OS install. Network cutting out basically means restarting the `pacstrap` step again, which can be annoying on a 3 MB/s connection.
 
 ### Set your keyboard layout
 
@@ -39,7 +39,7 @@ Fortunately, if you *do* forget to set a password, you can just reboot into the 
 
 ### `base-devel`
 
-Most of the guides I saw for installing arch simply said to install the `base` package group. Originally I took this advise, thinking `base-devel` contained things I didn't need to do kernel-level development on the OS. I was wrong.
+Most of the guides I saw for installing arch simply said to install the `base` package group. Originally I took this advice, thinking `base-devel` contained things I didn't need to do kernel-level development on the OS. I was wrong.
 
 Whilst `base-devel` does contain many developer-related packages, such as `gcc` and `make`, it also contains some important system utilities, namely `sudo`, `file`, `which` and `grep`. You can see the full list of packages [here](https://www.archlinux.org/groups/x86_64/base-devel/), but changes are you want most of these, so just install it.
 

@@ -5,7 +5,7 @@ date: 2019-01-18
 
 # Cleaning up Facebook - Part 1
 
-Around 10 years ago, Facebook was everything. No matter your interests, you could find like minded people on Facebook to share your passion with. But that communication came at a price: your personal data. In recent years, we've realised to what extend Facebook was selling our data and generally invading our privacy. After the [Cambridge Analytics scandal](https://www.nytimes.com/2018/04/04/us/politics/cambridge-analytica-scandal-fallout.html) from March 2018 showed the extent Facebook was collecting our data, and mistreating it for financial gain.
+Around 10 years ago, Facebook was everything. No matter your interests, you could find like-minded people on Facebook to share your passion with. But that communication came at a price: your personal data. In recent years, we've realized to what extent Facebook was selling our data and generally invading our privacy. After the [Cambridge Analytics scandal](https://www.nytimes.com/2018/04/04/us/politics/cambridge-analytica-scandal-fallout.html) from March 2018 showed the extent Facebook was collecting our data, and mistreating it for financial gain.
 
 In my youth, I was a terrible Facebook user, posting random thoughts which came into my head, sharing loads of personal information and sharing weird memes (or what passed for memes in 2010, anyway). In recent years, as my passion for security and privacy thrived, I've attempted to undo the damage my younger self did.
 
@@ -13,9 +13,9 @@ It's now 2019, and my plan for this new year is to slowly go through my Facebook
 
 ## Techniques
 
-### Cleaning up posts - Facebook memories
+### Cleaning up posts: Facebook memories
 
-[Facebook memories](https://www.facebook.com/help/439014052921484/) shows you things you did on Facebook on this day day in previous years. Using this, you can go through things posted to your Facebook, and delete them, slowly but surely. Spending a minute or so a day over the course of a year to clean up Facebook really works! I've been doing this for just over two weeks, and I've already deleted 22 posts!
+[Facebook memories](https://www.facebook.com/help/439014052921484/) shows you things you did today on Facebook in previous years. Using this, you can go through things posted to your Facebook, and delete them, slowly but surely. Spending a minute or so a day over the course of a year to clean up Facebook really works! I've been doing this for just over two weeks, and I've already deleted 22 posts!
 
 ### Unliking pages
 
