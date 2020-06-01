@@ -1,14 +1,12 @@
 {{ if .Params.image }}
+  {{ .Scratch.Set "image" .Params.image }}
   {{ if hasPrefix .Params.image "resource:" }}
     {{ $resource := .Resources.GetMatch (replace .Params.image "resource:" "") }}
     {{ .Scratch.Set "image" ($resource.Fill "800x418").Permalink }}
-  {{ else }}
-    {{ .Scratch.Set "image" .Params.image}}
   {{ end }}
 {{ end }}
 
 {{ $image := .Scratch.Get "image" }}
-
 
 {{/* Twitter-specific tags */}}
 <meta name="twitter:dnt" content="on" />
@@ -22,7 +20,6 @@
   <meta name="twitter:image" content="{{ absURL $image }}" />
   <meta name="twitter:image:alt" content="{{ .Title | htmlUnescape }}" />
 {{ end }}
-
 
 {{/* OpenGraph tags*/}}
 <meta property="og:title" content="{{ .Title | htmlUnescape }}" />
