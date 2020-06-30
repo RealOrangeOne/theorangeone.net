@@ -4,8 +4,6 @@ date: 2020-05-28
 subtitle: How to store passwords **properly**!
 ---
 
-# How to store passwords
-
 Storing passwords is a pretty simple problem in software development, right? Wrong! Storing passwords _correctly_ is pretty complicated. With that said, it's very simple to just lean on work someone else has done, and the libraries available for your language of choice.
 
 In reality, you should never do it yourself. If whatever library or framework you're using can store passwords for you, use it. However, occasionally you'll need to write your own, whether for some specific requirements, or just a keen interest.
