@@ -2,6 +2,7 @@
 title: Fix steam under linux with an iGPU
 subtitle: Fixing "`libGL error failed to load driver i965`"
 image: http://stuffpoint.com/steam/image/91140-steam-steam-wallpaper-circles.png
+date: 2016-09-19
 tags: [linux]
 ---
 

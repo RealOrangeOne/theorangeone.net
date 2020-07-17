@@ -9,15 +9,11 @@
 
     {{ range .Pages.GroupByDate "2006-01" }}
       {{ $month := print .Key "-01" }}
-      {{ if (index .Pages 0).Date.IsZero }}
-        <hr class="my-5" />
-      {{ else }}
-        <h3 class="mt-5" id="{{ $month }}">
-          <a href="#{{ $month }}" class="no-color-change">
-            <time datetime="{{ $month }}" title='{{ dateFormat "January 2006" $month }}'>{{ dateFormat "2006-01" $month }}</time>
-          </a>
-        </h3>
-      {{ end }}
+      <h3 class="mt-5" id="{{ $month }}">
+        <a href="#{{ $month }}" class="no-color-change">
+          <time datetime="{{ $month }}" title='{{ dateFormat "January 2006" $month }}'>{{ dateFormat "2006-01" $month }}</time>
+        </a>
+      </h3>
       {{ range (sort .Pages "Date" "desc") }}
         {{ partial "list_item.html" . }}
       {{ end }}
