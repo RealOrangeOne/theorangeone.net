@@ -1,0 +1,13 @@
+{{ $destination := .Destination }}
+
+{{ if not (hasPrefix .Destination "http") }}
+  {{ $resource := .Page.Resources.GetMatch $destination }}
+  {{ $destination = ($resource.Resize "1000x").RelPermalink }}
+{{ end }}
+
+<figure class="text-center">
+  <img src="{{ $destination | safeURL }}" alt="{{ .Text | plainify }}" style="max-width: 90%;"/>
+  <figcaption class="text-center">
+    <small>{{ .Text | markdownify }}</small>
+  </figcaption>
+</figure>

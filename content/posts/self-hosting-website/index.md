@@ -5,9 +5,7 @@ date: 2020-04-11
 
 A few days ago, I was sharing a [blog post]({{< relref "wireguard-haproxy-gateway" >}}) to someone on the [self-hosted podcast](https://selfhosted.show/) discord, and they asked if I was self hosting my website. Unfortunately, and rather ironically, I had to answer no. I've been intending to move it over to my own server for a while, so this felt like as good of a push as any!
 
-{{< resource src="chat-log.png" >}}
-Chat log of me admitting shame
-{{< /resource >}}
+![chat-log.png](Chat log of me admitting shame)
 
 At the time, my website was hosted on [Netlify](https://www.netlify.com/). If you're looking to host a static site, and don't want to run your own servers, netlify is the right answer! The performance is great, the free plan is wonderful, and the fact content is distributed over their CDN is pretty nice!
 

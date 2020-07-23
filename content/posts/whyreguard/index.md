@@ -44,9 +44,7 @@ The Wireguard codebase is nice and small. Compared to OpenVPN it's practically m
 
 Wireguard is incredibly fast. Take these benchmarks from the Wireguard website, captured over a gigabit network.
 
-{{< resource src="charts.png" >}}
-Wireguard benchmarks. [src](https://www.Wireguard.com/performance/#results)
-{{< /resource >}}
+![Wireguard benchmarks. [src](https://www.Wireguard.com/performance/#results)](charts.png)
 
 Not only is Wireguard significantly faster than OpenVPN, and slightly faster still than IPSec, there's an important extra bit of detail. The Wireguard version was the only one not maxing out the CPU, meaning whatever's limiting Wireguard's score, it's not Wireguard itself, it's likely something far more fundamental like networking overhead, seeing as 1011mb is pretty close to one gigabit.
 

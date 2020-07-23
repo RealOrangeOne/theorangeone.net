@@ -25,9 +25,7 @@ These new features require some changes to the system, your database file, and b
 
 To migrate to KDBX4, you must change the _Encryption Algorithm_ to _"ChaCha20"_, and the _Key Derivation Function_ to _"Argon2"_. These can both be done in the _Encryption_ settings for your database (Database > Database Settings).
 
-{{< resource src="db-settings.png" >}}
-The settings I'm using for my database
-{{< /resource >}}
+![The settings I'm using for my database](db-settings.png)
 
 ### Mobile
 If you're planning to use your database on less-powerful hardware, such as a phone, you'll want to set the transformation rounds low. Argon2 is far more computationally intensive compared to PBKDF2. Using the 1-second benchmark button suggests using just 23 rounds. Where before I used 20,000 rounds of PBKDF2, I now use just five rounds of Argon2, to ensure it opens in reasonable time on my phone.
@@ -74,16 +72,12 @@ With the SSH now enabled, a new _"SSH Agent"_ tab appears in the entry edit view
 
 To pair the key with this entry, you should attach it from the _"Advanced"_ pane. You only need to attach the private key, as this often contains the related public key as part of the file. Then, from the _"SSH Agent"_ pane, select the attachment as the primary key. This should populate the _"Public key"_ section with the respective public key.
 
-{{< resource src="ssh-agent-settings.png" >}}
-The _"SSH Agent"_ pane showing an attached key
-{{< /resource >}}
+![The _"SSH Agent"_ pane showing an attached key](ssh-agent-settings.png)
 
 I've also set the key to be automatically added and removed from the agent, rather than manually. It'd be nice if this could be changed / defaulted globally.
 
 Now, the keys are accessibly to use for authentication.
 
-{{< resource src="ssh-agent-terminal.png" >}}
-You can validate they're accessible using `ssh-add -l`, which should show the fingerprint of the key.
-{{< /resource >}}
+![You can validate they're accessible using `ssh-add -l`, which should show the fingerprint of the key.](ssh-agent-terminal.png)
 
 These new features of KeePassXC are completely optional. However, KeePassHTTP and legacy key files are considered deprecated, and may be removed in upcoming releases. So, might as well update now!

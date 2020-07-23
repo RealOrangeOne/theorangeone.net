@@ -66,13 +66,9 @@ When getting started, and even long after that, the traefik dashboard is an incr
 
 If you're trying to configure a service, and not sure how Traefik is seeing, if it sees it at all. The web interfaces shows you everything.
 
-{{< resource src="traefik-router.png" >}}
-Traefik router configuration for this website
-{{< /resource >}}
+![Traefik router configuration for this website](traefik-router.png)
 
-{{< resource src="traefik-service.png" >}}
-Traefik service configuration for this website
-{{< /resource >}}
+![Traefik service configuration for this website](traefik-service.png)
 
 ## TLS
 

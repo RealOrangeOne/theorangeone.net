@@ -31,9 +31,7 @@ Last year, I was a fan of [Caret](https://caret.io/), and was eagerly awaiting v
 ## Quick files edits
 Nothing beats [Vim](http://www.vim.org/) for anything like this. I've switched my default editor for git commit messages, and have it installed on all my servers. I'm still unfamiliar with many of the advanced keyboard shortcuts, but I can navigate around a file just well enough for me.
 
-{{< resource src="editing-my-stack.png" >}}
-Editing my stack, in VSCode
-{{< /resource >}}
+![Editing my stack, in VSCode](editing-my-stack.png)
 
 # Shell
 My shell prompt is almost identical to last year. If it ain't broke, don't fix it! I've got plenty of aliases set up to make complex tasks easier, and the prompt looking just how I like it!
@@ -41,9 +39,7 @@ My shell prompt is almost identical to last year. If it ain't broke, don't fix i
 # Terminal Emulator
 My terminal environment has probably been one of the largest changes in the last 12 months. Previously, I was using [Terminator](https://gnometerminator.blogspot.co.uk/p/introduction.html). In the last year, I've moved from Terminator, to [Tilix](https://gnunn1.github.io/tilix-web/), and finally settled on [Alacritty](https://github.com/jwilm/alacritty), with [Tmux](https://github.com/tmux/tmux). Alacritty is fast, lightweight, and GPU-accelerated. Thanks to Tmux, I can keep the tiled experience in my terminal too. After a colleague started experimenting with Tmux, I gave it a shot, and it's great. My config is modified, like changing the prefix to `C-t`, and to make sure things still work as I'm used to.
 
-{{< resource src="terminal.png" >}}
-My shell prompt
-{{< /resource >}}
+![My shell prompt](terminal.png)
 
 # Browser
 [Firefox](https://www.mozilla.org/en-GB/firefox/new/), end of.
