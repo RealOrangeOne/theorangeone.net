@@ -37,6 +37,8 @@
 
     {{ partial "script_async.html" "js/app.js" }}
 
-    <script async defer data-domain="theorangeone.net" src="https://plausible.theorangeone.net/js/plausible.js"></script>
+    {{ if not .Site.IsServer }}
+      <script async defer data-domain="theorangeone.net" src="https://plausible.theorangeone.net/js/plausible.js"></script>
+    {{ end }}
   </body>
 </html>
