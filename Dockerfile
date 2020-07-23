@@ -3,7 +3,7 @@ FROM node:lts-slim as build
 
 ENV NODE_ENV production
 
-ENV HUGO_VERSION=0.68.3
+ENV HUGO_VERSION=0.73.0
 
 WORKDIR /app
 
