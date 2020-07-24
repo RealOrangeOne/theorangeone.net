@@ -61,16 +61,26 @@ $(document).ready(function() {
   });
 });
 
-$('#scroll-top').on('click', function(event) {
+function scrollTo(offset) {
   $('html, body')
     .stop()
     .animate(
       {
-        scrollTop: 0,
+        scrollTop: offset,
       },
       500
     );
+}
+
+$('#scroll-top').on('click', function(event) {
   event.preventDefault();
+  scrollTo(0);
+});
+
+$('#TableOfContents a').on('click', function(event) {
+  event.preventDefault();
+  const target = $($(this).attr('href'));
+  scrollTo(target.offset().top);
 });
 
 $('[data-clipboard-text]').on('click', function(event) {
