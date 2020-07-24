@@ -1,11 +1,17 @@
 <footer class="p-5 {{ if eq .IsHome false }}mt-5{{ end }}">
   <div class="container">
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <p>{{ partial "copyright.html" . }}</p>
         <p></p>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-4 text-center px-5">
+        <p>
+          <a id="scroll-top" class="float-left">To top</a>
+          <a id="scroll-elevator" class="float-right">To top, in <i>style</i></a>
+        </p>
+      </div>
+      <div class="col-sm-4">
         <h3 class="text-right">
           {{ range .Site.Data.social.footer_accounts }}
           {{ $account := index $.Site.Data.social.accounts . }}

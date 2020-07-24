@@ -1,4 +1,5 @@
 const Clipboard = require('clipboard');
+const Elevator = require('elevator.js');
 
 function waitFor(obj, property, callback) {
   // Wait for a property to exist on window before running callback
@@ -51,21 +52,24 @@ $(document).ready(function() {
       ele.removeClass('image');
     }
   });
+
+  new Elevator({
+    element: document.getElementById('scroll-elevator'),
+    mainAudio: '/audio/elevator.mp3',
+    endAudio: '/audio/ding.mp3',
+    preloadAudio: false,
+  });
 });
 
-$('.navbar-brand').on('click', function(event) {
-  if ($('html').scrollTop() > 100) {
-    $('html, body')
-      .stop()
-      .animate(
-        {
-          scrollTop: 0,
-        },
-        500
-      );
-  } else {
-    window.location = '/';
-  }
+$('#scroll-top').on('click', function(event) {
+  $('html, body')
+    .stop()
+    .animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    );
   event.preventDefault();
 });
 

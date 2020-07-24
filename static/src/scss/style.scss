@@ -265,3 +265,7 @@ a.no-color-change {
   border: 1px solid $body-color;
   background-color: $body-bg;
 }
+
+#scroll-top, #scroll-elevator {
+  cursor: n-resize;
+}
