@@ -4,6 +4,7 @@
 
 
 $body-color: $gray-300;
+$navbar-height: 40px;
 
 
 html, body {
@@ -108,7 +109,7 @@ table td {
 
 #index-header {
   width: 100%;
-  height: calc(100vh - #{$footer-height});
+  height: calc(100vh - #{$footer-height} - #{$navbar-height});
 }
 
 footer {
