@@ -5,8 +5,6 @@ image: https://hacktoberfest.digitalocean.com/assets/HF19_social-744d976f227e4af
 tags: [programming]
 ---
 
-# Hacktoberfest 2019
-
 This is year number three of my participation in [Hacktoberfest](https://hacktoberfest.digitalocean.com/), the initiative from DigitalOcean, and new this year, [Dev.to](https://dev.to/). In previous years, the objective was to submit five pull requests to an open-source project. This year, the number was reduced to four, for some reason.
 
 In [2018]({{< relref "hacktoberfest-2018" >}}), I submitted a total of 10 pull requests to open-source projects. This year, I did a few more than that.
