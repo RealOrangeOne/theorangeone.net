@@ -40,3 +40,17 @@ theme:
   - utils
 
 assetDir: static/build/
+
+related:
+  threshold: 1
+  includeNewer: true
+  toLower: true
+  indices:
+    - name: tags
+      weight: 1
+    - name: keywords
+      weight: 1
+    - name: title
+      weight: 1
+    - name: subtitle
+      weight: 1
