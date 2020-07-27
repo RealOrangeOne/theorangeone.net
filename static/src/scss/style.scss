@@ -270,3 +270,23 @@ a.no-color-change {
 #scroll-top, #scroll-elevator {
   cursor: n-resize;
 }
+
+.block-shortcode {
+  margin-bottom: $paragraph-margin-bottom;
+
+  & > code:first-child, & > code:last-child {
+    margin: 0;
+    padding: 0;
+    color: $body-color;
+  }
+
+  .inner {
+    margin: $paragraph-margin-bottom / 4 0;
+    padding-left: $spacer * 1.2;
+
+    p:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+}

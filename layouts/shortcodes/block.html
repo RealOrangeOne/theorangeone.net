@@ -1,0 +1,9 @@
+<div class="block-shortcode">
+  <code>&lt;{{ .Get 0 }}&gt;</code>
+
+  <div class="inner">
+    {{ .Inner | markdownify }}
+  </div>
+
+  <code>&lt;/{{ .Get 0 }}&gt;</code>
+</div>
