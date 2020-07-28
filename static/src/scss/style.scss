@@ -169,7 +169,7 @@ ul ul, ol ol {
 }
 
 pre.chroma {
-  margin: $spacer 0;
+  margin-bottom: $paragraph-margin-bottom;
   padding: $spacer;
 
   .highlight & {
@@ -179,7 +179,7 @@ pre.chroma {
 
 .content {
   h1, h2, h3, h4, h5, h6 {
-    margin-top: $spacer;
+    margin-top: $headings-margin-bottom * 2.2;
   }
 
   blockquote {
@@ -194,6 +194,10 @@ pre.chroma {
   iframe {
     width: 100%;
     height: 75vh;
+  }
+
+  figure {
+    margin-bottom: $paragraph-margin-bottom;
   }
 }
 
