@@ -5,7 +5,7 @@
       {{ if .Content }}
         <hr />
       {{ end }}
-      {{ range .Pages.ByTitle }}
+      {{ range .Pages.ByDate.Reverse }}
         {{ partial "list_item.html" . }}
       {{ end }}
     </div>
