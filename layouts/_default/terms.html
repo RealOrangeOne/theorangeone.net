@@ -6,7 +6,13 @@
         <hr />
       {{ end }}
       {{ range .Pages.ByTitle }}
-        {{ partial "list_item.html" . }}
+        <div class="media list-page-item mb-3">
+          <div class="media-body">
+            <a href="{{ .RelPermalink }}">
+              <h5 class="my-0"><code>#{{ .Title }}</code></h5>
+            </a>
+          </div>
+        </div>
       {{ end }}
     </div>
   </div>
