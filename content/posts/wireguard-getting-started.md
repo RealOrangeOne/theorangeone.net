@@ -1,6 +1,7 @@
 ---
 title: Getting started with Wireguard
 date: 2019-09-15
+tags: [security]
 ---
 
 Wireguard is taking the VPN world by storm, coming very close to the current champion OpenVPN in simple, small-scale deployments. It's just unfortunate few people know about it, and quite how incredible it is!

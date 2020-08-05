@@ -1,6 +1,7 @@
 ---
 title: Privacy-respecting analytics with GoAccess
 date: 2020-04-10
+tags: [self-hosting]
 ---
 
 Recently, I decided to put some analytics on my website. Would be nice to see what view number are like and what pages get the most traffic.

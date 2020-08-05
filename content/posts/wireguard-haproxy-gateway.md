@@ -2,6 +2,7 @@
 title: Wireguard HAProxy Gateway
 subtitle: Tunnelling traffic
 date: 2020-03-21
+tags: [self-hosting, security]
 ---
 
 Last year, I wrote [a post]({{< relref "vpn-gateway" >}}) on setting up OpenVPN-AS as a gateway to a private network. I ran this network setup for quite a while with a lot of success, exposing services on my home network to the public internet, securely.

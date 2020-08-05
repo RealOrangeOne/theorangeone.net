@@ -2,6 +2,7 @@
 title: KeePassXC 2.3 Migration Guide
 date: 2018-03-03
 image: resource:db-settings.png
+tags: [security]
 ---
 
 I've been using [KeePassXC](https://keepassxc.org/) since not long after it's initial split from [KeePassX](https://www.keepassx.org/) in late 2016. I've bounced around many password managers, but KeePassXC looked to fill all the boxes:

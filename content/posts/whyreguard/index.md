@@ -2,6 +2,7 @@
 title: Why Wireguard
 subtitle: ~~whyreguard~~
 date: 2020-03-06
+tags: [self-hosting, security]
 ---
 
 ## What is Wireguard?

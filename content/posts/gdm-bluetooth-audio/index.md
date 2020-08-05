@@ -3,6 +3,7 @@ title: Repairing GDM and Bluetooth Audio
 date: 2018-02-13
 image: resource:device-broken.png
 hide_header_image: true
+tags: [linux]
 ---
 
 Bluetooth audio is great! I've had a pair of Bluetooth headphones, [Sony MDR-XB950 BT](https://www.sony.com/electronics/headband-headphones/mdr-xb950bt), for around a year now, and the ability to listen to music without cables is amazing. But, I can only use the Bluetooth parts of this with my phone, because on Linux, it just sounds terrible. I've even gone so far as to buy and wire in a cable on my desk at work to enable me to fairly easily connect to my desk, without having to plug into the desktop every day.

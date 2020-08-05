@@ -3,6 +3,7 @@ title: My Stack - 2017 Edition
 date: 2017-12-31
 image: resource:editing-my-stack.png
 hide_header_image: true
+tags: [linux, arch]
 ---
 
 As a software engineer and perfectionist, I have my machines set up in a very specific way, so I can do my job properly and have everything just the way I like it. Thanks to my [dotfiles]({{< relref "projects/dotfiles" >}}), I have everything syncing up between machines, meaning the tools I use are configured correctly, the same, everywhere.

@@ -2,6 +2,7 @@
 title: Opening Port 22
 date: 2018-01-23
 subtitle: Using an SSH reverse tunnel to bypass a firewall
+tags: [security]
 ---
 
 My university has a development sever, which it uses to host our coursework without the need to set up a development environment locally. It also enables lecturers to mark our work in a controlled environment, without needing to spin up an environment, and run untrusted code on their machines, a security hole I'm more than likely to take advantage of!

@@ -3,6 +3,7 @@ title: Self hosting Plausible
 date: 2020-08-05
 image: resource:plausible-login.png
 subtitle: Simple and privacy-friendly alternative to Google Analytics
+tags: [self-hosting]
 ---
 
 I only recently talked about using [GoAccess]({{< relref "goaccess-analytics" >}}) as an analytics tool. Over the last couple months, I've been more interested in how many hits this website actually gets. GoAccess was a really simple solution which worked on log files and only captured the bits of information I really cared about: Page views.

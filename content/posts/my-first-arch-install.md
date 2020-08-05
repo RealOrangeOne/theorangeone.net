@@ -2,6 +2,7 @@
 title: My first arch install
 subtitle: With Antergos gone, it's time to install arch from scratch!
 date: 2019-05-29
+tags: [arch, linux]
 ---
 
 I've been an arch user for many years, and a linux user for even longer, but I've never installed arch from scratch. I was an Antergos user for many years, but after its demise, I needed an alternative. In a [previous post]({{< relref replacing-antergos >}}), I spoke of attempting to install vanilla arch from scratch on my laptop. As I write this, it works well, really well. Everything installed correctly, complete with EFI boot, encrypted partitions and sleep state.
