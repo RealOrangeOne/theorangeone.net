@@ -14,7 +14,7 @@
 {{ if .Params.subtitle }}
   <h5 class="my-3">{{ markdownify .Params.subtitle | emojify }}</h5>
 {{ end }}
-{{ if ne .Kind "section" }}
+{{ if .IsPage }}
   <p>{{ partial "content-details.html" . }}</p>
 {{ end }}
 {{ if .Content }}
