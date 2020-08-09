@@ -64,12 +64,13 @@ This is the point we diverge pretty hard from what's defined in both the `docker
 
 1. Start up everything except Plausible itself (`docker-compose up -d db clickhouse`)
 2. Enter the Plausible container (`docker-compose run plausible sh`)
-3. Run migrations (`/entrypoint.sh db migrate`)
-4. Define your user credentials as environment variables:
+3. Create databases (`/entrypoint.sh db createdb`)
+4. Run migrations (`/entrypoint.sh db migrate`)
+5. Define your user credentials as environment variables:
     - `$ADMIN_USER_NAME`
     - `$ADMIN_USER_EMAIL`
     - `$ADMIN_USER_PWD`
-5. Create your admin user (`/entrypoint.sh db init-admin`)
+6. Create your admin user (`/entrypoint.sh db init-admin`)
 
 These steps only need to be done once, during application setup. After this, the command must be changed to automatically run migrations on start up. This ensures the database schema and running application are always in sync, and are updated with the container. This can be done by changing the `docker-compose.yml` [like so](https://github.com/RealOrangeOne/infrastructure/commit/384a07b513e42942625df07184ae502957d41013).
 
