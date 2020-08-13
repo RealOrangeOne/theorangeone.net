@@ -2,7 +2,7 @@
 
 {{ if not (hasPrefix .Destination "http") }}
   {{ $resource := .Page.Resources.GetMatch $destination }}
-  {{ $destination = ($resource.Resize "1000x").RelPermalink }}
+  {{ $destination = ($resource.Resize "1500x").RelPermalink }}
 {{ end }}
 
 <figure class="text-center">
