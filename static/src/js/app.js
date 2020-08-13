@@ -77,10 +77,12 @@ $('#scroll-top').on('click', function(event) {
   scrollTo(0);
 });
 
-$('#TableOfContents a').on('click', function(event) {
+$('a[href^="#"] ').on('click', function(event) {
   event.preventDefault();
   const target = $($(this).attr('href'));
-  scrollTo(target.offset().top);
+  if (target.length) {
+    scrollTo(target.offset().top);
+  }
 });
 
 $('[data-clipboard-text]').on('click', function(event) {
