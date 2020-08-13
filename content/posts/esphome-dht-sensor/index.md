@@ -2,7 +2,7 @@
 title: HomeAssistant Temperature & Humidity Sensor with ESPHome
 date: 2020-08-12
 tags: [self-hosting]
-image: resource:ha-dashboard.png
+image: resource:sensor-circuit.jpg
 ---
 
 The majority of England (where I live) is being hit by [quite a heatwave](https://www.dailymail.co.uk/news/article-8610963/UK-weather-Britain-swelter-TEN-day-heatwave.html). It's hot here, like really hot!
@@ -50,6 +50,8 @@ Constructing your sensor is very simple and doesn't require any soldering.
 The first step is to identify the right pins on the DHT sensor. There are 3 pins: ground, power and data. When connecting up your sensor, you'll need to ensure the ground pin is connected to ground, 3.3V is connected to a 3.3v output, and data is connected to one of the data pins.
 
 The pins labelled on the board are not necessarily all accessible to ESPHome, nor are the numbers correct. Be sure to check the [documentation](https://esphome.io/devices/nodemcu_esp8266.html) for the specific board you're using, and connect the pins correctly. In my case, I connected the data line to the pin labelled `D1`.
+
+![My NodeMCU with connected DHT11](sensor-circuit.jpg)
 
 ### Create firmware
 
