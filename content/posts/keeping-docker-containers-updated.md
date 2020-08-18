@@ -2,7 +2,7 @@
 title: Keeping your Docker containers up to date
 subtitle: Updating your applications with minimal effort
 date: 2020-07-27
-tags: [self-hosting]
+tags: [self-hosting, containers]
 ---
 
 Last year, I switched all of my hosting from arbitrarily installed packages to Docker. This made installing and configuring incredibly simple, but updating a little less defined. Whilst Docker itself is updated through the system package manager (probably), the containers themselves aren't.
