@@ -3,6 +3,7 @@ title: Container processes shouldn't run as root!
 subtitle: \"What's wrong with containers running as root?\"
 date: 2020-08-18
 tags: [self-hosting, security]
+image: https://www.threatstack.com/wp-content/uploads/2017/06/docker-cloud-twitter-card.png
 ---
 
 Docker containers, and containers as a whole, are really just a regular program wrapped in some extra protections provided by the kernel (namely `cgroups` etc) to create isolation, and other interesting features.
