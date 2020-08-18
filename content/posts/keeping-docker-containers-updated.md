@@ -17,7 +17,7 @@ So, how can we deal with this?
 
 Well, the obvious way to deal with this is to just keep on top of your tags. When a new version comes out, update the tag in your `docker-compose.yml`, `docker-compose pull`, and then restart the container (`docker-compose down && docker-compose up -d`). This is simple, and robust, and means nothing will update without you knowing.
 
-The downside is that this is obviously quite a lot of work. There are projects which [expose RSS feeds from docker hub](https://docker-hub-rss.now.sh/), but you've still got to go manually update each container and issue a `docker-compose pull`etc.
+The downside is that this is obviously quite a lot of work. There are projects which [expose RSS feeds from docker hub](https://docker-hub-rss.theconnman.vercel.app/), but you've still got to go manually update each container and issue a `docker-compose pull`etc.
 
 Here are some examples of the changes needed:
 
@@ -45,7 +45,7 @@ So, here's a workflow:
 
 1. Pin your containers as you need them, as loosely as you're comfortable with. If you don't actually care what version it's using, and are confident it can update itself, pin `latest`. If you need a specific patch version for _reasons_, pin that. If you're unsure, pin the latest major version, as anything below it shouldn't have breaking changes, and should be backwards compatible.
 2. Use `watchtower` to keep these pins up to date. This ensures `latest` always means `latest`, and that specific pins always reflect upstream, which makes rebuilding easier.
-3. Have some way of knowing when new versions are released. Whether that's via [DockerHub RSS](https://docker-hub-rss.now.sh/), [GitHub releases](https://github.community/t/rss-feeds-for-github-projects/292), or something else, it doesn't matter.
+3. Have some way of knowing when new versions are released. Whether that's via [DockerHub RSS](https://docker-hub-rss.theconnman.vercel.app/), [GitHub releases](https://github.community/t/rss-feeds-for-github-projects/292), or something else, it doesn't matter.
 4. When new versions are released, bump the pinned version in your `docker-compose.yml` (or alike), and re-deploy (`pull`, `down`, `up -d`).
 
 With this, you'll have a container setup which reasonably matches the package management workflow you're used to, with a couple niceties around auto updating. Only the packages you want to automatically update will automatically update, and the rest you can update when you're notified of updates.
