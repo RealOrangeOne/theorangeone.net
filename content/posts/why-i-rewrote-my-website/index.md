@@ -2,7 +2,6 @@
 title: Why I rewrote my website
 date: 2017-11-13
 image: resource:new-site-screenshot.png
-tags: [self-hosting]
 ---
 
 I've had a website for around four years now, starting with a python CGI-based site hosted at [1&1](https://www.1and1.co.uk/), and evolving into its current form, powered by [Hugo](https://gohugo.io/).
