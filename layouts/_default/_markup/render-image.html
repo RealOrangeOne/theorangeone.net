@@ -6,7 +6,9 @@
 {{ end }}
 
 <figure class="text-center">
-  <img src="{{ $destination | safeURL }}" alt="{{ .Text | plainify }}" style="max-width: 90%;"/>
+  <a href="{{ $destination | safeURL }}" target="_blank">
+    <img src="{{ $destination | safeURL }}" alt="{{ .Text | plainify }}" style="max-width: 90%;"/>
+  </a>
   <figcaption class="text-center">
     <small>{{ .Text | markdownify }}</small>
   </figcaption>
