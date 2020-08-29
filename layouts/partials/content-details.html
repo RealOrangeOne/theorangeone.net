@@ -4,7 +4,7 @@
 
 {{ if not .Parent.IsHome }}
   {{ if gt .ReadingTime 2 }}
-    <span class="pr-2"><i class="far fa-clock pr-1"></i>{{ .ReadingTime }} minutes</span>
+    <span class="pr-2" title='{{ .WordCount }} words'><i class="far fa-clock pr-1"></i>{{ .ReadingTime }} minutes</span>
   {{ end }}
 {{ end }}
 
