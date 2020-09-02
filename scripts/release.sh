@@ -8,3 +8,7 @@ source ./scripts/common.sh
 env > $BASEDIR/.env
 
 ./scripts/build.sh --minify
+
+gzipper compress -e gz --verbose $OUTPUT_DIR $OUTPUT_DIR
+
+rm -f $BASEDIR/.env
