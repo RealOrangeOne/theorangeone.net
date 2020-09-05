@@ -68,7 +68,7 @@ accounts:
 
   hacker-news:
     name: Hacker News
-    username: theorangeone
+    username: TheOrangeOne
     link: https://news.ycombinator.com/user?id=theorangeone
     icon: fab fa-hacker-news-square
 
@@ -89,6 +89,24 @@ accounts:
     username: TheOrangeOne
     link: https://git.theorangeone.net
     icon: fab fa-gitlab
+
+  pypi:
+    name: PyPI
+    username: TheOrangeOne
+    link: https://pypi.org/user/TheOrangeOne/
+    icon: fab fa-python
+
+  discord:
+    name: Discord
+    username: TheOrangeOne#6595
+    link: https://discord.com/
+    icon: fab fa-discord
+
+  dockerhub:
+    name: Docker Hub
+    username: TheOrangeOne
+    link: https://hub.docker.com/u/theorangeone
+    icon: fab fa-docker
 
 footer_accounts:
   - github
