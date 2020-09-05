@@ -48,7 +48,7 @@ services:
 
 Yes, quite well actually! I've got an incredibly simple analytics tool which gives just the information I need. It's performant, it's simple, and has almost 0 runtime overhead.
 
-You can see it in action here: https://theorangeone.net/stats/.
+You can see it in action here:  ~~theorangeone.net/stats.~~
 
 ## Issues
 
@@ -57,3 +57,5 @@ GoAccess isn't the perfect tool for everyone. Because it's so simple, it's not e
 I've also heard GoAccess can get slow to generate with incredibly large sites, which whilst unlikely to affect me, could happen to someone!
 
 Besides that, this was a great success!
+
+Update August 2020: I recently decided to deploy a fully-featured yet still private analytics solution using [Plausible]({{< relref "self-hosting-plausible" >}}).

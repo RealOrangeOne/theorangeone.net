@@ -21,8 +21,6 @@ RUN ./scripts/release.sh
 # Production run
 FROM nginx:stable-alpine
 
-RUN rm /var/log/nginx/access.log
-
 COPY nginx.conf /etc/nginx/nginx.conf
 
 COPY --from=build /app/public/ /usr/share/nginx/html
