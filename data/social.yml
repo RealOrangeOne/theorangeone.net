@@ -93,12 +93,11 @@ accounts:
 footer_accounts:
   - github
   - twitter
+  - self-hosted-gitlab
   - reddit
-  - flickr
-  - bitbucket
-  - keybase
+  - hacker-news
 
 navbar_accounts:
   - github
   - twitter
-  - keybase
+  - self-hosted-gitlab
