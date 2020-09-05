@@ -78,6 +78,18 @@ accounts:
     link: https://open.spotify.com/user/theorangeone97
     icon: fab fa-spotify
 
+  gitlab:
+    name: GitLab
+    username: RealOrangeOne
+    link: https://gitlab.com/RealOrangeOne
+    icon: fab fa-gitlab
+
+  self-hosted-gitlab:
+    name: Self Hosted GitLab
+    username: TheOrangeOne
+    link: https://git.theorangeone.net
+    icon: fab fa-gitlab
+
 footer_accounts:
   - github
   - twitter
