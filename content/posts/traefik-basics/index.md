@@ -1,7 +1,7 @@
 ---
 title: Traefik Basics
 date: 2020-05-01
-image: https://docs.traefik.io/assets/img/traefik-architecture.png
+image: https://docs.traefik.io/assets/img/traefik-concepts-2.png
 tags: [self-hosting, containers, traefik]
 ---
 
