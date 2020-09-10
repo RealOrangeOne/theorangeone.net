@@ -2,7 +2,7 @@
 title: Observing Traefik with InfluxDB
 date: 2020-09-10
 image: resource:website-stats.png
-tags: [containers, self-hosting]
+tags: [containers, self-hosting, traefik]
 ---
 
 Traefik's dashboard is a great tool to diagnose routing issues, and check services are being detected correctly, but it can't do much more than that. It doesn't show any metrics. Instead, it relies (arguably correctly) on external monitoring tools for metrics.

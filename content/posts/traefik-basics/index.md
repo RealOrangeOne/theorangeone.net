@@ -2,7 +2,7 @@
 title: Traefik Basics
 date: 2020-05-01
 image: https://docs.traefik.io/assets/img/traefik-architecture.png
-tags: [self-hosting, containers]
+tags: [self-hosting, containers, traefik]
 ---
 
 [Traefik](https://docs.traefik.io/) is a cloud native reverse proxy, which is basically a fancy way of saying it's a reverse proxy with some fancy features. Specifically it has fancy features around auto-discovery, and deep integration with technologies like Docker and Kubernetes.
