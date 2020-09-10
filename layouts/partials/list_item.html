@@ -5,7 +5,7 @@
         {{ .Scratch.Set "image" .Params.image }}
         {{ if hasPrefix .Params.image "resource:" }}
           {{ $resource := .Resources.GetMatch (replace .Params.image "resource:" "") }}
-          {{ .Scratch.Set "image" ($resource.Resize "300x").RelPermalink }}
+          {{ .Scratch.Set "image" ($resource.Resize "500x").RelPermalink }}
         {{ end }}
         <div class="image" data-image='{{ .Scratch.Get "image" }}'></div>
       </a>
@@ -19,4 +19,3 @@
     <p>{{ partial "summary.html" . }}</p>
   </div>
 </div>
-
