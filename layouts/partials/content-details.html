@@ -9,7 +9,9 @@
 {{ end }}
 
 {{ if .Params.tags }}
-  <i class="fas fa-tags small"></i>
+  <a href="{{ ref . "/tags" }}" class="no-color-change mr-1">
+    <i class="fas fa-tags small"></i>
+  </a>
   {{ range $i, $e := .Params.tags }}
     <a href="/tags/{{ urlize . }}" class="mr-1">#{{ . }}</a>
   {{ end }}
