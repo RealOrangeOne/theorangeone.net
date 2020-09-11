@@ -3,9 +3,13 @@
   <div class="container">
     {{ partial "content.html" . }}
 
-    {{ with .OutputFormats.Get "rss" }}
-      <p class="float-right"><a href="{{ .Permalink }}"><i class="fas fa-rss"></i> Subscribe</a></p>
-    {{ end }}
+    <p class="float-right">
+      <a href="{{ ref . "/tags" }}" title="All Tags"><i class="fas fa-tag ml-3"></i></a>
+
+      {{ with .OutputFormats.Get "rss" }}
+        <a href="{{ .Permalink }}" title="Subscribe"><i class="fas fa-rss ml-3"></i></a>
+      {{ end }}
+    </p>
 
     {{ range .Pages.GroupByDate "2006-01" }}
       {{ $month := print .Key "-01" }}
