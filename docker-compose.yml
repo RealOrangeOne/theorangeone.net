@@ -4,7 +4,6 @@ services:
   website:
     build:
       context: .
-    env_file: .env
     volumes:
       - "./public:/usr/share/nginx/html:ro"
       - "./nginx.conf:/etc/nginx/nginx.conf:ro"
