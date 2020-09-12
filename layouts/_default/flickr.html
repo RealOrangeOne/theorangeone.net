@@ -4,9 +4,9 @@
     {{ partial "content.html" . }}
 
     {{ $id := .Params.photoset }}
-    {{ $query := querify "format" "json" "nojsoncallback" "1" "api_key" .Site.Data.flickr.api_key  }}
+    {{ $query := querify "format" "json" "nojsoncallback" "1" "api_key" (getenv "FLICKR_API_KEY") }}
 
-    {{ $method := querify "method" "flickr.photosets.getPhotos" "user_id" .Site.Data.flickr.user_id "photoset_id" $id "extras" "url_k,url_q" }}
+    {{ $method := querify "method" "flickr.photosets.getPhotos" "user_id" (getenv "FLICKR_USER_ID") "photoset_id" $id "extras" "url_k,url_q" }}
     {{ $photoset := (getJSON "https://api.flickr.com/services/rest/?" $query "&" $method).photoset }}
 
     <div id="light-gallery" class="row">

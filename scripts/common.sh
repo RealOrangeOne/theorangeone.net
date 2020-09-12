@@ -1,4 +1,7 @@
 BASEDIR=$PWD
+
+export $(cat $BASEDIR/.env | xargs)
+
 NODE_BIN=$BASEDIR/node_modules/.bin
 
 STATIC_SRC=$BASEDIR/static/src

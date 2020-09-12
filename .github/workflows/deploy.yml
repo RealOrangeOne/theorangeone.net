@@ -5,6 +5,10 @@ on:
     branches:
       - master
 
+env:
+  FLICKR_API_KEY: ${{ secrets.FLICKR_API_KEY }}
+  FLICKR_USER_ID: ${{ secrets.FLICKR_USER_ID }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,8 +18,11 @@ jobs:
         with:
           submodules: true
 
+      - name: Dump environment
+        run: env >> .env
+
       - name: Build production container
-        run: docker build --tag docker.pkg.github.com/${GITHUB_REPOSITORY,,}/theorangeone.net:latest .
+        run: docker build --tag docker.pkg.github.com/${GITHUB_REPOSITORY,,}/theorangeone.net:latest --env-file .env .
 
       - name: Log into GitHub Docker Registry
         run: echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com -u ${GITHUB_REPOSITORY%/*} --password-stdin
