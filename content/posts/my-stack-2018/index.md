@@ -10,7 +10,7 @@ Last year, I wrote [_My stack 2017_]({{< relref "posts/my-stack-2017" >}}), and 
 
 # OS
 
-I'm still an [Antergos](https://antergos.com/) user, and have no sign of changing. I've had a few instabilities, but the [AUR](https://aur.archlinux.org/) and [Arch Wiki](https://wiki.archlinux.org/) are just fantastic!
+I'm still an [Antergos](https://web.archive.org/web/20190903082315/https://antergos.com/) user, and have no sign of changing. I've had a few instabilities, but the [AUR](https://aur.archlinux.org/) and [Arch Wiki](https://wiki.archlinux.org/) are just fantastic!
 
 ## Desktop
 

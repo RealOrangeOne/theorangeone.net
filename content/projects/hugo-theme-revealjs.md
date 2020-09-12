@@ -22,7 +22,7 @@ If we combine revealjs and a static site generator, we get many benefits. Beside
 ## `hugo-theme-revealjs`
 `hugo-theme-revealjs` is a theme for Hugo which combines the two: a powerful static site generator, with a powerful presentation framework. The theme makes writing content east, especially for those who like content organized. Each slide is a separate markdown file, which can be grouped into sections to form the vertical slide groups Reveal is famous for. All settings and configuration options for Reveal are accessible through this theme, in an attempt to make it versatile and usable by all people.
 
-The source for the theme is on [GitHub](https://github.com/RealOrangeOne/hugo-theme-revealjs), and can be [installed](https://gohugo.io/themes/installing-and-using-themes/) as if it were any other theme.
+The source for the theme is on [GitHub](https://github.com/RealOrangeOne/hugo-theme-revealjs), and can be [installed](https://gohugo.io/hugo-modules/theme-components/) as if it were any other theme.
 
 {{< iframe src="https://hugo-theme-revealjs.netlify.com/" >}}
 Example presentation, which shows off some features of the theme.

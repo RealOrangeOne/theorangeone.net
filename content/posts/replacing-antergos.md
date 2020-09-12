@@ -6,7 +6,7 @@ image: https://antergos.com/wp-content/uploads/2014/09/antergos-wallpaper.png
 tags: [arch]
 ---
 
-I've been an [Antergos](https://antergos.com/) user for almost three years, and I love it! It's like Arch, but with a simple installation process, and yields a near-pure Arch install, unlike Arch derivatives like [Manjaro](https://manjaro.org/). Unfortunately, on 21st May 2019, the [Antergos project ended](https://antergos.com/blog/antergos-linux-project-ends/). Those behind the project were unable to commit the time the project needed and deserved. I for one want to thank them for the effort they have put in!
+I've been an [Antergos](https://web.archive.org/web/20190903082315/https://antergos.com/) user for almost three years, and I love it! It's like Arch, but with a simple installation process, and yields a near-pure Arch install, unlike Arch derivatives like [Manjaro](https://manjaro.org/). Unfortunately, on 21st May 2019, the [Antergos project ended](https://web.archive.org/web/20190816093432/https://antergos.com/blog/antergos-linux-project-ends/). Those behind the project were unable to commit the time the project needed and deserved. I for one want to thank them for the effort they have put in!
 
 The issue now is what to do with my machines which run Antergos (of which there are currently 5). Technically, I don't need to do anything, the Antergos team state that because existing installations are _basically_ vanilla arch, there's no need to panic and wipe:
 

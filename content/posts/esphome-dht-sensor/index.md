@@ -20,7 +20,7 @@ To build the sensor, you'll need a few things:
 
 And a few components:
 
-- [ESPHome-compatible](https://esphome.io/#devices) board (I'm using a NodeMCU from [amazon.co.uk](https://www.amazon.co.uk/MakerHawk-Internet-Development-Wireless-Micropython/dp/B07M8Q38LK))
+- [ESPHome-compatible](https://esphome.io/#devices) board (I'm using a NodeMCU from [amazon.co.uk](https://www.amazon.co.uk/s?k=nodemcu))
 - DHT11 (DHT22 is significantly nicer, but more expensive)
 - Jumper cables (often come with the DHT)
 

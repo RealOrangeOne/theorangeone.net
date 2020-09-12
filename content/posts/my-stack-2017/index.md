@@ -9,7 +9,7 @@ tags: [linux, arch]
 As a software engineer and perfectionist, I have my machines set up in a very specific way, so I can do my job properly and have everything just the way I like it. Thanks to my [dotfiles]({{< relref "projects/dotfiles" >}}), I have everything syncing up between machines, meaning the tools I use are configured correctly, the same, everywhere.
 
 # OS
-My current distro of choice is [Arch](https://www.archlinux.org/), specifically [Antergos](https://antergos.com/). My main reason for choosing arch is the [AUR](https://aur.archlinux.org/). Almost every package I can think of is packaged there, often by the community. It's great to be able to install things through one method and have everything update in a single command. Antergos is also far easier to install than raw arch, and has little to no bloat that comes with it.
+My current distro of choice is [Arch](https://www.archlinux.org/), specifically [Antergos](https://web.archive.org/web/20190903082315/https://antergos.com/). My main reason for choosing arch is the [AUR](https://aur.archlinux.org/). Almost every package I can think of is packaged there, often by the community. It's great to be able to install things through one method and have everything update in a single command. Antergos is also far easier to install than raw arch, and has little to no bloat that comes with it.
 
 ## Desktop
 My current desktop of choice is [i3](https://i3wm.org/). After spending a lot of time using [Gnome](https://www.gnome.org/), and always having windows either full screen or split, I tried out i3 in an attempt to use fewer resources, and it's amazing. Admittedly i3 doesn't look quite as nice, but it's far cleaner, and structured, and that's enough for me!
@@ -31,7 +31,7 @@ Whilst I use [ZSH](https://www.zsh.org/), I'm not a fan of the [super fancy them
 
 ![My shell prompt](shell-prompt.png)
 
-I do have a fair number of plugins and aliases, thanks to both [oh my ZSH](http://ohmyz.sh/) and [my custom config](https://github.com/RealOrangeOne/dotfiles/tree/master/modules/shell/files).
+I do have a fair number of plugins and aliases, thanks to both [oh my ZSH](http://ohmyz.sh/) and [my custom config](https://github.com/RealOrangeOne/dotfiles/tree/master/files/zshrc).
 
 ## Terminal Emulator
 [Terminator](https://gnometerminator.blogspot.co.uk/p/introduction.html) is a really fast, simple terminal emulator, with features like pane splitting, resizing, and many colour customizations. I do plan to move over to [Alacritty](https://github.com/jwilm/alacritty) just as soon as it gets [scrollback support](https://github.com/jwilm/alacritty/pull/657), because it renders things a lot nicer, and uses far fewer resources. I'm also very partial to things written in rust!
