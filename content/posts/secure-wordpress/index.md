@@ -2,6 +2,7 @@
 title: Creating a fast, secure WordPress site
 date: 2018-10-08
 tags: [security, self-hosting]
+image: unsplash:3hBH-ZuvppU
 ---
 
 In terms of security, [WordPress](https://wordpress.org), and PHP in general for that matter, have become a bit of a [joke](https://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/). If you want a site to be secure, people tend to steer clear of WordPress and PHP. That being said, nothing stands even close to WordPress in plugin support, community size, and documentation. As much as we may not like it, I think WordPress isn't going anywhere.

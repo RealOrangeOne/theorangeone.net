@@ -2,6 +2,7 @@
 title: macOS - A Linux Guys Perspective
 date: 2019-10-01
 tags: [linux]
+image: unsplash:K_aNRqkOTH0
 ---
 
 For the last four years, I've been spending every working day off a Dell Optiplex. With an after-market SSD upgrade, and a little extra memory, it makes a pretty good work machine. When it comes to needing to work away from my desk, it's a little annoying having only a desktop. For the last 10 months, I've been asking for a laptop which, because _reasons_, has to be a macbook.

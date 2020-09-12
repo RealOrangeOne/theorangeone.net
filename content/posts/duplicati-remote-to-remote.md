@@ -3,6 +3,7 @@ title: Remote to remote backups with Duplicati
 subtitle: "Duplicati + Rclone = :heart:"
 date: 2020-05-22
 tags: [self-hosting]
+image: unsplash:hL8slYnc-bM
 ---
 
 [Duplicati](https://www.duplicati.com/) is one of my favourite backup system. It's pretty fast, supports numerous backup sources, and has a nice configuration web UI. Unfortunately however, it can't be used to back up remote files. In fact, I can't find a nice fully-features backup solution which does do this, which sucks.

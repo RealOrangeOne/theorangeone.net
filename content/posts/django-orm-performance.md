@@ -2,6 +2,7 @@
 title: Django ORM Performance
 date: 2020-06-07
 tags: [programming, django]
+image: unsplash:iR8m2RRo-z4
 ---
 
 Django already does some pretty incredible things when it comes to performance, especially in the ORM layer. The lazy loading, fluent interface for querying means it'll only fetch the data you need, when you need it. But it can't handle everything for you, and often needs some help to work out what you're doing, and what exactly it can optimize. Performance isn't all about moving your computation into the database from python-land, or reducing the number of queries, but more often than not, it really helps.

@@ -1,6 +1,7 @@
 ---
 title: Nextcloud Sane Text Editor
 date: 2020-04-19
+image: unsplash:npxXWgQ33ZQ
 ---
 
 As a part of Nextcloud 17, Nextcloud released [Text](https://apps.nextcloud.com/apps/text), a fancy new WYSIWYG editor for markdown with support for collaboration.

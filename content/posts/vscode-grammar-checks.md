@@ -2,6 +2,7 @@
 title: VSCode Grammar Checks
 subtitle: Improving grammar when writing in VSCode
 date: 2020-05-31
+image: unsplash:1UDjq8s8cy0
 ---
 
 I write quite a lot. Whether it be coursework, blog posts, or any other random thing. Most of my time is spent in either VSCode or QOwnNotes, neither of which have any kind of spelling and grammar checking. It's rare I'll actually go back over something and fully check its grammar, unless there's a very obvious issue or typo. What I really want is something automated to do it for me.

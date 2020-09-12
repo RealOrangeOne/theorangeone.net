@@ -2,6 +2,7 @@
 title: Dealing with spoilers in a professional manner
 date: 2019-04-28
 subtitle: Just don't be a dick - It's not that difficult!
+image: unsplash:23LET4Hxj_U
 ---
 
 Spoiling films is something which has plagued people since forever. If something dramatic happens, of course people don't want to find out by just being told, they want to watch and experience it for themselves. Unfortunately, it seems many people take pride and pleasure in spoiling films for people.

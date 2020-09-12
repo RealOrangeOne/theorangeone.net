@@ -1,6 +1,7 @@
 ---
 title: Facebook cleanup - Part 1
 date: 2019-01-18
+image: unsplash:AGqzy-Uj3s4
 ---
 
 # Cleaning up Facebook - Part 1

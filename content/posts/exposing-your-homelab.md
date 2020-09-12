@@ -3,6 +3,7 @@ title: Exposing your Homelab
 subtitle: How to **securely** expose your homelab to the internet
 date: 2020-04-29
 tags: [self-hosting]
+image: unsplash:SwVkmowt7qA
 ---
 
 In the current lockdown situation, a lot of people are starting to eye up that old desktop machine, or Raspberry Pi they bought for a project and just left on a shelf, and thinking of putting it to use, as a server!
