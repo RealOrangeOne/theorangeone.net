@@ -3,6 +3,11 @@
   {{ if hasPrefix .Params.image "resource:" }}
     {{ $resource := .Resources.GetMatch (replace .Params.image "resource:" "") }}
     {{ .Scratch.Set "image" ($resource.Fill "800x418").Permalink }}
+  {{ else if hasPrefix .Params.image "unsplash:" }}
+    {{ $unsplash_id := replace .Params.image "unsplash:" "" }}
+    {{ $query := querify "client_id" (getenv "UNSPLASH_ACCESS_KEY") }}
+    {{ $unsplash_data := (getJSON "https://api.unsplash.com/photos/" $unsplash_id "?" $query )}}
+    {{ .Scratch.Set "image" $unsplash_data.urls.small }}
   {{ end }}
 {{ end }}
 

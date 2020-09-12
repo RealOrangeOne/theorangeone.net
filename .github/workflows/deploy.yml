@@ -8,6 +8,7 @@ on:
 env:
   FLICKR_API_KEY: ${{ secrets.FLICKR_API_KEY }}
   FLICKR_USER_ID: ${{ secrets.FLICKR_USER_ID }}
+  UNSPLASH_API_KEY: ${{ secrets.UNSPLASH_API_KEY }}
 
 jobs:
   build:

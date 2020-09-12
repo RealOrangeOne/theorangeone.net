@@ -2,6 +2,7 @@
 title: Installing Arch from scratch on Kimsufi
 date: 2020-08-29
 tags: [arch, linux, self-hosting]
+image: unsplash:Tjbk79TARiE
 ---
 
 Recently, I bought myself a new server from [Kimsufi](https://kimsufi.com/), to function as an off-site backup server. And after fighting with both their management interface and customer services, I finally got it booted. Kimsufi have a respectable list of OS options, however not especially recent. The latest version of Ubuntu they have is 16.04, and the Arch installer is based on an image from 2018.
