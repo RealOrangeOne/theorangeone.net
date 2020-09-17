@@ -9,7 +9,7 @@ I've been using [Traefik](https://containo.us/traefik/) for a while now, and I'v
 
 Traefik has a bit of an image problem, mostly that it's far too complex, fiddly and _magic_ for the lowly self-hoster. This image problem is something I've been working on trying to change for months. To help do that, here's a complete getting stated guide for Traefik, to complement and extend my previous [Traefik basics]({{<relref "traefik-basics" >}}) post. It's intentionally verbose, to explain some of the _magic_ going on.
 
-## Fundementals
+## Fundamentals
 
 Traefik has three fundamental concepts: Entrypoints, Routers and Services.
 
@@ -17,7 +17,7 @@ Entrypoints define which ports and interfaces Traefik listens on for traffic. Ge
 
 Routers are what listen to entrypoints, and match domains and paths to applications. A route has a rule which identifies it, a service, and a set of middleware.
 
-Services are your applications to route traffic to. A service may be a single container, or multiple in a load-balancing setup. Services can be either HTTP, TCP or UDP.
+Services are your applications to route traffic to. A service may be a single container, or multiple in a load-balancing set up. Services can be either HTTP, TCP or UDP.
 
 ![Diagram of traffic route](https://docs.traefik.io/assets/img/quickstart-diagram.png)
 
@@ -56,7 +56,7 @@ providers:
 
 Here we tell Traefik to communicate with docker using the docker socket. `exposedByDefault` makes the dashboard look cleaner, and prevents things accidentally being routable when we don't want them to be. `watch: true` instructs Traefik to watch for changes to running containers, and automatically clean up or create routers and services as necessary, all without requiring a restart.
 
-### Create traefik container
+### Create Traefik container
 
 Now that we have a Traefik configuration file, we need to have a Traefik. For this, I use `docker-compose` to create a container configuration:
 
@@ -81,7 +81,7 @@ I intentionally mount a directory in rather than just the `traefik.yml` to handl
 
 For ease, I've also set `network_mode: host`. This means Traefik binds directly to ports on the host. The primary reason is because it allows Traefik to communicate with the upstream containers more easily and without defining a custom bridge network.
 
-### Test traefik is accessible
+### Test Traefik is accessible
 
 Now we've got a Traefik configuration, and a docker configuration to run it, we can start Traefik and check it's all working. Once the container has been downloaded and started, Traefik is running, congratulations!
 
@@ -293,6 +293,6 @@ If you take a look at [my file provider](https://github.com/RealOrangeOne/infras
 
 If you've reached this point, congratulations! You've now set up Traefik as a reverse proxy for multiple applications, both in and outside of Docker, with auto-renewing TLS.
 
-Your Traefik set up may grow, both in terms of number of containers, and size of configuration file - [Here's](https://github.com/RealOrangeOne/infrastructure/tree/master/ansible/roles/traefik/files) mine. But once you understand the [fundementals](#fundementals), it'll scale to whatever your needs may be.
+Your Traefik set up may grow, both in terms of number of containers, and size of configuration file - [Here's](https://github.com/RealOrangeOne/infrastructure/tree/master/ansible/roles/traefik/files) mine. But once you understand the [fundamentals](#fundementals), it'll scale to whatever your needs may be.
 
 See, Traefik isn't _that_ scary!
