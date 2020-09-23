@@ -108,12 +108,19 @@ accounts:
     link: https://hub.docker.com/u/theorangeone
     icon: fab fa-docker
 
+  buymeacoffee:
+    name: Buy Me A Coffee
+    username: TheOrangeOne
+    link: https://www.buymeacoffee.com/theorangeone
+    icon: fas fa-coffee
+
 footer_accounts:
   - github
   - twitter
   - self-hosted-gitlab
   - reddit
   - hacker-news
+  - buymeacoffee
 
 navbar_accounts:
   - github

@@ -6,6 +6,7 @@
         <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"><i class="mx-1 fab fa-facebook" aria-hidden="true"></i></a>
         <a href="http://www.reddit.com/submit?url={{ .Permalink }}"><i class="mx-1 fab fa-reddit" aria-hidden="true"></i></a>
         <a href="{{ .Permalink }}" data-clipboard-text="{{ .Permalink }}" title="Copy link to clipboard"><i class="mx-1 fas fa-copy" aria-hidden="true"></i></a>
+        <a href="{{ .Site.Data.social.accounts.buymeacoffee.link }}"><i class="{{ .Site.Data.social.accounts.buymeacoffee.icon }}"></i></a>
     </h3>
     </div>
 {{ end }}
