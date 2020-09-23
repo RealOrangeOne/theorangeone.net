@@ -1,12 +1,12 @@
 {{ if .Section }}
     <div class="container mt-5 text-center">
-    <small>Share this page</small>
-    <h3>
-        <a href="https://twitter.com/intent/tweet?text={{ .Permalink }}"><i class="mx-1 fab fa-twitter" aria-hidden="true"></i></a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"><i class="mx-1 fab fa-facebook" aria-hidden="true"></i></a>
-        <a href="http://www.reddit.com/submit?url={{ .Permalink }}"><i class="mx-1 fab fa-reddit" aria-hidden="true"></i></a>
-        <a href="{{ .Permalink }}" data-clipboard-text="{{ .Permalink }}" title="Copy link to clipboard"><i class="mx-1 fas fa-copy" aria-hidden="true"></i></a>
-        <a href="{{ .Site.Data.social.accounts.buymeacoffee.link }}"><i class="{{ .Site.Data.social.accounts.buymeacoffee.icon }}"></i></a>
-    </h3>
+        <small>Share this page</small>
+        <h3>
+            <a href="https://twitter.com/intent/tweet?text={{ .Permalink }}" title="Share on Twitter"><i class="mx-1 fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" class="Share on Facebook"><i class="mx-1 fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="http://www.reddit.com/submit?url={{ .Permalink }}" title="Share on Reddit"><i class="mx-1 fab fa-reddit" aria-hidden="true"></i></a>
+            <a href="{{ .Permalink }}" data-clipboard-text="{{ .Permalink }}" title="Copy link to clipboard"><i class="mx-1 fas fa-copy" aria-hidden="true"></i></a>
+            <a href="{{ .Site.Data.social.accounts.buymeacoffee.link }}" title="Buy me a coffee"><i class="{{ .Site.Data.social.accounts.buymeacoffee.icon }}"></i></a>
+        </h3>
     </div>
 {{ end }}
