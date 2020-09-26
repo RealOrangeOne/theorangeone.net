@@ -28,11 +28,8 @@ services:
     ports:
       - "7278:8080"
     volumes:
-      - /dev/disk:/dev/disk
-      - /run/udev:/run/udev:ro
       - ./config:/config
     environment:
-      - SCRUTINY_COLLECTOR=false
       - SCRUTINY_WEB=true
       - PUID=3000
       - PGID=3000
@@ -40,15 +37,16 @@ services:
 
   collector:
     image: linuxserver/scrutiny:latest
-    privileged: True
+    privileged: true
     volumes:
       - /dev/disk:/dev/disk
       - /run/udev:/run/udev:ro
       - ./config:/config
     environment:
       - SCRUTINY_COLLECTOR=true
-      - SCRUTINY_WEB=false
       - SCRUTINY_API_ENDPOINT=http://web:8080
+      - PUID=3000
+      - PGID=3000
     restart: unless-stopped
 ```
 
