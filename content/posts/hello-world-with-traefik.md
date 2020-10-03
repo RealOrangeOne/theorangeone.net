@@ -244,7 +244,7 @@ http:
       tls:
         certResolver: le
   services:
-    otherservoce:
+    otherservice:
       loadBalancer:
         servers:
           - url: http://192.168.1.99:8123/
@@ -274,10 +274,10 @@ entryPoints:
     http:
       redirections:
         entryPoint:
-          to: websecure
+          to: web-secure
           scheme: https
 
-  websecure:
+  web-secure:
     address: :443
 ```
 
