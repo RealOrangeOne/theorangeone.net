@@ -11,6 +11,7 @@ cache:
     - .cache
 
 before_script:
+  - apt update && apt install -y curl
   - curl -Lo /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb
   - dpkg -i /tmp/hugo.deb
   - npm ci --cache .npm --prefer-offline --production
