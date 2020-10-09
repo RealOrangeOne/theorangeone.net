@@ -1,0 +1,30 @@
+image: "node:lts-slim"
+
+variables:
+  HUGO_VERSION: "0.73.0"
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .npm
+    - .cache
+
+before_script:
+  - wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb -O /tmp/hugo.deb
+  - dpkg -i /tmp/hugo.deb
+  - npm ci --cache .npm --prefer-offline --production
+
+test:
+  stage: test
+  script:
+    - ./scripts/test.sh
+
+pages:
+  stage: deploy
+  script:
+    - ./scripts/release.sh
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
