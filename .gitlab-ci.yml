@@ -4,6 +4,10 @@ variables:
   HUGO_VERSION: "0.73.0"
   GIT_SUBMODULE_STRATEGY: recursive
 
+stages:
+  - test
+  - deploy
+
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
