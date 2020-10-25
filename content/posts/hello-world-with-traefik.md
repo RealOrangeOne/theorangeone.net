@@ -56,6 +56,16 @@ providers:
 
 Here we tell Traefik to communicate with docker using the docker socket. `exposedByDefault` makes the dashboard look cleaner, and prevents things accidentally being routable when we don't want them to be. `watch: true` instructs Traefik to watch for changes to running containers, and automatically clean up or create routers and services as necessary, all without requiring a restart.
 
+To access the dashboard, you'll need to enable it. It'll be incredibly useful later.
+
+```yaml
+api:
+  dashboard: true
+  insecure: true
+```
+
+Setting `insecure` means the dashboard is accessible to anyone and everyone on port `8080`. For a production deployment, you'll likely want to create your own router to add a layer of authentication, or just block the port with a firewall. But for now, this is fine.
+
 ### Create Traefik container
 
 Now that we have a Traefik configuration file, we need to have a Traefik. For this, I use `docker-compose` to create a container configuration:
