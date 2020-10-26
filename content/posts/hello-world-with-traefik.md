@@ -254,7 +254,7 @@ http:
       tls:
         certResolver: le
   services:
-    otherservoce:
+    otherservice:
       loadBalancer:
         servers:
           - url: http://192.168.1.99:8123/
