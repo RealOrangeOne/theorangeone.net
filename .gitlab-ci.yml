@@ -1,4 +1,4 @@
-image: "node:lts-slim"
+image: node:lts
 
 variables:
   HUGO_VERSION: "0.73.0"
