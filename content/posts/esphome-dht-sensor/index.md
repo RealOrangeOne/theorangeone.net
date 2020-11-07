@@ -1,7 +1,7 @@
 ---
 title: HomeAssistant Temperature & Humidity Sensor with ESPHome
 date: 2020-08-12
-tags: [self-hosting]
+tags: [self-hosting, electronics]
 image: resource:sensor-circuit.jpg
 ---
 
