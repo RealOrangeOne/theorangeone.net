@@ -7,7 +7,7 @@ image: resource:magichome-soldered.jpg
 
 I recently added some RGB LED strips around my headboard and bed frame, because everyone needs more RGB in their life. The only thing better than RGB is internet connected RGB. One of the most common controllers for this is the MagicHome.
 
-The MagicHome comes with its own firmware, which works, but it's not open-source, and judging from the logs it's definitely doing some phoning home. Because it's just an ESP32 underneath, it can be flashed with alternative firmware easily. My choice of which is [ESPHome](https://esphome.io/).
+The MagicHome comes with its own firmware, which works, but it's not open-source, and judging from the logs it's definitely doing some phoning home. Because it's just an ESP8266 underneath, it can be flashed with alternative firmware easily. My choice of which is [ESPHome](https://esphome.io/).
 
 ## Requirements
 
