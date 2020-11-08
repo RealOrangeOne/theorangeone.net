@@ -11,13 +11,13 @@ The MagicHome comes with its own firmware, which works, but it's not open-source
 
 ## Requirements
 
-- [MagicHome](https://www.amazon.co.uk/s?k=magic+home+LED)
+- [MagicHome](https://www.amazon.co.uk/gp/product/B07PDVK151/)
 - Soldering kit (soldering iron, solder, etc)
 - Jumper wire
 - [USB-TTL Adapter](https://www.amazon.co.uk/s?k=USB+TTL)
 - Multimeter (optional) - to check your solders and wiring
 
-If you look for "MagicHome LED" on Amazon, you'll be met with a lot of devices which look the same. Really, they are all the same. I'd recommend not going for the absolute cheapest one, but most of them will be around £10. If you're thinking of buying one with an IR remote so you can use that as a fallback, don't bother. The firmware below won't support that. In theory, it's possible - But that's for a future guide.
+If you look for ["MagicHome LED"](https://www.amazon.co.uk/s?k=magic+home+LED) on Amazon, you'll be met with a lot of devices which look the same. Really, they are all the same. I'd recommend not going for the absolute cheapest one, but most of them will be around £10. If you're thinking of buying one with an IR remote so you can use that as a fallback, don't bother. The firmware below won't support that. In theory, it's possible - But that's for a future guide.
 
 ## Disassembly
 
