@@ -50,7 +50,7 @@ The first step, and likely the one which makes the most difference, is to flat o
 
 ### Reduce logging
 
-Step 2 is to reduce the log level on both the file logger, and any other table logging we can't disable entirely. This change is done in [`config.xml`](https://github.com/RealOrangeOne/infrastructure/blob/master/ansible/roles/plausible/files/clickhouse-config.xml). I set the level to `warning`, so it's still obvious to see when something is wrong, but it won't bombard me with information.
+Step 2 is to reduce the log level on both the file logger, and any other table logging we can't disable entirely. This change is done in [`config.xml`](https://github.com/RealOrangeOne/infrastructure/blob/master/ansible/roles/plausible/files/clickhouse-config.xml). I set the level to `warning`, so it's still obvious to see when something is wrong, but these all go into the shell, so it's fine. All the table logs are completely disabled.
 
 ```xml
 <yandex>
@@ -58,13 +58,12 @@ Step 2 is to reduce the log level on both the file logger, and any other table l
         <level>warning</level>
         <console>true</console>
     </logger>
-    <text_log>
-        <level>warning</level>
-    </text_log>
-    <metric_log>
-        <level>warning</level>
-    </metric_log>
-    <trace_log></trace_log>
+    <query_thread_log remove="remove"/>
+    <query_log remove="remove"/>
+    <text_log remove="remove"/>
+    <trace_log remove="remove"/>
+    <metric_log remove="remove"/>
+    <asynchronous_metric_log remove="remove"/>
 </yandex>
 ```
 
@@ -76,11 +75,13 @@ In addition to reducing the log level, I moved the log files to a`tmpfs` mount. 
 
 The final step is to reclaim the disk space we lost to the overly verbose logs. Because everything was logged to tables, it's all still around. This probably won't impact runtime performance much, but disk usage went from 8GB to 200MB, which is quite nice!
 
-1. Log in to the Clickhouse shell: `docker-compose exec clickhouse clickhouse-client`
-2. Truncate some tables: `truncate table <table_name>;`
-    - `system.query_log`
-    - `system.query_thread_log`
-    - `system.metric_log`
+1. Log in to the Clickhouse shell: `docker-compose exec clickhouse bash`
+2. Truncate the existing logs:
+
+```bash
+clickhouse-client -q "SELECT name FROM system.tables WHERE name LIKE '%log%';" | xargs -I{} clickhouse-client -q "TRUNCATE TABLE system.{};"
+```
+
 3.  Quit: `\q`
 
 ## Review
