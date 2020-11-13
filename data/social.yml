@@ -114,6 +114,12 @@ accounts:
     link: https://www.buymeacoffee.com/theorangeone
     icon: fas fa-coffee
 
+  telegram:
+    name: Telegram
+    username: TheOrangeOne
+    link: https://t.me/TheOrangeOne
+    icon: fab fa-telegram-plane
+
 footer_accounts:
   - github
   - twitter
