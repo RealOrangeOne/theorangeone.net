@@ -1,6 +1,7 @@
 ---
 title: About
 layout: about
+image: unsplash:SYTO3xs06fU
 ---
 
 In the interest of privacy, there's very little personal information here.
