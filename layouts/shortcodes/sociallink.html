@@ -1,0 +1,3 @@
+{{ $socialDetail := index .Site.Data.social.accounts (.Get 0) }}
+
+<a href="{{ $socialDetail.link }}" title="{{ $socialDetail.name }} account">{{ $socialDetail.username }}</a>
