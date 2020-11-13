@@ -25,6 +25,10 @@
 
     {{ block "main" . }}{{ end }}
 
+    {{ if not .IsHome }}
+      {{ partial "bmac-pill.html" . }}
+    {{ end }}
+
     {{ partial "footer.html" . }}
 
     {{ partial "script.html" "js/jquery.js" }}

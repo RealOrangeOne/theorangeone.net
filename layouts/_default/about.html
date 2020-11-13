@@ -3,12 +3,6 @@
   <div class="container">
     {{ partial "content.html" . }}
 
-    <div class="text-center mt-4 mb-5">
-      <a href="{{ .Site.Data.social.accounts.buymeacoffee.link }}" target="_blank">
-        <img src="https://cdn.buymeacoffee.com/buttons/v2/arial-orange.png" alt="Buy Me A Coffee" style="height: 45px !important;width: 163px !important;">
-      </a>
-    </div>
-
     <div class="row">
       {{ range $i, $e := sort .Site.Data.social.accounts "name" }}
         <div class="col-sm-3 mt-3">

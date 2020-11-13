@@ -120,7 +120,6 @@ footer_accounts:
   - self-hosted-gitlab
   - reddit
   - hacker-news
-  - buymeacoffee
 
 navbar_accounts:
   - github

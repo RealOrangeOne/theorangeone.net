@@ -295,3 +295,32 @@ a.no-color-change {
   }
 
 }
+
+
+.bmac-pill {
+  @extend .badge, .badge-primary;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    position: fixed;
+    right: $spacer;
+    bottom: $spacer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    width: 60px;
+    height: 60px;
+
+    img {
+      margin: 0;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: $spacer * 3;
+    width: 100%;
+  }
+}
