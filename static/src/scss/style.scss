@@ -194,6 +194,11 @@ pre.chroma {
   iframe {
     width: 100%;
     height: 75vh;
+
+    &.youtube-embed {
+      margin-bottom: $paragraph-margin-bottom;
+      height: 50vh;
+    }
   }
 
   figure {
