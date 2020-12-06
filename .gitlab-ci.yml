@@ -1,7 +1,7 @@
 image: node:lts
 
 variables:
-  HUGO_VERSION: "0.73.0"
+  HUGO_VERSION: "0.79.0"
   GIT_SUBMODULE_STRATEGY: recursive
 
 stages:
