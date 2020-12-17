@@ -125,7 +125,6 @@ footer_accounts:
   - twitter
   - self-hosted-gitlab
   - reddit
-  - hacker-news
 
 navbar_accounts:
   - github
