@@ -83,6 +83,8 @@ There's my GPU being detected correctly, using driver version `418.152.00` - we'
 
 (This is just a temporary GPU until I purchase something more suited for transcoding. Don't judge me.)
 
+As an alternative to installing through your system package manager, you may prefer to install direct from [nvidia.com](https://www.nvidia.com/Download/index.aspx). This has the downside of requiring manual updates for newer versions, but means it's much easier to match versions between the host and guest OS (more on that later).
+
 ### 2. Configure container
 
 Next, create your container. There's nothing special about this process, just choose the OS and resource requirements for you.
@@ -126,6 +128,8 @@ Now that the host is configured, and the control files passed through, the guest
 The gist of the configuration is to also install the nvidia drivers, but without the kernel modules. Exactly how this is done varies between OS. For this I'm going to use Ubuntu 20.04.
 
 To install on Ubuntu, you'll need to install the `nvidia-headless-no-dkms-418-server` package for the actual drive and `nvidia-utils-418-server` for some of the extra utils (and `nvidia-smi`). Note that the "418" in these packages matches the major version number of the driver installed on the host. If you install the wrong ones, it'll install correctly, but attempting to use the GPU will fail due to the mismatch (it's nice enough to tell you this is the issue, though).
+
+As with the host, it's also possible to install these drivers through [nvidia.com](https://www.nvidia.com/Download/index.aspx), although be sure to run the install with `--no-kernel-module`.
 
 ### 4. Test it
 
