@@ -166,4 +166,6 @@ You can find out what your GPU supports on the [NVENC support matrix](https://de
 
 Nvidia's professional line "Quadro" have no such restrictions, however you will pay a premium for this, especially for the tier of cards you'd need to play games rather than simply transcode.
 
+You can also get around this limit using a [patched driver](https://github.com/keylase/nvidia-patch), which claims very good compatibility. This is on my list to try once I start hitting the limit myself.
+
 Now you've got a GPU in your LXC container, go forth and do something useful with it! Like [Folding@Home](https://www.youtube.com/watch?v=KU4qOebhkfs), **Not** crypto mining!
