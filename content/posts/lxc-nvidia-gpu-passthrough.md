@@ -26,22 +26,9 @@ When doing PCIe passthrough, the first step is to blacklist the driver to ensure
 
 You need to install the kernel headers, which for me on Proxmox is the `pve-headers` package.
 
-Next, you'll need to install the actual nvidia drivers. The easiest way to find out which package on Debian is to install the [`nvidia-detect`](https://wiki.debian.org/NvidiaGraphicsDrivers#nvidia-detect) package, and run it to tell you the package to install:
+Next, you'll need to install the actual nvidia drivers. The easiest way to do this is to download the driver from [nvidia.com](https://www.nvidia.com/Download/index.aspx). This not only ensures you're using the latest driver, but means it won't accidentally update during a system update, as it's important that the host and guest OS have the exact same driver version. You can still install it using the system package manager, just be aware of updates - especially if the guest and host OS are different distributions.
 
-```
-Detected NVIDIA GPUs:
-03:00.0 VGA compatible controller [0300]: NVIDIA Corporation GK104 [GeForce GTX 760] [10de:1187] (rev a1)
-
-Checking card:  NVIDIA Corporation GK104 [GeForce GTX 760] (rev a1)
-Your card is supported by all driver versions.
-It is recommended to install the
-    nvidia-driver
-package.
-```
-
-It's also worth installing the [`nvidia-smi`](https://packages.debian.org/buster/nvidia-smi) package to check the GPU is being picked up correctly.
-
-Next you'll need to make sure the drivers are loaded correctly. To do this, edit the file `/etc/modules-load.d/modules.conf` and add the following to it:
+Next you'll need to make sure the drivers are loaded on boot. To do this, edit the file `/etc/modules-load.d/modules.conf` and add the following to it:
 
 ```bash
 # Nvidia modules
@@ -62,28 +49,29 @@ Now you can reboot, and run `nvidia-smi` to check the GPU is being detected corr
 
 ```
 +-----------------------------------------------------------------------------+
-| NVIDIA-SMI 418.152.00   Driver Version: 418.152.00   CUDA Version: N/A      |
+| NVIDIA-SMI 450.80.02    Driver Version: 450.80.02    CUDA Version: 11.0     |
 |-------------------------------+----------------------+----------------------+
 | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
 | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
 |===============================+======================+======================|
-|   0  GeForce GTX 760     On   | 00000000:03:00.0 N/A |                  N/A |
-| 34%   31C    P5    N/A /  N/A |      1MiB /  1996MiB |     N/A      Default |
+|   0  GeForce GTX 760     Off  | 00000000:03:00.0 N/A |                  N/A |
+|  0%   34C    P0    N/A /  N/A |      0MiB /  1996MiB |     N/A      Default |
+|                               |                      |                  N/A |
 +-------------------------------+----------------------+----------------------+
 
 +-----------------------------------------------------------------------------+
-| Processes:                                                       GPU Memory |
-|  GPU       PID   Type   Process name                             Usage      |
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
 |=============================================================================|
-|    0                    Not Supported                                       |
+|  No running processes found                                                 |
 +-----------------------------------------------------------------------------+
 ```
 
-There's my GPU being detected correctly, using driver version `418.152.00` - we'll be needing this later.
+There's my GPU being detected correctly, using driver version `450.80.02` - we'll be needing this later.
 
 (This is just a temporary GPU until I purchase something more suited for transcoding. Don't judge me.)
-
-As an alternative to installing through your system package manager, you may prefer to install direct from [nvidia.com](https://www.nvidia.com/Download/index.aspx). This has the downside of requiring manual updates for newer versions, but means it's much easier to match versions between the host and guest OS (more on that later).
 
 ### 2. Configure container
 
@@ -125,32 +113,33 @@ The `lxc.cgroup.devices.allow` lines denote the cgroups which own the nvidia dri
 
 Now that the host is configured, and the control files passed through, the guest needs configuring.
 
-The gist of the configuration is to also install the nvidia drivers, but without the kernel modules. Exactly how this is done varies between OS. For this I'm going to use Ubuntu 20.04.
+The gist of the configuration is to also install the nvidia drivers, but without the kernel modules. The simplest way to do this is to use the same driver binary downloaded from [nvidia.com](https://www.nvidia.com/Download/index.aspx), and run it with the `--no-kernel-module` argument.
 
-To install on Ubuntu, you'll need to install the `nvidia-headless-no-dkms-418-server` package for the actual drive and `nvidia-utils-418-server` for some of the extra utils (and `nvidia-smi`). Note that the "418" in these packages matches the major version number of the driver installed on the host. If you install the wrong ones, it'll install correctly, but attempting to use the GPU will fail due to the mismatch (it's nice enough to tell you this is the issue, though).
-
-As with the host, it's also possible to install these drivers through [nvidia.com](https://www.nvidia.com/Download/index.aspx), although be sure to run the install with `--no-kernel-module`.
+You can still install drivers using the system package manager, but ensure they're kept in-sync with the host version. If you install the wrong ones, it'll install correctly, but attempting to use the GPU will fail due to the mismatch (it's nice enough to tell you this is the issue, though). On Ubuntu, the packages you'll want are `nvidia-headless-no-dkms-418-server` and `nvidia-utils-418-server` for version 418 of the driver.
 
 ### 4. Test it
 
-Now, from your container, you should be able to run `nvidia-smi`, and it'll show the right version GPU and driver.
+Now, from your container, you should be able to run `nvidia-smi`, and it'll show the right version GPU and driver:
 
 ```
 +-----------------------------------------------------------------------------+
-| NVIDIA-SMI 418.152.00   Driver Version: 418.152.00   CUDA Version: 10.1     |
+| NVIDIA-SMI 450.80.02    Driver Version: 450.80.02    CUDA Version: 11.0     |
 |-------------------------------+----------------------+----------------------+
 | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
 | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
 |===============================+======================+======================|
 |   0  GeForce GTX 760     Off  | 00000000:03:00.0 N/A |                  N/A |
-| 34%   27C    P8    N/A /  N/A |      1MiB /  1996MiB |     N/A      Default |
+|  0%   34C    P0    N/A /  N/A |      0MiB /  1996MiB |     N/A      Default |
+|                               |                      |                  N/A |
 +-------------------------------+----------------------+----------------------+
 
 +-----------------------------------------------------------------------------+
-| Processes:                                                       GPU Memory |
-|  GPU       PID   Type   Process name                             Usage      |
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
 |=============================================================================|
-|    0                    Not Supported                                       |
+|  No running processes found                                                 |
 +-----------------------------------------------------------------------------+
 ```
 
