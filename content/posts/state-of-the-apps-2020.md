@@ -1,9 +1,8 @@
 ---
 title: State of the Apps 2020
 date: 2020-01-01
+tags: [linux, programming]
 aliases:
-    - /stack/
-    - /sota/
     - /posts/my-stack-2019/
 ---
 
