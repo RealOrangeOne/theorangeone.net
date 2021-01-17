@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - "*"
+  pull_request:
+
+
+env:
+  FLICKR_API_KEY: ${{ secrets.FLICKR_API_KEY }}
+  FLICKR_USER_ID: ${{ secrets.FLICKR_USER_ID }}
+  UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.79.0'
+          extended: true
+
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      - uses: actions/cache@v1
+        with:
+          path: $HOME/.npm
+          key: npm-${{ hashFiles('package-lock.json') }}
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Dump environment
+        run: env >> .env
+
+      - name: Build site
+        run: ./scripts/release.sh
+
+      - name: Run tests
+        run: ./scripts/test.sh
