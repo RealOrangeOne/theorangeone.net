@@ -120,6 +120,12 @@ accounts:
     link: https://t.me/TheOrangeOne
     icon: fab fa-telegram-plane
 
+  matrix:
+    name: Matrix
+    username: "@jake:theorangeone.net"
+    link: https://matrix.to/#/@jake:theorangeone.net
+    icon: fas fa-project-diagram
+
 footer_accounts:
   - github
   - twitter

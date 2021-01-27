@@ -12,6 +12,6 @@ If you stumbled across an email address of mine, best not to use it. Like most p
 
 - Twitter: {{< sociallink twitter >}}
 - Discord: {{< sociallink discord >}}
-- Telegram: {{< sociallink telegram >}}
+- Matrix: {{< sociallink matrix >}}
 
 ### Profiles
