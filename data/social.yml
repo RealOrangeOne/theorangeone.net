@@ -84,11 +84,11 @@ accounts:
     link: https://gitlab.com/RealOrangeOne
     icon: fab fa-gitlab
 
-  self-hosted-gitlab:
-    name: Self Hosted GitLab
+  self-hosted-gitea:
+    name: Self Hosted Gitea
     username: TheOrangeOne
     link: https://git.theorangeone.net
-    icon: fab fa-gitlab
+    icon: fas fa-coffee
 
   pypi:
     name: PyPI
@@ -123,10 +123,10 @@ accounts:
 footer_accounts:
   - github
   - twitter
-  - self-hosted-gitlab
+  - self-hosted-gitea
   - reddit
 
 navbar_accounts:
   - github
   - twitter
-  - self-hosted-gitlab
+  - self-hosted-gitea
