@@ -1,2 +1,9 @@
-{{ $script := resources.Get . | minify | fingerprint }}
+{{ $script := resources.Get . }}
+
+{{ if in . "min" }}
+  {{ $script = $script | minify | fingerprint }}
+{{ else }}
+  {{ $script = $script | js.Build (dict "minify" true) | fingerprint }}
+{{ end }}
+
 <script type="text/javascript" async src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
