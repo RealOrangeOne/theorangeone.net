@@ -284,10 +284,10 @@ entryPoints:
     http:
       redirections:
         entryPoint:
-          to: websecure
+          to: web-secure
           scheme: https
 
-  websecure:
+  web-secure:
     address: :443
 ```
 
