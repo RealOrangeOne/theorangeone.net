@@ -8,7 +8,7 @@ tags: [self-hosting]
 
 Yesterday, I moved my Git server from GitLab to Gitea. There's nothing wrong with GitLab, I actually quite like it, but it's a rather large tool for my needs. Gitea is much more [lightweight](https://twitter.com/RealOrangeOne/status/1351262593776840714), faster, and provides all its features for free. Now, it'd be nice to add some analytics to Plausible, for no reason other than personal interest.
 
-Plausible, my analytics tool of choice, simply requires a single `script` tag be added somewhere on the page. With GitLab, modifying templates or adding custom ones was a bit of a pain. GitLab has a tonne of theming and configuration options, but none seem to quite go as far as "here's some custom HTML". Gitea on the other hand has some great options for adding custom HTML to certain parts of the page, and even supports just being given an entirely custom theme.
+Plausible, [my analytics tool of choice]({{< relref "self-hosting-plausible" >}}), simply requires a single `script` tag be added somewhere on the page. With GitLab, modifying templates or adding custom ones was a bit of a pain. GitLab has a tonne of theming and configuration options, but none seem to quite go as far as "here's some custom HTML". Gitea on the other hand has some great options for adding custom HTML to certain parts of the page, and even supports just being given an entirely custom theme.
 
 ## Custom footer content
 
