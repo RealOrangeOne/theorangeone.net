@@ -58,6 +58,10 @@ environment:
 
 Here's my full [`docker-compose.yml`](https://github.com/RealOrangeOne/infrastructure/blob/master/ansible/roles/plausible/files/docker-compose.yml) for reference.
 
+{{<block warning>}}
+Clickhouse can be incredibly resource-intensive unless [configured correctly]({{< relref "calming-down-clickhouse" >}}). Unless constrained and configured properly, it will happily consume almost all the storage and compute resources it's given.
+{{</block>}}
+
 ### Migration and admin setup
 
 This is the point we diverge pretty hard from what's defined in both the `docker-compose.yml` and `HOSTING.md` from Plausible. The instructions there note a `setup` container, which is used to initialize Plausible, but then shouldn't be run afterwards. Personally I don't like this pattern, I'd rather the compose file contain exactly what's needed to run the application, no more no less. Instead, we need to set up the databases manually:
