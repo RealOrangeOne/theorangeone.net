@@ -210,7 +210,7 @@ pre.chroma {
   min-width: initial;
 }
 
-p, li, h1, h2, h3, h4, h5, h6 {
+p, li, h1, h2, h3, h4, h5, h6, div.block-shortcode {
   code {
     @extend .chroma;
     padding: $spacer * 0.25;
