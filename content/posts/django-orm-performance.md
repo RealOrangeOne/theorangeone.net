@@ -80,7 +80,7 @@ I've seen it many times. Given a list of models, set all the values of property 
 Querysets have an `.update` method, which takes the same arguments as `.filter`, but rather than filtering based on them, it updates the rows in the queryset based on the arguments.
 
 ```python
-ToDo.objects.filter(is_completed=True).updated(is_completed=False)
+ToDo.objects.filter(is_completed=True).update(is_completed=False)
 ```
 
 Simple, and a single query! But what if we want to update the value of 1 property to another?
