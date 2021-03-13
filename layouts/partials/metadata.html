@@ -59,6 +59,9 @@
 <meta name="author" content="{{ title .Site.Params.author }}" />
 <meta name="canonical" content="{{ .Permalink }}" />
 
+{{ range .Params.tags }}
+  <meta property="article:tag" content="{{ . }}" />
+{{ end }}
 
 {{ range .AlternativeOutputFormats }}
   <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}">
