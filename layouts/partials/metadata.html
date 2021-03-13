@@ -16,7 +16,7 @@
 {{/* Twitter-specific tags */}}
 <meta name="twitter:dnt" content="on" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="{{ .Site.Data.social.accounts.twitter.username }}" />
+<meta name="twitter:site" content="@{{ .Site.Data.social.accounts.twitter.username }}" />
 <meta name="twitter:title" content="{{ .Title | htmlUnescape }}" />
 <meta name="twitter:description" content="{{ .Summary | plainify | chomp | htmlUnescape }}{{ if .Truncated }}...{{ end }}" />
 <meta name="twitter:creator" content="{{ .Site.Data.social.accounts.twitter.username }}" />
