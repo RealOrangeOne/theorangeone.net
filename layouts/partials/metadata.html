@@ -21,6 +21,11 @@
 <meta name="twitter:description" content="{{ .Summary | plainify | chomp | htmlUnescape }}{{ if .Truncated }}...{{ end }}" />
 <meta name="twitter:creator" content="{{ .Site.Data.social.accounts.twitter.username }}" />
 
+{{ if gt .ReadingTime 2 }}
+  <meta name="twitter:label1" content="Reading time" />
+  <meta name="twitter:data1" content="{{ .ReadingTime }} min read" />
+{{ end }}
+
 {{ if $image }}
   <meta name="twitter:image" content="{{ absURL $image }}" />
   <meta name="twitter:image:alt" content="{{ .Title | htmlUnescape }}" />
