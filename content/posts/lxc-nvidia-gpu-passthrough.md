@@ -6,7 +6,7 @@ tags: [self-hosting, linux, server-2020, containers]
 image: unsplash:A1blvxJxGU0
 ---
 
-[GPU Passthrough]([16dbAUrtMX4](https://www.youtube.com/watch?v=16dbAUrtMX4)) has become a great way to run a Linux host, but still run games under Windows. By having 2 GPUs, 1 for the Linux host and the other for a Windows VM, you give Windows its own full GPU for games, but without having to run Windows as your primary OS.
+[GPU Passthrough](https://www.youtube.com/watch?v=16dbAUrtMX4) has become a great way to run a Linux host, but still run games under Windows. By having 2 GPUs, 1 for the Linux host and the other for a Windows VM, you give Windows its own full GPU for games, but without having to run Windows as your primary OS.
 
 But, what about on the server? What if you only have a single GPU, but want it to be used by multiple guest OSs?  Unfortunately for now you're out of luck. SR-IOV is a technology from the datacentre to share a single GPU to multiple guest VMs, however it's poorly supported for consumers. For now, we can instead pass the GPU into multiple LXC containers rather than VMs. This means it can be shared and used by multiple applications in isolated environments, without the need for SR-IOV compatibility.
 
