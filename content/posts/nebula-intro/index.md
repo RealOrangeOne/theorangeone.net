@@ -6,14 +6,14 @@ image: unsplash:ln5drpv_ImI
 tags: [linux, security]
 ---
 
-[Wireguard]({{<relref "whyreguard">}}) has been the "hot new thing" when it comes to VPNs, but it's not always the best suited for every workload. [Nebula](https://github.com/slackhq/nebula) is a mesh network originally created by Slack, but now owned by a [separate company](https://www.defined.net/).
+[WireGuard]({{<relref "whyreguard">}}) has been the "hot new thing" when it comes to VPNs, but it's not always the best suited for every workload. [Nebula](https://github.com/slackhq/nebula) is a mesh network originally created by Slack, but now owned by a [separate company](https://www.defined.net/).
 
 - [TechSNAP 419 - Nebulous Networking](https://techsnap.systems/419)
 - [Linux Unplugged 329 - Flat Network Truthers](https://linuxunplugged.com/329)
 
 ## What's a mesh network?
 
-A conventional VPN, such as Wireguard and OpenVPN works in a hub-spoke pattern, such that all traffic flows through the central "hub", regardless of where the other devices are.
+A conventional VPN, such as WireGuard and OpenVPN works in a hub-spoke pattern, such that all traffic flows through the central "hub", regardless of where the other devices are.
 
 ![Traditional VPN](./hub-spoke.svg "50")
 
@@ -30,11 +30,11 @@ Nebula is constantly polling and updating the IPs usable for communications to a
 
 {{< youtube QfcwiSkV_AU >}}
 
-### What about wireguard
+### What about WireGuard
 
-Everyone loves Wireguard, and for good reason! It's relatively simple, fast and built-in to the Linux kernel. Unfortunately however, it doesn't natively support meshing. It's possible to make wireguard pretend it's a mesh, but it's not really designed for it. [`wg-dynamic`](https://git.zx2c4.com/wg-dynamic) is planning on changing that, but it's still under development (however inactive it may be).
+Everyone loves WireGuard, and for good reason! It's relatively simple, fast and built-in to the Linux kernel. Unfortunately however, it doesn't natively support meshing. It's possible to make WireGuard pretend it's a mesh, but it's not really designed for it. [`wg-dynamic`](https://git.zx2c4.com/wg-dynamic) is planning on changing that, but it's still under development (however inactive it may be).
 
-There is [tailscale](https://tailscale.com/), which is a mesh VPN which uses wireguard under the hood. If you really want to use wireguard, that's the closest you're going to get. However, it's missing the firewalling features of Nebula, not to mention that the server component (introducer) isn't open-source.
+There is [tailscale](https://tailscale.com/), which is a mesh VPN which uses WireGuard under the hood. If you really want to use WireGuard, that's the closest you're going to get. However, it's missing the firewalling features of Nebula, not to mention that the server component (introducer) isn't open-source.
 
 ## Getting started with nebula
 
@@ -192,7 +192,7 @@ PING 10.10.10.1 (10.10.10.1) 56(84) bytes of data.
 rtt min/avg/max/mdev = 9.692/10.139/10.565/0.356 ms
 ```
 
-But that's the same as if this were using Wireguard. Where's the Nebula magic?
+But that's the same as if this were using WireGuard. Where's the Nebula magic?
 
 When doing pings, check the ping times. Pings to the lighthouse should be about what you'd expect for pings to a cloud server, but pings between the 2 clients should be significantly lower, because traffic is staying on the LAN.
 
@@ -212,7 +212,7 @@ When doing the first connection between nodes, you may notice some latency befor
 
 ### Performance
 
-Nebula is still pretty fast, and for regular use you'll be hard pushed to notice any issues. However, the default settings aren't tuned perfectly for performance. In my testing, I topped out at around 700MB symmetrical over a gigabit link. Now that's nothing to turn your nose up at, but there's definitely room for improvement. Wireguard sets the bar for what performance can be like for a VPN.
+Nebula is still pretty fast, and for regular use you'll be hard pushed to notice any issues. However, the default settings aren't tuned perfectly for performance. In my testing, I topped out at around 700MB symmetrical over a gigabit link. Now that's nothing to turn your nose up at, but there's definitely room for improvement. WireGuard sets the bar for what performance can be like for a VPN.
 
 This performance issue **isn't** an issue with Nebula. Speaking with one of the original developers of Nebula, Slack have seen Nebula networks fully saturate 5 / 10 gigabit links without sweat. I was given some suggestions for how to boost the performance:
 
@@ -224,20 +224,20 @@ With these applied, I was topping out much nearer to 900MB. The default are rath
 
 ## Application
 
-It's all well and good singing the praises of Nebula, and it's a great tool to know for solving certain situations, but it's not globally useful everywhere. As far as more user-facing VPN servers, don't expect companies like Mullvad and PIA to start offering Nebula-based VPNs. Nebula isn't just a non-optimal technology for this, it's the wrong technology. In these cases meshing isn't useful, and may actually be a hindrance, so sticking to technologies like OpenVPN and Wireguard is a much better decision.
+It's all well and good singing the praises of Nebula, and it's a great tool to know for solving certain situations, but it's not globally useful everywhere. As far as more user-facing VPN servers, don't expect companies like Mullvad and PIA to start offering Nebula-based VPNs. Nebula isn't just a non-optimal technology for this, it's the wrong technology. In these cases meshing isn't useful, and may actually be a hindrance, so sticking to technologies like OpenVPN and WireGuard is a much better decision.
 
-So, when should you use Nebula? Or more specifically, when am I going to use Nebula? Currently, I have a wireguard VPN deployed to a Vultr VPS which serves 2 functions:
+So, when should you use Nebula? Or more specifically, when am I going to use Nebula? Currently, I have a WireGuard VPN deployed to a Vultr VPS which serves 2 functions:
 
 1. Access to non-public ports / devices
 2. [Tunnel traffic between the VPS and my home server to route traffic to internally hosted applications]({{<relref "wireguard-haproxy-gateway">}})
 
-For the latter use, I won't be changing from Wireguard. Whilst I could use Nebula, I don't have any benefits in that use for a mesh, as there will only ever be 2 nodes. Wireguard has been working great for this use, and I don't really see a reason or a need to switch.
+For the latter use, I won't be changing from WireGuard. Whilst I could use Nebula, I don't have any benefits in that use for a mesh, as there will only ever be 2 nodes. WireGuard has been working great for this use, and I don't really see a reason or a need to switch.
 
 For the former, however, Nebula fits really well. In the interest of security, I have some services only listening on a VPN interface. For remote servers, this means I have to be on the VPN network to SSH in. For home devices, I can just use the local IP address, unless I'm out the house that is. Currently, I have to use a different IP or SSH alias to access home services depending on whether I'm at home or not, which is quite a hack. The alternative is that traffic flows from my desktop to my server via a VPS in London, even though the 2 devices are on a gigabit LAN - what a waste!
 
-The meshing nature of Nebula means that when I'm at home, traffic flows purely on my LAN, and when I'm not, it flows direct, rather than via the server. That means I can still connect to services hosted in my house easily, but when I'm at home they run superfast! In an ideal world I'd route everything via Traefik, and just use IP whitelists to restrict access to certain web services, rather than use ports on VPN IPs. Unfortunately, whilst Wireguard supports overriding DNS, Nebula [does not](https://github.com/slackhq/nebula/issues/318).
+The meshing nature of Nebula means that when I'm at home, traffic flows purely on my LAN, and when I'm not, it flows direct, rather than via the server. That means I can still connect to services hosted in my house easily, but when I'm at home they run superfast! In an ideal world I'd route everything via Traefik, and just use IP whitelists to restrict access to certain web services, rather than use ports on VPN IPs. Unfortunately, whilst WireGuard supports overriding DNS, Nebula [does not](https://github.com/slackhq/nebula/issues/318).
 
-{{<mermaid caption="Intended network setup (solid lines being Nebula, thick lines being Wireguard)">}}
+{{<mermaid caption="Intended network setup (solid lines being Nebula, thick lines being WireGuard)">}}
 graph TD
 
 N[Nebula Lighthouse]
@@ -270,4 +270,4 @@ D---L
 S2===H
 {{</mermaid>}}
 
-Once deployed, I'll just have a single 2-peer wireguard tunnel, and everything else going over Nebula!
+Once deployed, I'll just have a single 2-peer WireGuard tunnel, and everything else going over Nebula!

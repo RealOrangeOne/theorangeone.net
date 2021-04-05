@@ -6,7 +6,7 @@ subtitle: Routing traffic to devices outside Nebula
 tags: [linux, security]
 ---
 
-[Nebula](https://github.com/slackhq/nebula) is a great mesh network I [recently deployed]({{< relref "nebula-intro" >}}) into my stack. For connecting nodes spread between networks, it's great, much better than my previous [wireguard]({{< relref "wireguard-haproxy-gateway" >}}) installation.
+[Nebula](https://github.com/slackhq/nebula) is a great mesh network I [recently deployed]({{< relref "nebula-intro" >}}) into my stack. For connecting nodes spread between networks, it's great, much better than my previous [WireGuard]({{< relref "wireguard-haproxy-gateway" >}}) installation.
 
 An additional feature of nebula is `unsafe_routes`. Unsafe routes allow nodes which don't have Nebula installed to be accessible to other Nebula nodes. Traffic for those nodes is sent via an intermediary node which has access to the devices on its own network. This means you can use a node as a form of gateway to bride to another network, all through Nebula.
 

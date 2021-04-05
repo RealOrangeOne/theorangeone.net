@@ -65,7 +65,7 @@ I've seen many people talking about how they really like [bitwarden](https://bit
 
 The primary reasons I had a VPN was for untrusted networks and downloading **Linux ISOs**. Given I've spent the majority of this year at home, the former hasn't come up very often.
 
-I'm currently still using my previous [PIA](https://www.privateinternetaccess.com/) subscription, and the drama with the buyout has definitely gone down, but it's still there in the background. I think once the subscription runs out I'll be switching back to [mullvad](https://mullvad.net/en/) indefinitely. Their clients are pretty good, entirely open source, and the fact you can just download the wireguard configuration direct is also handy for when I can't be bothered to mess with clients.
+I'm currently still using my previous [PIA](https://www.privateinternetaccess.com/) subscription, and the drama with the buyout has definitely gone down, but it's still there in the background. I think once the subscription runs out I'll be switching back to [mullvad](https://mullvad.net/en/) indefinitely. Their clients are pretty good, entirely open source, and the fact you can just download the WireGuard configuration direct is also handy for when I can't be bothered to mess with clients.
 
 ### Email
 

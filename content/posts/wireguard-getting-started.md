@@ -1,29 +1,29 @@
 ---
-title: Getting started with Wireguard
+title: Getting started with WireGuard
 date: 2019-09-15
 tags: [security]
 ---
 
-Wireguard is taking the VPN world by storm, coming very close to the current champion OpenVPN in simple, small-scale deployments. It's just unfortunate few people know about it, and quite how incredible it is!
+WireGuard is taking the VPN world by storm, coming very close to the current champion OpenVPN in simple, small-scale deployments. It's just unfortunate few people know about it, and quite how incredible it is!
 
-## What is wireguard?
+## What is WireGuard?
 
 > WireGuard® is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache. It intends to be considerably more performant than OpenVPN. WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. It is currently under heavy development, but already it might be regarded as the most secure, easiest to use, and simplest VPN solution in the industry.
 
 https://www.wireguard.com/
 
-Wireguard is not only lighter weight than OpenVPN, it's simpler, smaller, and most importantly does less. The final point may to some seem like a bad thing, but is actually great! The Unix Philosophy defines that tools should do one thing, and do it well. Wireguard simply creates networks and tunnels, no funky networking, no custom authentication, no complexity.
+WireGuard is not only lighter weight than OpenVPN, it's simpler, smaller, and most importantly does less. The final point may to some seem like a bad thing, but is actually great! The Unix Philosophy defines that tools should do one thing, and do it well. WireGuard simply creates networks and tunnels, no funky networking, no custom authentication, no complexity.
 
 
-## Getting started with Wireguard
+## Getting started with WireGuard
 
-There is an [official quick start guide](https://www.wireguard.com/quickstart/), however as someone just getting started with wireguard, and with little experience in the Linux network stack, it was a lot to understand at once. There is however a much simpler way of getting started: `wg-quick`.
+There is an [official quick start guide](https://www.wireguard.com/quickstart/), however as someone just getting started with WireGuard, and with little experience in the Linux network stack, it was a lot to understand at once. There is however a much simpler way of getting started: `wg-quick`.
 
-`wg-quick` creates standard wireguard tunnels, but generates the underlying commands for you, even printing them as it goes, so you can see how it's working.
+`wg-quick` creates standard WireGuard tunnels, but generates the underlying commands for you, even printing them as it goes, so you can see how it's working.
 
 ### Installation
 
-With wireguard, the server and client are the same, and so installing either side is just as simple. Wireguard maintain a list of [how to install on various platforms](https://www.wireguard.com/install/), read that! No point duplicating good documentation!
+With WireGuard, the server and client are the same, and so installing either side is just as simple. WireGuard maintain a list of [how to install on various platforms](https://www.wireguard.com/install/), read that! No point duplicating good documentation!
 
 As this creates a new type of network interface, it's highly likely you'll need to reboot.
 
@@ -31,9 +31,9 @@ As this creates a new type of network interface, it's highly likely you'll need 
 
 ### Authentication
 
-Unlike OpenVPN, which (by default) uses a username/password based authentication system, Wireguard works using a public/private key. Keys are used to both verify the client is connecting to the correct server, and that the client is authorized to connect to the server.
+Unlike OpenVPN, which (by default) uses a username/password based authentication system, WireGuard works using a public/private key. Keys are used to both verify the client is connecting to the correct server, and that the client is authorized to connect to the server.
 
-Wireguard comes with commands to generate the key-pairs securely:
+WireGuard comes with commands to generate the key-pairs securely:
 
 ```bash
 wg genkey | tee privatekey | wg pubkey > publickey
@@ -43,7 +43,7 @@ This creates two files, `publickey` and `privatekey` which contain, well, the pu
 
 ### Configuration
 
-Wireguard's configuration lives in `ini` files in `/etc/wireguard/*.conf`, where `*` is the name of the wireguard interface (that'll be useful later).
+WireGuard's configuration lives in `ini` files in `/etc/wireguard/*.conf`, where `*` is the name of the WireGuard interface (that'll be useful later).
 
 Be sure to take care when specifying keys. Be sure to specify the correct keys for the correct device, else you'll receive configuration error.
 
@@ -51,9 +51,9 @@ Be sure to take care when specifying keys. Be sure to specify the correct keys f
 
 ```ini
 [Interface]
-Address = 10.1.10.1  # IP of this device on this wireguard network
+Address = 10.1.10.1  # IP of this device on this WireGuard network
 PrivateKey = <server privatekey>  # The servers private key
-ListenPort = 51820  # The port for wireguard to listen on (51820 is the standard)
+ListenPort = 51820  # The port for WireGuard to listen on (51820 is the standard)
 
 
 # Specify one "Peer" block for each connecting device
@@ -62,7 +62,7 @@ PublicKey = <client publickey>  # The clients public key
 AllowedIPs = 10.1.10.2/32  # The IP and mask the client should be assigned
 ```
 
-Yes, that's really it! This isn't just a simple config, Wireguard just has a super simple configuration!
+Yes, that's really it! This isn't just a simple config, WireGuard just has a super simple configuration!
 
 #### Client configuration
 
@@ -73,7 +73,7 @@ PrivateKey = <client privatekey>  # The clients private key
 
 [Peer]
 PublicKey = <servers publickey>  # The servers public key
-Endpoint = <servers ip>:51820  # The IP (or hostname) of the server, along with the port wireguard is listening on
+Endpoint = <servers ip>:51820  # The IP (or hostname) of the server, along with the port WireGuard is listening on
 AllowedIPs = 10.1.10.2/24  # The IPs and masks the client should route through the tunnel
 
 PersistentKeepalive = 25  # Ensure connections remain active, especially useful over NAT
@@ -94,7 +94,7 @@ Assuming this didn't output any errors, you should see a new interface in `ifcon
 
 #### Connecting the client
 
-To connect a client, you can also run `wg-quick up <interface>`, and again, you'll see a wireguard interface with the specified IP allocated. `ip route` will also contain some entries for routing the required IP ranges through this new interface.
+To connect a client, you can also run `wg-quick up <interface>`, and again, you'll see a WireGuard interface with the specified IP allocated. `ip route` will also contain some entries for routing the required IP ranges through this new interface.
 
 ### _Profit_?
 
@@ -102,4 +102,4 @@ That's it!
 
 There's now an encrypted tunnel set up between your two machines, which can be used to send any kind of traffic over, whether it be web traffic, media streaming, or email (if you're reading this guide and thinking about using the tunnel for email, please don't!).
 
-If your needs are simply to forward traffic via another computer / network, or connect devices to the network of another, look past OpenVPN and give Wireguard a shot!
+If your needs are simply to forward traffic via another computer / network, or connect devices to the network of another, look past OpenVPN and give WireGuard a shot!

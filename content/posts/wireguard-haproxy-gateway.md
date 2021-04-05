@@ -1,5 +1,5 @@
 ---
-title: Wireguard HAProxy Gateway
+title: WireGuard HAProxy Gateway
 subtitle: Tunnelling traffic
 date: 2020-03-21
 tags: [self-hosting, security]
@@ -24,19 +24,19 @@ Don't get me wrong, none of these issues are actually that bad - I'm just a perf
 
 The requirements are pretty similar to last time. There's a VPS, and an internal device.
 
-This is where things diverge slightly: [Wireguard](https://www.wireguard.com/)! Since writing the original post, I've had a change to play with Wireguard, and fallen in love with its simplicity.
+This is where things diverge slightly: [WireGuard](https://www.wireguard.com/)! Since writing the original post, I've had a change to play with WireGuard, and fallen in love with its simplicity.
 
-The VPS will act as the VPN server, as before. This time, I'm using debian, because it's the far superior distribution for this kind of deployment. Realistically any distribution which supports Wireguard will do.
+The VPS will act as the VPN server, as before. This time, I'm using debian, because it's the far superior distribution for this kind of deployment. Realistically any distribution which supports WireGuard will do.
 
-The internal device now simply needs to run the Wireguard client. In this setup, it's also the device which serves the hosted applications, but could easily be used in the same setup as before, proxying to external servers.
+The internal device now simply needs to run the WireGuard client. In this setup, it's also the device which serves the hosted applications, but could easily be used in the same setup as before, proxying to external servers.
 
 The external device now simply forwards incoming traffic downstream, with little to no modification. This is done in a way which doesn't require modifying the packages, and so can be done without access to the TLS private keys, which is important.
 
 # Installation
 
-## Configure Wireguard
+## Configure WireGuard
 
-Configuring a wireguard tunnel is an incredibly straightforward process. I suggest you read [my getting started guide]({{< relref "wireguard-getting-started" >}}) to find out how to do it.
+Configuring a WireGuard tunnel is an incredibly straightforward process. I suggest you read [my getting started guide]({{< relref "wireguard-getting-started" >}}) to find out how to do it.
 
 ## Install HAProxy
 
@@ -48,7 +48,7 @@ HAProxy is generally used as a load balancer, but it works perfectly fine with a
 
 ## Enable automatic connections
 
-When building a tunnel like this, it's important for each end of the tunnel to reconnect in the event of issues. This was an incredibly annoying caveat with OpenVPN, but wireguard deals with this very well.
+When building a tunnel like this, it's important for each end of the tunnel to reconnect in the event of issues. This was an incredibly annoying caveat with OpenVPN, but WireGuard deals with this very well.
 
 To do this, we simply enable a systemd service, based on the name of the config file. If the config is at `/etc/wireguard/my-tun.conf`, then enable `wg-quick@my-tun.service`.
 
@@ -79,7 +79,7 @@ If you're using docker, [Traefik](https://docs.traefik.io/) accepts both proxy p
 
 ## Wrapping up
 
-Web traffic comes in to your VPS, is received by HAProxy, has proxy protocol details added, forwarded down a wireguard tunnel, and to your internal applications, all with almost no overhead.
+Web traffic comes in to your VPS, is received by HAProxy, has proxy protocol details added, forwarded down a WireGuard tunnel, and to your internal applications, all with almost no overhead.
 
 {{<mermaid caption="Network layout">}}
 graph LR
@@ -87,11 +87,11 @@ graph LR
 A[End Users]
 subgraph VPS
 B[HAProxy]
-C[Wireguard Server]
+C[WireGuard Server]
 end
 
 subgraph Home Server
-D[Wireguard Client]
+D[WireGuard Client]
 E[Traefik]
 F[Service 1]
 G[Service 2]

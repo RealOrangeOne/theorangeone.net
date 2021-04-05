@@ -25,7 +25,7 @@ To get a sense of your open ports, you can use `nmap` or [shodan.io](https://www
 
 #### VPN
 
-Sometimes, you want to access things from outside your network, but not expose it to the internet fully. For example, you may want web traffic accessible to anyone, but only you to access SSH. The simplest way to do that is with a VPN, tunnelling traffic through a single port opened on the firewall. Both [wireguard]({{< relref "wireguard-haproxy-gateway" >}}) and [nebula]({{< relref "nebula-intro" >}}) are great options for something like this. Alongside SSH, this may also be useful for web applications, if you only allow access to VPN IPs.
+Sometimes, you want to access things from outside your network, but not expose it to the internet fully. For example, you may want web traffic accessible to anyone, but only you to access SSH. The simplest way to do that is with a VPN, tunnelling traffic through a single port opened on the firewall. Both [WireGuard]({{< relref "wireguard-haproxy-gateway" >}}) and [nebula]({{< relref "nebula-intro" >}}) are great options for something like this. Alongside SSH, this may also be useful for web applications, if you only allow access to VPN IPs.
 
 This is far from an all-or-nothing type deal. If you just want to give access to your Jellyfin server from outside the house, that's fine (and probably doesn't need a VPN). By mixing firewalls and IP restrictions, it's simple to achieve this opt-in publicity.
 

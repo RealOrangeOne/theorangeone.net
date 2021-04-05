@@ -88,12 +88,12 @@ graph LR
 
 subgraph You
 A[Browser]
-B[Wireguard Client]
+B[WireGuard Client]
 end
 
 subgraph Home Network
 C[Router]
-D[Wireguard Client]
+D[WireGuard Client]
 subgraph Home Server
 E[Reverse Proxy]
 F[Service 1]
@@ -130,11 +130,11 @@ graph LR
 A[End Users]
 subgraph VPS
 B[HAProxy]
-C[Wireguard Server]
+C[WireGuard Server]
 end
 
 subgraph Home Network
-D[Wireguard Client]
+D[WireGuard Client]
 subgraph Home Server
 E[Reverse Proxy]
 F[Service 1]
@@ -158,7 +158,7 @@ This method, however good it sounds, comes with a number of drawbacks. It's a lo
 
 With that said, these extra complexities aren't huge, nor especially complicated, and you'll learn a lot whilst doing it!
 
-If you're interested in setting up something like this, I've written articles for both [Wireguard]({{< relref "wireguard-haproxy-gateway" >}}) and [OpenVPN]({{< relref "vpn-gateway" >}}).
+If you're interested in setting up something like this, I've written articles for both [WireGuard]({{< relref "wireguard-haproxy-gateway" >}}) and [OpenVPN]({{< relref "vpn-gateway" >}}).
 
 ## Reverse Proxies
 
