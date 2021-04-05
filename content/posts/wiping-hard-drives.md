@@ -2,7 +2,7 @@
 title: Wiping Hard Drives
 subtitle: As close to wiping a hard drive as you can get, at least
 date: 2020-11-21
-image: unsplash:5yEiCUynJ9w
+image: unsplash:1qL31aacAPA
 tags: [security, linux]
 ---
 
