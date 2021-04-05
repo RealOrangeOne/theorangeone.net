@@ -297,7 +297,7 @@ In this example, Traefik will redirect all traffic on port 80, to port 443 and H
 
 For some, this is too magic, and unfortunately the abstraction is a bit [leaky](https://en.wikipedia.org/wiki/Leaky_abstraction), as it shows up in the dashboard. What Traefik does here is define a new router on the entrypoint, with a rule designed to catch all traffic, and apply the `redirectscheme` middleware to it to force it to redirect to a different entrypoint. Simple!
 
-If you take a look at [my file provider](https://github.com/RealOrangeOne/infrastructure/blob/master/ansible/roles/traefik/files/file-provider.yml), I've implemented this manually.
+If you take a look at [my file provider](https://github.com/RealOrangeOne/infrastructure/blob/master/ansible/roles/traefik/files/file-provider-main.yml), I've implemented this manually.
 
 ## Done
 
