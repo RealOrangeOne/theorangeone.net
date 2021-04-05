@@ -13,12 +13,12 @@
     "yaml-lint": "1.2.4"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "5.14.0",
-    "bootstrap": "4.4.1",
-    "clipboard": "2.0.6",
+    "@fortawesome/fontawesome-free": "5.15.3",
+    "bootstrap": "4.6.0",
+    "clipboard": "2.0.8",
     "elevator.js": "1.0.1",
-    "jquery": "3.5.1",
-    "lg-thumbnail": "1.1.0",
-    "lightgallery": "1.8.0"
+    "jquery": "3.6.0",
+    "lg-thumbnail": "1.2.1",
+    "lightgallery": "1.10.0"
   }
 }
