@@ -93,7 +93,6 @@ The new change in Django 3.2 is that you can configure which field Django automa
 ```python
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'  # 31-bit
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'  # 64-bit
-DEFAULT_AUTO_FIELD = 'django.db.models.UUIDField'  # 128-bit
 ```
 
 If you run out of 128-bit primary keys, you're either doing something wrong or crazy (or both).
