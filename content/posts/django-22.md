@@ -1,6 +1,7 @@
 ---
 title: Django 2.2
 date: 2019-04-01
+image: unsplash:88UH5NqDgT0
 tags: [programming, django]
 ---
 
@@ -8,7 +9,7 @@ April marks the release of Django 2.2, the latest LTS version of the popular Pyt
 
 Django historically works off the LTS pattern of software releasing, providing two channels. LTS releases are maintained far longer than regular versions, and receive regular bug fixes and security patches in line with the main release channel.
 
-![Django update cycle](https://static.djangoproject.com/img/release-roadmap.png)
+![Django release cycle](https://static.djangoproject.com/img/release-roadmap.png)
 
 The bump from 1.11 to 2.2 also bought with it the updates from 2.0 and 2.1. Features used by some users for 18 months finally come to those who need the stability of an LTS release. I've not delved too far into the 2.x releases so far, as most of what I do strongly benefits from using an LTS-based version.
 
