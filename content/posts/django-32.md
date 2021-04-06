@@ -167,7 +167,7 @@ The Django admin now has a sidebar. It appears both in list and detail views and
 
 ### Admin no longer supports IE11
 
-Internet explorer 11 - just saying those words brings me out in cold sweats. Internet explorer 11 support is the bane of any developer's life. First released in XXXX, it hasn't even been updated since XXXX, but people still insist on supporting it.
+Internet explorer 11 - just saying those words brings me out in cold sweats. Internet explorer 11 support is the bane of any developer's life.
 
 Fortunately, Django is no longer one of them. From Django 3.1, there's no longer official support for IE11 in the admin. It might work, but it's no longer guaranteed. Chances are this not only makes the maintenance much easier, but now Django users can quote much higher numbers for maintaining IE11 support in applications, which will hopefully deter people from requiring support for it.
 
