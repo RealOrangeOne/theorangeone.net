@@ -48,9 +48,13 @@ For my setup when writing this, I'll be running the lighthouse on an Ubuntu VPS,
 
 Nebula uses good ol' PKI for authentication in the form of Certificate Authorities (CAs). Clients are given the CAs public key, and their own public / private key pair signed by the CA. Because each client knows the CA, it can validate easily whether the client is authorized, and adding new clients doesn't require editing any config files.
 
-The first step is to create the `ca.key`and `ca.crt`, which form your CA private and public keys. **Be sure to keep the `ca.key` file private**. I recommend storing the file offline, and treating it as you would an SSH key to your servers. Before locking it away, we need it to create some client certificates, 1 for each client.
+The first step is to create the `ca.key`and `ca.crt`, which form your CA private and public keys. **Be sure to keep the `ca.key` file private**. I recommend storing the file offline, and treating it as you would an SSH private key to your servers.
 
-When generating a client certificate, you need have decided what subnet you'll be using for the VPN network. I'm going to use `10.10.10.0/24`.
+```bash
+nebula-cert ca -name "My Nebula Network"
+```
+
+Before locking it away, we need it to create some client certificates, 1 for each client. When generating a client certificate, you need have decided what subnet you'll be using for the VPN network. I'm going to use `10.10.10.0/24`.
 
 ```bash
 nebula-cert sign -name "lighthouse" -ip "10.10.10.1/24"
