@@ -35,7 +35,7 @@ A cautionary tale for installing Clickhouse. I'd intended to run it on a reasona
 
 ### Setup and configuration
 
-Fortunately, configuring Plausible is actually really simple and the settings are pretty obvious. There's a [hosting README](https://github.com/plausible/analytics/blob/master/HOSTING.md) in the repository which should definitely be read. Here's what I have set up for Plausible:
+Fortunately, configuring Plausible is actually really simple and the settings are pretty obvious. There's official [hosting docs](https://plausible.io/docs/self-hosting) too, which should definitely be read. Here's what I have set up for Plausible:
 
 ```yaml
 environment:
