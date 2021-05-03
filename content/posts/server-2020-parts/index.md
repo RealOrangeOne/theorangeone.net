@@ -87,9 +87,11 @@ My server currently sits in my wardrobe, immediately adjacent to my bed, making 
 
 The largest change for this server upgrade is the OS. Going back the OS I had planned to use for the last wipe, but failed to get working in time (I'm a very impatient person): [Proxmox](https://www.proxmox.com/en/proxmox-ve). Proxmox is a great hypervisor OS capable of running both VMs and LXC containers.
 
-To handle data storage for application VMs, i'm planning on running [FreeNAS](https://www.freenas.org/) in a VM, passing through the drives to that, and then exposing the data via NFS to the rest of the containers. Because proxmox supports ordering VM startup, this is possible, however it does mean that rebooting FreeNAS likely requires rebooting the entire machine. Not ideal but not a dealbreaker.
+To handle data storage for application VMs, I'm planning on running [FreeNAS](https://www.freenas.org/) in a VM, passing through the drives to that, and then exposing the data via NFS to the rest of the containers. Because proxmox supports ordering VM startup, this is possible, however it does mean that rebooting FreeNAS likely requires rebooting the entire machine. Not ideal but not a dealbreaker.
 
 My intention is to run as much as possible from LXC, only resorting to VMs where absolutely necessary. The lower performance overhead can be quite handy, and you can still run complex systems like Docker just fine.
+
+I've written a [dedicated post]({{<relref "server-2020-proxmox">}}) about how I've set up Proxmox.
 
 ## More
 
