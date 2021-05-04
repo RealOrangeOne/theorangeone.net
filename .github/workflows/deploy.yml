@@ -43,12 +43,12 @@ jobs:
       - name: Build site
         run: ./scripts/release.sh
 
-      - uses: jakejarvis/s3-sync-action@master
+      - name: rclone
+        uses: wei/rclone@master
         with:
-          args: --follow-symlinks --delete
+          args: sync public/ pages:theorangeone.net/
         env:
-          AWS_S3_BUCKET: theorangeone.net
-          AWS_ACCESS_KEY_ID: github
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.MINIO_SECRET_KEY }}
-          SOURCE_DIR: public
-          AWS_S3_ENDPOINT: https://pages.theorangeone.net
+          RCLONE_CONFIG_PAGES_TYPE: webdav
+          RCLONE_CONFIG_PAGES_URL: https://pages.theorangeone.net
+          RCLONE_CONFIG_PAGES_USER: github
+          RCLONE_CONFIG_PAGES_PASS: ${{ secrets.RCLONE_WEBDAV_PASSWORD }}
