@@ -1,7 +1,7 @@
 ---
 title: Server build 2020 - Parts
 date: 2020-12-01
-image: unsplash:xV3CHzfhkjE
+image: resource:current-server.jpg
 tags: [server-2020, self hosting, linux]
 ---
 
