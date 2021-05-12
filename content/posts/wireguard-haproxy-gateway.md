@@ -5,17 +5,20 @@ date: 2020-03-21
 tags: [self-hosting, security]
 ---
 
-Last year, I wrote [a post]({{< relref "vpn-gateway" >}}) on setting up OpenVPN-AS as a gateway to a private network. I ran this network setup for quite a while with a lot of success, exposing services on my home network to the public internet, securely.
+Last year, I wrote [a post]({{< relref "vpn-gateway" >}}) on setting up a gateway to a private network, powered by OpenVPN-AS. I ran this network setup for quite a while with a lot of success, exposing services on my home network to the public internet, securely.
 
-Unfortunately, there were some issues:
+Unfortunately, there were a couple issues with that setup:
+
+- IPTables is weird to configure
+- TLS private keys are installed externally
+- HTTP traffic is unencrypted over the VPN
+
+and I'm also not too happy with OpenVPN:
 
 - OpenVPN access server isn't open source
 - OpenVPN access server is configured through a web UI, which is another _minor_ attack vector
 - OpenVPN access server configuration is complex
 - OpenVPN is more resource intensive than necessary
-- IPTables is weird to configure
-- TLS private keys are installed externally
-- HTTP traffic is unencrypted over the VPN
 - OpenVPN isn't great at repairing flakey connections
 
 Don't get me wrong, none of these issues are actually that bad - I'm just a perfectionist with time to kill! After doing some research, I found an alternative solution which solves all these issues, and is far simpler to set up. By simplifying the VPN setup, and moving the reverse proxy inside the private network, everything gets much nicer!
