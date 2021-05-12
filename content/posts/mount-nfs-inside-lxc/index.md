@@ -38,6 +38,20 @@ Personally, I think this isn't the best name for the setting. It implies more of
 
 To support NFS under LXC, some of the apparmor protections need to be lifted. Looking online, there are a number of guides which claim to make the required modifications for [LXC to mount NFS](https://unix.stackexchange.com/questions/450308/how-to-allow-specific-proxmox-lxc-containers-to-mount-nfs-shares-on-the-network). I tried every single one, and nothing appeared to work correctly. That said I've not worked much with apparmor. They all hinged around creating a new profile for LXC, and forcing the container to use it. If you know the secret ingredient to make this work for unprivileged containers, please [tell me]({{<relref "contact">}})! There are however several ways to make it work for privileged containers, which like I say isn't the end of the world, and is needed for some of my use cases anyway.
 
+## Mouting
+
+One that's done, restart the container, and you should be able to mount your NFS shares as normal. To ensure they're mounted correctly on boot, configure your mounts in `/etc/fstab`:
+
+```
+192.168.1.1:/data   /mnt/data   nfs   defaults	0 0
+```
+
+Or the quick and dirty way using the command line:
+
+```bash
+$ mount -t nfs 192.168.1.1:/data /mnt/data
+```
+
 ## TL;DR
 
 How _do_ you mount NFS shares inside an LXC container?
@@ -45,5 +59,6 @@ How _do_ you mount NFS shares inside an LXC container?
 1. Create a privileged LXC container, using any guest distribution of your choosing
 2. Once created, modify the config file (`/etc/pve/lxc/<id>.conf` on Proxmox) and add `features: mount=nfs`
 3. Restart the container
+4. Mount your data (e.g. `mount -t nfs 192.168.1.1:/data /mnt/data`)
 
 ![Proxmox makes enabling NFS on privileged containers just a check of a box](lxc-features.png)
