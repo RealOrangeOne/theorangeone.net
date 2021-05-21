@@ -27,7 +27,7 @@ Don't get me wrong, none of these issues are actually that bad - I'm just a perf
 
 The requirements are pretty similar to last time. There's a VPS, and an internal device.
 
-This is where things diverge slightly: [WireGuard](https://www.wireguard.com/)! Since writing the original post, I've had a change to play with WireGuard, and fallen in love with its simplicity.
+This is where things diverge slightly: [WireGuard](https://www.wireguard.com/)! Since writing the original post, I've had a chance to play with WireGuard, and fallen in love with its simplicity.
 
 The VPS will act as the VPN server, as before. This time, I'm using debian, because it's the far superior distribution for this kind of deployment. Realistically any distribution which supports WireGuard will do.
 
