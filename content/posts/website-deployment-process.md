@@ -1,5 +1,5 @@
 ---
-title: Website Deployment
+title: Website deployment process
 date: 2021-05-25
 subtitle: How do posts get from my brain to your eyes?
 image: unsplash:L4gN0aeaPY4
