@@ -39,7 +39,7 @@ Most of the applications I run live here: Yet another Debian LXC container. I ha
 This container the majority of services I host:
 
   - [Calibre](https://github.com/janeczku/calibre-web) - Ebook management
-  - [Duplicati](https://www.duplicati.com/) - Backups
+  - ~~[Duplicati](https://www.duplicati.com/) - Backups~~ ([not any more]({{<relref "backup-strategy-2021">}}))
   - [Gitea](https://gitea.io/) - `git` repository hosting / mirroring
   - [Gotify](https://gotify.net/) - Push notifications
   - [Librespeed](https://github.com/librespeed/speedtest) - Network speedtest
