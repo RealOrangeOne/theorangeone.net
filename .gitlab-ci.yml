@@ -1,0 +1,65 @@
+stages:
+  - install
+  - build
+  - test
+  - deploy
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+install:
+  image: node:alpine
+  stage: install
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - .npm
+      - .cache
+  script:
+    - npm ci --cache .npm --prefer-offline
+  artifacts:
+    name: '$CI_JOB_ID-node_modules'
+    paths:
+      - ./node_modules
+    expire_in: 30 mins
+
+build:
+  image: node:alpine
+  stage: build
+  before_script:
+    - apk add --no-cache hugo
+  script:
+    - ./scripts/release.sh
+  artifacts:
+    name: '$CI_JOB_ID-public'
+    paths:
+      - ./public
+    expire_in: 30 mins
+
+test:
+  image: node:alpine
+  stage: test
+  dependencies:
+    - install
+  script:
+    - ./scripts/test.sh
+
+deploy:
+  image: alpine
+  stage: deploy
+  dependencies:
+    - build
+  only:
+    - master
+  environment:
+    name: website
+    url: https://theorangeone.net
+  before_script:
+    - apk add --no-cache rclone
+  script:
+    - export RCLONE_CONFIG_PAGES_PASS=`rclone obscure $RCLONE_WEBDAV_PASSWORD`
+    - rclone sync -v public/ pages:theorangeone.net/
+  variables:
+    RCLONE_CONFIG_PAGES_TYPE: webdav
+    RCLONE_CONFIG_PAGES_URL: https://pages.theorangeone.net
+    RCLONE_CONFIG_PAGES_USER: github
