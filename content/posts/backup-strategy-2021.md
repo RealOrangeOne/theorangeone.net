@@ -84,7 +84,7 @@ I think the "surprisingly flimsy" comment is either a bad unit, or that the shoc
 
 {{< youtube A_PcOZK4vFk >}}
 
-The backup itself is done using [`rsnapshot`](https://rsnapshot.org/), a simple wrapper around `rsync`, but with snapshots. This way backups are versioned, and I can keep several copies without using excessive space. The configuration for all this is stored in a (private, sorry) repository on [my GitLab server](https://git.theorangeone.net), so just before running a backup I can `git pull` to ensure it's the latest.
+The backup itself is done using [`rsnapshot`](https://rsnapshot.org/), a simple wrapper around `rsync`, but with snapshots. This way backups are versioned, and I can keep several copies without using excessive space. The configuration for all this is stored in a (private, sorry) repository on [my GitLab server](https://git.theorangeone.net), so just before running a backup I can `git pull` to ensure it's the latest. Every once in a while (~2 weeks), I'll connect the drives, and run a backup. This keeps the data fresh, and monitors bit-rot.
 
 The drives contain backups for [vaultwarden](https://github.com/dani-garcia/vaultwarden), SSH keys, compressed database backups, important documents, git repositories and a few other bits which might be handy when restoring data. Now, if the absolute worst happens, there's still some hope of getting to my backups.
 
