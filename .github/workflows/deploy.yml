@@ -46,7 +46,7 @@ jobs:
       - name: rclone
         uses: wei/rclone@master
         with:
-          args: sync public/ pages:theorangeone.net/
+          args: sync -v public/ pages:theorangeone.net/
         env:
           RCLONE_CONFIG_PAGES_TYPE: webdav
           RCLONE_CONFIG_PAGES_URL: https://pages.theorangeone.net
