@@ -40,7 +40,7 @@ This container the majority of services I host:
 
   - [Calibre](https://github.com/janeczku/calibre-web) - Ebook management
   - ~~[Duplicati](https://www.duplicati.com/) - Backups~~ ([not any more]({{<relref "backup-strategy-2021">}}))
-  - [Gitea](https://gitea.io/) - `git` repository hosting / mirroring
+  - ~~[Gitea](https://gitea.io/) - `git` repository hosting / mirroring~~ (Recently switched back to [GitLab](https://git.theorangeone.net), in its own LXC container)
   - [Gotify](https://gotify.net/) - Push notifications
   - [Librespeed](https://github.com/librespeed/speedtest) - Network speedtest
   - [Nextcloud](https://nextcloud.com/) - File storage
