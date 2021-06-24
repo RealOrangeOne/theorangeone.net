@@ -18,3 +18,5 @@ If you're not really bothered, the default [`nginx`](https://hub.docker.com/_/ng
 {{% repobutton %}}
 
 Previously I had created [`tstatic`](https://github.com/RealOrangeOne/tstatic) to do this, but Nginx is far better as a server than node. The less node in my stack, the better!
+
+Note this isn't designed for serving websites. In fact, design decisions were made which make it really bad for websites. If you want to serve websites, take a look at [`docker-website-server`]({{<relref "docker-website-server">}})
