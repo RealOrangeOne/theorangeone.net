@@ -58,7 +58,7 @@ deploy:
     - apk add --no-cache rclone
   script:
     - export RCLONE_CONFIG_PAGES_PASS=`rclone obscure $RCLONE_WEBDAV_PASSWORD`
-    - rclone sync -v public/ pages:theorangeone.net/
+    - rclone sync -I -v public/ pages:theorangeone.net/
   variables:
     RCLONE_CONFIG_PAGES_TYPE: webdav
     RCLONE_CONFIG_PAGES_URL: https://pages.theorangeone.net
