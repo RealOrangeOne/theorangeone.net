@@ -19,6 +19,7 @@
     "elevator.js": "1.0.1",
     "jquery": "3.6.0",
     "lg-thumbnail": "1.2.1",
-    "lightgallery": "1.10.0"
+    "lightgallery": "1.10.0",
+    "lunr": "2.3.9"
   }
 }

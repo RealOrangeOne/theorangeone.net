@@ -7,6 +7,6 @@
   "globals": {
     "mermaid": true,
     "$": true,
-    "process": true
+    "URLSearchParams": true
   }
 }

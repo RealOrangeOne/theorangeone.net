@@ -110,6 +110,17 @@ table td {
 #index-header {
   width: 100%;
   height: calc(100vh - #{$footer-height} - #{$navbar-height});
+
+  #search-input {
+    border: 3px solid $black;
+    background-color: opacify($black, 0.8);
+    text-align: center;
+    color: $body-color;
+
+    &::placeholder {
+      color: opacify($body-color, 0.8);
+    }
+  }
 }
 
 footer {
@@ -333,5 +344,25 @@ a.no-color-change {
   @include media-breakpoint-down(sm) {
     margin-top: $spacer * 3;
     width: 100%;
+  }
+}
+
+#main.search-page {
+  .search-results {
+    .list-page-item {
+      display: none;
+    }
+  }
+
+  #search-input {
+    border: 0;
+    background-color: opacify($black, 0.6);
+    color: $body-color;
+  }
+
+  .input-group-text {
+    border: 0;
+    background-color: $black;
+    color: $body-color;
   }
 }

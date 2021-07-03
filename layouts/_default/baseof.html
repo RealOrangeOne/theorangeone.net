@@ -41,6 +41,8 @@
 
     {{ partial "script_async.html" "js/app.js" }}
 
+    {{ block "scripts_extra" . }}{{ end }}
+
     {{ if not .Site.IsServer }}
       <script async defer data-domain="theorangeone.net" src="https://elbisualp.theorangeone.net/js/index.js"></script>
     {{ end }}

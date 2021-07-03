@@ -10,11 +10,10 @@
 
     <div class="d-none d-lg-block">
       <ul class="navbar-nav">
-        {{ range .Site.Data.social.navbar_accounts }}
-          {{ $account := index $.Site.Data.social.accounts . }}
+        {{ with (.Site.GetPage "search") }}
           <li class="nav-item">
-            <a class="nav-link" href="{{ $account.link }}">
-              <i class="{{ $account.icon }}" title="{{ $account.name }}"></i>
+            <a class="nav-link" href="{{ .Permalink }}">
+              <i class="fas fa-search" title="Search"></i>
             </a>
           </li>
         {{ end }}
@@ -22,6 +21,14 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ .Permalink }}">
               <i class="fas fa-rss" title="RSS"></i>
+            </a>
+          </li>
+        {{ end }}
+        {{ range .Site.Data.social.navbar_accounts }}
+          {{ $account := index $.Site.Data.social.accounts . }}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ $account.link }}">
+              <i class="{{ $account.icon }}" title="{{ $account.name }}"></i>
             </a>
           </li>
         {{ end }}

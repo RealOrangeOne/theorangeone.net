@@ -3,6 +3,8 @@
 {{ $pages := where .Site.RegularPages.ByTitle "Section" "" }}
 {{ $nav_pages := union $pages .Site.Sections }}
 
+{{ $nav_pages = where $nav_pages "Params.hidden_from_navbar" "!=" true }}
+
 {{ range sort $nav_pages "LinkTitle" }}
     <li class="nav-item">
       <a href="{{ .RelPermalink }}" class="nav-link">
