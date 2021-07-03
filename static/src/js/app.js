@@ -1,5 +1,4 @@
 const Elevator = require('elevator.js');
-const shareon = require('shareon');
 
 function waitFor(obj, property, callback) {
   // Wait for a property to exist on window before running callback
@@ -53,8 +52,6 @@ $(document).ready(function() {
     endAudio: '/audio/ding.mp3',
     preloadAudio: false,
   });
-
-  shareon();
 });
 
 function scrollTo(offset) {

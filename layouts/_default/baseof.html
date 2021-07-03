@@ -42,6 +42,8 @@
 
     {{ partial "script_async.html" "js/app.js" }}
 
+    {{ partial "script_async.html" "js/shareon.js" }}
+
     {{ block "scripts_extra" . }}{{ end }}
 
     {{ if not .Site.IsServer }}
