@@ -16,6 +16,7 @@ cp -r $BASEDIR/node_modules/lightgallery/dist/img/* $STATIC_BUILD/img
 cp -r $BASEDIR/node_modules/@fortawesome/fontawesome-free/css/all.min.css $STATIC_BUILD/css/font-awesome.css
 cp $BASEDIR/node_modules/lightgallery/dist/css/lightgallery.min.css $STATIC_BUILD/css/lightgallery.css
 cp -r $BASEDIR/node_modules/@fortawesome/fontawesome-free/webfonts $STATIC_BUILD
+cp $BASEDIR/node_modules/shareon/dist/shareon.min.css $STATIC_BUILD/css/shareon.css
 
 cp -r $STATIC_SRC/js/ $STATIC_BUILD/js/
 cp $BASEDIR/node_modules/jquery/dist/jquery.min.js $STATIC_BUILD/js/jquery.min.js

@@ -1,5 +1,5 @@
-const Clipboard = require('clipboard');
 const Elevator = require('elevator.js');
+const shareon = require('shareon');
 
 function waitFor(obj, property, callback) {
   // Wait for a property to exist on window before running callback
@@ -20,12 +20,6 @@ $(document).ready(function() {
       download: false,
       share: false,
     });
-  });
-
-  new Clipboard('a').on('success', function(e) {
-    const ele = $(e.trigger);
-    ele.find('i').attr('class', 'fas fa-check');
-    alert('Copied "' + ele.data('clipboard-text') + '" to clipboard!');
   });
 
   // HACK: ToC has blank li if no initial header
@@ -59,6 +53,8 @@ $(document).ready(function() {
     endAudio: '/audio/ding.mp3',
     preloadAudio: false,
   });
+
+  shareon();
 });
 
 function scrollTo(offset) {
@@ -83,8 +79,4 @@ $('a[href^="#"] ').on('click', function(event) {
   if (target.length) {
     scrollTo(target.offset().top);
   }
-});
-
-$('[data-clipboard-text]').on('click', function(event) {
-  event.preventDefault();
 });

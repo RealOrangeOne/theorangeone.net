@@ -1,11 +1,19 @@
 {{ if .Section }}
     <div class="container mt-5 text-center">
         <small>Share this page</small>
-        <h3>
-            <a href="https://twitter.com/intent/tweet?text={{ .Permalink }}" title="Share on Twitter"><i class="mx-1 fab fa-twitter" aria-hidden="true"></i></a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" class="Share on Facebook"><i class="mx-1 fab fa-facebook" aria-hidden="true"></i></a>
-            <a href="http://www.reddit.com/submit?url={{ .Permalink }}" title="Share on Reddit"><i class="mx-1 fab fa-reddit" aria-hidden="true"></i></a>
-            <a href="{{ .Permalink }}" data-clipboard-text="{{ .Permalink }}" title="Copy link to clipboard"><i class="mx-1 fas fa-copy" aria-hidden="true"></i></a>
-        </h3>
+        <div class="shareon" data-title="{{ .Title }}" data-url="{{ .Permalink }}">
+            <a class="facebook"></a>
+            <a class="linkedin"></a>
+            <a class="mastodon"></a>
+            <a class="odnoklassniki"></a>
+            <a class="pinterest"></a>
+            <a class="pocket"></a>
+            <button class="reddit"></button>
+            <button class="telegram"></button>
+            <button class="twitter" data-via="{{ .Site.Data.social.accounts.twitter.username }}"></button>
+            <button class="viber"></button>
+            <button class="vkontakte"></button>
+            <button class="whatsapp"></button>
+        </div>
     </div>
 {{ end }}
