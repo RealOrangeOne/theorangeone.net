@@ -10,7 +10,7 @@
     {{ .Scratch.Set "image" $unsplash_data.urls.full }}
   {{ end }}
 
-  <div class="mb-3 image header-image" data-image='{{ .Scratch.Get "image" }}'></div>
+  <img class="mb-3 header-image" src='{{ .Scratch.Get "image" }}' />
 {{ end }}
 
 {{ partial "breadcrumbs/index.html" . }}

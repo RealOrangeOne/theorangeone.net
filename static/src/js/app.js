@@ -36,16 +36,6 @@ $(document).ready(function() {
     }
   });
 
-  $('.image').each(function() {
-    // setup div-image hybrids
-    const ele = $(this);
-    if (ele.data('image')) {
-      ele.css('background-image', 'url(' + ele.data('image') + ')');
-    } else {
-      ele.removeClass('image');
-    }
-  });
-
   new Elevator({
     element: document.getElementById('scroll-elevator'),
     mainAudio: '/audio/elevator.mp3',

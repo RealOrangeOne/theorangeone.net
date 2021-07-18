@@ -12,7 +12,7 @@
           {{ $unsplash_data := (getJSON "https://api.unsplash.com/photos/" $unsplash_id "?" $query )}}
           {{ .Scratch.Set "image" $unsplash_data.urls.thumb }}
         {{ end }}
-        <div class="image" data-image='{{ .Scratch.Get "image" }}'></div>
+        <img src='{{ .Scratch.Get "image" }}' decoding="async" loading="lazy" referrerpolicy="no-referrer" />
       </a>
     </div>
   {{ end }}

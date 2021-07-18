@@ -32,7 +32,7 @@
               <tr>
                 {{ with index .album.images 0 }}
                   <td>
-                    <a href="{{ $spotify_url }}"><div class="image" data-image="{{ .url }}"></div></a>
+                    <a href="{{ $spotify_url }}"><img src="{{ .url }}" decoding="async" loading="lazy" referrerpolicy="no-referrer"/></a>
                   </td>
                 {{ end }}
                 <td class="text-center">
