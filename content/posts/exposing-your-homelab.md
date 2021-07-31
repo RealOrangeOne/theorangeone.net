@@ -199,6 +199,6 @@ Having a homelab is great, as a learning opportunity, hobby, and a way to take b
 
 There are many reasons to expose your lab to the internet. Access to your services outside the house, allowing other people access to your services, or hosting completely public services like a blog.
 
-Personally, I run a VPN gateway on [Vultr](https://www.vultr.com/?ref=7167289), and it works really well for my needs. If I don't want a service exposed to the public, I can connect to the VPN tunnel myself and access applications through that.
+Personally, I run a VPN gateway on [Vultr]({{<referralurl vultr>}}), and it works really well for my needs. If I don't want a service exposed to the public, I can connect to the VPN tunnel myself and access applications through that.
 
 Like many other things, there's no one right way to expose your homelab, there's always tradeoffs. Hopefully now you've got everything you need to make an informed decision.

@@ -14,6 +14,6 @@ If you stumbled across an email address of mine, best not to use it. Like most p
 - Discord: {{< sociallink discord >}}
 - Matrix: {{< sociallink matrix >}}
 
-Want to say thanks? [Buy me a coffee]({{< socialurl buymeacoffee >}}).
+Want to [say thanks]({{<relref "support" >}})?
 
 ### Profiles

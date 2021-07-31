@@ -1,0 +1,22 @@
+---
+referral:
+  vultr:
+    name: Vultr
+    link: https://www.vultr.com/?ref=7167289
+  fastmail:
+    name: Fastmail
+    link: https://ref.fm/u19842056
+    icon: fas fa-envelope-open
+
+donate:
+  buymeacoffee:
+    name: Buy Me A Coffee
+    link: https://www.buymeacoffee.com/theorangeone
+    icon: fas fa-coffee
+  github:
+    name: GitHub
+    link: https://github.com/sponsors/RealOrangeOne
+    icon: fab fa-github
+  liberapay:
+    name: Liberapay
+    link: https://liberapay.com/theorangeone/

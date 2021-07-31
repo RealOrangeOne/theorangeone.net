@@ -57,7 +57,7 @@ The desktop client for Mullvad whilst functional, isn't great. I recently found 
 
 # Email
 
-After realizing that the benefits of [Mailfence](https://mailfence.com/) weren't useful to me, as there's no way I'm uploading a private key, I switched. [FastMail](https://www.fastmail.com/) has all the features I could ever need, and a great UI.
+After realizing that the benefits of [Mailfence](https://mailfence.com/) weren't useful to me, as there's no way I'm uploading a private key, I switched. [FastMail]({{<referralurl fastmail>}}) has all the features I could ever need, and a great UI.
 
 ## Email Client
 My email client has stayed the same. There really is nothing close to [Thunderbird](https://www.thunderbird.net/en-GB/) on Linux! Mailspring does look nice, but it's still not quite feature-complete for my needs. And the fact Thunderbird is also a calendar app is quite useful too!

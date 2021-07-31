@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div id="main">
+  <div class="container">
+    {{ partial "content.html" . }}
+
+    <h3>Referrals</h3>
+    <p>Interested in the same <a href='{{ (.GetPage "posts").Permalink }}'>things</a> as me? Below are referral links for some of the services I use. By following them, you get something, I get something - win win!</p>
+    <ul>
+      {{ range $i, $referral := sort .Site.Data.support.referral "name" }}
+        <li>
+          <a href="{{ $referral.link }}">
+            <i class="{{ $referral.icon }}"></i> {{ $referral.name }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+
+    <h3>Donations</h3>
+    <p>Money doesn't buy happiness, but it certainly helps me do what I do.</p>
+    <ul>
+      {{ range $i, $referral := sort .Site.Data.support.donate "name" }}
+        <li>
+          <a href="{{ $referral.link }}">
+            <i class="{{ $referral.icon }}"></i> {{ $referral.name }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ end }}
