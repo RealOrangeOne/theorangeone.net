@@ -30,11 +30,11 @@ accounts:
     link: https://bitbucket.com/TheOrangeOne/
     icon: fab fa-bitbucket
 
-  freenode:
-    name: Freenode
-    username: TheOrangeOne
-    link: https://webchat.freenode.net/
-    icon: fas fa-rss
+  liberachat:
+    name: Libera.chat
+    username: theorangeone
+    link: https://web.libera.chat/
+    icon: fas fa-comments
 
   pcpartpicker:
     name: PCPartPicker
