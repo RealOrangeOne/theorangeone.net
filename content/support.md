@@ -8,4 +8,6 @@ aliases:
     - /donate/
 ---
 
-If you like what I do, and want to say "Thanks". Here is the best way:
+If you like what I do, and want to say "Thanks". Here is the best way.
+
+Or, [just say "hi"]({{<relref "contact" >}}).
