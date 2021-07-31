@@ -15,5 +15,3 @@ If you stumbled across an email address of mine, best not to use it. Like most p
 - Matrix: {{< sociallink matrix >}}
 
 Want to [say thanks]({{<relref "support" >}})?
-
-### Profiles

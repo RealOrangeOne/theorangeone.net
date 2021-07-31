@@ -3,6 +3,8 @@
   <div class="container">
     {{ partial "content.html" . }}
 
+    <h3>Profiles</h3>
+
     <div class="row">
       {{ range $i, $e := sort .Site.Data.social.accounts "name" }}
         <div class="col-sm-3 mt-3">
