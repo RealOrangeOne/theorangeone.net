@@ -2,7 +2,7 @@
 title: Server build 2020 - Proxmox setup
 date: 2021-05-03
 image: https://techlr.de/wp-content/uploads/2018/09/proxmox-logo-800x250.png
-tags: [server-2020, self hosting, linux]
+tags: [server-2020, self-hosting, linux]
 ---
 
 Back in [December]({{<relref "server-2020-parts">}}), I fully rebuilt my home server from the ground up based on [Proxmox](https://www.proxmox.com/en/proxmox-ve). Being a hypervisor OS, it makes sense to run everything in VMs or LXC containers, not on the host. Therefore, there's a huge amount of scope for opinions, lessons and customizations.

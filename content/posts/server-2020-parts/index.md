@@ -2,7 +2,7 @@
 title: Server build 2020 - Parts
 date: 2020-12-01
 image: resource:current-server.jpg
-tags: [server-2020, self hosting, linux]
+tags: [server-2020, self-hosting, linux]
 ---
 
 Black Friday, the only day which seems to last over a month, is a great time to buy tech. Whilst most people will be buying early christmas presents, new gadgets for themselves, or just impulse buying stuff they don't need (something I totally never do...), I ordered the parts for my new server. My current home server still works, but it's showing its age more and more. I also needed something to do to kill time over this festive edition of "global pandemic lockdown".

@@ -4,7 +4,7 @@ repo: RealOrangeOne/git-mirror
 subtitle: Provider-agnostic mirroring of git repositories
 ---
 
-Recently, I started moving most of my archived projects from GitHub onto my own Git server. Unfortunately, the self hosted offerings aren't perfect for mirroring. [Gitea](https://gitea.io/) supports mirroring repositories _into_ itself, but not pushing (work is [planned](https://github.com/go-gitea/gitea/issues/7609)). [GitLab](https://gitlab.com/) supports pushing repositories _to_ an upstream, but not mirroring into itself unless you pay them a lot of money.
+Recently, I started moving most of my archived projects from GitHub onto my own Git server. Unfortunately, the self-hosted offerings aren't perfect for mirroring. [Gitea](https://gitea.io/) supports mirroring repositories _into_ itself, but not pushing (work is [planned](https://github.com/go-gitea/gitea/issues/7609)). [GitLab](https://gitlab.com/) supports pushing repositories _to_ an upstream, but not mirroring into itself unless you pay them a lot of money.
 
 This meant if I wanted the primary for my repositories to be on my server, but still be visible on GitHub, I couldn't. That is, unless I wrote something myself.
 

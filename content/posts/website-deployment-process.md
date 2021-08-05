@@ -3,7 +3,7 @@ title: Website deployment process
 date: 2021-05-25
 subtitle: How do posts get from my brain to your eyes?
 image: unsplash:L4gN0aeaPY4
-tags: [self hosting, programming]
+tags: [self-hosting, programming]
 ---
 
 [My website]({{<relref "/">}}) is a very important project to me. I've written a lot of content over the years, useful both to me and other internet folks. Currently, my website is a static site, powered by [Hugo](https://gohugo.io/). Because it's static, the content is served insanely quickly and handles any insane load spikes like a champ (not that any have happened).
