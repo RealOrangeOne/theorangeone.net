@@ -213,6 +213,14 @@ pre.chroma {
   figure {
     margin-bottom: $paragraph-margin-bottom;
   }
+
+  table {
+    @extend .table, .table-dark, .table-striped;
+    margin: 0 auto;
+    margin-bottom: $paragraph-margin-bottom;
+    width: 66%;
+    text-align: center;
+  }
 }
 
 .plyr {
