@@ -3,7 +3,7 @@ title: Backup Strategy 2021
 date: 2021-06-06
 subtitle: Protecting my data from myself
 image: unsplash:hL8slYnc-bM
-tags: [self-hosting, server-2021]
+tags: [self-hosting, server-2020]
 ---
 
 Backups are critical to any systems longevity and reliability. If you're not backing up your data, stop reading this now, go do it, then come back...
