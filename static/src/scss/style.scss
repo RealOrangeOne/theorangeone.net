@@ -319,7 +319,7 @@ a.no-color-change {
 }
 
 
-.bmac-pill {
+.support-pill {
   @extend .badge, .badge-primary;
 
   @include media-breakpoint-up(md) {
@@ -332,13 +332,7 @@ a.no-color-change {
     border-radius: 30px;
     width: 60px;
     height: 60px;
-
-    img {
-      margin: 0;
-      padding: 0;
-      width: 40px;
-      height: 40px;
-    }
+    font-size: 100%;
   }
 
   @include media-breakpoint-down(sm) {
