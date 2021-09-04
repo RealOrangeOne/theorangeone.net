@@ -4,7 +4,7 @@
     {{ partial "content.html" . }}
 
     <h3>Referrals</h3>
-    <p>Interested in the same <a href='{{ (.GetPage "posts").Permalink }}'>things</a> as me? Below are referral links for some of the services I use. By following them, you get something, I get something - win win!</p>
+    <p>Interested in the same <a href='{{ relURL "posts" }}'>things</a> as me? Below are referral links for some of the services I use. By following them, you get something, I get something - win win!</p>
     <ul>
       {{ range $i, $referral := sort .Site.Data.support.referral "name" }}
         <li>

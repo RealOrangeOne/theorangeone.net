@@ -6,7 +6,7 @@
       <h1 class="display-1">{{ .Site.Params.author_name }}</h1>
       <h2 class="lead">{{ .Content }}</h2>
 
-      <form action='{{ (.Site.GetPage "search").RelPermalink }}' method="GET">
+      <form action='{{ relURL "search" }}' method="GET">
         <div class="input-group mt-5">
           <input name="q" type="text" class="form-control" id="search-input" placeholder="Search" title="Press enter to search">
         </div>
