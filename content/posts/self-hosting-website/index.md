@@ -1,7 +1,7 @@
 ---
 title: Self hosting my website
 date: 2020-04-11
-tags: [self-hosting, containers]
+tags: [self-hosting, containers, website]
 ---
 
 A few days ago, I was sharing a [blog post]({{< relref "wireguard-haproxy-gateway" >}}) to someone on the [self-hosted podcast](https://selfhosted.show/) discord, and they asked if I was self-hosting my website. Unfortunately, and rather ironically, I had to answer no. I've been intending to move it over to my own server for a while, so this felt like as good of a push as any!

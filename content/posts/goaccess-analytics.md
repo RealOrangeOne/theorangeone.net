@@ -1,7 +1,7 @@
 ---
 title: Privacy-respecting analytics with GoAccess
 date: 2020-04-10
-tags: [self-hosting, containers]
+tags: [self-hosting, containers, website]
 image: https://goaccess.io/images/goaccess-dashboard.png
 ---
 
