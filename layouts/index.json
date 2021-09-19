@@ -1,7 +1,7 @@
 {{- $result := slice -}}
 
 {{- range .Site.RegularPages -}}
-    {{- $data := dict "title" .Title "id" .File.UniqueID "url" .Permalink "path" .RelPermalink "section" .Section -}}
+    {{- $data := dict "title" .Title "url" .Permalink "date" .Date -}}
     {{- $result = $result | append $data -}}
 {{- end -}}
 
