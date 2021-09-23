@@ -5,7 +5,7 @@ image: unsplash:fr3YLb9UHSQ
 tags: [programming, self-hosting, website]
 ---
 
-My website is built with [Hugo](https://gohugo.io), a great static site generator with a bunch of features. One of the big missing features though is search. Hugo has [documentation](https://gohugo.io/tools/search/) on a bunch of different integrations, but none of them quite did what I wanted. Over the last few months, I've been ["badgered"](twitter.com/ironicBadger/) to add search to my site, to make content easier to find when trying to find something I've written about (I do write quite a lot). A few weeks ago, I did exactly that. Hugo's own search uses [Algolia](https://www.algolia.com/), which is great, but not being self-hosted meant it was out for obvious reasons. So instead, I wrote my own.
+My website is built with [Hugo](https://gohugo.io), a great static site generator with a bunch of features. One of the big missing features though is search. Hugo has [documentation](https://gohugo.io/tools/search/) on a bunch of different integrations, but none of them quite did what I wanted. Over the last few months, I've been ["badgered"](https://twitter.com/ironicBadger/) to add search to my site, to make content easier to find when trying to find something I've written about (I do write quite a lot). A few weeks ago, I did exactly that. Hugo's own search uses [Algolia](https://www.algolia.com/), which is great, but not being self-hosted meant it was out for obvious reasons. So instead, I wrote my own.
 
 ## How it works
 
