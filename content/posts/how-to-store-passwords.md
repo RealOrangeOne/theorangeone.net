@@ -3,7 +3,7 @@ title: How to store passwords
 date: 2020-05-28
 subtitle: How to store passwords **properly**!
 tags: [security, programming]
-image: unsplash:zEFyM4sulJ8
+image: unsplash:uw_NWjC1mBE
 ---
 
 Storing passwords is a pretty simple problem in software development, right? Wrong! Storing passwords _correctly_ is pretty complicated. With that said, it's very simple to just lean on work someone else has done, and the libraries available for your language of choice.
