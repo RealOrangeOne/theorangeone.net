@@ -26,36 +26,9 @@ For once, I'm writing an article where the "how-to" section is surprisingly simp
 2. Install Docker (other OCI technologies also available) in the LXC container however you wish
 3. Profit?
 
-Yes, it's really that simple! Now, running [`docker run hello-world`](https://hub.docker.com/_/hello-world/) should start a container and work absolutely flawlessly!
+Yes, it's really that simple! Now, running [`docker run hello-world`](https://hub.docker.com/_/hello-world/) should start a container and work absolutely flawlessly! At least excluding some minor [storage issues]({{<relref "docker-lxc-storage">}}).
 
-For reasons I don't quite understand, I wasn't able to get Alpine linux working as the base OS for the LXC container. I really like Alpine as a minimal base OS, and given everything would be running in docker, the musl _complexities_ didn't bother me. Instead, I just ran Debian, and it worked absolutely perfectly first time. Arch also works perfectly for me, as too I suspect would almost any other distro.
-
-## Storage
-
-[~~Ogres~~ ~~Onions~~](https://www.youtube.com/watch?v=GZpcwKEIRCI) Docker containers have [layers](https://docs.docker.com/storage/storagedriver/). In your `Dockerfile`, each new `RUN`, `COPY` or `ADD` line creates a new layer (so do the others, but not ones which affect the filesystem).
-
-On a normal system, only the changes between each layer are stored on disk, and when a container starts up, it transparently merges them together with a Union filesystem (similar to [MergerFS](https://github.com/trapexit/mergerfs), if you've heard of it). Docker refers to this as `overlay2` (which is its default [storage driver](https://docs.docker.com/storage/storagedriver/select-storage-driver/)). This way, if a layer only changes a few files, only those few files are duplicated, but only the latest can be seen in the container. It's possible to access individual layers though, so don't go adding extra layers to delete secrets in a futile attempt at security.
-
-On LXC however, the default `overlay2` driver doesn't work, because the LXC doesn't have permission to mount these magic overlay FSs (they're a kernel construct). Instead, it defaults to [`vfs`](https://docs.docker.com/storage/storagedriver/vfs-driver/), which whilst significantly simpler, also has some major issues. Rather than using an overlay to only store the changes on disk, `vfs` does a deep copy of the entire previous filesystem to build the next layer, on top of the previous. This means mounting a container uses significantly more storage, as many of the base OS files are duplicated with each layer, massively increasing disk usage. Forcing `overlay2` doesn't make things easier:
-
-```
-ERRO[2021-09-30T09:24:56.914420548Z] failed to mount overlay: invalid argument     storage-driver=overlay2
-ERRO[2021-09-30T09:24:56.914439880Z] [graphdriver] prior storage driver overlay2 failed: driver not supported
-failed to start daemon: error initializing graphdriver: driver not supported
-```
-
-There is however a solution to this, in the form of FUSE. There exists a userspace implementation of `overlayfs`, known helpfully as `fuse-overlayfs`. Even more helpfully, docker has native support for it. Switching to it is simple:
-
-1. Install `fuse-overlayfs` using your package manager of choice
-2. Modify `/etc/docker/daemon.json` and set `storage-driver` to `fuse-overlayfs`
-3. Restart Docker
-4. Profit?
-
-Note that because I don't use native docker volumes for anything important, I didn't back up `/var/lib/docker` at all in the above. If you are, or want to be extra cautious, it's probably worth doing.
-
-Now, once docker restarts, it's likely none of your containers will be running. This is normal. Now you'll just need to pull and start the previously running containers (you're using something like `docker-compose` to manage your configuration, right?). Containers should start in exactly the same way, and work in exactly the same way. If everything went well, you'll be up and back to normal.
-
-Now, to see the differences. Inside `/var/lib/docker`, Docker stores separate directories based on the storage driver it's using. `du -hs <directory>` will show you the size of each, so you can see how much storage you saved. When I performed this, the `vfs` directory was 18GB, whilst `fuse-overlayfs` was a mere 5GB. 4x saving by doing practically nothing - just how I like it!
+For reasons I don't quite understand, I wasn't able to get Alpine linux working as the base OS for the LXC container at the time. I really like Alpine as a minimal base OS, and given everything would be running in docker, the musl _complexities_ didn't bother me. Instead, I just run Debian, and it worked absolutely perfectly first time. Arch also works perfectly for me, as too I suspect would almost any other distro. Revisiting it whilst writing this article, and it seems to work fine. In cases like this, there is no "best distro", the distro doesn't matter - what does is that you're comfortable maintaining it for its lifespan.
 
 ## But why?
 
