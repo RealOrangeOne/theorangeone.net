@@ -19,10 +19,11 @@ failed to start daemon: error initializing graphdriver: driver not supported
 
 There is however a solution to this, in the form of FUSE. There exists a userspace implementation of `overlayfs`, known helpfully as `fuse-overlayfs`. Even more helpfully, docker has native support for it. Switching to it is simple:
 
-1. Install `fuse-overlayfs` using your package manager of choice
-2. Modify `/etc/docker/daemon.json` and set `storage-driver` to `fuse-overlayfs`
-3. Restart Docker
-4. Profit?
+1. Ensure that `fuse` is enabled on the container. Either set `features: fuse=1` in the LXC config file, or check "fuse" under options in Proxmox. After changing, restart the container.
+2. Install `fuse-overlayfs` using your package manager of choice
+3. Modify `/etc/docker/daemon.json` and set `storage-driver` to `fuse-overlayfs`
+4. Restart Docker
+5. Profit?
 
 Note that because I don't use native docker volumes for anything important, I didn't back up `/var/lib/docker` at all in the above. If you are, or want to be extra cautious, it's probably worth doing.
 
