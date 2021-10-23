@@ -12,7 +12,11 @@ As far as web traffic goes, there are 2 main compression algorithms: gzip and br
 
 The exact support depends on the browser (almost all modern ones support [brotli](https://caniuse.com/brotli) and [gzip](https://caniuse.com/sr_content-encoding-gzip)), but if a client doesn't support a specific algorithm (it sends the ones it does in the `Accept-Encoding` header), then the server won't respond with it. It's also well know that some files don't compress well at all, hence many servers only compress certain file types, and even then only send the compressed data if it's actually smaller. This way, enabling compression is 0 risk.
 
-Take a look at this website for example. Loading this page (just the HTML) transferred XXXX, but the file is actually XXXX, and you didn't even notice a difference. Loading the whole page, assets and all should have been XXXX, saving XXXX data. Savings like that almost every request sounds like a pretty great deal to me!
+Take a look at this website for example. Loading this page (just the HTML) transferred 5.23KB, but the file is actually 15.32 KB, and you didn't even notice a difference. Loading the whole page, assets and all should have been 2.1 MB, but only transferred 1.81 MB - saving 13%! Savings like that almost every request sounds like a pretty great deal to me!
+
+{{< block "mini-rant" >}}
+For reasons I don't understand, [Unsplash](https://unsplash.com), the service I use for most of the great images you see at the top of my posts, doesn't serve its images compressed. Whilst images aren't necessarily ideal for compression, they can still gain a decent amount. That's where most of the weight comes from for this page.
+{{</block>}}
 
 Normally, an application won't support compression in itself - it's more common on reverse proxies to do the compression on the fly. However, if the application _does_ support it, I'd strongly recommend enabling it too (you can enable it in both places just fine). If the server enables it too, it may allow it to serve pre-compressed static assets if available, removing the need to compress those files on the fly, reducing resource use and latency (not that it'd be much to notice on most scales). Reverse proxies will be aware not to try and compress data which is already compressed (using the `Content-Encoding` header), this way you can enable it on all sites at the reverse proxy level, and they all benefit - but if a specific application supports it itself, then enabling that will give just that application a little extra boost.
 
