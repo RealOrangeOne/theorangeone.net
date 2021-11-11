@@ -1,0 +1,3 @@
+Contact: https://theorangeone.net/contact/#matrix
+Canonical: https://theorangeone.net/.well-known/security.txt
+Preferred-Languages: en
