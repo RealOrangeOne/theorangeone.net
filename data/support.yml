@@ -9,9 +9,9 @@ referral:
     icon: fas fa-envelope-open
 
 donate:
-  buymeacoffee:
-    name: Buy Me A Coffee
-    link: https://www.buymeacoffee.com/theorangeone
+  Ko-fi:
+    name: Ko-fi
+    link: https://ko-fi.com/theorangeone
     icon: fas fa-coffee
   github:
     name: GitHub
