@@ -32,12 +32,12 @@ To explicitly add address space for your containers, an entry needs to be added 
 {
     ...
     "default-address-pools":[
-        {"base":"172.80.0.0/16","size":24},
-        {"base":"172.90.0.0/16","size":24}
+        {"base":"172.20.0.0/16","size":24},
+        {"base":"172.21.0.0/16","size":24}
     ]
 }
 ```
 
-This configuration will allow Docker to allocate `172.80.[0-255].0/24` and `172.90.[0-255].0/24`, which allows a total of 256 addresses to each network, and a total of 512 networks.
+This configuration will allow Docker to allocate `172.20.[0-255].0/24` and `172.21.[0-255].0/24`, which allows a total of 256 addresses to each network, and a total of 512 networks.
 
 The day you hit that limit is the day you've done something wrong!
