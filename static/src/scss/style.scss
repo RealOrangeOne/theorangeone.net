@@ -194,6 +194,7 @@ pre.chroma {
   }
 
   img {
+    cursor: zoom-in;
     width: 100%;
   }
 
@@ -358,5 +359,15 @@ a.no-color-change {
     border: 0;
     background-color: $black;
     color: $body-color;
+  }
+}
+
+#lightbox-modal {
+  img {
+    max-width: initial !important;
+  }
+
+  .modal-dialog {
+    max-width: 75%;
   }
 }

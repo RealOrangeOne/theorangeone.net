@@ -67,3 +67,13 @@ $('a[href^="#"] ').on('click', function(event) {
     scrollTo(target.offset().top);
   }
 });
+
+$('.content img').on('click', function(event) {
+  event.preventDefault();
+  const lightbox = $('#lightbox-modal');
+  lightbox.find('img').remove();
+  $(this)
+    .clone()
+    .appendTo(lightbox.find('.modal-content'));
+  lightbox.modal();
+});
