@@ -27,3 +27,7 @@
   {{ partial "related-content.html" . }}
 </div>
 {{ end }}
+
+{{ define "scripts_extra" }}
+  {{ partial "script_async.html" "js/lightgallery.min.js" }}
+{{ end }}

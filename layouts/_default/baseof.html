@@ -36,10 +36,6 @@
 
     {{ partial "script.html" "js/jquery.min.js" }}
 
-    {{ if eq .Params.layout "flickr" }}
-      {{ partial "script_async.html" "js/lightgallery.min.js" }}
-    {{ end }}
-
     {{ partial "script_async.html" "js/bootstrap.min.js" }}
 
     {{ partial "script_async.html" "js/app.js" }}
