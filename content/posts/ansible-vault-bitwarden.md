@@ -75,7 +75,13 @@ In this setup, Bitwarden will prompt you for your master password every time you
 
 That thing I mentioned before, the ["session key"](https://bitwarden.com/help/article/cli/#using-a-session-key), this is where that comes in. The session key allows Bitwarden to access its credentials without prompting you for your password each time. It works by setting a `$BW_SESSION` environment variable, which future command line invocations can read and unlock the database with.
 
-To configure this, run `bw unlock`. This will prompt you for your master password, and then display a session key environment variable to set. If you set this in the same terminal you run Ansible from, it won't prompt you for your master password any more, as ansible helpfully passes through all environment variables into the relevant password file script.
+To configure this, run `bw unlock`. This will prompt you for your master password, and then display a session key environment variable to set. If you set this in the same terminal you run Ansible from, it won't prompt you for your master password any more, as Ansible helpfully passes through all environment variables into the relevant password file script.
+
+If you want a one-liner to set the session key:
+
+```bash
+export BW_SESSION=$(bw unlock --raw)
+```
 
 ## What about the become password?
 
