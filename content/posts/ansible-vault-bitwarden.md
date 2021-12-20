@@ -69,6 +69,14 @@ So now, when deploying with Ansible, rather than reading the vault password from
 
 [My diff](https://github.com/RealOrangeOne/infrastructure/commit/9e473265a530807a5123c3f7f3d99736aca2e35a)
 
+### Password caching
+
+In this setup, Bitwarden will prompt you for your master password every time you run Ansible. For most, that's not a massive issue, but for some that could get quite annoying.
+
+That thing I mentioned before, the ["session key"](https://bitwarden.com/help/article/cli/#using-a-session-key), this is where that comes in. The session key allows Bitwarden to access its credentials without prompting you for your password each time. It works by setting a `$BW_SESSION` environment variable, which future command line invocations can read and unlock the database with.
+
+To configure this, run `bw unlock`. This will prompt you for your master password, and then display a session key environment variable to set. If you set this in the same terminal you run Ansible from, it won't prompt you for your master password any more, as ansible helpfully passes through all environment variables into the relevant password file script.
+
 ## What about the become password?
 
 You probably shouldn't run Ansible as root, for the same reasons you shouldn't run many things as root. Given Ansible uses SSH, that would require SSH to be open to `root` anyway, which is also a bad idea. Instead, Ansible has [`become`](https://docs.ansible.com/ansible/latest/user_guide/become.html), which can use `sudo` to change user as part of individual tasks and roles.
