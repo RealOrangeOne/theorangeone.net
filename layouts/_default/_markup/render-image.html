@@ -3,7 +3,7 @@
 {{ $resource := .Page.Resources.GetMatch $destination }}
 
 {{ if $resource }}
-  {{ $destination = ($resource.Resize "1500x").RelPermalink }}
+  {{ $destination = ($resource.Resize "1500x webp").RelPermalink }}
 {{ end }}
 
 <figure class="text-center">
