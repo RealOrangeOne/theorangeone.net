@@ -64,6 +64,10 @@ Step 2 is to reduce the log level on both the file logger, and any other table l
     <trace_log remove="remove"/>
     <metric_log remove="remove"/>
     <asynchronous_metric_log remove="remove"/>
+
+    <!-- Update: Required for newer versions of Clickhouse -->
+    <session_log remove="remove"/>
+    <part_log remove="remove"/>
 </yandex>
 ```
 
