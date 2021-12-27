@@ -12,7 +12,7 @@
     <div id="light-gallery" class="row">
     {{ range $element := $photoset.photo }}
       <a href="{{ $element.url_k }}" title="{{ $element.title }}" class="col-md-2 col-xs-12">
-        <img src="{{ $element.url_q }}" alt="{{ $element.title }}" referrerpolicy="no-referrer"/>
+        <img src="{{ $element.url_q }}" alt="{{ $element.title }}" referrerpolicy="no-referrer" decoding="async" loading="lazy"/>
       </a>
     {{ end }}
     </div>
