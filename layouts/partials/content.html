@@ -17,7 +17,7 @@
 
 <h1 class="display-4">{{ .Title }}</h1>
 {{ if .Params.subtitle }}
-  <h5 class="my-3">{{ markdownify .Params.subtitle | emojify }}</h5>
+  <h2 class="my-3 h5">{{ markdownify .Params.subtitle | emojify }}</h2>
 {{ end }}
 {{ if .IsPage }}
   <p>{{ partial "content-details.html" . }}</p>
