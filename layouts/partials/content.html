@@ -10,7 +10,7 @@
     {{ .Scratch.Set "image" $unsplash_data.urls.regular }}
   {{ end }}
 
-  <img class="mb-3 header-image" src='{{ .Scratch.Get "image" }}' alt="" decoding="async" loading="lazy" referrerpolicy="no-referrer" />
+  <img class="mb-3 header-image" src='{{ .Scratch.Get "image" }}' alt="" decoding="async" referrerpolicy="no-referrer" />
 {{ end }}
 
 {{ partial "breadcrumbs/index.html" . }}
