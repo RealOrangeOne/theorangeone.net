@@ -15,9 +15,7 @@
     {{ partial "style.html" "css/highlight.css" }}
     {{ partial "style.html" "css/shareon.css" }}
 
-    {{ if eq .Params.layout "flickr" }}
-      {{ partial "style.html" "css/lightgallery.css" }}
-    {{ end }}
+    {{ block "style_extra" . }}{{ end }}
 
     <title>{{ partial "title-item.html" . }}{{ .Site.Title }}</title>
 

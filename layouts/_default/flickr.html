@@ -28,6 +28,10 @@
 </div>
 {{ end }}
 
+{{ define "style_extra" }}
+  {{ partial "style.html" "css/lightgallery.css" }}
+{{ end }}
+
 {{ define "scripts_extra" }}
   {{ partial "script_async.html" "js/lightgallery.min.js" }}
 {{ end }}
