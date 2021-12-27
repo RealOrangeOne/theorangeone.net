@@ -1,7 +1,7 @@
 <div class="media list-page-item mb-3" data-id="{{ .File.UniqueID }}">
   {{ if .Params.image }}
     <div class="d-none d-md-block align-self-center img-wrapper mr-3">
-      <a href="{{ .RelPermalink }}">
+      <a href="{{ .RelPermalink }}" title="{{ .Title }}">
         {{ .Scratch.Set "image" .Params.image }}
         {{ if hasPrefix .Params.image "resource:" }}
           {{ $resource := .Resources.GetMatch (replace .Params.image "resource:" "") }}
@@ -17,7 +17,7 @@
     </div>
   {{ end }}
   <div class="media-body">
-    <a href="{{ .RelPermalink }}">
+    <a href="{{ .RelPermalink }}" title="{{ .Title }}">
       <h5 class="my-0">{{ .Title }}</h5>
     </a>
     <small>{{ partial "content-details.html" . }}</small>
