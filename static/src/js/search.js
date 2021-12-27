@@ -79,7 +79,7 @@ $(document).ready(function() {
   const initialSearchTerm = getInitialSearchTerm();
   searchInput.val(initialSearchTerm);
 
-  $.getJSON('./index.json', function(data) {
+  $.getJSON('/search/index.json', function(data) {
     // populate the index
     searchIndex = lunr(function() {
       this.ref('id');
