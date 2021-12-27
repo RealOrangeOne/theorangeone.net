@@ -3,7 +3,7 @@ title: Calming down Clickhouse
 subtitle: Why is Clickhouse so intensive?!
 date: 2020-09-02
 tags: [containers, self-hosting]
-image: https://clickhouse.tech/images/index/intro.svg
+image: https://raw.githubusercontent.com/ClickHouse/ClickHouse/master/website/images/index/intro.svg
 ---
 
 [Clickhouse](https://clickhouse.tech/) is a column oriented database engine, mostly designed for analytics. It was developed and deployed by [Yandex](https://yandex.com/) in their analytics offering, but [Plausible](https://plausible.io), my analytics provider of choice, uses it to store the analytics data, as it's more suited to this than [PostgreSQL](https://www.postgresql.org/).
