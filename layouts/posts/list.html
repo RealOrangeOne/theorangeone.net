@@ -14,11 +14,11 @@
     {{ range .Pages.GroupByDate "2006-01" }}
       {{ $month := print .Key "-01" }}
       {{ $display := dateFormat "2006-01" $month }}
-      <h3 class="mt-5" id="{{ $display }}">
+      <h2 class="mt-5 h3" id="{{ $display }}">
         <a href="#{{ $display }}" class="no-color-change">
           <time datetime="{{ $month }}" title='{{ dateFormat "January 2006" $month }}'>{{ $display }}</time>
         </a>
-      </h3>
+      </h2>
       {{ range (sort .Pages "Date" "desc") }}
         {{ partial "list_item.html" . }}
       {{ end }}
