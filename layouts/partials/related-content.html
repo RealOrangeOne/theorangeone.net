@@ -7,11 +7,11 @@
     {{ $col := printf "col-md-%d" (div 12 (len $related)) }}
 
     <div class="container mt-5 text-center">
-      <h3 class="m-0">Related content</h3>
+      <h2 class="m-0 h3">Related content</h2>
       <div class="row">
         {{ range $related }}
           <div class="{{ $col }} mt-4">
-            <h5><a href="{{ .RelPermalink }}">{{ .Title }}</a></h5>
+            <h3 class="h5"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
             {{ partial "content-details.html" . }}
           </div>
         {{ end }}
