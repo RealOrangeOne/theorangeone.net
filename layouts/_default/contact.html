@@ -3,14 +3,14 @@
   <div class="container">
     {{ partial "content.html" . }}
 
-    <h3>Profiles</h3>
+    <h2>Profiles</h2>
 
     <div class="row">
       {{ range $i, $e := sort .Site.Data.social.accounts "name" }}
         <div class="col-sm-3 mt-3">
           <div class="card about-card text-center" id="{{ urlize $e.name }}">
             <a href="{{ $e.link }}" class="colour-invert">
-              <h1 class="display-3"><i class="{{ $e.icon }}"></i></h1>
+              <h3 class="display-3"><i class="{{ $e.icon }}"></i></h3>
             </a>
             <div class="card-body">
               <a href="{{ $e.link }}" class="colour-invert">
