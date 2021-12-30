@@ -10,6 +10,22 @@ function waitFor(obj, property, callback) {
   }, 500);
 }
 
+function scrollTo(offset) {
+  $('html, body')
+    .stop()
+    .animate(
+      {
+        scrollTop: offset,
+      },
+      500
+    );
+}
+
+function resetHash() {
+  // Clear URL hash, without reloading the page - https://stackoverflow.com/a/15323220
+  window.history.pushState('', document.title, window.location.pathname);
+}
+
 $(document).ready(function() {
   waitFor($.fn, 'lightGallery', function() {
     $('#light-gallery').lightGallery({
@@ -41,27 +57,20 @@ $(document).ready(function() {
     mainAudio: '/audio/elevator.mp3',
     endAudio: '/audio/ding.mp3',
     preloadAudio: false,
+    endCallback: resetHash,
   });
 });
 
-function scrollTo(offset) {
-  $('html, body')
-    .stop()
-    .animate(
-      {
-        scrollTop: offset,
-      },
-      500
-    );
-}
-
 $('#scroll-top').on('click', function() {
   scrollTo(0);
-  window.history.pushState('', document.title, window.location.pathname); // Reset hash in URL
+  resetHash();
 });
 
-$('a[href^="#"] ').on('click', function(event) {
-  event.preventDefault();
+$('a[href^="#"]').on('click', function(event) {
+  if (this.dataset.noPreventDefault === undefined) {
+    event.preventDefault();
+    resetHash();
+  }
   const target = $($(this).attr('href'));
   if (target.length) {
     scrollTo(target.offset().top);
