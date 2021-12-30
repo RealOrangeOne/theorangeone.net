@@ -25,6 +25,8 @@ enableEmoji: true
 MetaDataFormat: yaml
 stepAnalysis: true
 
+enableGitInfo: true
+
 pygmentsCodefencesGuessSyntax: true
 pygmentsCodefences: true
 pygmentsUseClasses: true

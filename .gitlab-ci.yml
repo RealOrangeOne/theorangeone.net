@@ -27,7 +27,7 @@ build:
   image: node:alpine
   stage: build
   before_script:
-    - apk add --no-cache hugo
+    - apk add --no-cache hugo git
   script:
     - ./scripts/release.sh
   artifacts:
