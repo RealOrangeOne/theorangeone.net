@@ -54,3 +54,9 @@ related:
       weight: 1
     - name: subtitle
       weight: 1
+
+
+security:
+  funcs:
+    getenv:
+      - .*
