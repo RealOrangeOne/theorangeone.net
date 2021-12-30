@@ -55,9 +55,9 @@ function scrollTo(offset) {
     );
 }
 
-$('#scroll-top').on('click', function(event) {
-  event.preventDefault();
+$('#scroll-top').on('click', function() {
   scrollTo(0);
+  window.history.pushState('', document.title, window.location.pathname); // Reset hash in URL
 });
 
 $('a[href^="#"] ').on('click', function(event) {
