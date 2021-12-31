@@ -6,9 +6,9 @@ image: unsplash:5bYxXawHOQg
 tags: [programming]
 ---
 
-It was a normal (for 2021) Sunday evening back in July, I was minding my own business, obviously doing something _super cool_, when I spotted a [message](https://discord.com/channels/693469700109369394/693469700109369397/866362106089177089) from a certain [badger-y fellow](https://twitter.com/IronicBadger/) in the [Self Hosted show](https://selfhosted.show/)'s [Discord](https://discord.gg/U3Gvr54VRp):
+It was a normal (for 2021) Sunday evening back in July, I was minding my own business, obviously doing something _super cool_, when I spotted [a message](https://discord.com/channels/693469700109369394/693469700109369397/866362106089177089) from a certain [badger-y fellow](https://twitter.com/IronicBadger/) in the [Self Hosted show](https://selfhosted.show/)'s [Discord](https://discord.gg/U3Gvr54VRp). Alex has the lovely and weird ability of reliably [nerd-sniping](https://xkcd.com/356/) me into spending a couple of hours or so creating a side projects, so down the rabbit-hole I dove...
 
-Alex has the lovely and weird ability of reliably [nerd-sniping](https://xkcd.com/356/) me into spending a couple of hours or so creating a side projects, so down the rabbit-hole I dove...
+![The [message](https://discord.com/channels/693469700109369394/693469700109369397/866362106089177089) which started it all](message.png)
 
 ## The project
 
