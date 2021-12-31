@@ -69,7 +69,7 @@ I'm currently still using my previous [PIA](https://www.privateinternetaccess.co
 
 ### Email
 
-[Fastmail](https://ref.fm/u19842056) is one of the companies I've been using the longest. No they're not encrypted at rest, yes they're in a five-eyes country, but as a service they're amazing, and besides a small blip this year they've been rock solid. [Protonmail](https://protonmail.com/) is nice, and is something I want to use and support, but it's just so damn expensive if you use multiple aliases!
+[Fastmail]({{<referralurl fastmail>}}) is one of the companies I've been using the longest. No they're not encrypted at rest, yes they're in a five-eyes country, but as a service they're amazing, and besides a small blip this year they've been rock solid. [Protonmail](https://protonmail.com/) is nice, and is something I want to use and support, but it's just so damn expensive if you use multiple aliases!
 
 I've been tempted to try spinning up my own email server, but email is still pretty important in 2020, that downtime isn't acceptable. If you are thinking about doing this, i'd highly recommend [mailcow](https://mailcow.email/).
 

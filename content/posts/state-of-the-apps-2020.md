@@ -71,7 +71,7 @@ My current VPN of choice is [Private Internet Access](https://www.privateinterne
 
 ## Email
 
-I've been a pretty loyal [Fastmail](https://ref.fm/u19842056) user for a couple of years now. It's not encrypted at rest like [ProtonMail](https://protonmail.com/), but they claim very high levels of privacy, and the feature list is incredible!
+I've been a pretty loyal [Fastmail]({{<referralurl fastmail>}}) user for a couple of years now. It's not encrypted at rest like [ProtonMail](https://protonmail.com/), but they claim very high levels of privacy, and the feature list is incredible!
 
 As a client, I still quite like [Thunderbird](https://www.thunderbird.net/). I tried [Mailspring](https://getmailspring.com/), [Evolution](https://wiki.gnome.org/Apps/Evolution/), and just the web UI, but Thunderbird is really nice in terms of features and performance, and the calendar integration is really handy. Since Mozilla stopped supporting it, the community has picked it back up, and there's now full-time work being done on it, and it's improving quite a lot. But there's still quite a long way to go before it's really ready to start recommending to people.
 
