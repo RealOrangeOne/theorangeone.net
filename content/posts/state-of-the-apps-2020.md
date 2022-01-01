@@ -1,7 +1,7 @@
 ---
 title: State of the Apps 2020
 date: 2020-01-01
-tags: [linux, programming, arch, state-of-the-apps]
+tags: [linux, arch, state-of-the-apps]
 aliases:
     - /posts/my-stack-2019/
 ---
