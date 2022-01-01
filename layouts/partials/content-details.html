@@ -12,7 +12,7 @@
   <a href="{{ ref . "/tags" }}" class="no-color-change mr-1" title="Tags">
     <i class="fas fa-tags small"></i>
   </a>
-  {{ range $i, $e := .Params.tags }}
+  {{ range (.Params.tags | sort) }}
     <a href="/tags/{{ urlize . }}" class="mr-1" title="{{ . }}">#{{ . }}</a>
   {{ end }}
 {{ end }}
