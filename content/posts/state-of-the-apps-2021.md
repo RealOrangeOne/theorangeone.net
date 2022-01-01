@@ -3,8 +3,6 @@ title: State of the Apps 2021
 date: 2021-01-01
 image: unsplash:uUBltZemj1E
 tags: [linux, self-hosting, arch, state-of-the-apps]
-aliases:
-    - /posts/my-stack-2020/
 ---
 
 It's that time of the year again: time to look back at how I work, the tools I use, and how the next year might look. I've been working from home basically full time since the UK went into lockdown 17th March. It's been quite an adjustment barely leaving the house, and has brought with it a number of changes to my desk and tooling.
