@@ -4,6 +4,7 @@ date: 2020-01-01
 tags: [linux, arch, state-of-the-apps]
 aliases:
     - /posts/my-stack-2019/
+image: unsplash:Raw0dyfm4GE
 ---
 
 This year marks the 3rd year of my pattern for publishing a "My Stack" post, noting down how I get work done both professionally and personally ([2018]({{< relref "my-stack-2018" >}}) / [2017]({{< relref "my-stack-2017" >}})). This year, I'm ~~stealing~~ borrowing inspiration from [CGP Grey](https://www.cgpgrey.com/) / [Cortex](https://www.relay.fm/cortex/) and their ["State of the Apps"](https://www.cgpgrey.com/blog/state-of-the-apps-2014/) episodes, and also talking about productivity, and the other services I use to get things done.
