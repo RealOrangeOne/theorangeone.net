@@ -1,8 +1,10 @@
 ---
-title: Backing up and restoring containers
+title: Backing up and restoring Docker containers
 date: 2020-12-06
 image: unsplash:CpsTAUPoScw
-tags: [containers, linux, self-hosting]
+tags: [containers, linux, self-hosting, docker]
+aliases:
+    - /posts/backup-restore-containers/
 ---
 
 You should back up your data, properly! If you're not, you're playing a dangerous game with fate. Computers are pretty reliable, but they also go wrong, often. You should always backup your files, but backing up a containerized application isn't quite as simple.

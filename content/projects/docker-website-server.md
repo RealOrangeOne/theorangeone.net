@@ -2,6 +2,7 @@
 title: Docker Website Server
 repo: RealOrangeOne/docker-website-server
 subtitle: Static file server designed for serving websites
+tags: [docker]
 ---
 
 If you, like me, have a website, you'll probably need some way of serving it. And if, like me, your website is static, `nginx` is a great, lightweight and insanely fast file server. But, how do you configure it? Sometimes, you just don't care, and want someone else to do it for you - like me!

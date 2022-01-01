@@ -2,7 +2,7 @@
 title: Container processes shouldn't run as root!
 subtitle: \"What's wrong with containers running as root?\"
 date: 2020-08-18
-tags: [self-hosting, security, containers]
+tags: [self-hosting, security, containers, docker]
 image: https://www.threatstack.com/wp-content/uploads/2017/06/docker-cloud-twitter-card.png
 ---
 

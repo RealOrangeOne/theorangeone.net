@@ -3,7 +3,7 @@ title: Docker in LXC
 subtitle: A hack or a haven?
 date: 2021-09-30
 image: unsplash:uyDNkvdIKv8
-tags: [linux, containers, server-2020, self-hosting]
+tags: [linux, containers, server-2020, self-hosting, docker]
 ---
 
 Docker is a great containerization technology for running applications. It keeps multiple applications completely isolated from each other, only allowing connections exactly when you tell them to. But what if you're on a hypervisor? You want your host OS to be as lean as possible (else it defeats the point), but you don't want the overhead and additional complexities which come from full on VMs?

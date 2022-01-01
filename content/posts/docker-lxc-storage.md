@@ -2,7 +2,7 @@
 title: Reducing storage usage for Docker in LXC
 date: 2021-10-01
 image: unsplash:FJTz_ASf_BI
-tags: [linux, containers, server-2020, self-hosting]
+tags: [linux, containers, server-2020, self-hosting, docker]
 ---
 
 Docker containers (like [onions](https://www.youtube.com/watch?v=GZpcwKEIRCI)) have [layers](https://docs.docker.com/storage/storagedriver/). In your `Dockerfile`, each new `RUN`, `COPY` or `ADD` line creates a new layer (so do the others, but not ones which affect the filesystem). Each layer contains only the files which changed from the previous layer, which allows layers to be shared between containers, reducing download size and disk usage. It's possible to access individual layers though, so don't go adding extra layers to delete secrets in a futile attempt at security.

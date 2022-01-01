@@ -1,6 +1,6 @@
 ---
 title: Upgrading Databases in Docker
-tags: [containers]
+tags: [containers, docker]
 date: 2021-12-23
 image: unsplash:lRoX0shwjUQ
 ---
@@ -9,7 +9,7 @@ For me, every Monday is updates day. I run through all the entries in my Ansible
 
 Database upgrades are _fun_ at the best of times. By their nature they contain some of the most important data to an application's operations. When you add Docker into the mix, it can get even more complex. But it doesn't have to be difficult. With a little planning, and a tiny amount of downtime, the upgrade process is just a few simple steps, depending on the engine you're using.
 
-Before you do any of this, absolutely make sure you have backups. Containers are wonderfully [simple]({{<relref "backup-restore-containers">}}) to back up, and you do not want your upgrade to result in complete loss of data! I give each application its own database container, to keep things separate and clean, but these upgrade instructions are the same regardless.
+Before you do any of this, absolutely make sure you have backups. Containers are wonderfully [simple]({{<relref "backup-restore-docker-containers">}}) to back up, and you do not want your upgrade to result in complete loss of data! I give each application its own database container, to keep things separate and clean, but these upgrade instructions are the same regardless.
 
 ## PostgreSQL
 

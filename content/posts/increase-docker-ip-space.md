@@ -3,7 +3,7 @@ title: Increase your Docker IP space
 date: 2020-10-30
 image: unsplash:fN603qcEA7g
 subtitle: Fixing "could not find an available, non-overlapping IPv4 address pool among the defaults to assign to the network"
-tags: [containers, self-hosting, linux]
+tags: [containers, self-hosting, linux, docker]
 ---
 
 Recently, I started setting up a new application on my docker host. It was late in the day, and I just wanted to get something up and working to play around with. Just my luck, I was met with wonderfully cryptic error:
