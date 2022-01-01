@@ -2,7 +2,7 @@
 title: State of the Apps 2021
 date: 2021-01-01
 image: unsplash:uUBltZemj1E
-tags: [linux, programming, self-hosting]
+tags: [linux, programming, self-hosting, arch, state-of-the-apps]
 aliases:
     - /posts/my-stack-2020/
 ---

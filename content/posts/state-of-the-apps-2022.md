@@ -1,7 +1,7 @@
 ---
 title: State of the Apps 2022
 date: 2022-01-01
-tags: [self-hosting, linux, programming]
+tags: [self-hosting, linux, programming, linux, arch, state-of-the-apps]
 image: unsplash:TgGipdWWDuA
 ---
 

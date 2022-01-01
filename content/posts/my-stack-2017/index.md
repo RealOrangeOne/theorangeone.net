@@ -3,7 +3,7 @@ title: My Stack - 2017 Edition
 date: 2017-12-31
 image: resource:editing-my-stack.png
 hide_header_image: true
-tags: [linux, arch]
+tags: [linux, arch, state-of-the-apps]
 aliases:
     - /posts/state-of-the-apps-2018/
 ---
