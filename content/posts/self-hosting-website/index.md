@@ -10,6 +10,10 @@ A few days ago, I was sharing a [blog post]({{< relref "wireguard-haproxy-gatewa
 
 At the time, my website was hosted on [Netlify](https://www.netlify.com/). If you're looking to host a static site, and don't want to run your own servers, netlify is the right answer! The performance is great, the free plan is wonderful, and the fact content is distributed over their CDN is pretty nice!
 
+{{<block disclaimer>}}
+This post is now out of date. I recently created an updated dedicated post about my [websites deployment process]({{<relref "website-deployment-process">}}).
+{{</block>}}
+
 ## Build Modifications
 
 To get the site working on my home server, the build process would need to change slightly. Netlify automatically discovers the tasks which need doing to install dependencies for your site, and then let you provide a single command to build the site. In my case, all I needed was [Hugo](https://gohugo.io/), NodeJS, and a [specific bash script](https://github.com/RealOrangeOne/theorangeone.net/blob/master/scripts/build.sh) to run. My home server runs is basically a docker host, so the site would need to run from inside a container.
