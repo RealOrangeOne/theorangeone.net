@@ -2,7 +2,7 @@
 title: Antergos to vanilla Arch
 date: 2019-05-25
 subtitle: With Antergos unsupported, what's next?
-image: https://antergos.com/wp-content/uploads/2014/09/antergos-wallpaper.png
+image: https://2.bp.blogspot.com/-Sqy8eqqY4Kg/VzeTtm1RtEI/AAAAAAAAAw4/nP7ql0Py2-MhTfexWfOnCDI5pPelo6mYgCLcB/s1600/antergos-everyone-bg.jpg
 tags: [arch]
 ---
 

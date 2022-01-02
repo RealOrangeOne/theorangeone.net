@@ -157,7 +157,7 @@ When I originally set up the network, I was feeling lazy, so I set up a DHCP ser
 
 ## Storage
 
-My storage setup isn't the fanciest, nor the most complicated. It's far from anything which would feel at home on [r/datahorder](reddit.com/r/datahoarder). The most important thing is that I feel confident storing my data on it, without worrying that it's going to suddenly vanish whilst I sleep.
+My storage setup isn't the fanciest, nor the most complicated. It's far from anything which would feel at home on [r/datahorder](https://reddit.com/r/datahoarder). The most important thing is that I feel confident storing my data on it, without worrying that it's going to suddenly vanish whilst I sleep.
 
 ### Disks
 
@@ -197,7 +197,7 @@ There are a couple pain points which are next on my list:
 
 Currently, Nebula [doesn't support](https://github.com/slackhq/nebula/issues/318) specifying a custom DNS server like WireGuard (or more specifically `wg-quick`) does, so routing things with DNS rather than IPs isn't especially clean. Having bookmarks with a load of IPs and ports is my current solution, I'd also like to add some firewalling to the Nebula network, as currently it's far flatter than it really should be.
 
-As mentioned, my media storage isn't great. At some point soon, I really need to get a couple extra drives, and create a pool out of these. My current intention is to use [mergerFS](https://github.com/trapexit/mergerfs) and [snapraid](https://www.snapraid.it/), as recommended by [PMS](https://perfectmediaserver.com/tech-stack/snapraid/), although I am having a few dirty BTRFS-related thoughts, because the compression and integrations aren't something I want to miss out on - even though BTRFS has a very [checkered](https://btrfs.wiki.kernel.org/index.php/Gotchas) past. I'll almost certainly go snapraid, but I'm still keeping an eye out.
+As mentioned, my media storage isn't great. At some point soon, I really need to get a couple extra drives, and create a pool out of these. My current intention is to use [mergerFS](https://github.com/trapexit/mergerfs) and [snapraid](https://www.snapraid.it/), as recommended by [PMS](https://perfectmediaserver.com/tech-stack/snapraid.html), although I am having a few dirty BTRFS-related thoughts, because the compression and integrations aren't something I want to miss out on - even though BTRFS has a very [checkered](https://btrfs.wiki.kernel.org/index.php/Gotchas) past. I'll almost certainly go snapraid, but I'm still keeping an eye out.
 
 As strange as it might sound, I'd like to base fewer things off Debian if I can help it. Debian is a great OS, don't get me wrong, leaps better than Ubuntu, but its reliability comes at the cost of using older releases, and that's a trade-off I'd rather not make for certain things. I've recently become a big fan of Alpine for some use cases, and my most recent VPS provision is based on arch ([I use Arch]({{<relref "state-of-the-apps-2021">}}) BTW). Debian is working fine, but perhaps the grass running arch is greener.
 

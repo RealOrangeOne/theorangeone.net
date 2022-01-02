@@ -50,4 +50,4 @@ In the past I've also used a [custom nginx container](https://git.theorangeone.n
 
 I'm not one to really sit still, and keep things the way they are. I've not been especially happy with Hugo for a while, nor my website. I'm likely to completely rebuild it this year, but I don't know exactly how or what in. Given I now professionally build sites with [Wagtail](https://wagtail.io/), I suspect that could play a part.
 
-Until that time, when you see a new post deployed, and get notified about it through [RSS](/index.rss), this is how it happens.
+Until that time, when you see a new post deployed, and get notified about it through [RSS](/index.xml), this is how it happens.

@@ -37,7 +37,7 @@ Somewhat recently, The folks at System76 [mentioned](https://www.omgubuntu.co.uk
 
 ### Shell
 
-My shell hasn't changed since last year, and probably won't change next year. [Alacritty](https://alacritty.org/), [ZSH](https://www.zsh.org/) and [tmux]([alacritty](https://github.com/alacritty/alacritty)) are at its heart, and that's probably not going to change. I've considered switching back to bash for a more cohesive setup across devices, but given I don't use many of the zsh-specific features, it doesn't make a difference, and having some [oh-my-zsh](https://ohmyz.sh/) plugins can be rather nice.
+My shell hasn't changed since last year, and probably won't change next year. [Alacritty](https://alacritty.org/), [ZSH](https://www.zsh.org/) and [tmux] are at its heart, and that's probably not going to change. I've considered switching back to bash for a more cohesive setup across devices, but given I don't use many of the zsh-specific features, it doesn't make a difference, and having some [oh-my-zsh](https://ohmyz.sh/) plugins can be rather nice.
 
 I still haven't had a proper look into my clipboard issues, but my brain has trained itself to just ignore it and work around it. Some parts have got better, others haven't. Hopefully by the time I get really annoyed by it, it'll magically solve itself.
 

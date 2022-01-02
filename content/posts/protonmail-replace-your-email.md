@@ -1,7 +1,7 @@
 ---
 title: ProtonMail - Can it replace your email provider?
 date: 2016-06-28
-image: https://protonmail.com/images/main-banner.jpg
+image: https://protonmail.com/images/main-banner.png
 subtitle: Incredibly secure, easy to use, but are it's trade-offs worth it?
 tags: [security]
 ---

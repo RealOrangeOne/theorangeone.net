@@ -1,7 +1,7 @@
 ---
 title: Hacktoberfest 2019
 date: 2019-11-01
-image: https://hacktoberfest.digitalocean.com/assets/HF19_social-744d976f227e4aff6866443abcede8c651b309ec9c7c9f7410f5944f8e1299b9.png
+image: https://42coders.com/storage/45/hacktoberfest_2019-min.png
 tags: [programming]
 ---
 

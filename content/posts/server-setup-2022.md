@@ -23,7 +23,7 @@ If a server isn't monitored, does it really exist? How else do you know if it's 
 
 For the monitoring itself, I really wanted to like [statping](https://github.com/statping/statping), but recent versions were horrifically buggy, and support basically stopped altogether. Instead, I use [uptime-kuma](https://github.com/louislam/uptime-kuma), a fantastic uptimerobot-inspired monitoring tool to check services are accessible. When an application goes down, uptime-kuma sends both an email and a message to a Matrix room.
 
-I'm also a very big fan of [healthchecks](https://heathchecks.io) for monitoring scheduled tasks, using it for anything I can. I'm currently using the healthchecks hosted service, but in the spirit of self-hosting, I'm planning on hosting that myself too at some point.
+I'm also a very big fan of [healthchecks](https://healthchecks.io) for monitoring scheduled tasks, using it for anything I can. I'm currently using the healthchecks hosted service, but in the spirit of self-hosting, I'm planning on hosting that myself too at some point.
 
 ## Gateway
 

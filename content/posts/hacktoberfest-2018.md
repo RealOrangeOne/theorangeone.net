@@ -13,8 +13,6 @@ As someone who does a lot of development on GitHub, the messages behind hacktobe
 
 ## My Contributions
 
-This year, DigitalOcean have an [official status checker](https://hacktoberfest.digitalocean.com/stats/RealOrangeOne). It reports my progress, as well as some global statistics on contributions.
-
 ### 3 Contributions to [`srobo/team-emails`](https://github.com/srobo/team-emails)
 
 - [Add email confirming places for SR2019](https://github.com/srobo/team-emails/pull/4)

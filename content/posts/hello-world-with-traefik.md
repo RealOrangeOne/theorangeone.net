@@ -273,7 +273,7 @@ Save the file, and restart Traefik, and it'll start routing. Future edits won't 
 
 A common requirement for reverse proxies is to forcefully redirect traffic from HTTP to HTTPS.
 
-The first way most people think to do this is to apply the [redirectscheme](https://docs.traefik.io/middlewares/redirectscheme/) middleware to each and every router. Whilst this does work, it'd be far better if this only needed to be defined once, and magically reused for each application, right?
+The first way most people think to do this is to apply the [redirectscheme](https://doc.traefik.io/traefik/middlewares/http/redirectscheme/) middleware to each and every router. Whilst this does work, it'd be far better if this only needed to be defined once, and magically reused for each application, right?
 
 Fortunately, Traefik's got you covered. Entrypoints allow you to set a [`redirection`](https://docs.traefik.io/routing/entrypoints/#redirection) on them, such that all traffic to them is redirected to a different entrypoint on a given scheme.
 

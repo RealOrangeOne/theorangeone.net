@@ -40,7 +40,7 @@ In LXC, a container may be unprivileged or privileged. In docker containers, use
 
 For reasons I don't understand, this seems to have something to do with the backup process. Presumably it runs as a different user during the backup depending on the container type, who knows. Either way, it needs solving. I need my backups!
 
-After a bunch of searching around, I finally found the solution. I stumbled upon [this thread](https://forum.proxmox.com/threads/lxc-unprivileged-backup-task-failing.48565/1), which mentions a completely unrelated issue, with a very similar symptom. By this point, I had been wrestling with this issue for a few weeks, so blind config changes was something I was more than happy to do.
+After a bunch of searching around, I finally found the solution. I stumbled upon [this thread](https://forum.proxmox.com/threads/lxc-unprivileged-backup-task-failing.48565), which mentions a completely unrelated issue, with a very similar symptom. By this point, I had been wrestling with this issue for a few weeks, so blind config changes was something I was more than happy to do.
 
 The thread mentioned setting the `tmpdir` setting on `vzdump`. This directory controls where `vzdump` stores the container data during a "suspend" mode snapshot. My guess is `vzdump` runs as a different user on an unprivileged LXC dump vs a privileged dump. If you do know why this happens in some more detail, [please tell me]({{<relref "contact">}}). For security reasons, my backups are not world readable, only being writeable by `root`, but given that works fine
 
