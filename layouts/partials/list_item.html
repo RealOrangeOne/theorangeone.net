@@ -5,7 +5,7 @@
         {{ .Scratch.Set "image" .Params.image }}
         {{ if hasPrefix .Params.image "resource:" }}
           {{ $resource := .Resources.GetMatch (replace .Params.image "resource:" "") }}
-          {{ .Scratch.Set "image" ($resource.Resize "500x webp").RelPermalink }}
+          {{ .Scratch.Set "image" ($resource.Resize "200x webp").RelPermalink }}
         {{ else if hasPrefix .Params.image "unsplash:" }}
           {{ $unsplash_id := replace .Params.image "unsplash:" "" }}
           {{ $query := querify "client_id" (getenv "UNSPLASH_ACCESS_KEY") }}
