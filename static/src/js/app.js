@@ -57,7 +57,6 @@ $(document).ready(function() {
     mainAudio: '/audio/elevator.mp3',
     endAudio: '/audio/ding.mp3',
     preloadAudio: false,
-    endCallback: resetHash,
   });
 });
 
