@@ -23,7 +23,7 @@ function scrollTo(offset) {
 
 function resetHash() {
   // Clear URL hash, without reloading the page - https://stackoverflow.com/a/15323220
-  window.history.pushState('', document.title, window.location.pathname);
+  window.history.replaceState(null, document.title, window.location.pathname);
 }
 
 $(document).ready(function() {
