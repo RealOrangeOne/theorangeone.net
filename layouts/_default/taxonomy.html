@@ -2,9 +2,15 @@
   <div id="main">
     <div class="container">
       {{ partial "content.html" . }}
+
+      <div class="text-right mb-2">
+        <a href="{{ (.OutputFormats.Get "rss").Permalink }}" title="Subscribe to {{ .Title }}"><i class="fas fa-rss ml-3"></i></a>
+      </div>
+
       {{ if .Content }}
         <hr />
       {{ end }}
+
       {{ range .Pages.ByDate.Reverse }}
         {{ partial "list_item.html" . }}
       {{ end }}
