@@ -7,3 +7,12 @@
   {{ partial "related-content.html" . }}
 </div>
 {{ end }}
+
+{{ define "style_extra" }}
+  {{ partial "style.html" "css/shareon.css" }}
+  {{ partial "style.html" "css/highlight.css" }}
+{{ end }}
+
+{{ define "scripts_extra" }}
+  {{ partial "script_async.html" "js/shareon.js" }}
+{{ end }}
