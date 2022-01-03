@@ -17,9 +17,11 @@
     </div>
   {{ end }}
   <div class="media-body">
-    <a href="{{ .RelPermalink }}" title="{{ .Title }}">
-      <h3 class="my-0 h5">{{ .Title }}</h3>
-    </a>
+    <h3 class="my-0 h5">
+      <a href="{{ .RelPermalink }}" title="{{ .Title }}">
+        {{ .Title }}
+      </a>
+    </h3>
     <small>{{ partial "content-details.html" . }}</small>
     <p>{{ partial "summary.html" . }}</p>
   </div>
