@@ -52,6 +52,10 @@ environment:
   - SCHEME=https
 ```
 
+{{<block note>}}
+Some of these configuration options may have changed slightly since the time of writing. Take a look at the [configuration options](https://plausible.io/docs/self-hosting-configuration) for the most up-to-date options.
+{{</block>}}
+
 `$DISABLE_REGISTRATION` and `$DISABLE_SUBSCRIPTION` are both pretty handy. These prevent other users from signing up to your instance, and stop showing anything to do with subscriptions. For now, the self-hosted Plausible comes with a 100-year subscription for admin users, which is very gracious.
 
 `$SECRET_KEY_BASE` and `$SIGNING_SALT` should be kept private at all costs. There's little documentation on what these should be or how to generate them, but according to Phoenix `$SECRET_KEY_BASE` should be at least 64 bytes. `$SIGNING_SALT` just needs to be something reasonably complex, but I used 16 bytes for ease. I used `openssl rand -hex <length>` to securely generate these keys.
