@@ -18,7 +18,7 @@ In a similar vein to this, [DinD](https://hub.docker.com/_/docker/) (docker in d
 
 ## How
 
-For once, I'm writing an article where the "how-to" section is surprisingly simple:
+For once, I'm writing a post where the "how-to" section is surprisingly simple:
 
 1. Create an LXC container
     1. Ensure "nesting" is enabled (it is by default in Proxmox)
@@ -28,7 +28,7 @@ For once, I'm writing an article where the "how-to" section is surprisingly simp
 
 Yes, it's really that simple! Now, running [`docker run hello-world`](https://hub.docker.com/_/hello-world/) should start a container and work absolutely flawlessly! At least excluding some minor [storage issues]({{<relref "docker-lxc-storage">}}).
 
-For reasons I don't quite understand, I wasn't able to get Alpine linux working as the base OS for the LXC container at the time. I really like Alpine as a minimal base OS, and given everything would be running in docker, the musl _complexities_ didn't bother me. Instead, I just run Debian, and it worked absolutely perfectly first time. Arch also works perfectly for me, as too I suspect would almost any other distro. Revisiting it whilst writing this article, and it seems to work fine. In cases like this, there is no "best distro", the distro doesn't matter - what does is that you're comfortable maintaining it for its lifespan.
+For reasons I don't quite understand, I wasn't able to get Alpine linux working as the base OS for the LXC container at the time. I really like Alpine as a minimal base OS, and given everything would be running in docker, the musl _complexities_ didn't bother me. Instead, I just run Debian, and it worked absolutely perfectly first time. Arch also works perfectly for me, as too I suspect would almost any other distro. Revisiting it whilst writing this post, and it seems to work fine. In cases like this, there is no "best distro", the distro doesn't matter - what does is that you're comfortable maintaining it for its lifespan.
 
 ## But why?
 
@@ -40,4 +40,4 @@ Speaking of passing through mountpoint, [passing through GPUs]({{<relref "lxc-nv
 
 And of course, that's to say nothing of the reduced overhead. Virtualizing a whole OS adds a lot of extra layers between the containers running your application and the CPU executing their instructions. These layers exist for good reason, they add isolation and allow the VM to be completely different to the host OS. But for a docker container, it's probably going to be a Linux-based guest OS anyway, so why not cut out the abstraction layers and benefit from the extra performance.
 
-I've been running Docker inside LXC for a little under a year now, and it's been absolutely fantastic. I have a few separate LXCs running separate Docker instances for things like monitoring (to keep it separate), but my primary "throw-all" LXC has a number of different docker containers with a number of mount points. I wrote up [an article]({{<relref "server-2020-proxmox">}}) a few months ago about how exactly [my Proxmox server]({{<relref "server-2020">}}) is setup, which may inspire your next server project.
+I've been running Docker inside LXC for a little under a year now, and it's been absolutely fantastic. I have a few separate LXCs running separate Docker instances for things like monitoring (to keep it separate), but my primary "throw-all" LXC has a number of different docker containers with a number of mount points. I wrote up [a post]({{<relref "server-2020-proxmox">}}) a few months ago about how exactly [my Proxmox server]({{<relref "server-2020">}}) is setup, which may inspire your next server project.

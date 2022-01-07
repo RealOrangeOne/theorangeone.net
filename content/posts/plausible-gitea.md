@@ -14,7 +14,7 @@ Plausible, [my analytics tool of choice]({{< relref "self-hosting-plausible" >}}
 
 Plausble recommends putting the tracking script in the `<head />` of the page. Personally I prefer to keep scripts like this at the end of the page, so they don't impact the actual site load. If you want to follow Plausible rather than me, just change `footer.tmpl` below with `header.tmpl`, and everything should work fine.
 
-Gitea's documentation on this [used to be](https://github.com/go-gitea/gitea/pull/14399) a little hard to understand, so I fixed it just before writing this article. Gitea wants the custom templates to live in a `templates` directory, which will sit next to the `conf` directory with your `app.ini`. Here we need to create the file `custom/footer.tmpl`, which will contain the extra HTML Gitea will put immediately before the closing`</body>`.
+Gitea's documentation on this [used to be](https://github.com/go-gitea/gitea/pull/14399) a little hard to understand, so I fixed it just before writing this post. Gitea wants the custom templates to live in a `templates` directory, which will sit next to the `conf` directory with your `app.ini`. Here we need to create the file `custom/footer.tmpl`, which will contain the extra HTML Gitea will put immediately before the closing`</body>`.
 
 Inside `footer.tmpl`, add the script tag for Plausible. You can find this in the Plausible admin panel.
 

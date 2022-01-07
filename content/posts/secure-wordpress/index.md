@@ -15,7 +15,7 @@ And so, after two weeks of on-and-off poking, research, re-installation and opti
 
 Decisions on the OS are fairly simple. For my site, I used Debian. In part because I'd not used it extensively before, and wanted to see if there were any benefits to Ubuntu, my go-to alternative, but also because it's considered to be dependable and secure. The Debian repos are some of the largest, containing any application I could need for a project like this, all of which have been well tested.
 
-There's nothing about this project, or article, which is Debian specific, or even Linux specific. Running this on something like FreeBSD would work great (and debatable be more secure). Theoretically it's possible to run all these applications on a Windows server. But running a Windows server by choice seems crazy to me!
+There's nothing about this project, or post, which is Debian specific, or even Linux specific. Running this on something like FreeBSD would work great (and debatable be more secure). Theoretically it's possible to run all these applications on a Windows server. But running a Windows server by choice seems crazy to me!
 
 ## Web Server
 

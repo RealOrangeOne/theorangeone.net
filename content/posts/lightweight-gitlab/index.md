@@ -113,4 +113,4 @@ I do run GitLab's CI runner, but that's on a separate ~~machine~~ LXC.
 
 ![Current usage of my GitLab LXC](pve-stats.png)
 
-If you're interested in reading a little more, you can take a look at [my full configuration](https://git.theorangeone.net/sys/infrastructure/-/blob/master/ansible/roles/gitlab/files/gitlab.rb). GitLab also have their own documentation on running in [memory-constrained environments](https://docs.gitlab.com/omnibus/settings/memory_constrained_envs.html), which I discovered around half-way through writing this article.
+If you're interested in reading a little more, you can take a look at [my full configuration](https://git.theorangeone.net/sys/infrastructure/-/blob/master/ansible/roles/gitlab/files/gitlab.rb). GitLab also have their own documentation on running in [memory-constrained environments](https://docs.gitlab.com/omnibus/settings/memory_constrained_envs.html), which I discovered around half-way through writing this post.

@@ -50,4 +50,4 @@ To revert, just restore the backup of the pacman mirrorlist, and re-run the abov
 Generally, having out of date packages on your system is a bad idea. Not only for security reasons, but stability and compatibility. [The article](https://www.ostechnix.com/downgrade-packages-specific-date-arch-linux/) goes through a couple more too.
 
 ## Actually solving my issue
-A few days later, After [posting this article on twitter](https://twitter.com/RealOrangeOne/status/907591524644466688), I had a discussion with [@MortenLinderud](https://twitter.com/MortenLinderud) about the issue, who [pointed out](https://twitter.com/MortenLinderud/status/908262748718596096) that the library had already been fixed. So after updating `psycopg2`, my issue went away!
+A few days later, After [tweeting this post](https://twitter.com/RealOrangeOne/status/907591524644466688), I had a discussion with [@MortenLinderud](https://twitter.com/MortenLinderud) about the issue, who [pointed out](https://twitter.com/MortenLinderud/status/908262748718596096) that the library had already been fixed. So after updating `psycopg2`, my issue went away!

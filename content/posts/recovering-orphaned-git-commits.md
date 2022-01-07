@@ -39,6 +39,6 @@ Searching through the output file, I eventually found the commits I needed. Beca
 
 Whilst rather stressful in the moment, experiences like these aren't without their lessons:
 
-- Don't delete your local copies of articles until they're actually live, rather than just committed
+- Don't delete your local copies of posts until they're actually live, rather than just committed
 - Be careful when relying on `git` magic and rebasing
 - `git` is pretty damn good at making sure you don't lose any data

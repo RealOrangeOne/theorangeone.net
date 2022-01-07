@@ -158,7 +158,7 @@ This method, however good it sounds, comes with a number of drawbacks. It's a lo
 
 With that said, these extra complexities aren't huge, nor especially complicated, and you'll learn a lot whilst doing it!
 
-If you're interested in setting up something like this, I've written articles for both [WireGuard]({{< relref "wireguard-haproxy-gateway" >}}) and [OpenVPN]({{< relref "vpn-gateway" >}}).
+If you're interested in setting up something like this, I've written posts for both [WireGuard]({{< relref "wireguard-haproxy-gateway" >}}) and [OpenVPN]({{< relref "vpn-gateway" >}}).
 
 ## Reverse Proxies
 
