@@ -58,30 +58,30 @@ $(document).ready(function() {
     endAudio: '/audio/ding.mp3',
     preloadAudio: false,
   });
-});
 
-$('#scroll-top').on('click', function() {
-  scrollTo(0);
-  resetHash();
-});
-
-$('a[href^="#"]').on('click', function(event) {
-  if (this.dataset.noPreventDefault === undefined) {
-    event.preventDefault();
+  $('#scroll-top').on('click', function() {
+    scrollTo(0);
     resetHash();
-  }
-  const target = $($(this).attr('href'));
-  if (target.length) {
-    scrollTo(target.offset().top);
-  }
-});
+  });
 
-$('.content img').on('click', function(event) {
-  event.preventDefault();
-  const lightbox = $('#lightbox-modal');
-  lightbox.find('img').remove();
-  $(this)
-    .clone()
-    .appendTo(lightbox.find('.modal-content'));
-  lightbox.modal();
+  $('a[href^="#"]').on('click', function(event) {
+    if (this.dataset.noPreventDefault === undefined) {
+      event.preventDefault();
+      resetHash();
+    }
+    const target = $($(this).attr('href'));
+    if (target.length) {
+      scrollTo(target.offset().top);
+    }
+  });
+
+  $('.content img').on('click', function(event) {
+    event.preventDefault();
+    const lightbox = $('#lightbox-modal');
+    lightbox.find('img').remove();
+    $(this)
+      .clone()
+      .appendTo(lightbox.find('.modal-content'));
+    lightbox.modal();
+  });
 });
