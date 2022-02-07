@@ -43,7 +43,7 @@ I love PostgreSQL, but MySQL definitely makes the upgrade process much simpler. 
 1. Stop the application (`docker-compose down`)
 2. Update the tag you are using, and pull the new container (`mariadb:10.5` &rarr; `mariadb:10.7`)
 3. Start just the database (which should now be the new version) (`docker-compose up -d mariadb`)
-4. Run `mysql_upgrade`, likely using the `-u` and `-p` flags to specify credentials (`mysql_upgrade -uroot -p`)
+4. Run `mysql_upgrade`, likely using the `-u` and `-p` flags to specify credentials (`docker-compose exec mariadb mysql_upgrade -uroot -p`)
 5. Once complete, stop the database container (`docker-compose down`)
 6. Start everything again as normal (`docker-compose up -d`)
 
