@@ -25,7 +25,7 @@ There are [ways](https://github.com/tianon/docker-postgres-upgrade) around this,
 4. Stop the database (`docker-compose down`)
 5. Remove the contents of the database directory, wherever you've mounted in `/var/lib/postgres`
 6. Update the tag you are using, and pull the new container (`postgres:12-alpine` &rarr; `postgres:14-alpine`)
-7. Start just the database (`docker-compose up -d`). This will recreate a fresh database, using the credentials from the environment.
+7. Start just the database (`docker-compose up -d db`). This will recreate a fresh database, using the credentials from the environment.
 8. Import the data into the new database (`psql -U username < data.sql`)
 12. Stop the database container (`docker-compose down`)
 13. Start everything (`docker-compose up -d`)
