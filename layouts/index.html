@@ -11,6 +11,16 @@
           <input name="q" type="text" class="form-control" id="search-input" placeholder="Search" title="Press enter to search">
         </div>
       </form>
+
+      {{ with index .Site.Pages.ByPublishDate.Reverse 0 }}
+        <div class="latest-post">
+          <strong>Latest Post</strong>:
+          <a class="colour-invert" href="{{ .RelPermalink }}">
+            {{ .Title }}
+            <i class="fas fa-angle-right"></i>
+          </a>
+        </div>
+      {{ end }}
     </div>
   </header>
 {{ end }}

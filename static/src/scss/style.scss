@@ -113,6 +113,16 @@ table td {
       color: transparentize($body-color, 0.2);
     }
   }
+
+  .latest-post {
+    @include border-radius($input-border-radius-sm);
+
+    display: inline-block;
+    margin-top: 3rem;
+    background-color: transparentize($black, 0.2);
+    padding: ($spacer * 0.25) $spacer;
+    color: $body-color;
+  }
 }
 
 footer {
