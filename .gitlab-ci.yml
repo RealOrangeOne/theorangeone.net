@@ -63,3 +63,13 @@ deploy:
     RCLONE_CONFIG_PAGES_TYPE: webdav
     RCLONE_CONFIG_PAGES_URL: https://pages.theorangeone.net
     RCLONE_CONFIG_PAGES_USER: github
+
+container:
+  image: docker:stable
+  stage: deploy
+  dependencies:
+    - build
+  only:
+    - master
+  script:
+    - docker build -f prod/Dockerfile -t theorangeone.net .
