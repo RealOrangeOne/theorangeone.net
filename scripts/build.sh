@@ -20,7 +20,7 @@ cp $BASEDIR/node_modules/shareon/dist/shareon.min.css $STATIC_BUILD/css/shareon.
 
 cp -r $STATIC_SRC/js/ $STATIC_BUILD/js/
 cp $BASEDIR/node_modules/jquery/dist/jquery.min.js $STATIC_BUILD/js/jquery.min.js
-cp $BASEDIR/node_modules/shareon/dist/shareon.min.js $STATIC_BUILD/js/shareon.js
+cp $BASEDIR/node_modules/shareon/dist/shareon.iife.js $STATIC_BUILD/js/shareon.js
 cp $BASEDIR/node_modules/lightgallery/dist/js/lightgallery-all.min.js $STATIC_BUILD/js/lightgallery.min.js
 cp $BASEDIR/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js $STATIC_BUILD/js/bootstrap.min.js
 cp $BASEDIR/node_modules/elevator.js/demo/music/*.mp3 $STATIC_BUILD/audio/
