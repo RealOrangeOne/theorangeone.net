@@ -71,5 +71,10 @@ container:
     - build
   only:
     - master
+  variables:
+    IMAGE_TAG: $CI_REGISTRY_IMAGE:latest
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
   script:
-    - docker build -f prod/Dockerfile -t theorangeone.net .
+    - docker build -f prod/Dockerfile -t $IMAGE_TAG .
+    - docker push $IMAGE_TAG
