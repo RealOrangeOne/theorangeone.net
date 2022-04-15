@@ -13,7 +13,7 @@
     "yaml-lint": "1.2.4"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "5.15.3",
+    "@fortawesome/fontawesome-free": "5.15.4",
     "@ledge/is-ie-11": "^7.0.0",
     "bootstrap": "4.6.1",
     "elevator.js": "1.0.1",
