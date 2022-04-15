@@ -2,7 +2,7 @@
 title: Educating internet explorer users
 date: 2022-04-15
 tags: [website, security, programming]
-image: https://stopinternetexplorer.com/img/stop_using_ie.webp
+image: https://stopinternetexplorer.com/img/stop_using_ie.jpg
 ---
 
 [Internet Explorer](https://en.wikipedia.org/wiki/Internet_Explorer) was, in its prime, the most popular internet browser in the world. Originally released alongside Windows 95, its headline feature [seemed to be](https://web.archive.org/web/20031002010203/http://www.microsoft.com/windows/WinHistoryIE.mspx) that it was maintained by Microsoft and was automatically installed. It wasn't until Internet Explorer 2.0 in November 1995 that feature we're used to, like SSL and cookies. But it's not 1995 any more.
