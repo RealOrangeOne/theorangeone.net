@@ -10,6 +10,9 @@
 
     {{ partial "favicon.html" }}
 
+    <!-- Intentionally early, to prevent the rest of the page rendering -->
+    {{ partial "script_async.html" "js/ie11-deterrent.js" }}
+
     {{ partial "style.html" "scss/style.scss" }}
     {{ partial "style.html" "css/font-awesome.css" }}
 
