@@ -24,10 +24,10 @@ install:
     expire_in: 30 mins
 
 build:
-  image: node:alpine
+  image: archlinux
   stage: build
   before_script:
-    - apk add --no-cache hugo git
+    - pacman -S --noconfirm hugo git npm nodejs
   script:
     - ./scripts/release.sh
   artifacts:
