@@ -9,6 +9,6 @@
 <figure class="text-center">
   <img src="{{ $destination | safeURL }}" alt="{{ .Text | plainify }}" style='max-width: {{ default "90" .Title }}%;' referrerpolicy="no-referrer" loading="lazy" decoding="async" />
   <figcaption class="text-center">
-    <small>{{ .Text | markdownify }}</small>
+    <small>{{ .Text | safeHTML }}</small>
   </figcaption>
 </figure>
