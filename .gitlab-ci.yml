@@ -27,7 +27,7 @@ build:
   image: archlinux
   stage: build
   before_script:
-    - pacman -S --noconfirm hugo git npm nodejs
+    - pacman -Sy --noconfirm hugo git npm nodejs
   script:
     - ./scripts/release.sh
   artifacts:
