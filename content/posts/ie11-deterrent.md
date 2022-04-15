@@ -63,7 +63,7 @@ Added right at the top of the `<head>` tag, this should do the trick nicely!
 
 I take the performance of my website very seriously. Professionally I focus on performance, from both the server and client sides of development.  My website is currently a [static site](https://github.com/realorangeone/theorangeone.net) created with [Hugo](https://gohugo.io) using a very custom theme. Because it's static, it's incredibly fast to load, and is compressed as much as it can be.
 
-The additional weight on the page is as small as possible. The script itself is tiny, sent both minified and compressed, and executed async to prevent any impact. Additionally, the file will only be downloaded once, so subsequent visits won't need to download it. And, because the script is so small and simple, it barely takes any time to run anyway.
+The additional weight on the page is as small as possible. The script itself is tiny (288 **bytes**), sent compressed (214 bytes over the wire), and executed async to prevent any impact. Additionally, the file will only be downloaded once, so subsequent visits won't need to download it. And, because the script is so small and simple, it barely takes any time to run anyway.
 
 ## Impact
 
