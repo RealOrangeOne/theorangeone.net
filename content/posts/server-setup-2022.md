@@ -61,4 +61,4 @@ With most VPS providers, there's not a huge difference in costs. They've mostly 
 Apparently [Mythic-Beasts](https://www.mythic-beasts.com/order/vps?schedule=month) never got that memo.
 {{</block>}}
 
-Whilst Vultr has been great, I'm looking into moving. They've not done anything wrong, I just want to go somewhere else, partly so my money goes somewhere other than a VC-funded company. Currently, the top runner is [Linode](https://linode.com), but we'll see what 2022 brings.
+Whilst Vultr has been great, I'm looking into moving. They've not done anything wrong, I just want to go somewhere else, partly so my money goes somewhere other than a VC-funded company. Currently, the top runner is [Linode]({{<referralurl linode>}}), but we'll see what 2022 brings.

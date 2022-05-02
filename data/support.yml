@@ -7,6 +7,9 @@ referral:
     name: Fastmail
     link: https://ref.fm/u19842056
     icon: fas fa-envelope-open
+  linode:
+    name: Linode
+    link: https://www.linode.com/?r=1ff0613ecac34eacda8237e79fa441783cd4b5e9
 
 donate:
   Ko-fi:
