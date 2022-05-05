@@ -14,7 +14,9 @@
           {{ $playlist.name }}
         </a>
       </h3>
-
+      {{ if $playlist.tracks.next }}
+        <p>Only showing first {{ $playlist.tracks.limit }}. <a href="{{ $playlist.external_urls.spotify }}">See all {{ $playlist.tracks.total }}</a></p>
+      {{ end }}
       <table class="table table-hover table-striped table-dark">
         <thead>
         <tr>
