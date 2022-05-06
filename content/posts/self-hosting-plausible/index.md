@@ -22,6 +22,11 @@ Plausible's primary offering is a hosted version, but in the last few weeks the 
 
 ## Installation
 
+{{<block note>}}
+I wrote this installation guide a long time ago. As a result, many of the steps may be incorrect. If you're after more up-to-date setup instructions, check out the [official documentation](https://plausible.io/docs/self-hosting).
+{{</block>}}
+
+
 The current options are to compile and run the Elixir application yourself, or use [Docker](https://hub.docker.com/r/plausible/analytics). My servers already run Docker, so that was a simple decision! In the Plausible repository, there's a `docker-compose.yml` - Don't use it. It's intended more as a reference to what's needed for setup rather than to be used directly. However, from this we can see we need a couple containers:
 
 - [Plausible](https://hub.docker.com/r/plausible/analytics) itself, obviously
