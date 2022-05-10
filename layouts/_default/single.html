@@ -3,6 +3,13 @@
   <div class="container">
     {{ partial "content.html" . }}
   </div>
+
+  {{ with .Scratch.Get "unsplash_data" }}
+    <div class="container text-center my-4">
+      <small><a href="#header">Header</a> photo by <a href="{{ .user.links.html }}">{{ .user.name }}</a> on <a href="{{ .links.html }}">Unsplash</a>.</small>
+    </div>
+  {{ end }}
+
   {{ partial "share.html" . }}
   {{ partial "related-content.html" . }}
 </div>

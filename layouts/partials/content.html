@@ -8,9 +8,10 @@
     {{ $query := querify "client_id" (getenv "UNSPLASH_ACCESS_KEY") }}
     {{ $unsplash_data := (getJSON "https://api.unsplash.com/photos/" $unsplash_id "?" $query )}}
     {{ .Scratch.Set "image" $unsplash_data.urls.regular }}
+    {{ .Scratch.Set "unsplash_data" $unsplash_data }}
   {{ end }}
 
-  <img class="mb-3 header-image" src='{{ .Scratch.Get "image" }}' alt="" decoding="async" referrerpolicy="no-referrer" />
+  <img class="mb-3 header-image" id="header" src='{{ .Scratch.Get "image" }}' alt="" decoding="async" referrerpolicy="no-referrer" />
 {{ end }}
 
 {{ partial "breadcrumbs/index.html" . }}
