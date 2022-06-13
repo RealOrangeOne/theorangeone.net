@@ -86,8 +86,8 @@ table td {
   }
 
   .nav-link {
-    padding-right: $font-size-base !important;
-    padding-left: $font-size-base !important;
+    padding-right: $spacer * 0.75 !important;
+    padding-left: $spacer * 0.75 !important;
   }
 
   .nav-link code, .navbar-brand code {
