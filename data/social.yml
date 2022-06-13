@@ -120,13 +120,9 @@ accounts:
     link: https://matrix.to/#/@jake:theorangeone.net
     icon: fas fa-project-diagram
 
-footer_accounts:
+
+notable_accounts:
   - github
   - twitter
   - self-hosted-gitlab
   - reddit
-
-navbar_accounts:
-  - github
-  - twitter
-  - self-hosted-gitlab

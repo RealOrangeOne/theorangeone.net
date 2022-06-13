@@ -31,7 +31,7 @@
             </a>
           </li>
         {{ end }}
-        {{ range .Site.Data.social.navbar_accounts }}
+        {{ range .Site.Data.social.notable_accounts }}
           {{ $account := index $.Site.Data.social.accounts . }}
           <li class="nav-item">
             <a class="nav-link" href="{{ $account.link }}">

@@ -13,7 +13,7 @@
       </div>
       <div class="col-sm-4">
         <h3 class="text-right">
-          {{ range .Site.Data.social.footer_accounts }}
+          {{ range .Site.Data.social.notable_accounts }}
             {{ $account := index $.Site.Data.social.accounts . }}
             <a href="{{ $account.link }}" title="{{ $account.name }}"><i class="mx-1 {{ $account.icon }}" aria-hidden="true"></i></a>
           {{ end }}
