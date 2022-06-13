@@ -13,7 +13,7 @@
         {{ with (.Site.GetPage "search") }}
           <li class="nav-item">
             <a class="nav-link" href="{{ .Permalink }}">
-              <i class="fas fa-search" title="Search"></i>
+              <i class="fas fa-search" title="{{ .Title }}"></i>
             </a>
           </li>
         {{ end }}
@@ -21,6 +21,13 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ .Permalink }}">
               <i class="fas fa-rss" title="RSS"></i>
+            </a>
+          </li>
+        {{ end }}
+        {{ with (.Site.GetPage "guestbook") }}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ .Permalink }}">
+              <i class="fas fa-book" title="{{ .Title }}"></i>
             </a>
           </li>
         {{ end }}
