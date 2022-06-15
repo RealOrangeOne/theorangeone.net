@@ -48,7 +48,7 @@ I currently switch between [Firefox](#browser) and [Chromium](https://www.chromi
 I've switched around password managers _a lot_, but I'm currently settled on [KeePassXC](https://keepassxc.org/), a community fork of [KeePassX](https://www.keepassx.org/), which is a cross-platform fork of [KeePass](https://keepass.info/). When it comes to cross-platform password managers, there's very little out there that's also open-source. I can access password on both my linux machines, and [my phone](https://github.com/PhilippC/keepass2android), and my windows OS when I occasionally have to use it. The [browser integration](https://addons.mozilla.org/en-US/firefox/addon/keepasshttp-connector/) is also pretty nice too!
 
 # Email
-My personal email provider of choice is [Mailfence](https://mailfence.com/), for now. I've experimented a lot with both [FastMail]({{<referralurl fastmail>}}) and [ProtonMail](https://protonmail.com/) in the past. ProtonMail is great for security and privacy, but is lacking far too heavily in features. FastMail is the inverse, it's interface and feature-set are amazing, but their privacy / security policies aren't good enough for me.
+My personal email provider of choice is [Mailfence](https://mailfence.com/), for now. I've experimented a lot with both [FastMail]({{<referralurl fastmail>}}) and [Proton Mail](https://proton.me/) in the past. ProtonMail is great for security and privacy, but is lacking far too heavily in features. FastMail is the inverse, it's interface and feature-set are amazing, but their privacy / security policies aren't good enough for me.
 
 Mailfence supports all the standard features a mail client should, and has a nice set of [security features](https://mailfence.com/en/secure-email.jsp).
 
