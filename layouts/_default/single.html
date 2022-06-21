@@ -8,9 +8,11 @@
   {{ partial "comments.html" . }}
   {{ partial "related-content.html" . }}
 
+  {{ $unsplash_utm := (printf "utm_source=%s&utm_medium=referral" (lower .Site.Params.author)) }}
+
   {{ with .Scratch.Get "unsplash_data" }}
     <div class="container text-center my-4">
-      <small><a href="#header">Header</a> photo by <a href="{{ .user.links.html }}">{{ .user.name }}</a> on <a href="{{ .links.html }}">Unsplash</a>.</small>
+      <small><a href="#header">Header</a> photo by <a href="{{ .user.links.html }}?{{ $unsplash_utm }}">{{ .user.name }}</a> on <a href="{{ .links.html }}?{{ $unsplash_utm }}">Unsplash</a>.</small>
     </div>
   {{ end }}
 </div>
