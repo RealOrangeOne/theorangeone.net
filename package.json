@@ -15,7 +15,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.15.4",
     "@ledge/is-ie-11": "7.0.0",
-    "bootstrap": "4.6.1",
+    "bootstrap": "4.6.2",
     "elevator.js": "1.0.1",
     "jquery": "3.6.0",
     "lg-thumbnail": "1.2.1",
